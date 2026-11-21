@@ -57,3 +57,6 @@
 .home-review-track .review-card{height:330px;min-height:0;padding:22px}
 .home-review-track .review-card blockquote{max-height:190px}
 @media(max-width:700px){.home .hero .two>div:first-child{order:0}.home .hero .art{order:1}.home .hero .art img{max-width:280px}.home .hero .chip{font-size:11px}.home-review-track .review-card{height:350px}}
+.home .wrap>h2,.home .wrap>div>h2{border-left:0;padding-left:0}
+.home .wrap>h2::before,.home .wrap>div>h2::before{content:"";display:inline-block;width:3px;height:.85em;margin-right:12px;background:var(--y);vertical-align:baseline}
+@media(max-width:700px){.home .hero .art{grid-row:auto}}
