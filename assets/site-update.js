@@ -31,3 +31,44 @@
     });
   });
 })();
+
+// Category filters and embedded calculator sizing for the content preview.
+(() => {
+  const filters = [...document.querySelectorAll('[data-guide-filter]')];
+  const guideCards = [...document.querySelectorAll('.guide-card[data-guide-category]')];
+  const updates = document.querySelector('.guide-updates');
+  filters.forEach(button => button.addEventListener('click', () => {
+    const category = button.dataset.guideFilter;
+    filters.forEach(item => {
+      const active = item === button;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    guideCards.forEach(card => card.hidden = category === 'updates' || category !== 'all' && card.dataset.guideCategory !== category);
+    if (updates) updates.hidden = category !== 'all' && category !== 'updates';
+  }));
+
+  document.querySelectorAll('.fee-frame').forEach(frame => {
+    frame.addEventListener('load', () => {
+      const inner = frame.contentWindow;
+      if (!inner) return;
+      const resize = () => {
+        frame.style.height = Math.max(700, inner.document.documentElement.scrollHeight, inner.document.body.scrollHeight) + 'px';
+      };
+      resize();
+      new inner.ResizeObserver(resize).observe(inner.document.body);
+      inner.document.addEventListener('click', event => {
+        if (event.target.closest('button') && typeof window.gtag === 'function') {
+          window.gtag('event', 'calculate_fee');
+        }
+      });
+    });
+  });
+
+  document.addEventListener('click', event => {
+    const control = event.target.closest('[data-ga-event]');
+    if (control && typeof window.gtag === 'function') {
+      window.gtag('event', control.dataset.gaEvent);
+    }
+  });
+})();
