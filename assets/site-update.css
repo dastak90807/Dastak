@@ -106,5 +106,10 @@
 
 /* Document checklist */
 .checklist-tool{max-width:850px;margin:28px auto}.checklist-tool select{display:block;width:100%;margin:10px 0 16px;padding:12px;border:1px solid var(--bd);border-radius:8px;font:inherit}.checklist-item{display:flex;align-items:flex-start;gap:12px;padding:12px;border-bottom:1px solid var(--bd);cursor:pointer}.checklist-item input{width:20px;height:20px;flex:none;accent-color:var(--g)}.checklist-progress{height:12px;border-radius:999px;background:var(--mint);overflow:hidden;margin:10px 0 24px}.checklist-progress span{display:block;height:100%;background:var(--g);width:0;transition:width .2s}.checklist-tool .btn{margin-top:18px}
+#checklist-variant[hidden],#checklist-share[hidden]{display:none}
 @media(prefers-reduced-motion:reduce){.checklist-progress span{transition:none}}
 .portal-card li{margin-bottom:12px}.portal-card li small{display:block;color:var(--mut);line-height:1.45;margin-top:3px}
+
+/* Forms and downloads */
+#forms-search{display:block;width:100%;max-width:560px;margin:10px 0 16px;padding:12px;border:1px solid var(--bd);border-radius:8px;font:inherit}.forms-filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px}.forms-filters button{border:1px solid var(--bd);border-radius:999px;background:#fff;color:var(--dg);padding:10px 15px;font:inherit;font-weight:700;cursor:pointer}.forms-filters button.active{background:var(--dg);color:#fff}.forms-filters button:focus-visible{outline:3px solid var(--y);outline-offset:2px}.forms-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.form-card h2{font-size:1.15rem}.form-card .row{margin:16px 0}.form-card[hidden]{display:none}.downloads-faq{margin:32px 0}
+@media(max-width:700px){.forms-grid{grid-template-columns:1fr}}

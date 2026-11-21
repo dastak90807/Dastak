@@ -40,7 +40,7 @@
       },
       {
         "text": "Official Police Loss Report (Required for Duplicate License only)",
-        "optional": false
+        "optional": true
       }
     ],
     "notes": [
@@ -98,7 +98,7 @@
       },
       {
         "text": "Mandatory Live Biometric Verification of Both Seller & Buyer (Plus sponsoring bank/agency representative if under lease/HPA)",
-        "optional": true
+        "optional": false
       }
     ],
     "notes": []
@@ -225,20 +225,55 @@
   },
   {
     "name": "Birth / Marriage Certificate & E-Stamp Paper",
-    "items": [
+    "notes": [],
+    "variants": [
       {
-        "text": "For Birth Certificate: Parents' CNIC Copies, Hospital/Midwife Birth Slip & Filled Union Council Form",
-        "optional": false
+        "name": "Birth Certificate",
+        "items": [
+          {
+            "text": "Parents' CNIC Copies",
+            "optional": false
+          },
+          {
+            "text": "Hospital or Midwife Birth Slip",
+            "optional": false
+          },
+          {
+            "text": "Filled Union Council Form",
+            "optional": false
+          }
+        ]
       },
       {
-        "text": "For Marriage Certificate: Registered Nikah Nama Copy, Husband & Wife CNICs, and Both Parents' CNIC Copies",
-        "optional": false
+        "name": "Marriage Certificate",
+        "items": [
+          {
+            "text": "Registered Nikah Nama Copy",
+            "optional": false
+          },
+          {
+            "text": "Husband and Wife CNIC Copies",
+            "optional": false
+          },
+          {
+            "text": "Both Parents' CNIC Copies",
+            "optional": false
+          }
+        ]
       },
       {
-        "text": "For E-Stamp Paper: Parties' Valid CNIC Copies & Relevant Transaction / Agreement Details",
-        "optional": false
+        "name": "E-Stamp Paper",
+        "items": [
+          {
+            "text": "Parties' Valid CNIC Copies",
+            "optional": false
+          },
+          {
+            "text": "Relevant Transaction or Agreement Details",
+            "optional": false
+          }
+        ]
       }
-    ],
-    "notes": []
+    ]
   }
 ]

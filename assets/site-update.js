@@ -68,7 +68,8 @@
   document.addEventListener('click', event => {
     const control = event.target.closest('[data-ga-event]');
     if (control && typeof window.gtag === 'function') {
-      window.gtag('event', control.dataset.gaEvent);
+      const params = control.dataset.formName ? { form_name: control.dataset.formName } : {};
+      window.gtag('event', control.dataset.gaEvent, params);
     }
   });
 })();
@@ -115,6 +116,9 @@
       const detail = document.createElement('small');
       detail.textContent = item.type + (item.summary ? ' · ' + item.summary : '');
       link.append(heading, detail);
+      link.addEventListener('click', () => {
+        if (typeof window.gtag === 'function') window.gtag('event', 'site_search', { search_term: input.value.trim() });
+      });
       results.append(link);
     });
   };
