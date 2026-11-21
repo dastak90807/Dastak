@@ -20,31 +20,53 @@
     ]
   },
   {
-    "name": "Regular / Duplicate Punjab Driving License Renewal",
-    "items": [
-      {
-        "text": "Applicant's Original Valid CNIC (Front & Back)",
-        "optional": false
-      },
-      {
-        "text": "Live Photograph with White Background",
-        "optional": false
-      },
-      {
-        "text": "Original Existing / Expired Driving License (Note: If original license is missing, duplicate issuance rules apply)",
-        "optional": true
-      },
-      {
-        "text": "Medical Certificate signed by a Government Doctor (If age 50+ or LTV)",
-        "optional": true
-      },
-      {
-        "text": "Official Police Loss Report (Required for Duplicate License only)",
-        "optional": true
-      }
-    ],
+    "name": "Punjab Driving License Renewal / Duplicate",
     "notes": [
       "Info Note: Licenses expired for 5 years or more require a physical visit to a Traffic Licensing Center or Police Khidmat Markaz."
+    ],
+    "variants": [
+      {
+        "name": "Renewal",
+        "items": [
+          {
+            "text": "Applicant's Original Valid CNIC (Front & Back)",
+            "optional": false
+          },
+          {
+            "text": "Live Photograph with White Background",
+            "optional": false
+          },
+          {
+            "text": "Original Existing / Expired Driving License (Note: If original license is missing, duplicate issuance rules apply)",
+            "optional": false
+          },
+          {
+            "text": "Medical Certificate signed by a Government Doctor (If age 50+ or LTV)",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "name": "Duplicate license",
+        "items": [
+          {
+            "text": "Applicant's Original Valid CNIC (Front & Back)",
+            "optional": false
+          },
+          {
+            "text": "Live Photograph with White Background",
+            "optional": false
+          },
+          {
+            "text": "Medical Certificate signed by a Government Doctor (If age 50+ or LTV)",
+            "optional": true
+          },
+          {
+            "text": "Official Police Loss Report (Required for Duplicate License only)",
+            "optional": false
+          }
+        ]
+      }
     ]
   },
   {

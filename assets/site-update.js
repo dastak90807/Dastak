@@ -73,78 +73,58 @@
     }
   });
 })();
-// Search pages and FAQs from the static index bundled with the site.
+// Compact navigation: hover on desktop, tap or keyboard on any screen.
 (() => {
-  const opener = document.querySelector('.site-search-open');
-  if (!opener) return;
-  const dialog = document.createElement('div');
-  dialog.className = 'site-search-dialog';
-  dialog.hidden = true;
-  dialog.innerHTML = '<div class="site-search-panel" role="dialog" aria-modal="true" aria-label="Search Dastak 90807"><div class="site-search-head"><label for="site-search-query">Search this website</label><button type="button" class="site-search-close" aria-label="Close search">×</button></div><input id="site-search-query" type="search" placeholder="Try learner, character, 70cc or domicile" autocomplete="off"><div class="site-search-results" aria-live="polite"></div></div>';
-  document.body.append(dialog);
-  const input = dialog.querySelector('input');
-  const results = dialog.querySelector('.site-search-results');
+  const menu = document.querySelector('.nav-tools');
+  const toggle = menu?.querySelector('button');
+  if (!toggle) return;
+  const setOpen = value => { toggle.setAttribute('aria-expanded', String(value)); menu.classList.toggle('is-open', value); };
+  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+  menu.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse' && innerWidth > 980) setOpen(true); });
+  menu.addEventListener('pointerleave', event => { if (event.pointerType === 'mouse' && innerWidth > 980) setOpen(false); });
+  menu.addEventListener('focusout', event => { if (!menu.contains(event.relatedTarget)) setOpen(false); });
+  document.addEventListener('click', event => { if (!menu.contains(event.target)) setOpen(false); });
+  menu.addEventListener('keydown', event => { if (event.key === 'Escape') { setOpen(false); toggle.focus(); } });
+})();
+// Visible search beneath the page introduction; results stay within the page.
+(() => {
+  const search = document.querySelector('.site-search');
+  if (!search) return;
+  const input = search.querySelector('input');
+  const results = search.querySelector('.site-search-results');
   let entries;
-  const close = () => {
-    dialog.hidden = true;
-    document.body.classList.remove('search-open');
-    opener.focus();
-  };
+  let loading;
   const render = () => {
     const query = input.value.trim().toLowerCase();
     results.replaceChildren();
-    if (!query) {
-      results.textContent = 'Search services, guides, FAQs and tools.';
-      return;
-    }
+    results.hidden = !query;
+    if (!query) return;
+    if (!entries) { results.textContent = 'Loading search…'; return; }
     const words = query.split(/\s+/);
-    const matches = (entries || []).map(item => {
+    const matches = entries.map(item => {
       const title = item.title.toLowerCase();
-      const summary = item.summary.toLowerCase();
-      const score = words.reduce((total, word) => total + (title.includes(word) ? 3 : 0) + (summary.includes(word) ? 1 : 0), 0);
+      const summary = (item.summary || '').toLowerCase();
+      const score = words.every(word => (title + ' ' + summary).includes(word)) ? words.reduce((n, word) => n + (title.includes(word) ? 3 : 1), 0) : 0;
       return { item, score };
-    }).filter(result => result.score > 0).sort((a, b) => b.score - a.score).slice(0, 10);
-    if (!matches.length) {
-      results.textContent = 'No matching pages found. Try another term.';
-      return;
-    }
-    matches.forEach(({ item }) => {
-      const link = document.createElement('a');
-      link.href = item.url;
-      const heading = document.createElement('strong');
-      heading.textContent = item.title;
-      const detail = document.createElement('small');
-      detail.textContent = item.type + (item.summary ? ' · ' + item.summary : '');
-      link.append(heading, detail);
-      link.addEventListener('click', () => {
-        if (typeof window.gtag === 'function') window.gtag('event', 'site_search', { search_term: input.value.trim() });
-      });
-      results.append(link);
+    }).filter(x => x.score).sort((a,b) => b.score-a.score).slice(0,6);
+    if (!matches.length) { results.textContent = 'No results found. Try a service name such as learner, domicile or challan.'; return; }
+    matches.forEach(({item}) => {
+      const link = document.createElement('a'); link.href = item.url;
+      const title = document.createElement('strong'); title.textContent = item.title;
+      const detail = document.createElement('small'); detail.textContent = item.type;
+      link.append(title, detail); results.append(link);
+      link.addEventListener('click', () => { if (typeof window.gtag === 'function') window.gtag('event','site_search',{search_term:input.value.trim()}); });
     });
   };
-  opener.addEventListener('click', async () => {
-    dialog.hidden = false;
-    document.body.classList.add('search-open');
-    input.focus();
+  const run = async () => {
     render();
-    if (entries) return;
+    if (!input.value.trim() || entries) return;
     try {
-      const response = await fetch('/assets/search-index.json');
-      if (!response.ok) throw new Error('Search index unavailable');
-      entries = await response.json();
-      render();
-    } catch {
-      results.textContent = 'Search is temporarily unavailable. Browse Services or Citizen Tools instead.';
-    }
-  });
-  dialog.querySelector('.site-search-close').addEventListener('click', close);
-  dialog.addEventListener('click', event => { if (event.target === dialog) close(); });
-  document.addEventListener('keydown', event => {
-    if (dialog.hidden) return;
-    if (event.key === 'Escape') close();
-    if (event.key === 'Enter' && event.target === input && typeof window.gtag === 'function') {
-      window.gtag('event', 'site_search', { search_term: input.value.trim() });
-    }
-  });
-  input.addEventListener('input', render);
+      loading ||= fetch('/assets/search-index.json', { cache: 'no-cache' }).then(response => { if (!response.ok) throw new Error('Unavailable'); return response.json(); });
+      entries = await loading; render();
+    } catch { loading = null; results.textContent = 'Search could not load. Please try again or open Services from the menu.'; }
+  };
+  input.addEventListener('input', run);
+  input.addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); run(); } if (event.key === 'Escape') { input.value = ''; render(); } });
+  search.querySelector('button').addEventListener('click', () => { input.focus(); run(); });
 })();

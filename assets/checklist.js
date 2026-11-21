@@ -1,8 +1,10 @@
 (() => {
   const selector = document.getElementById('checklist-service');
   if (!selector) return;
+  selector.disabled = true;
   const content = document.getElementById('checklist-content');
   const title = document.getElementById('checklist-title');
+  const variantField = document.getElementById('checklist-variant-field');
   const variantSelect = document.getElementById('checklist-variant');
   const list = document.getElementById('checklist-items');
   const notes = document.getElementById('checklist-notes');
@@ -33,9 +35,9 @@
     content.hidden = !selector.value || !service;
     if (content.hidden) return;
     title.textContent = service.name;
-    variantSelect.hidden = !service.variants;
+    variantField.hidden = !service.variants;
     if (service.variants) {
-      variantSelect.replaceChildren(new Option('Choose the document type', ''));
+      variantSelect.replaceChildren(new Option('Select application type', ''));
       service.variants.forEach((variant, index) => variantSelect.add(new Option(variant.name, String(index))));
       variantSelect.value = '';
     }
@@ -60,7 +62,7 @@
       label.className = 'checklist-item';
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
-      checkbox.dataset.label = item.text;
+      checkbox.dataset.label = item.text + (item.optional ? ' (if applicable)' : '');
       if (item.optional) checkbox.dataset.optional = 'true';
       const text = document.createElement('span');
       text.textContent = item.text + (item.optional ? ' (if applicable)' : '');
@@ -81,11 +83,14 @@
     show();
     if (typeof window.gtag === 'function') window.gtag('event', 'checklist_service_select', { service: services[Number(selector.value)]?.name });
   });
-  fetch('/assets/checklist-data.json').then(response => {
+  fetch('/assets/checklist-data.json', { cache: 'no-cache' }).then(response => {
     if (!response.ok) throw new Error('Checklist unavailable');
     return response.json();
   }).then(data => {
     services = data;
+    const labels = ['Learner driving permit', 'License renewal / duplicate', 'International driving permit', 'Vehicle ownership transfer', 'New vehicle registration', 'Police character certificate', 'Police loss report', 'Tenant registration', 'Domicile certificate', 'Birth, marriage or e-stamp'];
+    [...selector.options].slice(1).forEach((option, index) => { option.textContent = labels[index]; });
+    selector.disabled = false;
     show();
   }).catch(() => {
     selector.disabled = true;

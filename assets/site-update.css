@@ -99,11 +99,6 @@
 @media(max-width:700px){.guide-grid{grid-template-columns:1fr}}
 .calculator-tabs button span{display:inline;font-size:1.2rem;margin:0 8px 0 0;vertical-align:middle}
 
-/* Site navigation and search */
-.nav-tools{position:relative;align-self:center}.nav-tools summary{list-style:none;cursor:pointer;font-weight:600;font-size:15px;padding:6px 0;white-space:nowrap}.nav-tools summary::-webkit-details-marker{display:none}.nav-tools summary::after{content:' ▾'}.nav-tools-menu{display:flex;flex-direction:column;gap:0;min-width:235px;background:#fff;border:1px solid var(--bd);border-radius:10px;box-shadow:0 12px 30px #12302b22;padding:8px;position:absolute;top:100%;left:0;z-index:20}.nav-tools:not([open]) .nav-tools-menu{display:none}.nav-tools-menu a{padding:8px 10px;border-radius:6px}.nav-tools-menu a:hover{background:var(--mint)}.site-search-open{border:0;background:transparent;color:var(--dg);font-size:1.15rem;cursor:pointer;min-width:44px;min-height:44px}.site-search-open:focus-visible,.nav-tools summary:focus-visible,.site-search-close:focus-visible{outline:3px solid var(--y);outline-offset:2px}.site-search-dialog{position:fixed;inset:0;background:#0b2922a8;z-index:100;display:grid;place-items:start center;padding:10vh 16px 16px}.site-search-dialog[hidden]{display:none}.site-search-panel{background:#fff;border-radius:16px;width:min(680px,100%);max-height:80vh;overflow:auto;padding:22px;box-shadow:0 20px 50px #0004}.site-search-head{display:flex;justify-content:space-between;align-items:center;gap:16px}.site-search-head label{font-size:1.3rem;font-weight:800}.site-search-close{border:0;background:transparent;font-size:1.8rem;cursor:pointer;color:var(--dg)}#site-search-query{width:100%;margin:15px 0;padding:12px;border:1px solid var(--bd);border-radius:8px;font:inherit}.site-search-results{display:grid;gap:6px}.site-search-results a{display:grid;gap:2px;text-decoration:none;padding:10px;border-radius:8px}.site-search-results a:hover,.site-search-results a:focus-visible{background:var(--mint)}.site-search-results small{color:var(--mut)}body.search-open{overflow:hidden}
-@media(min-width:981px){.nav-tools:hover .nav-tools-menu,.nav-tools:focus-within .nav-tools-menu{display:flex}}
-@media(max-width:980px){.nav-tools{width:100%}.nav-tools summary{padding:10px 0}.nav-tools-menu{position:static;box-shadow:none;width:100%}.site-search-open{align-self:flex-start}}
-
 /* Document checklist */
 .checklist-tool{max-width:850px;margin:28px auto}.checklist-tool select{display:block;width:100%;margin:10px 0 16px;padding:12px;border:1px solid var(--bd);border-radius:8px;font:inherit}.checklist-item{display:flex;align-items:flex-start;gap:12px;padding:12px;border-bottom:1px solid var(--bd);cursor:pointer}.checklist-item input{width:20px;height:20px;flex:none;accent-color:var(--g)}.checklist-progress{height:12px;border-radius:999px;background:var(--mint);overflow:hidden;margin:10px 0 24px}.checklist-progress span{display:block;height:100%;background:var(--g);width:0;transition:width .2s}.checklist-tool .btn{margin-top:18px}
 #checklist-variant[hidden],#checklist-share[hidden]{display:none}
@@ -113,3 +108,51 @@
 /* Forms and downloads */
 #forms-search{display:block;width:100%;max-width:560px;margin:10px 0 16px;padding:12px;border:1px solid var(--bd);border-radius:8px;font:inherit}.forms-filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px}.forms-filters button{border:1px solid var(--bd);border-radius:999px;background:#fff;color:var(--dg);padding:10px 15px;font:inherit;font-weight:700;cursor:pointer}.forms-filters button.active{background:var(--dg);color:#fff}.forms-filters button:focus-visible{outline:3px solid var(--y);outline-offset:2px}.forms-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.form-card h2{font-size:1.15rem}.form-card .row{margin:16px 0}.form-card[hidden]{display:none}.downloads-faq{margin:32px 0}
 @media(max-width:700px){.forms-grid{grid-template-columns:1fr}}
+
+/* Consistent navigation and in-page search. */
+.hd nav{align-items:center}
+.hd nav>a,.hd .nav-tools-toggle{font-size:15px;font-weight:600;line-height:1.5}
+.nav-tools{position:relative;align-self:stretch;display:flex;align-items:center}
+.nav-tools-toggle{display:flex;align-items:center;gap:7px;background:transparent;border:0;color:var(--ink);padding:12px 0;font-family:inherit;cursor:pointer}
+.nav-tools-toggle:hover{color:var(--g)}
+.nav-tools-toggle span{font-size:16px}
+.nav-tools-menu{display:none;position:absolute;top:100%;left:-16px;z-index:30;width:224px;padding:8px;background:#fff;border:1px solid var(--bd);border-radius:10px;box-shadow:0 8px 24px #12302b14}
+.nav-tools.is-open .nav-tools-menu{display:flex;flex-direction:column;gap:2px}
+.hd .nav-tools-menu a{display:block;border:0;padding:10px 12px;font-size:14px;font-weight:600;line-height:1.5;border-radius:6px;white-space:nowrap}
+.hd .nav-tools-menu a:hover{background:var(--mint);color:var(--dg)}
+.nav-tools-toggle:focus-visible{outline:3px solid var(--y);outline-offset:4px;border-radius:4px}
+.site-search{max-width:640px;margin:24px 0 28px;text-align:left;position:relative}
+.site-search>label{display:block;font-size:13px;font-weight:600;color:var(--mut);margin-bottom:8px}
+.site-search-field{display:flex;align-items:center;gap:10px;border:1px solid #b7ccc4;border-radius:10px;background:#fff;padding:5px 5px 5px 14px}
+.site-search-field:focus-within{border-color:var(--g);box-shadow:0 0 0 3px #0e7c6614}
+.site-search-field svg{flex:none;color:var(--g)}
+.site-search-field input{width:100%;min-width:0;border:0;background:transparent;padding:9px 0;margin:0;border-radius:0;font-size:14px;outline:none}
+.site-search-submit{flex:none;background:var(--g);color:#fff;border:0;border-radius:6px;padding:10px 16px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.site-search-results{margin-top:8px;border:1px solid var(--bd);border-radius:10px;padding:8px;background:#fff;box-shadow:0 6px 16px #12302b0a;max-height:320px;overflow:auto;color:var(--mut);font-size:14px}
+.site-search-results[hidden]{display:none}
+.site-search-results a{display:flex;flex-direction:column;gap:3px;padding:10px;text-decoration:none;border-radius:6px;line-height:1.45}
+.site-search-results a:hover{background:var(--mint)}
+.site-search-results strong{font-size:14px;color:var(--ink)}
+.site-search-results small{font-size:12px;color:var(--mut)}
+@media(max-width:980px){.hd nav{align-items:stretch}.nav-tools{display:block;width:100%}.nav-tools-toggle{width:100%;justify-content:space-between;text-align:left;padding:12px 0}.nav-tools-menu{position:static;width:100%;box-shadow:none;border:0;border-left:2px solid var(--bd);border-radius:0;margin:0 0 8px;padding:0 0 0 10px}.hd .nav-tools-menu a{white-space:normal}.site-search{max-width:100%}}
+@media(max-width:480px){.site-search-field{gap:8px;padding-left:10px}.site-search-submit{padding:10px}.site-search-field input{font-size:16px}.site-search-field input::placeholder{font-size:13px}}
+
+/* A quiet, readable checklist with clearly separated fields. */
+.checklist-page{max-width:940px}
+.checklist-tool{margin:28px 0 36px;padding:28px;box-shadow:none;border-radius:14px;max-width:100%}
+.checklist-tool label:not(.checklist-item){display:block;font-size:14px;font-weight:600;color:var(--ink);margin:0 0 8px}
+.checklist-tool select{appearance:auto;background:#fff;color:var(--ink);width:100%;max-width:100%;min-height:48px;padding:11px 36px 11px 12px;margin:0 0 16px;border:1px solid #b7ccc4;border-radius:8px;font-size:15px;text-overflow:ellipsis}
+#checklist-content{border-top:1px solid var(--bd);padding-top:24px;margin-top:22px}
+#checklist-content h2{font-size:21px;line-height:1.4;margin:0 0 20px;letter-spacing:-.3px}
+#checklist-variant-field{max-width:440px;margin-bottom:24px}
+#checklist-items{display:grid;gap:8px}
+.checklist-item{display:flex;align-items:flex-start;gap:12px;background:#fafcfb;border:1px solid var(--bd);border-radius:8px;padding:14px;margin:0;font-size:14px;line-height:1.6}
+.checklist-item:has(input:checked){background:var(--mint);border-color:#a6cdbf}
+.checklist-item input{appearance:auto;width:18px;height:18px;min-width:18px;margin:3px 0 0;padding:0;border-radius:3px;accent-color:var(--g);cursor:pointer}
+#checklist-progress-text{font-size:13px;font-weight:600;margin:22px 0 8px}
+.checklist-progress{height:7px;margin:0 0 20px}
+#checklist-notes .note{padding:12px 14px;background:var(--cream);border-radius:8px;line-height:1.6;font-size:13px}
+#checklist-share{font-size:14px;padding:12px 18px;margin-top:16px}
+#checklist-content[hidden],#checklist-variant-field[hidden],#checklist-share[hidden]{display:none}
+.forms-grid{gap:20px}.form-card{box-shadow:none;padding:24px}.form-card h2{line-height:1.45;margin:14px 0 10px}.form-card .btn{font-size:14px;padding:10px 14px}.forms-filters button{font-size:14px}
+@media(max-width:600px){.checklist-tool{padding:18px}.checklist-tool select{font-size:14px}#checklist-content h2{font-size:19px}.checklist-item{padding:12px}#checklist-share{display:block;width:100%}.form-card{padding:20px}}
