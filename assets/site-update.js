@@ -72,3 +72,75 @@
     }
   });
 })();
+// Search pages and FAQs from the static index bundled with the site.
+(() => {
+  const opener = document.querySelector('.site-search-open');
+  if (!opener) return;
+  const dialog = document.createElement('div');
+  dialog.className = 'site-search-dialog';
+  dialog.hidden = true;
+  dialog.innerHTML = '<div class="site-search-panel" role="dialog" aria-modal="true" aria-label="Search Dastak 90807"><div class="site-search-head"><label for="site-search-query">Search this website</label><button type="button" class="site-search-close" aria-label="Close search">×</button></div><input id="site-search-query" type="search" placeholder="Try learner, character, 70cc or domicile" autocomplete="off"><div class="site-search-results" aria-live="polite"></div></div>';
+  document.body.append(dialog);
+  const input = dialog.querySelector('input');
+  const results = dialog.querySelector('.site-search-results');
+  let entries;
+  const close = () => {
+    dialog.hidden = true;
+    document.body.classList.remove('search-open');
+    opener.focus();
+  };
+  const render = () => {
+    const query = input.value.trim().toLowerCase();
+    results.replaceChildren();
+    if (!query) {
+      results.textContent = 'Search services, guides, FAQs and tools.';
+      return;
+    }
+    const words = query.split(/\s+/);
+    const matches = (entries || []).map(item => {
+      const title = item.title.toLowerCase();
+      const summary = item.summary.toLowerCase();
+      const score = words.reduce((total, word) => total + (title.includes(word) ? 3 : 0) + (summary.includes(word) ? 1 : 0), 0);
+      return { item, score };
+    }).filter(result => result.score > 0).sort((a, b) => b.score - a.score).slice(0, 10);
+    if (!matches.length) {
+      results.textContent = 'No matching pages found. Try another term.';
+      return;
+    }
+    matches.forEach(({ item }) => {
+      const link = document.createElement('a');
+      link.href = item.url;
+      const heading = document.createElement('strong');
+      heading.textContent = item.title;
+      const detail = document.createElement('small');
+      detail.textContent = item.type + (item.summary ? ' · ' + item.summary : '');
+      link.append(heading, detail);
+      results.append(link);
+    });
+  };
+  opener.addEventListener('click', async () => {
+    dialog.hidden = false;
+    document.body.classList.add('search-open');
+    input.focus();
+    render();
+    if (entries) return;
+    try {
+      const response = await fetch('/assets/search-index.json');
+      if (!response.ok) throw new Error('Search index unavailable');
+      entries = await response.json();
+      render();
+    } catch {
+      results.textContent = 'Search is temporarily unavailable. Browse Services or Citizen Tools instead.';
+    }
+  });
+  dialog.querySelector('.site-search-close').addEventListener('click', close);
+  dialog.addEventListener('click', event => { if (event.target === dialog) close(); });
+  document.addEventListener('keydown', event => {
+    if (dialog.hidden) return;
+    if (event.key === 'Escape') close();
+    if (event.key === 'Enter' && event.target === input && typeof window.gtag === 'function') {
+      window.gtag('event', 'site_search', { search_term: input.value.trim() });
+    }
+  });
+  input.addEventListener('input', render);
+})();

@@ -1,0 +1,244 @@
+[
+  {
+    "name": "New Punjab Learner Driving Permit",
+    "items": [
+      {
+        "text": "Applicant's Original Valid CNIC (Front & Back)",
+        "optional": false
+      },
+      {
+        "text": "Live Photograph with White Background (Upper Shoulder)",
+        "optional": false
+      },
+      {
+        "text": "Medical Certificate signed by a Government Doctor (Required only if age is 50+ or applying for Commercial LTV)",
+        "optional": true
+      }
+    ],
+    "notes": [
+      "Info Note: Learner permit is valid for 180 days; minimum age 21+ for commercial LTV."
+    ]
+  },
+  {
+    "name": "Regular / Duplicate Punjab Driving License Renewal",
+    "items": [
+      {
+        "text": "Applicant's Original Valid CNIC (Front & Back)",
+        "optional": false
+      },
+      {
+        "text": "Live Photograph with White Background",
+        "optional": false
+      },
+      {
+        "text": "Original Existing / Expired Driving License (Note: If original license is missing, duplicate issuance rules apply)",
+        "optional": true
+      },
+      {
+        "text": "Medical Certificate signed by a Government Doctor (If age 50+ or LTV)",
+        "optional": true
+      },
+      {
+        "text": "Official Police Loss Report (Required for Duplicate License only)",
+        "optional": false
+      }
+    ],
+    "notes": [
+      "Info Note: Licenses expired for 5 years or more require a physical visit to a Traffic Licensing Center or Police Khidmat Markaz."
+    ]
+  },
+  {
+    "name": "International Driving Permit (IDP) – Punjab",
+    "items": [
+      {
+        "text": "Valid Regular Punjab Driving License",
+        "optional": false
+      },
+      {
+        "text": "Original Valid CNIC",
+        "optional": false
+      },
+      {
+        "text": "Valid Pakistani Passport Copy",
+        "optional": false
+      },
+      {
+        "text": "Valid Foreign Visa / Travel Document Copy",
+        "optional": false
+      },
+      {
+        "text": "White-Background Photograph",
+        "optional": false
+      }
+    ],
+    "notes": []
+  },
+  {
+    "name": "Vehicle / Motorcycle Ownership Transfer (Punjab Excise)",
+    "items": [
+      {
+        "text": "Prescribed Transfer Order (T.O.) Form",
+        "optional": false
+      },
+      {
+        "text": "Valid CNIC Copies of Both Seller & Purchaser",
+        "optional": false
+      },
+      {
+        "text": "Valid CNIC Copies of Witnesses",
+        "optional": false
+      },
+      {
+        "text": "Original Registration Certificate / Smart Card (With updated Token Tax)",
+        "optional": false
+      },
+      {
+        "text": "Original Registration File (If registered under File Return Scheme)",
+        "optional": true
+      },
+      {
+        "text": "Mandatory Live Biometric Verification of Both Seller & Buyer (Plus sponsoring bank/agency representative if under lease/HPA)",
+        "optional": true
+      }
+    ],
+    "notes": []
+  },
+  {
+    "name": "New Car / Motorcycle Registration (Punjab Excise)",
+    "items": [
+      {
+        "text": "Filled Application Form (Form-F)",
+        "optional": false
+      },
+      {
+        "text": "Owner's Valid CNIC Copy",
+        "optional": false
+      },
+      {
+        "text": "Original Sales Certificate & Original Sales Invoice",
+        "optional": false
+      },
+      {
+        "text": "Mandatory Owner Biometric Verification",
+        "optional": false
+      }
+    ],
+    "notes": [
+      "Additional if Imported: Customs Import Permission, Original Duplicate GD, Invoice & Bill of Lading; if resold prior to registration: T.O. Form & first buyer's CNIC."
+    ]
+  },
+  {
+    "name": "Police Character Certificate (Jobs / Foreign Visas)",
+    "items": [
+      {
+        "text": "Original CNIC or B-Form + Photocopy",
+        "optional": false
+      },
+      {
+        "text": "Original Passport + Photocopy",
+        "optional": false
+      },
+      {
+        "text": "Signed Affidavit (Bayan-e-Halfi)",
+        "optional": false
+      },
+      {
+        "text": "Authority Letter (Only if applying from abroad via blood relative—stamped by Pakistani Embassy or attested by two respectable persons mentioning stay duration)",
+        "optional": true
+      },
+      {
+        "text": "Applicant Photograph (Required if applying for a blood relative)",
+        "optional": true
+      }
+    ],
+    "notes": []
+  },
+  {
+    "name": "Police Loss Report (Missing Documents)",
+    "items": [
+      {
+        "text": "Applicant's Original CNIC + Photocopy",
+        "optional": false
+      },
+      {
+        "text": "Written Application / Complaint detailing the lost item",
+        "optional": false
+      },
+      {
+        "text": "Photocopy or Reference Details of the Lost Document (If available)",
+        "optional": true
+      }
+    ],
+    "notes": []
+  },
+  {
+    "name": "Tenant Registration (Punjab Police)",
+    "items": [
+      {
+        "text": "Landlord's Original CNIC + Photocopy",
+        "optional": false
+      },
+      {
+        "text": "Tenant's Original CNIC + Photocopy",
+        "optional": false
+      },
+      {
+        "text": "Original Rent Agreement + Photocopy",
+        "optional": false
+      },
+      {
+        "text": "Signed Affidavit (Bayan-e-Halfi)",
+        "optional": false
+      },
+      {
+        "text": "Tenant's Photograph",
+        "optional": false
+      }
+    ],
+    "notes": []
+  },
+  {
+    "name": "Punjab Domicile Certificate",
+    "items": [
+      {
+        "text": "Applicant's CNIC or B-Form",
+        "optional": false
+      },
+      {
+        "text": "Father's or Husband's CNIC Copy",
+        "optional": false
+      },
+      {
+        "text": "Birth Certificate or Educational / School Certificate",
+        "optional": false
+      },
+      {
+        "text": "Electricity / Gas Utility Bill or Property Proof",
+        "optional": false
+      },
+      {
+        "text": "2 Passport-Size Photographs + Paid Bank Challan Receipt",
+        "optional": false
+      }
+    ],
+    "notes": []
+  },
+  {
+    "name": "Birth / Marriage Certificate & E-Stamp Paper",
+    "items": [
+      {
+        "text": "For Birth Certificate: Parents' CNIC Copies, Hospital/Midwife Birth Slip & Filled Union Council Form",
+        "optional": false
+      },
+      {
+        "text": "For Marriage Certificate: Registered Nikah Nama Copy, Husband & Wife CNICs, and Both Parents' CNIC Copies",
+        "optional": false
+      },
+      {
+        "text": "For E-Stamp Paper: Parties' Valid CNIC Copies & Relevant Transaction / Agreement Details",
+        "optional": false
+      }
+    ],
+    "notes": []
+  }
+]
