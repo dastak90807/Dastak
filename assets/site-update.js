@@ -68,7 +68,11 @@
   document.addEventListener('click', event => {
     const control = event.target.closest('[data-ga-event]');
     if (control && typeof window.gtag === 'function') {
-      const params = control.dataset.formName ? { form_name: control.dataset.formName } : {};
+      const params = {};
+      for (const [attribute, key] of [['formName', 'form_name'], ['serviceName', 'service_name'], ['toolName', 'tool_name'], ['faqTitle', 'faq_title']]) {
+        if (control.dataset[attribute]) params[key] = control.dataset[attribute];
+      }
+      if (control.tagName === 'DETAILS' && control.dataset.gaEvent === 'home_faq_expand') return;
       window.gtag('event', control.dataset.gaEvent, params);
     }
   });
