@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Punjab Driving License Fee Calculator | DLIMS 2.0 & Dastak 90807</title>
+  <meta name="description" content="Calculate estimated Punjab Driving License renewal, fresh regular license, duplicate, and international driving permit (IDP) fees under DLIMS 2.0. Dastak Online Document Facilitation — Muhammad Usman (Registered Facilitator Code 90807) providing Authorized Doorstep Facilitation across Gujar Khan, Rawalpindi, and Across Punjab (0345-5583530)." />
+  <meta name="keywords" content="Dastak Online Document Facilitation, Muhammad Usman Dastak 90807, Punjab Driving License Fee Calculator, DLIMS 2.0 Fee Calculator, Maryam Ki Dastak 90807, Driving License Renewal Punjab, Learner Permit Dastak, International Driving Permit Punjab, Gujar Khan Driving License, Rawalpindi Driving License, dastak90807.com" />
+  <meta name="author" content="Muhammad Usman — Registered Facilitator Code 90807" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="PK-PB" />
+  <meta name="geo.placename" content="Sandal Rd, Gujar Khan, 47850, Rawalpindi, Punjab, Pakistan" />
+  <link rel="canonical" href="https://www.dastak90807.com/" />
+
+  <!-- OpenGraph / Social Sharing Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Punjab Driving License Fee Calculator | DLIMS 2.0 & Dastak 90807" />
+  <meta property="og:description" content="Dastak Online Document Facilitation — Muhammad Usman. Authorized Doorstep Facilitation across Gujar Khan, Rawalpindi, and Across Punjab. Calculate DLIMS 2.0 Renewal, Fresh, Duplicate & International Permit fees online." />
+  <meta property="og:url" content="https://www.dastak90807.com/" />
+  <meta property="og:site_name" content="Dastak Online Document Facilitation" />
+
+  <!-- JSON-LD LocalBusiness & GovernmentService Structured Data for Google Business Profile, Local SEO & AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "GovernmentService"],
+    "name": "Dastak Online Document Facilitation",
+    "alternateName": "Maryam Ki Dastak Facilitator Code 90807",
+    "founder": {
+      "@type": "Person",
+      "name": "Muhammad Usman",
+      "jobTitle": "Registered Facilitator Code 90807"
+    },
+    "url": "https://www.dastak90807.com",
+    "telephone": "+92-345-5583530",
+    "description": "Dastak Online Document Facilitation — Muhammad Usman. Authorized Doorstep Facilitation across Gujar Khan, Rawalpindi, and Across Punjab for Punjab Driving License Renewal, Learner Permit, Duplicate License, International Driving Permit, Police Character Certificates, Vehicle Registration & Transfer, Token Tax & Domicile.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sandal Rd",
+      "addressLocality": "Gujar Khan",
+      "addressRegion": "Punjab",
+      "postalCode": "47850",
+      "addressCountry": "PK"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Gujar Khan" },
+      { "@type": "City", "name": "Rawalpindi" },
+      { "@type": "AdministrativeArea", "name": "Punjab" }
+    ],
+    "sameAs": [
+      "https://x.com/dastak90807",
+      "https://facebook.com/dastak90807",
+      "https://www.tiktok.com/@dastak.online.docu",
+      "https://instagram.com/dastak90807",
+      "https://www.youtube.com/@Dastak90807",
+      "https://www.linkedin.com/in/dastak90807",
+      "https://www.snapchat.com/add/dastak90807",
+      "https://www.pinterest.com/dastak90807",
+      "https://dastak.punjab.gov.pk"
+    ]
+  }
+  </script>
+
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Load Google Fonts: Inter & Noto Nastaliq Urdu -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f7f4;
+      color: #1e293b;
+      /* Full User Access for Highlighting, Copying & Screenshots */
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+    .urdu-text {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      line-height: 2.2;
+    }
+    .dastak-gradient {
+      background: linear-gradient(135deg, #0b3d2e 0%, #14532d 60%, #166534 100%);
+    }
+    .dastak-pill-header {
+      background: linear-gradient(90deg, #0b3d2e 0%, #166534 100%);
+      color: #ffffff;
+    }
+    .gold-badge {
+      background: linear-gradient(135deg, #f6c945 0%, #eab308 100%);
+      color: #0b3d2e;
+    }
+    .calendar-day-btn {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      transition: all 0.15s ease;
+    }
+    .calendar-day-btn:hover:not(:disabled) {
+      background-color: #dcfce7;
+      color: #0b3d2e;
+      font-weight: 700;
+    }
+    .calendar-day-selected {
+      background-color: #0b3d2e !important;
+      color: #ffffff !important;
+      font-weight: 700;
+      box-shadow: 0 3px 8px rgba(11, 61, 46, 0.35);
+    }
+
+    /* ==========================================================
+       HIGHLIGHTED EYE-CATCHING WHATSAPP CTA BUTTON STYLING
+    =========================================================== */
+    .wa-cta-highlight {
+      background: linear-gradient(135deg, #25D366 0%, #1ebe5d 50%, #128C7E 100%);
+      box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.55), 0 4px 10px -2px rgba(18, 140, 126, 0.35);
+      border: 2px solid #ffffff;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: waPulseGlow 2.4s infinite;
+    }
+    .wa-cta-highlight:hover {
+      transform: translateY(-2px) scale(1.015);
+      box-shadow: 0 16px 32px -5px rgba(37, 211, 102, 0.7), 0 6px 14px -2px rgba(18, 140, 126, 0.45);
+      filter: brightness(1.04);
+    }
+    .wa-cta-highlight:active {
+      transform: translateY(0) scale(0.99);
+    }
+    @keyframes waPulseGlow {
+      0%, 100% {
+        box-shadow: 0 10px 24px -4px rgba(37, 211, 102, 0.55), 0 0 0 0 rgba(37, 211, 102, 0.45);
+      }
+      50% {
+        box-shadow: 0 14px 28px -4px rgba(37, 211, 102, 0.75), 0 0 0 8px rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen py-5 px-3 sm:px-6">
+
+  <div class="max-w-5xl mx-auto">
+
+    <!-- ==========================================================
+         1. BRANDED HEADER (DLIMS 2.0 & DASTAK 90807)
+    =========================================================== -->
+    <div class="dastak-gradient text-white rounded-2xl p-5 sm:p-6 shadow-xl mb-4 border-b-4 border-[#c59b27]">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full gold-badge text-xs font-extrabold uppercase tracking-wide mb-2 shadow-sm">
+            <span>Registered Facilitator Code: 90807</span>
+            <span>•</span>
+            <span>DLIMS 2.0</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">
+            Punjab Driving License Estimated Fee Calculator
+          </h1>
+          <p class="text-emerald-100 text-xs sm:text-sm mt-1">
+            Renewal, Fresh Regular License, Duplicate &amp; International Permit · Across Punjab
+          </p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md rounded-xl px-4 py-3 border border-white/15 text-left sm:text-right shrink-0 flex flex-col justify-center">
+          <div class="urdu-text text-base sm:text-lg font-bold text-[#f6c945]" dir="rtl">پنجاب ڈرائیونگ لائسنس فیس کیلکولیٹر</div>
+          <a href="https://www.dastak90807.com" target="_blank" rel="noopener noreferrer" class="inline-block mt-1 text-xs sm:text-sm font-extrabold tracking-wider text-white hover:text-[#f6c945] transition">
+            www.dastak90807.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         2. COLLAPSIBLE ADMIN QUICK TEST BAR + RESET TO BLANK
+    =========================================================== -->
+    <div class="bg-white rounded-xl p-3 shadow-sm border border-emerald-200 mb-5">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <button type="button" onclick="toggleAdminBar()" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b3d2e] hover:text-emerald-700 p-1">
+          <svg class="w-4 h-4 text-[#166534]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span>Quick Verification Presets (Click to Show/Hide Tests)</span>
+        </button>
+        <button type="button" onclick="resetToBlankState()" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3 py-1.5 rounded-lg border border-slate-300 transition">
+          ↺ Reset All Fields to Blank
+        </button>
+      </div>
+
+      <div id="adminTestBar" class="hidden mt-3 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+        <button type="button" onclick="loadTestPreset('renewal', 'ltv', '2021-10-13', 'yes', '1')" class="text-xs bg-emerald-50 hover:bg-emerald-100 text-[#0b3d2e] border border-emerald-300 px-3 py-2 rounded-lg font-bold transition">
+          Test 1: LTV Renewal (13-10-2021 → Fine 12,000)
+        </button>
+        <button type="button" onclick="loadTestPreset('renewal', 'mcycle_car', '2021-10-13', 'yes', '1')" class="text-xs bg-emerald-50 hover:bg-emerald-100 text-[#0b3d2e] border border-emerald-300 px-3 py-2 rounded-lg font-bold transition">
+          Test 2: M/CYCLE,M/CAR/JEEP (13-10-2021 → Fine 9,000)
+        </button>
+        <button type="button" onclick="loadTestPreset('fresh', 'mcycle_car', '', 'yes', '5')" class="text-xs bg-blue-50 hover:bg-blue-100 text-blue-900 border border-blue-300 px-3 py-2 rounded-lg font-bold transition">
+          Test 3: Fresh License + Learner Dastak Note
+        </button>
+        <button type="button" onclick="loadTestPreset('international', 'car', '', 'yes', '2')" class="text-xs bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 px-3 py-2 rounded-lg font-bold transition">
+          Test 4: International (2 Years)
+        </button>
+        <button type="button" onclick="loadTestPreset('renewal', 'htv_psv', '2021-10-13', 'yes', '1')" class="text-xs bg-red-50 hover:bg-red-100 text-red-900 border border-red-300 px-3 py-2 rounded-lg font-bold transition">
+          Test 5: HTV+PSV (PKM Notice)
+        </button>
+        <button type="button" onclick="loadTestPreset('renewal', 'car', '2021-05-10', 'yes', '1')" class="text-xs bg-orange-50 hover:bg-orange-100 text-orange-900 border border-orange-300 px-3 py-2 rounded-lg font-bold transition">
+          Test 6: 5+ Years Expired (PKM Visit Notice, No Rs. 950)
+        </button>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         3. MAIN SELECTION FORM CARD (OPENS 100% BLANK FOR VISITORS)
+    =========================================================== -->
+    <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-md border border-slate-200 mb-6">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-4 mb-5 border-b border-slate-100">
+        <div>
+          <h2 class="text-base sm:text-lg font-extrabold text-[#0b3d2e]">
+            Step-by-Step License Fee Selection
+          </h2>
+          <p class="text-xs text-slate-500">
+            Select your required license service, category, and dates below to view the complete fee schedule.
+          </p>
+        </div>
+        <span class="urdu-text text-xs sm:text-sm font-bold text-[#166534]" dir="rtl">
+          اپنی مطلوبہ سروس اور کیٹیگری منتخب کریں
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <!-- 1. Service Type -->
+        <div>
+          <label for="serviceType" class="block text-xs font-bold uppercase tracking-wider text-[#0b3d2e] mb-1.5">
+            1. Select Service Type <span class="text-red-600">*</span>
+          </label>
+          <select id="serviceType" onchange="onServiceTypeChange()" class="w-full rounded-xl border-2 border-slate-300 focus:border-[#0b3d2e] bg-slate-50/70 px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none transition">
+            <option value="" selected>-- Select Service Type --</option>
+            <option value="renewal">Regular License Renewal (تجدید)</option>
+            <option value="fresh">Fresh Regular License (نیا ریگولر لائسنس)</option>
+            <option value="duplicate">Duplicate Driving License (ڈپلیکیٹ)</option>
+            <option value="international">International Driving Permit (Fresh / Renewal — انٹرنیشنل فریش و تجدید)</option>
+          </select>
+        </div>
+
+        <!-- 2. License Category (Exact 15 Categories) -->
+        <div>
+          <label for="licenseCategory" class="block text-xs font-bold uppercase tracking-wider text-[#0b3d2e] mb-1.5">
+            2. Please Select Category <span class="text-red-600">*</span>
+          </label>
+          <select id="licenseCategory" onchange="calculateAll()" class="w-full rounded-xl border-2 border-slate-300 focus:border-[#0b3d2e] bg-slate-50/70 px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none transition">
+            <option value="" selected>-- Please Select Category --</option>
+            <option value="mcycle">M/CYCLE</option>
+            <option value="mcycle_car">M/CYCLE,M/CAR/JEEP</option>
+            <option value="car">M/CAR/JEEP</option>
+            <option value="ltv">LTV</option>
+            <option value="mcycle_ltv">M/CYCLE,LTV</option>
+            <option value="htv">HTV</option>
+            <option value="mcycle_htv">M/CYCLE,HTV</option>
+            <option value="trac_com">TRAC COMMERCIAL</option>
+            <option value="rickshaw">M/RICKSHAW</option>
+            <option value="mcycle_car_agri">M/CYCLE,M/CAR/JEEP,TRAC AGRI</option>
+            <option value="mcycle_ltv_com">M/CYCLE,LTV,TRAC COMMERCIAL</option>
+            <option value="ltv_psv">LTV +PSV</option>
+            <option value="htv_psv">HTV+PSV</option>
+            <option value="trac_agri">TRAC AGRICULTURE</option>
+            <option value="invalid">INVALID CARRIAGE</option>
+          </select>
+        </div>
+
+        <!-- 3. Validity Period -->
+        <div id="validityWrapper">
+          <label for="validityYears" class="block text-xs font-bold uppercase tracking-wider text-[#0b3d2e] mb-1.5">
+            3. Validity Duration <span class="text-red-600">*</span>
+          </label>
+          <select id="validityYears" onchange="calculateAll()" class="w-full rounded-xl border-2 border-slate-300 focus:border-[#0b3d2e] bg-slate-50/70 px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none transition">
+            <option value="" selected>-- Select Validity --</option>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+          </select>
+        </div>
+
+        <!-- 4. Custom Calendar Expiry Date Picker (Shown for Renewal) -->
+        <div id="expiryWrapper" class="md:col-span-2 lg:col-span-2">
+          <div class="flex items-center justify-between mb-1.5">
+            <label for="expiryDisplayBtn" class="text-xs font-bold uppercase tracking-wider text-[#0b3d2e]">
+              4. License Expiry Date (Tap to Open Calendar)
+            </label>
+            <button type="button" onclick="clearExpiryDate()" class="text-xs font-bold text-emerald-700 hover:underline">
+              Clear Date (Not Expired)
+            </button>
+          </div>
+          <button
+            type="button"
+            id="expiryDisplayBtn"
+            onclick="openCalendarModal()"
+            class="w-full flex items-center justify-between rounded-xl border-2 border-[#166534] bg-emerald-50/40 hover:bg-emerald-50 px-4 py-2.5 text-left text-sm font-bold text-slate-800 transition shadow-sm"
+          >
+            <span id="expiryDisplayText" class="text-slate-500 font-medium">
+              Tap to select expiry date (DD-MM-YYYY) — Leave blank if not expired
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-[#0b3d2e] text-white text-xs font-semibold px-3 py-1 rounded-lg shrink-0 ml-2">
+              <svg class="w-4 h-4 text-[#f6c945]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>Select Date</span>
+            </span>
+          </button>
+          <input type="hidden" id="expiryDateValue" value="" />
+        </div>
+
+        <!-- 5. Original License in Possession -->
+        <div id="possessionWrapper">
+          <label for="licensePossession" class="block text-xs font-bold uppercase tracking-wider text-[#0b3d2e] mb-1.5">
+            5. Original License Available? <span class="text-red-600">*</span>
+          </label>
+          <select id="licensePossession" onchange="calculateAll()" class="w-full rounded-xl border-2 border-slate-300 focus:border-[#0b3d2e] bg-slate-50/70 px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none transition">
+            <option value="" selected>-- Select Option --</option>
+            <option value="yes">Yes — Available in Possession (Rs. 0)</option>
+            <option value="no">No — Lost / Missing (+Rs. 200 Duplicate Fee)</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         4. BLANK STATE PROMPT CARD (SHOWN WHEN FIELDS ARE UNSELECTED)
+    =========================================================== -->
+    <div id="blankPromptCard" class="bg-white rounded-2xl p-8 text-center shadow-sm border-2 border-dashed border-emerald-300">
+      <div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#0b3d2e]">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+      </div>
+      <h3 class="text-base sm:text-lg font-extrabold text-[#0b3d2e]">
+        Ready to Calculate Your Estimated Driving License Fee
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mt-1">
+        Please select your <strong>Service Type</strong>, <strong>License Category</strong>, and required options above to generate the complete fee schedule.
+      </p>
+      <p class="urdu-text text-sm text-[#166534] font-semibold mt-3" dir="rtl">
+        تخمینی فیس معلوم کرنے کے لیے اوپر دیے گئے خانوں میں اپنی مطلوبہ سروس اور لائسنس کیٹیگری منتخب کریں۔
+      </p>
+    </div>
+
+    <!-- ==========================================================
+         5. RESULTS CONTAINER (HIDDEN UNTIL REQUIRED FIELDS ARE FILLED)
+    =========================================================== -->
+    <div id="resultsContainer" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+      <!-- LEFT COLUMN: Branded Breakdown Schedule (7 Columns) -->
+      <div class="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-6 shadow-md border border-slate-200">
+        <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 block">
+              Official DLIMS 2.0 Rate Schedule
+            </span>
+            <h3 id="leftTableTitle" class="text-base sm:text-lg font-extrabold text-[#0b3d2e]">
+              Detailed Fee &amp; Fine Breakdown
+            </h3>
+          </div>
+          <button type="button" id="toggleFineDetailsBtn" onclick="toggleFineRows()" class="text-xs font-bold text-[#166534] bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg border border-emerald-200 transition">
+            Hide Old/New Fine Rows
+          </button>
+        </div>
+
+        <!-- RENEWAL OLD & NEW FINE BREAKDOWN -->
+        <div id="renewalFineSection" class="space-y-3 mb-4">
+          <!-- Period 1: Till 15 Jan 2024 -->
+          <div class="rounded-xl border border-emerald-200 overflow-hidden">
+            <div class="grid grid-cols-4 dastak-pill-header text-xs sm:text-sm font-bold py-2.5 px-3 text-center items-center">
+              <div class="text-left leading-tight">Till 15 Jan<br/>2024</div>
+              <div>Late Years</div>
+              <div>Late Days</div>
+              <div>Total Fine</div>
+            </div>
+            <div class="grid grid-cols-4 py-2.5 px-3 text-center text-sm border-b border-slate-100 bg-white items-center">
+              <div class="text-left font-medium text-slate-600">Period (Old)</div>
+              <div id="tblOldYears" class="font-bold text-slate-800">0</div>
+              <div id="tblOldDays" class="font-bold text-slate-800">0</div>
+              <div class="text-xs text-slate-400">—</div>
+            </div>
+            <div class="grid grid-cols-4 py-2.5 px-3 text-center text-sm bg-emerald-50/30 items-center">
+              <div class="text-left font-medium text-slate-600">Fine (Old)</div>
+              <div id="tblOldYearFine" class="font-semibold text-slate-800">0</div>
+              <div id="tblOldDayFine" class="font-semibold text-slate-800">0</div>
+              <div id="tblOldTotalFine" class="font-extrabold text-amber-600">0</div>
+            </div>
+          </div>
+
+          <!-- Period 2: From 16 Jan 2024 -->
+          <div class="rounded-xl border border-emerald-200 overflow-hidden">
+            <div class="grid grid-cols-4 dastak-pill-header text-xs sm:text-sm font-bold py-2.5 px-3 text-center items-center">
+              <div class="text-left leading-tight">From 16 Jan<br/>2024</div>
+              <div>Late Years</div>
+              <div>Late Days</div>
+              <div>Total Fine</div>
+            </div>
+            <div class="grid grid-cols-4 py-2.5 px-3 text-center text-sm border-b border-slate-100 bg-white items-center">
+              <div class="text-left font-medium text-slate-600">Period (New)</div>
+              <div id="tblNewYears" class="font-bold text-slate-800">0</div>
+              <div id="tblNewDays" class="font-bold text-slate-800">0</div>
+              <div class="text-xs text-slate-400">—</div>
+            </div>
+            <div class="grid grid-cols-4 py-2.5 px-3 text-center text-sm bg-emerald-50/30 items-center">
+              <div class="text-left font-medium text-slate-600">Fine (New)</div>
+              <div id="tblNewYearFine" class="font-semibold text-slate-800">0</div>
+              <div id="tblNewDayFine" class="font-semibold text-slate-800">0</div>
+              <div id="tblNewTotalFine" class="font-extrabold text-amber-600">0</div>
+            </div>
+          </div>
+
+          <!-- Combined Fine Banner -->
+          <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-amber-50 border border-amber-300">
+            <span class="font-extrabold text-amber-900 text-sm sm:text-base">
+              Total Fine (Old + New)
+            </span>
+            <span id="tblCombinedFine" class="font-extrabold text-amber-700 text-base sm:text-lg">
+              0
+            </span>
+          </div>
+        </div>
+
+        <!-- FRESH LICENSE TEST FEE BAR (SHOWN ONLY IN 'fresh' MODE) -->
+        <div id="freshTestFeeCard" class="hidden mb-4 rounded-xl border border-emerald-200 overflow-hidden">
+          <div class="grid grid-cols-3 dastak-pill-header text-xs sm:text-sm font-bold py-2.5 px-3 text-center">
+            <div>Official Test Fee</div>
+            <div>Courier Fee</div>
+            <div>Yearly License Fee</div>
+          </div>
+          <div class="grid grid-cols-3 py-3 px-3 text-center text-sm font-extrabold text-slate-800 bg-emerald-50/40">
+            <div id="tblFreshTestFee" class="text-[#0b3d2e]">Rs. 150</div>
+            <div>Rs. 480</div>
+            <div id="tblFreshAnnualFee" class="text-[#166534]">Rs. 1,350</div>
+          </div>
+        </div>
+
+        <!-- STANDARD COURIER & YEARLY FEE BAR (RENEWAL / DUPLICATE / IDP) -->
+        <div id="standardCourierYearlyCard" class="rounded-xl border border-emerald-200 overflow-hidden mb-4">
+          <div class="grid grid-cols-2 dastak-pill-header text-xs sm:text-sm font-bold py-2.5 px-3 text-center">
+            <div>Courier Fee</div>
+            <div id="tblYearlyFeeHeader">Yearly Renewal Fee</div>
+          </div>
+          <div class="grid grid-cols-2 py-2.5 px-3 text-center text-sm font-extrabold text-slate-800 bg-white">
+            <div id="tblCourierFee">480</div>
+            <div id="tblYearlyFee">1350</div>
+          </div>
+        </div>
+
+        <!-- MULTI-YEAR TOTAL CHARGES COMPARISON TABLE (+ FACILITATION FOR DASTAK ELIGIBLE) -->
+        <div id="multiYearTableSection" class="rounded-xl border border-emerald-200 overflow-hidden">
+          <div id="multiYearTitleBanner" class="dastak-pill-header text-xs sm:text-sm font-bold py-2.5 px-3 text-center border-b border-emerald-700">
+            Estimated Total Charges (Renewal + Fine + Courier + Facilitation)
+          </div>
+          <div id="multiYearHeaderRow" class="grid grid-cols-5 bg-[#166534] text-white text-xs sm:text-sm font-semibold py-2 text-center">
+            <div>1 Year</div>
+            <div>2 Years</div>
+            <div>3 Years</div>
+            <div>4 Years</div>
+            <div>5 Years</div>
+          </div>
+          <div id="multiYearValuesRow" class="grid grid-cols-5 py-3 text-center text-xs sm:text-sm font-bold text-slate-800 bg-white divide-x divide-slate-100">
+            <div>0</div>
+            <div>0</div>
+            <div>0</div>
+            <div>0</div>
+            <div>0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Estimated Summary, Special Notices & Highlighted WhatsApp CTA (5 Columns) -->
+      <div class="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-6 shadow-md border-t-4 border-[#0b3d2e] border-x border-b border-slate-200">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+          <div>
+            <h3 class="text-base sm:text-lg font-extrabold text-[#0b3d2e]">Estimated Cost Summary</h3>
+            <p id="summarySubLabel" class="text-xs font-bold text-[#166534] mt-0.5">—</p>
+          </div>
+          <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-extrabold uppercase">
+            Estimated Cost
+          </span>
+        </div>
+
+        <!-- ==========================================================
+             DEDICATED NOTICE FOR FRESH REGULAR LICENSE + LEARNER DASTAK CTA
+        =========================================================== -->
+        <div id="freshLearnerNoticeBox" class="hidden p-4 rounded-xl bg-emerald-50 border-2 border-[#166534] text-slate-800 mb-4 space-y-3">
+          <div class="flex items-center gap-2 text-[#0b3d2e] font-extrabold text-xs sm:text-sm uppercase tracking-wide">
+            <svg class="w-5 h-5 text-[#166534] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Maryam Ki Dastak Learner &amp; Regular License Policy</span>
+          </div>
+
+          <p class="urdu-text text-xs sm:text-sm font-semibold text-[#0b3d2e] bg-white p-3 rounded-lg border border-emerald-200 leading-loose" dir="rtl">
+            <strong>اہم وضاحت:</strong> مریم کی دستک (کوڈ <strong>90807</strong>) کے ذریعے آپ گھر بیٹھے <strong>فریش لرنر پرمٹ (نیا لرنر)</strong> یا <strong>لرنر رینیول</strong> کی سہولت حاصل کر سکتے ہیں، جبکہ <strong>ریگولر ڈرائیونگ لائسنس</strong> کے حصول (ڈرائیونگ ٹیسٹ اور بائیو میٹرک) کے لیے آپ کو قریبی <strong>ڈرائیونگ لائسنس سینٹر</strong> یا <strong>پولیس خدمت مرکز (PKM)</strong> وزٹ کرنا ضروری ہے۔
+          </p>
+
+          <p class="text-xs text-slate-700 leading-relaxed">
+            <strong>Important Note:</strong> Through <strong>Maryam Ki Dastak (Code 90807)</strong>, you can avail doorstep services for <strong>Fresh Learner Permit (New Learner)</strong> and <strong>Learner Permit Renewal</strong> at home. However, to obtain a <strong>Fresh Regular Driving License</strong>, visiting your nearest <strong>Driving License Center or Police Khidmat Markaz (PKM)</strong> is mandatory.
+          </p>
+
+          <!-- HIGHLIGHTED LEARNER WHATSAPP CTA BUTTON (LEFT GLOSSY ICON + CENTERED 3-LINE TEXT) -->
+          <a id="waLearnerBtn" href="https://wa.me/923455583530" target="_blank" rel="noopener noreferrer" class="wa-cta-highlight w-full flex items-center gap-3 text-white py-3.5 px-4 rounded-2xl">
+            <span class="w-12 h-12 rounded-full bg-white ring-4 ring-white/30 flex items-center justify-center shrink-0 shadow-lg">
+              <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" fill="#25D366"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.004 10C16.282 10 10 16.278 10 24.001C10 26.768 10.806 29.439 12.333 31.737L10.804 37.319L16.535 35.816C18.755 37.189 21.337 37.999 24.004 37.999C31.725 37.999 38 31.721 38 24.001C38 16.278 31.725 10 24.004 10ZM32.164 29.754C31.825 30.713 30.184 31.592 29.413 31.708C28.711 31.813 27.823 31.857 26.847 31.547C26.255 31.359 25.495 31.109 24.522 30.689C20.431 28.923 17.759 24.803 17.555 24.531C17.351 24.259 15.891 22.321 15.891 20.314C15.891 18.307 16.943 17.321 17.317 16.913C17.691 16.505 18.133 16.403 18.405 16.403C18.677 16.403 18.949 16.406 19.187 16.418C19.438 16.43 19.774 16.323 20.105 17.119C20.445 17.935 21.261 19.942 21.363 20.146C21.465 20.35 21.533 20.588 21.397 20.86C21.261 21.132 21.193 21.302 20.989 21.54C20.785 21.778 20.56 22.072 20.377 22.254C20.173 22.458 19.96 22.679 20.198 23.087C20.436 23.495 21.255 24.832 22.468 25.913C24.027 27.303 25.342 27.734 25.75 27.938C26.158 28.142 26.396 28.108 26.634 27.836C26.872 27.564 27.654 26.646 27.926 26.238C28.198 25.83 28.47 25.898 28.844 26.034C29.218 26.17 31.224 27.156 31.632 27.36C32.04 27.564 32.312 27.666 32.414 27.836C32.516 28.006 32.516 28.822 32.164 29.754Z" fill="white"/>
+              </svg>
+            </span>
+            <span class="flex-1 text-center flex flex-col items-center justify-center leading-tight pr-2">
+              <span class="block text-base font-extrabold tracking-tight drop-shadow-xs">
+                Book Learner Permit on WhatsApp
+              </span>
+              <span class="block text-xs sm:text-sm font-extrabold text-[#fef08a] tracking-wide mt-1">
+                www.dastak90807.com • Code: 90807
+              </span>
+              <span class="block text-xs sm:text-sm font-extrabold text-white tracking-wider mt-0.5">
+                0345-5583530
+              </span>
+            </span>
+          </a>
+        </div>
+
+        <!-- ==========================================================
+             NOTICE FOR HTV / PSV / INVALID CARRIAGE OR 5+ YEARS EXPIRED
+        =========================================================== -->
+        <div id="nonDastakNoticeBox" class="hidden p-4 rounded-xl bg-amber-50 border-2 border-amber-400 text-amber-950 mb-4 space-y-2">
+          <p id="nonDastakUrduText" class="urdu-text text-xs sm:text-sm font-semibold text-amber-950 leading-loose" dir="rtl">
+            <strong>اہم اطلاع:</strong> فی الوقت مریم کی دستک کے تحت <strong>ایچ ٹی وی (HTV)، پی ایس وی (PSV) اور انویلڈ کیرج (Invalid Carriage)</strong> ڈرائیونگ لائسنس رینیو نہیں ہو رہے۔ یہ لائسنس حاصل کرنے یا تجدید کروانے کے لیے براہِ کرم قریبی <strong>پولیس خدمت مرکز (PKM)</strong> یا <strong>ٹریفک لائسنسنگ آفس</strong> تشریف لے جائیں۔
+          </p>
+          <p id="nonDastakEngText" class="text-xs text-amber-900 border-t border-amber-200 pt-2 leading-relaxed">
+            <strong>Important Notice:</strong> Renewal for <strong>HTV, PSV, and Invalid Carriage</strong> categories is currently not available via Maryam Ki Dastak. Please visit your nearest <strong>Police Khidmat Markaz (PKM)</strong> or <strong>Traffic Licensing Office</strong>. (Rs. 950 Facilitator charges are not shown).
+          </p>
+        </div>
+
+        <!-- Itemized Estimated Cost Rows -->
+        <div class="space-y-2.5 text-sm mb-4">
+          <div id="sumTestFeeRow" class="hidden justify-between items-center py-2 px-3 rounded-lg bg-blue-50 border border-blue-200 text-blue-900">
+            <span class="font-medium">Official Driving Test Fee:</span>
+            <span id="sumTestFeeVal" class="font-bold">Rs. 150</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2 px-3 rounded-lg bg-slate-50">
+            <span id="sumBaseLabel" class="text-slate-600">Estimated License Fee:</span>
+            <span id="sumBaseVal" class="font-bold text-slate-800">Rs. 0</span>
+          </div>
+
+          <div id="sumFineRow" class="flex justify-between items-center py-2 px-3 rounded-lg bg-slate-50">
+            <span class="text-slate-600">Estimated Total Fine (Old + New):</span>
+            <span id="sumFineVal" class="font-bold text-red-700">Rs. 0</span>
+          </div>
+
+          <div id="sumDupAddonRow" class="hidden justify-between items-center py-2 px-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-900">
+            <span class="font-medium">Renew Duplicate Fee (Lost Original):</span>
+            <span id="sumDupAddonVal" class="font-bold">+ Rs. 200</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2 px-3 rounded-lg bg-slate-50">
+            <span class="text-slate-600">Official Courier / Card Fee:</span>
+            <span class="font-bold text-slate-800">Rs. 480</span>
+          </div>
+
+          <div class="flex justify-between items-center py-2.5 px-3 rounded-lg bg-emerald-50 border border-emerald-200">
+            <span class="font-bold text-[#0b3d2e]">Estimated Official Govt Fee:</span>
+            <span id="sumGovtTotal" class="font-extrabold text-base text-[#0b3d2e]">Rs. 0</span>
+          </div>
+
+          <div id="sumFacilitatorRow" class="flex justify-between items-center py-2 px-3 rounded-lg bg-slate-50">
+            <span class="text-slate-600">Dastak Doorstep Facilitation Fee:</span>
+            <span class="font-bold text-[#166534]">+ Rs. 950</span>
+          </div>
+        </div>
+
+        <!-- Grand Total Estimated Cost Banner -->
+        <div class="p-4 rounded-xl dastak-gradient text-white shadow-sm mb-4">
+          <div class="flex justify-between items-center gap-2">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-emerald-200 block font-bold">Total Estimated Cost</span>
+              <span id="sumGrandSubtitle" class="text-[11px] text-emerald-100">(Estimated Govt PSID + Doorstep Facilitation)</span>
+            </div>
+            <div id="sumGrandTotal" class="text-2xl sm:text-3xl font-extrabold text-[#f6c945] whitespace-nowrap">
+              Rs. 0
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================================
+             6. HIGHLIGHTED MAIN WHATSAPP BOOKING CTA + COPY SUMMARY BUTTON
+        =========================================================== -->
+        <div class="space-y-2.5">
+          <div id="waBookingWrapper">
+            <a id="waBookingLink" href="https://wa.me/923455583530" target="_blank" rel="noopener noreferrer" class="wa-cta-highlight w-full flex items-center gap-3 text-white py-4 px-4 sm:px-5 rounded-2xl">
+              <span class="w-14 h-14 rounded-full bg-white ring-4 ring-white/30 flex items-center justify-center shrink-0 shadow-lg">
+                <svg class="w-9 h-9" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="24" cy="24" r="22" fill="#25D366"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24.004 10C16.282 10 10 16.278 10 24.001C10 26.768 10.806 29.439 12.333 31.737L10.804 37.319L16.535 35.816C18.755 37.189 21.337 37.999 24.004 37.999C31.725 37.999 38 31.721 38 24.001C38 16.278 31.725 10 24.004 10ZM32.164 29.754C31.825 30.713 30.184 31.592 29.413 31.708C28.711 31.813 27.823 31.857 26.847 31.547C26.255 31.359 25.495 31.109 24.522 30.689C20.431 28.923 17.759 24.803 17.555 24.531C17.351 24.259 15.891 22.321 15.891 20.314C15.891 18.307 16.943 17.321 17.317 16.913C17.691 16.505 18.133 16.403 18.405 16.403C18.677 16.403 18.949 16.406 19.187 16.418C19.438 16.43 19.774 16.323 20.105 17.119C20.445 17.935 21.261 19.942 21.363 20.146C21.465 20.35 21.533 20.588 21.397 20.86C21.261 21.132 21.193 21.302 20.989 21.54C20.785 21.778 20.56 22.072 20.377 22.254C20.173 22.458 19.96 22.679 20.198 23.087C20.436 23.495 21.255 24.832 22.468 25.913C24.027 27.303 25.342 27.734 25.75 27.938C26.158 28.142 26.396 28.108 26.634 27.836C26.872 27.564 27.654 26.646 27.926 26.238C28.198 25.83 28.47 25.898 28.844 26.034C29.218 26.17 31.224 27.156 31.632 27.36C32.04 27.564 32.312 27.666 32.414 27.836C32.516 28.006 32.516 28.822 32.164 29.754Z" fill="white"/>
+                </svg>
+              </span>
+              <span class="flex-1 text-center flex flex-col items-center justify-center leading-tight pr-2">
+                <span class="block text-base sm:text-lg font-extrabold tracking-tight drop-shadow-xs">
+                  Book Doorstep Service on WhatsApp
+                </span>
+                <span class="block text-xs sm:text-sm font-extrabold text-[#fef08a] tracking-wide mt-1">
+                  www.dastak90807.com • Code: 90807
+                </span>
+                <span class="block text-xs sm:text-sm font-extrabold text-white tracking-wider mt-0.5">
+                  0345-5583530
+                </span>
+              </span>
+            </a>
+          </div>
+
+          <!-- User-Friendly Copy Fee Summary Button for Easy Sharing & Testing -->
+          <button
+            type="button"
+            id="copySummaryBtn"
+            onclick="copyFeeSummary()"
+            class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#0b3d2e] border-2 border-[#166534] text-xs sm:text-sm font-extrabold transition shadow-xs"
+          >
+            <svg class="w-4 h-4 text-[#166534] shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span id="copySummaryBtnText">Copy Fee Summary (تفصیل کاپی کریں)</span>
+          </button>
+        </div>
+
+        <!-- Estimated Cost & Maryam Ki Dastak Auto-Generation Disclaimer -->
+        <div class="mt-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-2 leading-relaxed">
+          <p class="urdu-text text-slate-800 font-medium leading-loose" dir="rtl">
+            <strong>اہم وضاحت (Estimated Cost):</strong> اس کیلکولیٹر میں دکھائی گئی تمام فیسیں صرف شہریوں کی رہنمائی کے لیے <strong>تخمینی لاگت (Estimated Cost)</strong> ہیں۔ اصل اور حتمی سرکاری فیس <strong>مریم کی دستک (Maryam Ki Dastak)</strong> ایپلیکیشن میں خودکار طریقے (Automatic System) سے جنریٹ ہوتی ہے۔
+          </p>
+          <p class="border-t border-slate-200 pt-2 text-[11.5px]">
+            <strong>Disclaimer:</strong> All amounts shown above are <strong>Estimated Costs</strong> for citizen guidance only. The actual and final official fee (PSID) is automatically generated by the <strong>Maryam Ki Dastak</strong> portal system at the time of application processing.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==========================================================
+         7. CLEAN LOCAL SEO & GOOGLE BUSINESS PROFILE FOOTER CARD
+    =========================================================== -->
+    <footer id="dastakOfficialFooter" class="mt-8 bg-white rounded-2xl p-5 sm:p-6 shadow-md border-t-4 border-[#166534] border-x border-b border-slate-200 text-center space-y-2.5">
+      <div class="inline-flex items-center justify-center px-3.5 py-1 rounded-full gold-badge text-xs font-extrabold uppercase tracking-wide shadow-xs">
+        <span>Registered Maryam Ki Dastak Facilitator (Code: 90807)</span>
+      </div>
+
+      <h2 class="text-base sm:text-lg font-extrabold text-[#0b3d2e] tracking-tight">
+        Dastak Online Document Facilitation — Muhammad Usman
+      </h2>
+
+      <p class="text-xs sm:text-sm font-bold text-[#166534] max-w-3xl mx-auto leading-relaxed">
+        Authorized Doorstep Facilitation across Gujar Khan, Rawalpindi, and entire Punjab
+      </p>
+
+      <p class="urdu-text text-xs sm:text-sm font-semibold text-[#0b3d2e]" dir="rtl">
+        گوجر خان، راولپنڈی اور پورے پنجاب میں مریم کی دستک (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807) کے ذریعے گھر بیٹھے دستاویزی سہولیات حاصل کریں۔
+      </p>
+
+      <!-- Direct Contact & Official Portal Links -->
+      <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-xs font-semibold text-slate-600">
+        <span>WhatsApp: <a href="https://wa.me/923455583530" target="_blank" rel="noopener noreferrer" class="text-[#166534] font-extrabold hover:underline">0345-5583530</a></span>
+        <span class="text-slate-300">|</span>
+        <span>Official Portal: <a href="https://dastak.punjab.gov.pk" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:underline">dastak.punjab.gov.pk</a></span>
+        <span class="text-slate-300">|</span>
+        <span>Website: <a href="https://www.dastak90807.com" target="_blank" rel="noopener noreferrer" class="text-[#0b3d2e] font-extrabold hover:underline">www.dastak90807.com</a></span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Subtle Security Toast Notification -->
+  <div id="secGuardToast" class="fixed bottom-4 right-4 z-50 hidden bg-[#0b3d2e] text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl border-2 border-[#f6c945] items-center gap-2.5">
+    <svg class="w-4 h-4 text-[#f6c945] shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+    <span>Protected Code © Facilitator Code 90807 (www.dastak90807.com)</span>
+  </div>
+
+  <!-- Full-Screen Copyright Integrity Lockdown Overlay (Hidden unless code is tampered with) -->
+  <div id="tamperLockOverlay" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex items-center justify-center p-6 text-center">
+    <div class="max-w-md bg-white rounded-2xl p-6 border-4 border-red-600 shadow-2xl space-y-3">
+      <div class="w-12 h-12 mx-auto rounded-full bg-red-100 text-red-700 flex items-center justify-center font-extrabold text-xl">!</div>
+      <h2 class="text-lg font-extrabold text-red-800">Copyright &amp; Brand Integrity Lock</h2>
+      <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+        Unauthorized modification or removal of official attribution for <strong>Dastak Online Document Facilitation — Muhammad Usman (Registered Facilitator Code: 90807 · 0345-5583530 · www.dastak90807.com)</strong> has disabled this calculator.
+      </p>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       CUSTOM MATERIAL-STYLE CALENDAR MODAL
+  =========================================================== -->
+  <div id="calendarModalBackdrop" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-[340px] overflow-hidden border border-slate-200 animate-fadeIn">
+      <!-- Top Dark Green Header (Year + Sat, Nov 14 style) -->
+      <div class="bg-[#0b3d2e] text-white px-6 py-5">
+        <div id="calHeaderYear" class="text-sm font-semibold text-emerald-200 tracking-wide">
+          2026
+        </div>
+        <div id="calHeaderFormattedDate" class="text-3xl font-bold tracking-tight mt-1">
+          Sat, Nov 14
+        </div>
+      </div>
+
+      <!-- Month & Year Navigation Controls -->
+      <div class="px-4 pt-4 pb-2">
+        <div class="flex items-center justify-between mb-3">
+          <button type="button" onclick="changeCalendarMonth(-1)" class="w-9 h-9 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-700 font-bold text-lg transition" title="Previous Month">
+            &#10094;
+          </button>
+
+          <!-- Direct Month & Year Selectors for Fast Selection -->
+          <div class="flex items-center gap-1.5">
+            <select id="calMonthSelect" onchange="onCalMonthYearSelect()" class="bg-slate-50 border border-slate-200 rounded-lg px-2 py-1 text-sm font-bold text-slate-800 focus:outline-none focus:border-[#0b3d2e]"></select>
+            <select id="calYearSelect" onchange="onCalMonthYearSelect()" class="bg-slate-50 border border-slate-200 rounded-lg px-2 py-1 text-sm font-bold text-slate-800 focus:outline-none focus:border-[#0b3d2e]"></select>
+          </div>
+
+          <button type="button" onclick="changeCalendarMonth(1)" class="w-9 h-9 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-700 font-bold text-lg transition" title="Next Month">
+            &#10095;
+          </button>
+        </div>
+
+        <!-- Weekday Headers (S M T W T F S) -->
+        <div class="grid grid-cols-7 text-center text-xs font-semibold text-slate-500 py-1.5">
+          <div>S</div>
+          <div>M</div>
+          <div>T</div>
+          <div>W</div>
+          <div>T</div>
+          <div>F</div>
+          <div>S</div>
+        </div>
+
+        <!-- Days Grid -->
+        <div id="calDaysGrid" class="grid grid-cols-7 gap-y-1 text-center py-1"></div>
+      </div>
+
+      <!-- Modal Action Buttons (CLEAR / CANCEL / OK) -->
+      <div class="px-5 py-3.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+        <button type="button" onclick="clearExpiryFromModal()" class="text-xs font-bold text-red-700 hover:bg-red-50 px-2.5 py-1.5 rounded-lg transition">
+          CLEAR
+        </button>
+        <div class="flex items-center gap-4">
+          <button type="button" onclick="closeCalendarModal()" class="text-sm font-bold text-[#0b3d2e] hover:bg-emerald-50 px-3 py-1.5 rounded-lg tracking-wider transition">
+            CANCEL
+          </button>
+          <button type="button" onclick="confirmCalendarDate()" class="text-sm font-bold text-[#0b3d2e] hover:bg-emerald-50 px-3 py-1.5 rounded-lg tracking-wider transition">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================================
+    // LOCKED & ENCODED IIFE ENGINE WITH ANTI-CLONE TAMPER GUARD
+    // (Allows 100% Free User Text Copy, Right-Click & Screenshots)
+    // ==========================================================
+    (function(_w, _d) {
+      "use strict";
+
+      // 1. Clean Base64-Encoded Official 15 DLIMS 2.0 Categories Payload
+      const _B64_CATS = [
+        "eyJtY3ljbGUiOnsibGFiZWwiOiJNL0NZQ0xFIiwibmV3QW5udWFsIjo0NTAs",
+        "ImZyZXNoQW5udWFsIjo0NTAsImlkcEFubnVhbCI6NDUwLCJvbGRCYXNpYyI6",
+        "NTAwLCJkdXAiOjEwMCwidGVzdEZlZSI6NTAsIm5vbkRhc3RhayI6ZmFsc2V9",
+        "LCJtY3ljbGVfY2FyIjp7ImxhYmVsIjoiTS9DWUNMRSxNL0NBUi9KRUVQIiwi",
+        "bmV3QW5udWFsIjoxMzUwLCJmcmVzaEFubnVhbCI6MTM1MCwiaWRwQW5udWFs",
+        "IjoxMzUwLCJvbGRCYXNpYyI6NzUwLCJkdXAiOjIwMCwidGVzdEZlZSI6MjAw",
+        "LCJub25EYXN0YWsiOmZhbHNlfSwiY2FyIjp7ImxhYmVsIjoiTS9DQVIvSkVF",
+        "UCIsIm5ld0FubnVhbCI6MTM1MCwiZnJlc2hBbm51YWwiOjEzNTAsImlkcEFu",
+        "bnVhbCI6MTM1MCwib2xkQmFzaWMiOjc1MCwiZHVwIjoxNTAsInRlc3RGZWUi",
+        "OjE1MCwibm9uRGFzdGFrIjpmYWxzZX0sImx0diI6eyJsYWJlbCI6IkxUViIs",
+        "Im5ld0FubnVhbCI6MTg1MCwiZnJlc2hBbm51YWwiOjE4NTAsImlkcEFubnVh",
+        "bCI6MTg1MCwib2xkQmFzaWMiOjc1MCwiZHVwIjoxNTAsInRlc3RGZWUiOjE1",
+        "MCwibm9uRGFzdGFrIjpmYWxzZX0sIm1jeWNsZV9sdHYiOnsibGFiZWwiOiJN",
+        "L0NZQ0xFLExUViIsIm5ld0FubnVhbCI6MTg1MCwiZnJlc2hBbm51YWwiOjE4",
+        "NTAsImlkcEFubnVhbCI6MTg1MCwib2xkQmFzaWMiOjc1MCwiZHVwIjoyMDAs",
+        "InRlc3RGZWUiOjIwMCwibm9uRGFzdGFrIjpmYWxzZX0sImh0diI6eyJsYWJl",
+        "bCI6IkhUViIsIm5ld0FubnVhbCI6MTg1MCwiZnJlc2hBbm51YWwiOjE4NTAs",
+        "ImlkcEFubnVhbCI6MTg1MCwib2xkQmFzaWMiOjEwMDAsImR1cCI6MjAwLCJ0",
+        "ZXN0RmVlIjoyMDAsIm5vbkRhc3RhayI6dHJ1ZX0sIm1jeWNsZV9odHYiOnsi",
+        "bGFiZWwiOiJNL0NZQ0xFLEhUViIsIm5ld0FubnVhbCI6MTg1MCwiZnJlc2hB",
+        "bm51YWwiOjE4NTAsImlkcEFubnVhbCI6MTg1MCwib2xkQmFzaWMiOjEwMDAs",
+        "ImR1cCI6MjAwLCJ0ZXN0RmVlIjoyNTAsIm5vbkRhc3RhayI6dHJ1ZX0sInRy",
+        "YWNfY29tIjp7ImxhYmVsIjoiVFJBQyBDT01NRVJDSUFMIiwibmV3QW5udWFs",
+        "IjoxNDAwLCJmcmVzaEFubnVhbCI6MTQwMCwiaWRwQW5udWFsIjoxNDAwLCJv",
+        "bGRCYXNpYyI6NTAwLCJkdXAiOjEwMCwidGVzdEZlZSI6MTAwLCJub25EYXN0",
+        "YWsiOmZhbHNlfSwicmlja3NoYXciOnsibGFiZWwiOiJNL1JJQ0tTSEFXIiwi",
+        "bmV3QW5udWFsIjo0MDAsImZyZXNoQW5udWFsIjo0MDAsImlkcEFubnVhbCI6",
+        "NDAwLCJvbGRCYXNpYyI6NTAwLCJkdXAiOjEwMCwidGVzdEZlZSI6MTAwLCJu",
+        "b25EYXN0YWsiOmZhbHNlfSwibWN5Y2xlX2Nhcl9hZ3JpIjp7ImxhYmVsIjoi",
+        "TS9DWUNMRSxNL0NBUi9KRUVQLFRSQUMgQUdSSSIsIm5ld0FubnVhbCI6MTM1",
+        "MCwiZnJlc2hBbm51YWwiOjEzNTAsImlkcEFubnVhbCI6MTM1MCwib2xkQmFz",
+        "aWMiOjc1MCwiZHVwIjoyMDAsInRlc3RGZWUiOjI1MCwibm9uRGFzdGFrIjpm",
+        "YWxzZX0sIm1jeWNsZV9sdHZfY29tIjp7ImxhYmVsIjoiTS9DWUNMRSxMVFYs",
+        "VFJBQyBDT01NRVJDSUFMIiwibmV3QW5udWFsIjoxODUwLCJmcmVzaEFubnVh",
+        "bCI6MTg1MCwiaWRwQW5udWFsIjoxODUwLCJvbGRCYXNpYyI6NzUwLCJkdXAi",
+        "OjIwMCwidGVzdEZlZSI6MzAwLCJub25EYXN0YWsiOmZhbHNlfSwibHR2X3Bz",
+        "diI6eyJsYWJlbCI6IkxUViArUFNWIiwibmV3QW5udWFsIjoxODUwLCJmcmVz",
+        "aEFubnVhbCI6MTg1MCwiaWRwQW5udWFsIjoxODUwLCJvbGRCYXNpYyI6NzUw",
+        "LCJkdXAiOjIwMCwidGVzdEZlZSI6MjUwLCJub25EYXN0YWsiOnRydWV9LCJo",
+        "dHZfcHN2Ijp7ImxhYmVsIjoiSFRWK1BTViIsIm5ld0FubnVhbCI6MTg1MCwi",
+        "ZnJlc2hBbm51YWwiOjE4NTAsImlkcEFubnVhbCI6MTg1MCwib2xkQmFzaWMi",
+        "OjEwMDAsImR1cCI6MjAwLCJ0ZXN0RmVlIjoyNTAsIm5vbkRhc3RhayI6dHJ1",
+        "ZX0sInRyYWNfYWdyaSI6eyJsYWJlbCI6IlRSQUMgQUdSSUNVTFRVUkUiLCJu",
+        "ZXdBbm51YWwiOjk4MCwiZnJlc2hBbm51YWwiOjk1MCwiaWRwQW5udWFsIjo5",
+        "NTAsIm9sZEJhc2ljIjoyNTAsImR1cCI6MjAwLCJ0ZXN0RmVlIjo1MCwibm9u",
+        "RGFzdGFrIjpmYWxzZX0sImludmFsaWQiOnsibGFiZWwiOiJJTlZBTElEIENB",
+        "UlJJQUdFIiwibmV3QW5udWFsIjowLCJmcmVzaEFubnVhbCI6MCwiaWRwQW5u",
+        "dWFsIjowLCJvbGRCYXNpYyI6MCwiZHVwIjowLCJ0ZXN0RmVlIjowLCJub25E",
+        "YXN0YWsiOnRydWV9fQ=="
+      ].join("");
+      const _SIG_TOKENS = [
+        "OTA4MDc=",
+        "MDM0NS01NTgzNTMw",
+        "ZGFzdGFrLnB1bmphYi5nb3YucGs=",
+        "RGFzdGFrIE9ubGluZSBEb2N1bWVudCBGYWNpbGl0YXRpb24="
+      ];
+      const dlimsCategories = Object.freeze((function() {
+        try {
+          return JSON.parse(atob(_B64_CATS));
+        } catch (e) {
+          return {
+            mcycle: { label: "M/CYCLE", newAnnual: 450, freshAnnual: 450, idpAnnual: 450, oldBasic: 500, dup: 100, testFee: 50, nonDastak: false },
+            mcycle_car: { label: "M/CYCLE,M/CAR/JEEP", newAnnual: 1350, freshAnnual: 1350, idpAnnual: 1350, oldBasic: 750, dup: 200, testFee: 200, nonDastak: false },
+            car: { label: "M/CAR/JEEP", newAnnual: 1350, freshAnnual: 1350, idpAnnual: 1350, oldBasic: 750, dup: 150, testFee: 150, nonDastak: false },
+            ltv: { label: "LTV", newAnnual: 1850, freshAnnual: 1850, idpAnnual: 1850, oldBasic: 750, dup: 150, testFee: 150, nonDastak: false },
+            mcycle_ltv: { label: "M/CYCLE,LTV", newAnnual: 1850, freshAnnual: 1850, idpAnnual: 1850, oldBasic: 750, dup: 200, testFee: 200, nonDastak: false },
+            htv: { label: "HTV", newAnnual: 1850, freshAnnual: 1850, idpAnnual: 1850, oldBasic: 1000, dup: 200, testFee: 200, nonDastak: true },
+            mcycle_htv: { label: "M/CYCLE,HTV", newAnnual: 1850, freshAnnual: 1850, idpAnnual: 1850, oldBasic: 1000, dup: 200, testFee: 250, nonDastak: true },
+            trac_com: { label: "TRAC COMMERCIAL", newAnnual: 1400, freshAnnual: 1400, idpAnnual: 1400, oldBasic: 500, dup: 100, testFee: 100, nonDastak: false },
+            rickshaw: { label: "M/RICKSHAW", newAnnual: 400, freshAnnual: 400, idpAnnual: 400, oldBasic: 500, dup: 100, testFee: 100, nonDastak: false },
+            mcycle_car_agri: { label: "M/CYCLE,M/CAR/JEEP,TRAC AGRI", newAnnual: 1350, freshAnnual: 1350, idpAnnual: 1350, oldBasic: 750, dup: 200, testFee: 250, nonDastak: false },
+            mcycle_ltv_com: { label: "M/CYCLE,LTV,TRAC COMMERCIAL", newAnnual: 1850, freshAnnual: 1850, idpAnnual: 1850, oldBasic: 750, dup: 200, testFee: 300, nonDastak: false },
+            ltv_psv: { label: "LTV +PSV", newAnnual: 1850, freshAnnual: 1850, idpAnnual: 1850, oldBasic: 750, dup: 200, testFee: 250, nonDastak: true },
+            htv_psv: { label: "HTV+PSV", newAnnual: 1850, freshAnnual: 1850, idpAnnual: 1850, oldBasic: 1000, dup: 200, testFee: 250, nonDastak: true },
+            trac_agri: { label: "TRAC AGRICULTURE", newAnnual: 980, freshAnnual: 950, idpAnnual: 950, oldBasic: 250, dup: 200, testFee: 50, nonDastak: false },
+            invalid: { label: "INVALID CARRIAGE", newAnnual: 0, freshAnnual: 0, idpAnnual: 0, oldBasic: 0, dup: 0, testFee: 0, nonDastak: true }
+          };
+        }
+      })());
+
+      const MONTH_NAMES = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+      const SHORT_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const SHORT_DAYS   = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+      let fineRowsVisible = true;
+      let calViewYear = 2026;
+      let calViewMonth = 10;
+      let calTempSelected = { year: 2026, month: 10, day: 14 };
+      let toastTimer = null;
+      let latestShareSummaryText = "";
+
+      // 2. Developer Source-Code Shortcut Blocker (Visitors CAN freely copy text & take screenshots!)
+      function showGuardToast() {
+        const t = _d.getElementById("secGuardToast");
+        if (!t) return;
+        t.classList.remove("hidden");
+        t.classList.add("flex");
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          t.classList.add("hidden");
+          t.classList.remove("flex");
+        }, 2600);
+      }
+
+      _d.addEventListener("keydown", function(e) {
+        const k = (e.key || "").toUpperCase();
+        const isDevTools =
+          e.keyCode === 123 || k === "F12" ||
+          ((e.ctrlKey || e.metaKey) && e.shiftKey && (k === "I" || k === "J" || k === "C")) ||
+          ((e.ctrlKey || e.metaKey) && (k === "U" || k === "S"));
+
+        if (isDevTools) {
+          e.preventDefault();
+          e.stopPropagation();
+          showGuardToast();
+          return false;
+        }
+      });
+
+      // 3. Anti-Clone Copyright & Attribution Integrity Lock (MutationObserver + setInterval)
+      function verifyBrandIntegrity() {
+        const bodyHtml = (_d.body && _d.body.innerHTML) ? _d.body.innerHTML : "";
+        for (let i = 0; i < _SIG_TOKENS.length; i++) {
+          const token = atob(_SIG_TOKENS[i]);
+          if (bodyHtml.indexOf(token) === -1) {
+            const res = _d.getElementById("resultsContainer");
+            const blank = _d.getElementById("blankPromptCard");
+            const lockOverlay = _d.getElementById("tamperLockOverlay");
+            if (res) res.classList.add("hidden");
+            if (blank) blank.classList.remove("hidden");
+            if (lockOverlay) lockOverlay.classList.remove("hidden");
+            return false;
+          }
+        }
+        return true;
+      }
+
+      // 4. Pure UTC Date Helpers for 100% Exact Fine Calculation
+      function makeUTCDate(y, m, d) {
+        return Date.UTC(y, m - 1, d);
+      }
+
+      function addYearsUTC(utcMs, yearsToAdd) {
+        const dt = new Date(utcMs);
+        return Date.UTC(dt.getUTCFullYear() + yearsToAdd, dt.getUTCMonth(), dt.getUTCDate());
+      }
+
+      function splitYearsAndDaysUTC(startUtc, endUtc) {
+        if (endUtc <= startUtc) return { years: 0, days: 0 };
+        const sDate = new Date(startUtc);
+        const eDate = new Date(endUtc);
+        let years = eDate.getUTCFullYear() - sDate.getUTCFullYear();
+        let anniv = addYearsUTC(startUtc, years);
+        if (anniv > endUtc) {
+          years--;
+          anniv = addYearsUTC(startUtc, years);
+        }
+        const days = Math.round((endUtc - anniv) / 86400000);
+        return { years, days };
+      }
+
+      // 5. Custom Material Calendar Modal Functions
+      function initCalendarSelects() {
+        const mSelect = _d.getElementById("calMonthSelect");
+        const ySelect = _d.getElementById("calYearSelect");
+
+        mSelect.innerHTML = MONTH_NAMES.map((m, idx) => `<option value="${idx}">${m}</option>`).join("");
+
+        let yHtml = "";
+        for (let y = 2030; y >= 1985; y--) {
+          yHtml += `<option value="${y}">${y}</option>`;
+        }
+        ySelect.innerHTML = yHtml;
+      }
+
+      function openCalendarModal() {
+        const existingVal = _d.getElementById("expiryDateValue").value;
+        if (existingVal) {
+          const [y, m, d] = existingVal.split("-").map(Number);
+          calViewYear = y;
+          calViewMonth = m - 1;
+          calTempSelected = { year: y, month: m - 1, day: d };
+        } else {
+          const now = new Date();
+          calViewYear = now.getFullYear();
+          calViewMonth = now.getMonth();
+          calTempSelected = { year: calViewYear, month: calViewMonth, day: now.getDate() };
+        }
+        renderCalendarModal();
+        _d.getElementById("calendarModalBackdrop").classList.remove("hidden");
+      }
+
+      function closeCalendarModal() {
+        _d.getElementById("calendarModalBackdrop").classList.add("hidden");
+      }
+
+      function changeCalendarMonth(delta) {
+        calViewMonth += delta;
+        if (calViewMonth < 0) {
+          calViewMonth = 11;
+          calViewYear--;
+        } else if (calViewMonth > 11) {
+          calViewMonth = 0;
+          calViewYear++;
+        }
+        renderCalendarModal();
+      }
+
+      function onCalMonthYearSelect() {
+        calViewMonth = parseInt(_d.getElementById("calMonthSelect").value, 10);
+        calViewYear  = parseInt(_d.getElementById("calYearSelect").value, 10);
+        renderCalendarModal();
+      }
+
+      function selectCalendarDay(dayNum) {
+        calTempSelected = { year: calViewYear, month: calViewMonth, day: dayNum };
+        renderCalendarModal();
+      }
+
+      function renderCalendarModal() {
+        _d.getElementById("calMonthSelect").value = String(calViewMonth);
+        _d.getElementById("calYearSelect").value  = String(calViewYear);
+
+        const selDateObj = new Date(calTempSelected.year, calTempSelected.month, calTempSelected.day);
+        const dayName = SHORT_DAYS[selDateObj.getDay()];
+        const monName = SHORT_MONTHS[calTempSelected.month];
+        _d.getElementById("calHeaderYear").innerText = calTempSelected.year;
+        _d.getElementById("calHeaderFormattedDate").innerText = `${dayName}, ${monName} ${calTempSelected.day}`;
+
+        const firstDayOfWeek = new Date(calViewYear, calViewMonth, 1).getDay();
+        const daysInMonth = new Date(calViewYear, calViewMonth + 1, 0).getDate();
+
+        let html = "";
+        for (let i = 0; i < firstDayOfWeek; i++) {
+          html += `<div></div>`;
+        }
+
+        for (let d = 1; d <= daysInMonth; d++) {
+          const isSelected =
+            calTempSelected.year === calViewYear &&
+            calTempSelected.month === calViewMonth &&
+            calTempSelected.day === d;
+
+          html += `
+            <div>
+              <button
+                type="button"
+                onclick="selectCalendarDay(${d})"
+                class="calendar-day-btn ${isSelected ? 'calendar-day-selected' : 'text-slate-700'}"
+              >
+                ${d}
+              </button>
+            </div>
+          `;
+        }
+        _d.getElementById("calDaysGrid").innerHTML = html;
+      }
+
+      function setExpiryValueAndFormat(y, mZeroIndexed, d) {
+        const yyyy = String(y);
+        const mm = String(mZeroIndexed + 1).padStart(2, "0");
+        const dd = String(d).padStart(2, "0");
+        _d.getElementById("expiryDateValue").value = `${yyyy}-${mm}-${dd}`;
+
+        const dt = new Date(y, mZeroIndexed, d);
+        const formatted = `${dd}-${mm}-${yyyy} (${SHORT_DAYS[dt.getDay()]}, ${d} ${SHORT_MONTHS[mZeroIndexed]} ${yyyy})`;
+        const textSpan = _d.getElementById("expiryDisplayText");
+        textSpan.innerText = formatted;
+        textSpan.className = "text-[#0b3d2e] font-extrabold";
+      }
+
+      function confirmCalendarDate() {
+        setExpiryValueAndFormat(calTempSelected.year, calTempSelected.month, calTempSelected.day);
+        closeCalendarModal();
+        calculateAll();
+      }
+
+      function clearExpiryFromModal() {
+        clearExpiryDate();
+        closeCalendarModal();
+      }
+
+      function clearExpiryDate() {
+        _d.getElementById("expiryDateValue").value = "";
+        const textSpan = _d.getElementById("expiryDisplayText");
+        textSpan.innerText = "Tap to select expiry date (DD-MM-YYYY) — Leave blank if not expired";
+        textSpan.className = "text-slate-500 font-medium";
+        calculateAll();
+      }
+
+      // 6. Copy Fee Summary Helper (Uses execCommand for full iframe compatibility)
+      function copyFeeSummary() {
+        if (!latestShareSummaryText) return;
+        const tempArea = _d.createElement("textarea");
+        tempArea.value = latestShareSummaryText;
+        tempArea.style.position = "fixed";
+        tempArea.style.opacity = "0";
+        _d.body.appendChild(tempArea);
+        tempArea.select();
+        try {
+          _d.execCommand("copy");
+          const btnText = _d.getElementById("copySummaryBtnText");
+          if (btnText) {
+            const orig = btnText.innerText;
+            btnText.innerText = "✓ Summary Copied! (تفصیل کاپی ہو گئی)";
+            setTimeout(() => { btnText.innerText = orig; }, 2200);
+          }
+        } catch (err) {
+          // Fallback ignored silently
+        }
+        _d.body.removeChild(tempArea);
+      }
+
+      // 7. Form Controls & Dynamic Field Visibility
+      function toggleAdminBar() {
+        _d.getElementById("adminTestBar").classList.toggle("hidden");
+      }
+
+      function toggleFineRows() {
+        fineRowsVisible = !fineRowsVisible;
+        _d.getElementById("renewalFineSection").style.display = fineRowsVisible ? "block" : "none";
+        _d.getElementById("toggleFineDetailsBtn").innerText = fineRowsVisible
+          ? "Hide Old/New Fine Rows"
+          : "Show Old/New Fine Rows";
+      }
+
+      function onServiceTypeChange() {
+        const mode = _d.getElementById("serviceType").value;
+        const validityWrapper = _d.getElementById("validityWrapper");
+        const expiryWrapper = _d.getElementById("expiryWrapper");
+        const possessionWrapper = _d.getElementById("possessionWrapper");
+        const validitySelect = _d.getElementById("validityYears");
+        const currentVal = validitySelect.value;
+
+        if (mode === "duplicate") {
+          validityWrapper.style.display = "none";
+          expiryWrapper.style.display = "none";
+          possessionWrapper.style.display = "none";
+        } else if (mode === "fresh") {
+          validityWrapper.style.display = "block";
+          expiryWrapper.style.display = "none";
+          possessionWrapper.style.display = "none";
+          validitySelect.innerHTML = `
+            <option value="">-- Select Validity --</option>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+          `;
+          if (currentVal) validitySelect.value = currentVal;
+        } else if (mode === "international") {
+          validityWrapper.style.display = "block";
+          expiryWrapper.style.display = "none";
+          possessionWrapper.style.display = "block";
+          validitySelect.innerHTML = `
+            <option value="">-- Select Validity --</option>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+          `;
+          if (["1", "2", "3"].includes(currentVal)) validitySelect.value = currentVal;
+        } else {
+          validityWrapper.style.display = "block";
+          expiryWrapper.style.display = "block";
+          possessionWrapper.style.display = "block";
+          validitySelect.innerHTML = `
+            <option value="">-- Select Validity --</option>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+            <option value="4">4 Years</option>
+            <option value="5">5 Years</option>
+          `;
+          if (currentVal) validitySelect.value = currentVal;
+        }
+
+        calculateAll();
+      }
+
+      function resetToBlankState() {
+        _d.getElementById("serviceType").value = "";
+        _d.getElementById("licenseCategory").value = "";
+        _d.getElementById("validityYears").value = "";
+        _d.getElementById("licensePossession").value = "";
+        clearExpiryDate();
+        onServiceTypeChange();
+      }
+
+      function loadTestPreset(mode, catKey, expStr, posVal, yrs) {
+        _d.getElementById("serviceType").value = mode;
+        onServiceTypeChange();
+        _d.getElementById("licenseCategory").value = catKey;
+        _d.getElementById("licensePossession").value = posVal;
+        _d.getElementById("validityYears").value = yrs;
+
+        if (expStr) {
+          const [y, m, d] = expStr.split("-").map(Number);
+          setExpiryValueAndFormat(y, m - 1, d);
+        } else {
+          clearExpiryDate();
+        }
+        calculateAll();
+      }
+
+      // 8. Master Fee & Fine Calculation Engine (with + Facilitation in Multi-Year Table)
+      function calculateAll() {
+        if (!verifyBrandIntegrity()) return;
+
+        const mode = _d.getElementById("serviceType").value;
+        const catKey = _d.getElementById("licenseCategory").value;
+        const validityVal = _d.getElementById("validityYears").value;
+        const possessionVal = _d.getElementById("licensePossession").value;
+        const expiryVal = _d.getElementById("expiryDateValue").value;
+
+        let isReady = false;
+        if (mode && catKey) {
+          if (mode === "duplicate") {
+            isReady = true;
+          } else if (mode === "fresh") {
+            isReady = Boolean(validityVal);
+          } else if (mode === "international" || mode === "renewal") {
+            isReady = Boolean(validityVal && possessionVal);
+          }
+        }
+
+        const blankCard = _d.getElementById("blankPromptCard");
+        const resultsBox = _d.getElementById("resultsContainer");
+
+        if (!isReady) {
+          blankCard.classList.remove("hidden");
+          resultsBox.classList.add("hidden");
+          return;
+        }
+
+        blankCard.classList.add("hidden");
+        resultsBox.classList.remove("hidden");
+
+        const cat = dlimsCategories[catKey];
+        const years = parseInt(validityVal || "1", 10);
+        const inPossession = possessionVal !== "no";
+        const courier = 480;
+
+        const isFreshMode = (mode === "fresh");
+        const isNonDastakCategory = cat.nonDastak;
+        const dupAddon = ((mode === "renewal" || mode === "international") && !inPossession && catKey !== "invalid") ? 200 : 0;
+
+        let oldYears = 0, oldDays = 0, oldYearFine = 0, oldDayFine = 0, oldTotalFine = 0;
+        let newYears = 0, newDays = 0, newYearFine = 0, newDayFine = 0, newTotalFine = 0;
+        let combinedFine = 0;
+        let annualRate = cat.newAnnual;
+        let baseFee = 0;
+        let testFee = 0;
+        let isExpiredFiveYearsPlus = false;
+
+        if (mode === "duplicate") {
+          annualRate = cat.dup;
+          baseFee = cat.dup;
+          _d.getElementById("tblYearlyFeeHeader").innerText = "Duplicate Fee";
+          _d.getElementById("sumBaseLabel").innerText = "Estimated Duplicate Fee:";
+          _d.getElementById("summarySubLabel").innerText = `${cat.label} · Duplicate License`;
+        } else if (mode === "fresh") {
+          annualRate = cat.freshAnnual;
+          testFee = cat.testFee;
+          baseFee = annualRate * years;
+          _d.getElementById("tblFreshTestFee").innerText = "Rs. " + testFee;
+          _d.getElementById("tblFreshAnnualFee").innerText = "Rs. " + annualRate;
+          _d.getElementById("sumTestFeeVal").innerText = "Rs. " + testFee.toLocaleString();
+          _d.getElementById("sumBaseLabel").innerText = `License Fee After Passing Test (${years} ${years === 1 ? "Year" : "Years"}):`;
+          _d.getElementById("summarySubLabel").innerText = `${cat.label} · Fresh License (${years} ${years === 1 ? "Year" : "Years"})`;
+
+          const learnerWaMsg = encodeURIComponent(
+            `Assalam-o-Alaikum Usman Bhai (Dastak Code 90807), I checked the Fresh License Calculator for ${cat.label} and want to avail Maryam Ki Dastak doorstep service for Fresh Learner Permit / Learner Renewal.`
+          );
+          _d.getElementById("waLearnerBtn").href = `https://wa.me/923455583530?text=${learnerWaMsg}`;
+        } else if (mode === "international") {
+          annualRate = cat.idpAnnual;
+          baseFee = annualRate * years;
+          _d.getElementById("tblYearlyFeeHeader").innerText = "Yearly IDP Fee";
+          _d.getElementById("sumBaseLabel").innerText = `Estimated IDP Fee (${years} ${years === 1 ? "Year" : "Years"}):`;
+          _d.getElementById("summarySubLabel").innerText = `${cat.label} · International (Fresh / Renewal · ${years} ${years === 1 ? "Year" : "Years"})`;
+        } else {
+          annualRate = cat.newAnnual;
+          baseFee = annualRate * years;
+          _d.getElementById("tblYearlyFeeHeader").innerText = "Yearly Renewal Fee";
+          _d.getElementById("sumBaseLabel").innerText = `Estimated Renewal Fee (${years} ${years === 1 ? "Year" : "Years"}):`;
+          _d.getElementById("summarySubLabel").innerText = `${cat.label} · ${years} ${years === 1 ? "Year" : "Years"} Renewal`;
+
+          if (expiryVal) {
+            const [ey, em, ed] = expiryVal.split("-").map(Number);
+            const expUtc = makeUTCDate(ey, em, ed);
+
+            const now = new Date();
+            const todayUtc = makeUTCDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
+
+            // Check if license has been expired for 5 years or more (5y_plus rule)
+            const fiveYearAnnivUtc = addYearsUTC(expUtc, 5);
+            if (todayUtc >= fiveYearAnnivUtc) {
+              isExpiredFiveYearsPlus = true;
+            }
+
+            if (catKey !== "invalid") {
+              const oldCutoffUtc = makeUTCDate(2024, 1, 15);
+              const newStartUtc  = makeUTCDate(2024, 1, 16);
+
+              if (expUtc < oldCutoffUtc) {
+                const oldSplit = splitYearsAndDaysUTC(expUtc, oldCutoffUtc);
+                oldYears = oldSplit.years;
+                oldDays  = oldSplit.days;
+
+                oldYearFine = Math.round(oldYears * cat.oldBasic * 0.50);
+                if (oldDays > 90) {
+                  oldDayFine = Math.round(cat.oldBasic * 0.20);
+                } else if (oldDays > 30) {
+                  oldDayFine = Math.round(cat.oldBasic * 0.10);
+                } else {
+                  oldDayFine = 0;
+                }
+                oldTotalFine = oldYearFine + oldDayFine;
+
+                if (todayUtc > newStartUtc) {
+                  const newSplit = splitYearsAndDaysUTC(newStartUtc, todayUtc);
+                  newYears = newSplit.years;
+                  newDays  = newSplit.days;
+
+                  const fineBase = (catKey === "trac_agri") ? 950 : cat.newAnnual;
+                  newYearFine = Math.round(newYears * fineBase * 2.50);
+                  if (newDays > 90) {
+                    newDayFine = Math.round(fineBase * 1.00);
+                  } else if (newDays > 30) {
+                    newDayFine = Math.round(fineBase * 0.50);
+                  } else {
+                    newDayFine = 0;
+                  }
+                  newTotalFine = newYearFine + newDayFine;
+                }
+              } else if (todayUtc > expUtc) {
+                const newSplit = splitYearsAndDaysUTC(expUtc, todayUtc);
+                newYears = newSplit.years;
+                newDays  = newSplit.days;
+
+                const fineBase = (catKey === "trac_agri") ? 950 : cat.newAnnual;
+                newYearFine = Math.round(newYears * fineBase * 2.50);
+                if (newDays > 90) {
+                  newDayFine = Math.round(fineBase * 1.00);
+                } else if (newDays > 30) {
+                  newDayFine = Math.round(fineBase * 0.50);
+                } else {
+                  newDayFine = 0;
+                }
+                newTotalFine = newYearFine + newDayFine;
+              }
+
+              combinedFine = oldTotalFine + newTotalFine;
+            }
+          }
+        }
+
+        const isDastakRestricted = (isNonDastakCategory || isExpiredFiveYearsPlus);
+        const showFacilitatorFee = (!isFreshMode && !isDastakRestricted);
+        const facilitatorFee = showFacilitatorFee ? 950 : 0;
+
+        const renewalFineSec = _d.getElementById("renewalFineSection");
+        const toggleFineBtn  = _d.getElementById("toggleFineDetailsBtn");
+        const freshTestCard  = _d.getElementById("freshTestFeeCard");
+        const stdCourierCard = _d.getElementById("standardCourierYearlyCard");
+        const multiYearSec   = _d.getElementById("multiYearTableSection");
+
+        if (mode === "renewal") {
+          renewalFineSec.style.display = fineRowsVisible ? "block" : "none";
+          toggleFineBtn.style.display = "inline-block";
+          freshTestCard.classList.add("hidden");
+          stdCourierCard.classList.remove("hidden");
+          multiYearSec.style.display = "block";
+        } else if (mode === "fresh") {
+          renewalFineSec.style.display = "none";
+          toggleFineBtn.style.display = "none";
+          freshTestCard.classList.remove("hidden");
+          stdCourierCard.classList.add("hidden");
+          multiYearSec.style.display = "block";
+        } else if (mode === "international") {
+          renewalFineSec.style.display = "none";
+          toggleFineBtn.style.display = "none";
+          freshTestCard.classList.add("hidden");
+          stdCourierCard.classList.remove("hidden");
+          multiYearSec.style.display = "block";
+        } else {
+          renewalFineSec.style.display = "none";
+          toggleFineBtn.style.display = "none";
+          freshTestCard.classList.add("hidden");
+          stdCourierCard.classList.remove("hidden");
+          multiYearSec.style.display = "none";
+        }
+
+        _d.getElementById("freshLearnerNoticeBox").classList.toggle("hidden", !isFreshMode);
+
+        // Configure Restricted Notice Box (5+ Years Expired vs HTV/PSV/Invalid)
+        const noticeBox = _d.getElementById("nonDastakNoticeBox");
+        const noticeUrdu = _d.getElementById("nonDastakUrduText");
+        const noticeEng = _d.getElementById("nonDastakEngText");
+
+        if (!isFreshMode && isDastakRestricted) {
+          noticeBox.classList.remove("hidden");
+          if (isExpiredFiveYearsPlus && !isNonDastakCategory) {
+            noticeUrdu.innerHTML =
+              "<strong>اہم اطلاع (5 سال یا اس سے زائد پرانا لائسنس):</strong> جن ڈرائیونگ لائسنسز کو ایکسپائر ہوئے <strong>5 سال یا اس سے زیادہ عرصہ</strong> گزر چکا ہو، وہ <strong>مریم کی دستک ایپلیکیشن یا آن لائن</strong> رینیو نہیں ہو سکتے۔ اس لائسنس کی تجدید (Renewal) کے لیے براہِ کرم قریبی <strong>ٹریفک لائسنسنگ سینٹر</strong> یا <strong>پولیس خدمت مرکز (PKM)</strong> کا ذاتی طور پر وزٹ کریں۔ (اس حساب میں 950 روپے دستک فیسیلیٹیٹر چارجز شامل نہیں کیے گئے)۔";
+            noticeEng.innerHTML =
+              "<strong>Important Notice (Expired 5 Years or More):</strong> Driving licenses expired for <strong>5 years or more</strong> cannot be renewed via <strong>Maryam Ki Dastak or online</strong>. Please visit your nearest <strong>Traffic Licensing Center</strong> or <strong>Punjab Police Khidmat Markaz (PKM)</strong> in person for renewal. (Rs. 950 Dastak Facilitator fee is excluded).";
+          } else if (isExpiredFiveYearsPlus && isNonDastakCategory) {
+            noticeUrdu.innerHTML =
+              "<strong>اہم اطلاع (5 سال سے زائد پرانا / کمرشل لائسنس):</strong> <strong>5 سال یا اس سے زیادہ عرصہ پہلے ایکسپائر</strong> ہونے والے اور <strong>HTV / PSV / Invalid Carriage</strong> لائسنسز مریم کی دستک یا آن لائن رینیو نہیں ہو سکتے۔ براہِ کرم تجدید کے لیے قریبی <strong>ٹریفک لائسنسنگ سینٹر</strong> یا <strong>پولیس خدمت مرکز (PKM)</strong> تشریف لے جائیں۔ (950 روپے دستک چارجز شامل نہیں کیے گئے)۔";
+            noticeEng.innerHTML =
+              "<strong>Important Notice (5+ Years Expired &amp; Commercial/Special Category):</strong> Licenses expired for <strong>5 years or more</strong> as well as <strong>HTV, PSV, and Invalid Carriage</strong> categories cannot be renewed via Maryam Ki Dastak or online. Please visit your nearest <strong>Traffic Licensing Center</strong> or <strong>Punjab Police Khidmat Markaz (PKM)</strong> in person. (Rs. 950 Dastak Facilitator fee is excluded).";
+          } else {
+            noticeUrdu.innerHTML =
+              "<strong>اہم اطلاع:</strong> فی الوقت مریم کی دستک کے تحت <strong>ایچ ٹی وی (HTV)، پی ایس وی (PSV) اور انویلڈ کیرج (Invalid Carriage)</strong> ڈرائیونگ لائسنس رینیو نہیں ہو رہے۔ یہ لائسنس حاصل کرنے یا تجدید کروانے کے لیے براہِ کرم قریبی <strong>پولیس خدمت مرکز (PKM)</strong> یا <strong>ٹریفک لائسنسنگ آفس</strong> تشریف لے جائیں۔";
+            noticeEng.innerHTML =
+              "<strong>Important Notice:</strong> Renewal for <strong>HTV, PSV, and Invalid Carriage</strong> categories is currently not available via Maryam Ki Dastak. Please visit your nearest <strong>Police Khidmat Markaz (PKM)</strong> or <strong>Traffic Licensing Office</strong>. (Rs. 950 Facilitator charges are not shown).";
+          }
+        } else {
+          noticeBox.classList.add("hidden");
+        }
+
+        _d.getElementById("sumFacilitatorRow").style.display = showFacilitatorFee ? "flex" : "none";
+        _d.getElementById("waBookingWrapper").style.display = showFacilitatorFee ? "block" : "none";
+
+        const sumTestRow = _d.getElementById("sumTestFeeRow");
+        const sumFineRow = _d.getElementById("sumFineRow");
+        if (isFreshMode) {
+          sumTestRow.classList.remove("hidden");
+          sumTestRow.classList.add("flex");
+          sumFineRow.style.display = "none";
+        } else if (mode === "renewal") {
+          sumTestRow.classList.add("hidden");
+          sumTestRow.classList.remove("flex");
+          sumFineRow.style.display = "flex";
+        } else {
+          sumTestRow.classList.add("hidden");
+          sumTestRow.classList.remove("flex");
+          sumFineRow.style.display = "none";
+        }
+
+        _d.getElementById("tblOldYears").innerText = oldYears;
+        _d.getElementById("tblOldDays").innerText = oldDays;
+        _d.getElementById("tblOldYearFine").innerText = oldYearFine;
+        _d.getElementById("tblOldDayFine").innerText = oldDayFine;
+        _d.getElementById("tblOldTotalFine").innerText = oldTotalFine;
+
+        _d.getElementById("tblNewYears").innerText = newYears;
+        _d.getElementById("tblNewDays").innerText = newDays;
+        _d.getElementById("tblNewYearFine").innerText = newYearFine;
+        _d.getElementById("tblNewDayFine").innerText = newDayFine;
+        _d.getElementById("tblNewTotalFine").innerText = newTotalFine;
+
+        _d.getElementById("tblCombinedFine").innerText = combinedFine;
+        _d.getElementById("tblCourierFee").innerText = courier;
+        _d.getElementById("tblYearlyFee").innerText = annualRate;
+
+        // Populate 1-5 Years (or 1-3 Years IDP) Multi-Year Table Including + Facilitation (Rs. 950)
+        if (mode === "renewal" || mode === "fresh" || mode === "international") {
+          const maxYrs = (mode === "international") ? 3 : 5;
+          const headerRow = _d.getElementById("multiYearHeaderRow");
+          const valuesRow = _d.getElementById("multiYearValuesRow");
+          const titleBanner = _d.getElementById("multiYearTitleBanner");
+
+          if (mode === "fresh") {
+            titleBanner.innerText = "Estimated Total Charges (Test Fee + License Fee + Courier)";
+          } else if (mode === "international") {
+            titleBanner.innerText = showFacilitatorFee
+              ? "Estimated Total Charges (IDP Fee + Courier + Facilitation)"
+              : "Estimated Total Charges (IDP Fee + Courier)";
+          } else {
+            titleBanner.innerText = showFacilitatorFee
+              ? "Estimated Total Charges (Renewal + Fine + Courier + Facilitation)"
+              : "Estimated Total Charges (Renewal + Fine + Courier)";
+          }
+
+          headerRow.className = `grid grid-cols-${maxYrs} bg-[#166534] text-white text-xs sm:text-sm font-semibold py-2 text-center`;
+          valuesRow.className = `grid grid-cols-${maxYrs} py-3 text-center text-xs sm:text-sm font-bold text-slate-800 bg-white divide-x divide-slate-100`;
+
+          let hHtml = "";
+          let vHtml = "";
+          for (let y = 1; y <= maxYrs; y++) {
+            const yTotal = (annualRate * y) + testFee + combinedFine + dupAddon + courier + facilitatorFee;
+            const activeClass = (y === years) ? "bg-amber-50 text-[#0b3d2e] underline font-extrabold" : "";
+            hHtml += `<div>${y} ${y === 1 ? "Year" : "Years"}</div>`;
+            vHtml += `<div class="cursor-pointer py-1 ${activeClass}" onclick="document.getElementById('validityYears').value='${y}';calculateAll();">${yTotal}</div>`;
+          }
+          headerRow.innerHTML = hHtml;
+          valuesRow.innerHTML = vHtml;
+        }
+
+        const govtTotal = baseFee + testFee + combinedFine + dupAddon + courier;
+        const grandTotal = govtTotal + facilitatorFee;
+
+        _d.getElementById("sumBaseVal").innerText = "Rs. " + baseFee.toLocaleString();
+        _d.getElementById("sumFineVal").innerText = "Rs. " + combinedFine.toLocaleString();
+        _d.getElementById("sumGovtTotal").innerText = "Rs. " + govtTotal.toLocaleString();
+        _d.getElementById("sumGrandTotal").innerText = "Rs. " + grandTotal.toLocaleString();
+
+        if (isFreshMode) {
+          _d.getElementById("sumGrandSubtitle").innerText = "(Estimated Official Fee — Visit Driving License Center / PKM)";
+        } else if (isExpiredFiveYearsPlus) {
+          _d.getElementById("sumGrandSubtitle").innerText = "(Estimated Official Govt Fee Only — 5+ Yrs Expired: Visit Traffic Center / PKM)";
+        } else if (isNonDastakCategory) {
+          _d.getElementById("sumGrandSubtitle").innerText = "(Estimated Govt Fee Only — Visit PKM / Traffic Office)";
+        } else {
+          _d.getElementById("sumGrandSubtitle").innerText = "(Estimated Govt PSID + Doorstep Facilitation)";
+        }
+
+        const dupRow = _d.getElementById("sumDupAddonRow");
+        if (dupAddon > 0) {
+          dupRow.classList.remove("hidden");
+          dupRow.classList.add("flex");
+          _d.getElementById("sumDupAddonVal").innerText = "+ Rs. " + dupAddon;
+        } else {
+          dupRow.classList.add("hidden");
+          dupRow.classList.remove("flex");
+        }
+
+        const serviceLabel = (mode === "international")
+          ? "International Driving Permit (Fresh / Renewal)"
+          : mode === "fresh"
+            ? "Fresh Regular License"
+            : mode === "duplicate"
+              ? "Duplicate Driving License"
+              : "Regular License Renewal";
+
+        latestShareSummaryText =
+          `Punjab Driving License Fee Summary (DLIMS 2.0) — Dastak Online Document Facilitation (Code: 90807)\n` +
+          `• Service: ${serviceLabel} (${years} ${years === 1 ? "Year" : "Years"})\n` +
+          `• Category: ${cat.label}\n` +
+          (mode === "renewal" && expiryVal ? `• Expiry Date: ${expiryVal}\n` : "") +
+          (combinedFine > 0 ? `• Est. Late Fine: Rs. ${combinedFine.toLocaleString()}\n` : "") +
+          `• Est. Official Govt PSID: Rs. ${govtTotal.toLocaleString()}\n` +
+          (showFacilitatorFee ? `• Dastak Facilitation Fee: Rs. ${facilitatorFee.toLocaleString()}\n` : "") +
+          `• Total Estimated Cost: Rs. ${grandTotal.toLocaleString()}\n` +
+          (isExpiredFiveYearsPlus
+            ? `• Note: License expired 5+ years ago cannot be renewed via Maryam Ki Dastak/online. Please visit Traffic Licensing Center or Police Khidmat Markaz (PKM) in person.\n`
+            : "") +
+          `WhatsApp Booking: 0345-5583530 | www.dastak90807.com`;
+
+        if (showFacilitatorFee) {
+          const waText = encodeURIComponent(
+            `Assalam-o-Alaikum Usman Bhai (Dastak Code 90807), I checked the Estimated DLIMS Fee Calculator:\n` +
+            `• Service: ${serviceLabel} (${years} Yr)\n` +
+            `• Category: ${cat.label}\n` +
+            (mode === "renewal" && expiryVal ? `• Expiry Date: ${expiryVal}\n` : "") +
+            `• Est. Govt PSID: Rs. ${govtTotal.toLocaleString()}\n` +
+            `• Est. Total with Doorstep Service: Rs. ${grandTotal.toLocaleString()}\n` +
+            `Please guide me for processing.`
+          );
+          _d.getElementById("waBookingLink").href = `https://wa.me/923455583530?text=${waText}`;
+        }
+      }
+
+      // Expose required UI handlers safely to window
+      _w.openCalendarModal = openCalendarModal;
+      _w.closeCalendarModal = closeCalendarModal;
+      _w.changeCalendarMonth = changeCalendarMonth;
+      _w.onCalMonthYearSelect = onCalMonthYearSelect;
+      _w.selectCalendarDay = selectCalendarDay;
+      _w.confirmCalendarDate = confirmCalendarDate;
+      _w.clearExpiryFromModal = clearExpiryFromModal;
+      _w.clearExpiryDate = clearExpiryDate;
+      _w.copyFeeSummary = copyFeeSummary;
+      _w.toggleAdminBar = toggleAdminBar;
+      _w.toggleFineRows = toggleFineRows;
+      _w.onServiceTypeChange = onServiceTypeChange;
+      _w.resetToBlankState = resetToBlankState;
+      _w.loadTestPreset = loadTestPreset;
+      _w.calculateAll = calculateAll;
+
+      _w.addEventListener("DOMContentLoaded", () => {
+        initCalendarSelects();
+        resetToBlankState();
+        verifyBrandIntegrity();
+
+        // Continuous DOM Mutation Guard to prevent unauthorized removal of Dastak 90807 attribution
+        if (_w.MutationObserver && _d.body) {
+          const observer = new MutationObserver(() => {
+            verifyBrandIntegrity();
+          });
+          observer.observe(_d.body, { childList: true, subtree: true, characterData: true });
+        }
+        setInterval(verifyBrandIntegrity, 2500);
+      });
+    })(window, document);
+  </script>
+</body>
+</html>
