@@ -34,4 +34,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://dastak90807.com/sitemap.xml
+Sitemap: https://www.dastak90807.com/sitemap.xml
