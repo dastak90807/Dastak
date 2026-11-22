@@ -22,8 +22,8 @@ main .card h2,main .card h3{line-height:1.4}
 .clean-footer p{margin:12px 0;font-size:13px;line-height:1.8;color:#d6e7e1}
 .clean-footer a{font-size:13px;line-height:1.7;color:#d6e7e1;margin:9px 0;text-decoration:none;overflow-wrap:anywhere}
 .clean-footer a:hover{color:var(--y);text-decoration:underline}
-.clean-footer .footer-logo{display:inline-flex;background:#fff;border-radius:8px;padding:9px 12px;margin:0 0 4px}
-.clean-footer .footer-logo img{width:152px;max-width:100%;height:auto}
+.clean-footer .footer-logo{display:block;width:190px;max-width:100%;aspect-ratio:9/4;margin:0 0 4px;background:url(/assets/dastak90807-logo2.webp) left center/contain no-repeat}
+.clean-footer .footer-logo img{display:none}
 .clean-footer .footer-small{font-size:12px;color:#adcac0}
 .clean-footer .footer-small a{display:inline;font-size:inherit;margin:0}
 .clean-footer .footer-verify{font-weight:600;color:#fff}
