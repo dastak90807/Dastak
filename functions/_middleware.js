@@ -10,11 +10,17 @@ export async function onRequest(context) {
     if (!footerRes.ok) return response;
     const footerHtml = await footerRes.text();
     if (!footerHtml.includes("clean-footer")) return response;
-    return new HTMLRewriter()
+    const out = new HTMLRewriter()
       .on("footer.clean-footer", {
         element(el) { el.replace(footerHtml, { html: true }); }
       })
       .transform(response);
+    // The page body changes when footer.html changes, so the original ETag must not be reused.
+    const headers = new Headers(out.headers);
+    headers.delete("ETag");
+    headers.delete("Last-Modified");
+    headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+    return new Response(out.body, { status: out.status, statusText: out.statusText, headers });
   } catch (e) {
     return response;
   }
