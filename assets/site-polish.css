@@ -12,8 +12,9 @@ main .card h2,main .card h3{line-height:1.4}
  .home-category:hover,.home-tool:hover,.form-card:hover,.guide-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,61,46,.09)}
  .reveal-up{animation:section-arrive .45s ease-out both}
  @keyframes section-arrive{from{opacity:.8;transform:translateY(10px)}to{opacity:1;transform:none}}
- .hero [data-ga-event="hero_whatsapp_click"]{animation:whatsapp-halo 2.6s ease-out infinite}
- @keyframes whatsapp-halo{0%,100%{box-shadow:0 0 0 0 rgba(14,124,102,0)}30%{box-shadow:0 0 0 0 rgba(14,124,102,.15)}85%{box-shadow:0 0 0 8px rgba(14,124,102,0)}}
+ .hero [data-ga-event="hero_whatsapp_click"]{position:relative}
+ .hero [data-ga-event="hero_whatsapp_click"]::after{content:"";position:absolute;inset:-1px;border-radius:inherit;box-shadow:0 0 0 6px rgba(14,124,102,.28);opacity:0;pointer-events:none;animation:whatsapp-halo 2.6s ease-out infinite}
+ @keyframes whatsapp-halo{0%,20%{opacity:0;transform:scale(.98)}35%{opacity:1;transform:scale(1)}85%,100%{opacity:0;transform:scale(1.06)}}
 }
 /* One concise footer on every content page. */
 .ft.clean-footer{padding:44px 24px 24px;background:var(--dg);color:#d6e7e1;border-top:3px solid var(--y);margin:0}

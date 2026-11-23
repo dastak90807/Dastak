@@ -69,7 +69,7 @@
     const control = event.target.closest('[data-ga-event]');
     if (control && typeof window.gtag === 'function') {
       const params = {};
-      for (const [attribute, key] of [['formName', 'form_name'], ['serviceName', 'service_name'], ['toolName', 'tool_name'], ['faqTitle', 'faq_title']]) {
+      for (const [attribute, key] of [['formName', 'form_name'], ['serviceName', 'service_name'], ['toolName', 'tool_name'], ['faqTitle', 'faq_title'], ['ctaLocation', 'cta_location']]) {
         if (control.dataset[attribute]) params[key] = control.dataset[attribute];
       }
       if (control.tagName === 'DETAILS' && control.dataset.gaEvent === 'home_faq_expand') return;
