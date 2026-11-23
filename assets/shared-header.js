@@ -14,6 +14,13 @@
   css.setAttribute('blocking', 'render');
   document.head.appendChild(css);
 
+  if (!window.__dastakAnalytics) {
+    const analytics = document.createElement('script');
+    analytics.defer = true;
+    analytics.src = '/assets/analytics.js?v=1';
+    document.head.appendChild(analytics);
+  }
+
   script.insertAdjacentHTML('beforebegin',
     '<header class="hd">' +
       '<a class="brand" href="/en/"><img class="brand-logo" src="/assets/dastak-90807-transparent.png" alt="Dastak 90807 — Doorstep Delivery of Services" width="2121" height="741"></a>' +
