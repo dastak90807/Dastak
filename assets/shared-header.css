@@ -39,3 +39,9 @@
   }
   .hd .hd-search:focus-within .site-search-field input { width: 100%; opacity: 1; }
 }
+
+/* Wide desktop (1200px+): menu and search sit together in the center, between logo and WhatsApp */
+@media (min-width: 1200px) {
+  .hd nav { margin-left: auto; }
+  .hd .site-search.hd-search { margin-left: 28px; margin-right: auto; }
+}
