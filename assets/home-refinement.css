@@ -11,7 +11,6 @@
 .home .hero .row{justify-content:flex-start}
 .home .hero .art{position:relative;text-align:center}
 .home .hero .art img{width:100%;height:auto;max-width:460px;mix-blend-mode:multiply;border:0;border-radius:0;box-shadow:none}
-.hero-verification{display:inline-block;margin:4px 0 0;padding:10px 16px;border:1px solid var(--bd);border-radius:8px;background:#fff;font-size:12px;color:var(--dg)}
 .home-trust{border-bottom:1px solid var(--bd);background:#fff}
 .home-trust>div{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1200px;margin:auto;padding:22px 24px;font-size:12px;font-weight:600;text-align:center;align-items:center}
 .home-trust a{text-decoration:none}
@@ -60,3 +59,9 @@
 .home .wrap>h2,.home .wrap>div>h2{border-left:0;padding-left:0}
 .home .wrap>h2::before,.home .wrap>div>h2::before{content:"";display:inline-block;width:3px;height:.85em;margin-right:12px;background:var(--y);vertical-align:baseline}
 @media(max-width:700px){.home .hero .art{grid-row:auto}}
+
+/* Hero photo (Nov 2026): the hero background is unchanged. The photo's pale left edge
+   fades out with a mask so it melts into the existing gradient. */
+.home .hero .art{width:100%;position:relative}
+.home .hero .art img{display:block;width:100%;max-width:none;height:auto;aspect-ratio:1200/675;object-fit:cover;mix-blend-mode:normal;border-radius:0;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 24%,rgba(0,0,0,.4) 32%,#000 42%);mask-image:linear-gradient(90deg,transparent 0%,transparent 24%,rgba(0,0,0,.4) 32%,#000 42%)}
+@media(max-width:700px){.home .hero .art img{-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 22%,rgba(0,0,0,.4) 30%,#000 40%),linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,transparent 22%,rgba(0,0,0,.4) 30%,#000 40%),linear-gradient(180deg,#000 70%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}}
