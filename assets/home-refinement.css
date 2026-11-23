@@ -60,8 +60,18 @@
 .home .wrap>h2::before,.home .wrap>div>h2::before{content:"";display:inline-block;width:3px;height:.85em;margin-right:12px;background:var(--y);vertical-align:baseline}
 @media(max-width:700px){.home .hero .art{grid-row:auto}}
 
-/* Hero photo (Nov 2026): the hero background is unchanged. The photo's pale left edge
-   fades out with a mask so it melts into the existing gradient. */
-.home .hero .art{width:100%;position:relative}
-.home .hero .art img{display:block;width:100%;max-width:none;height:auto;aspect-ratio:1200/675;object-fit:cover;mix-blend-mode:normal;border-radius:0;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 24%,rgba(0,0,0,.4) 32%,#000 42%);mask-image:linear-gradient(90deg,transparent 0%,transparent 24%,rgba(0,0,0,.4) 32%,#000 42%)}
-@media(max-width:700px){.home .hero .art img{-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 22%,rgba(0,0,0,.4) 30%,#000 40%),linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,transparent 22%,rgba(0,0,0,.4) 30%,#000 40%),linear-gradient(180deg,#000 70%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}}
+/* Immersive hero (Nov 2026): large photo bleeds to the right edge of the page, text sits on the left.
+   The hero background gradient is unchanged; the photo's pale left edge fades out with a mask. */
+.home .hero{position:relative;overflow:hidden;isolation:isolate}
+.home .hero .wrap.two{display:block;position:static;max-width:1400px;min-height:clamp(440px,42vw,640px);padding-block:56px;display:flex;align-items:center}
+.home .hero .two>div:first-child{position:relative;z-index:2;width:min(560px,46%)}
+.home .hero h1{font-size:clamp(30px,3.3vw,50px);line-height:1.12}
+.home .hero .art{position:absolute;z-index:1;top:0;right:0;bottom:0;width:min(66%,1280px);margin:0}
+.home .hero .art img{display:block;width:100%;height:100%;max-width:none;aspect-ratio:auto;object-fit:cover;object-position:right center;mix-blend-mode:normal;border-radius:0;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 8%,rgba(0,0,0,.45) 20%,#000 34%);mask-image:linear-gradient(90deg,transparent 0%,transparent 8%,rgba(0,0,0,.45) 20%,#000 34%)}
+@media(max-width:980px){
+ .home .hero .wrap.two{display:block;min-height:0;padding-bottom:0}
+ .home .hero .two>div:first-child{width:auto}
+ .home .hero h1{font-size:clamp(30px,8vw,40px)}
+ .home .hero .art{position:relative;top:auto;right:auto;bottom:auto;width:calc(100% + 40px);margin:8px -20px 0}
+ .home .hero .art img{height:auto;aspect-ratio:4/3;object-position:right center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 24%),linear-gradient(180deg,#000 68%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 24%),linear-gradient(180deg,#000 68%,transparent 100%);-webkit-mask-composite:source-in;mask-composite:intersect}
+}
