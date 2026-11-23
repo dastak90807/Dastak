@@ -1,0 +1,8 @@
+/* Guide card thumbnails + 3-in-a-row home grid (loaded on /en/ and /en/guides/) */
+.guide-illustration.has-thumb,.guide-grid .guide-illustration{display:block;height:auto;min-height:0;aspect-ratio:16/9;overflow:hidden}
+.guide-grid .guide-illustration:not(.has-thumb){display:flex;align-items:center;justify-content:center}
+.guide-illustration.has-thumb{background:#e6f4ed}
+.guide-illustration.has-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.home #guides .guide-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.home #guides .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.home #guides .guide-grid{grid-template-columns:1fr}}
