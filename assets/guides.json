@@ -1,0 +1,67 @@
+{
+ "_note": "Add one entry per guide (newest date first wins; ties keep list order). Then run: python3 scripts/build_guides.py  (and --check).",
+ "icons": {
+  "driving": "<svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><circle cx=\"8\" cy=\"11\" r=\"2\"/><path d=\"M5 16c0-3 6-3 6 0m3-6h4m-4 4h4\"/></svg>",
+  "police": "<svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6\"/></svg>",
+  "civil": "<svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 3h10l4 4v14H5zM14 3v5h5M8 12h8m-8 4h8\"/></svg>",
+  "vehicle": "<svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 11l2-5h10l2 5\"/><path d=\"M4 11h16a1 1 0 0 1 1 1v6H3v-6a1 1 0 0 1 1-1z\"/><path d=\"M6 18v2m12-2v2M6 14h2m8 0h2\"/></svg>"
+ },
+ "guides": [
+  {
+   "slug": "how-to-track-driving-license-in-punjab",
+   "title": "How to Track Your Driving License in Punjab (DLIMS & Pakistan Post)",
+   "summary": "Two-stage tracking guide: DLIMS status by CNIC, then Pakistan Post delivery.",
+   "category": "driving",
+   "date": "2026-11-23",
+   "eyebrow": "NEW · DRIVING LICENSE GUIDE",
+   "thumb": "track-driving-license-punjab-dastak-90807-thumb.webp",
+   "thumb_w": 640,
+   "thumb_h": 357,
+   "thumb_alt": "Guide banner on how to track a driving license in Punjab by DLIMS and Pakistan Post, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi"
+  },
+  {
+   "slug": "driving-license-renewal-gujar-khan",
+   "title": "Online Driving License Renewal in Gujar Khan & Rawalpindi",
+   "summary": "Punjab license renewal: documents, fees and tracking.",
+   "category": "driving",
+   "date": "2026-11-17",
+   "eyebrow": "LOCAL DOCUMENT GUIDE"
+  },
+  {
+   "slug": "police-character-certificate-gujar-khan",
+   "title": "Police Character Certificate in Gujar Khan: Documents & Doorstep Guide",
+   "summary": "Police character certificate preparation and verification.",
+   "category": "police",
+   "date": "2026-11-17",
+   "eyebrow": "LOCAL DOCUMENT GUIDE",
+   "thumb": "police-character-certificate-gujar-khan-rawalpindi-dastak-90807-thumb.webp",
+   "thumb_w": 546,
+   "thumb_h": 305,
+   "thumb_alt": "Dastak facilitator explaining police character certificate documents to a customer at home, Gujar Khan, Rawalpindi, Dastak Online Document Facilitation (Code 90807)"
+  },
+  {
+   "slug": "domicile-stamp-paper-gujar-khan-rawalpindi",
+   "title": "Domicile & e-Stamp Paper in Gujar Khan and Rawalpindi: Application Guide",
+   "summary": "Domicile documents, e-stamp preparation and official checks.",
+   "category": "civil",
+   "date": "2026-11-17",
+   "eyebrow": "LOCAL DOCUMENT GUIDE",
+   "thumb": "domicile-e-stamp-paper-gujar-khan-rawalpindi-dastak-90807-thumb.webp",
+   "thumb_w": 546,
+   "thumb_h": 305,
+   "thumb_alt": "Dastak facilitator reviewing domicile and e-stamp paper documents with a family at home, Gujar Khan, Rawalpindi, Dastak Online Document Facilitation (Code 90807)"
+  },
+  {
+   "slug": "vehicle-transfer-token-tax-punjab",
+   "title": "Vehicle & Motorcycle Ownership Transfer & Token Tax Guide (Punjab)",
+   "summary": "Required documents, buyer and seller biometric rules, PSID challan and fee breakdown.",
+   "category": "vehicle",
+   "date": "2026-11-17",
+   "eyebrow": "LOCAL DOCUMENT GUIDE",
+   "thumb": "vehicle-transfer-token-tax-punjab-dastak-90807-thumb.webp",
+   "thumb_w": 546,
+   "thumb_h": 305,
+   "thumb_alt": "Dastak facilitator checking vehicle ownership transfer and token tax documents for a motorbike owner in Punjab, Dastak Online Document Facilitation (Code 90807)"
+  }
+ ]
+}
