@@ -113,3 +113,18 @@ body:has(.home) .ft{padding-inline:max(20px,calc((100% - 1280px)/2))}
 .home .home-category .home-category-foot .home-category-more{margin:0;padding:0;border:0}
 .home .home-category .home-category-foot .home-category-wa{min-height:44px;padding:10px 14px;font-size:13px;text-decoration:none}
 .home .home-category .home-category-foot .home-category-wa:hover{text-decoration:none}
+
+/* Services cards hover v2: light curve + logo + arrow (desktop hover only, Nov 2026) */
+.home .home-category .category-icon,.home .home-category h3,.home .home-category p,.home .home-category ul,.home .home-category .home-category-wa{position:relative;z-index:2}
+.home .home-category .home-category-foot .home-category-more::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+@media (hover:hover) and (pointer:fine){
+ .home .home-category{overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+ .home .home-category::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .home .home-category::after{content:"";position:absolute;right:20px;top:50px;width:92px;height:32px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+ .home .home-category .home-category-foot::before{content:"\2192";position:absolute;right:22px;bottom:98px;width:38px;height:38px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-size:18px;font-weight:700;opacity:0;transform:translateX(-10px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;z-index:2}
+ .home .home-category:hover{border-color:var(--g)}
+ .home .home-category:hover::before{opacity:1;transform:scale(1)}
+ .home .home-category:hover::after{opacity:.95}
+ .home .home-category:hover .home-category-foot::before{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){.home .home-category,.home .home-category::before,.home .home-category::after,.home .home-category .home-category-foot::before{transition:none}}
