@@ -1,0 +1,10 @@
+/* Back-to-top button: yellow circle, dark green arrow, scroll progress ring */
+a.back-to-top{position:fixed;right:20px;bottom:84px;width:44px;height:44px;border:0;border-radius:50%;background:#F4B63D;color:#0A3F35;font-size:0;line-height:0;text-decoration:none;box-shadow:0 4px 14px rgba(10,63,53,.28);z-index:40;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s,background .2s ease}
+a.back-to-top.is-on{opacity:1;visibility:visible;transform:none}
+a.back-to-top:hover{background:#FFC552}
+a.back-to-top:focus-visible{outline:3px solid #0A3F35;outline-offset:3px}
+a.back-to-top svg{position:absolute;inset:0;width:100%;height:100%}
+a.back-to-top .btt-ring{transform:rotate(-90deg)}
+a.back-to-top .btt-arrow{inset:auto;left:50%;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px}
+@media(max-width:800px){a.back-to-top{right:16px;bottom:138px;width:40px;height:40px}}
+@media(prefers-reduced-motion:reduce){a.back-to-top{transition:none;transform:none}}
