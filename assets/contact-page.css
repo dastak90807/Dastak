@@ -60,3 +60,7 @@
 .contact-v2 .ct-foot{font-size:13px!important;text-align:center;color:#52645c!important;padding:20px 0 36px;margin:0}
 @media(max-width:900px){.contact-v2 .ct-options{grid-template-columns:1fr}.contact-v2 .ct-two,.contact-v2 .ct-loc-grid{grid-template-columns:1fr}.contact-v2 .contact-map{min-height:300px}.contact-v2 #wf{grid-template-columns:1fr}.contact-v2 .ct-card{padding:22px 18px}}
 @media (prefers-reduced-motion:reduce){.contact-v2 .ct-opt,.contact-v2 .ct-opt::before,.contact-v2 .ct-opt::after,.contact-v2 .ct-loc::before{transition:none}}
+
+/* inline styles moved here (site CSP blocks style="") */
+.ct-lbl{margin-bottom:6px}
+.ct-note{font-size:14.5px}
