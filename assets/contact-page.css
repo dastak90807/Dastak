@@ -1,0 +1,62 @@
+/* Contact page v2 (Nov 2026) */
+.page-contact.contact-v2{background:#f7faf9;padding:0}
+.contact-v2 .ct-wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.contact-v2 .ct-eb{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--g);text-transform:uppercase;margin:0}
+.contact-v2 h1{font-size:clamp(28px,3.6vw,42px);line-height:1.15;letter-spacing:-.6px;margin:10px 0 14px;color:var(--dg);max-width:24ch}
+.contact-v2 h2{font-size:clamp(23px,2.5vw,29px);line-height:1.2;margin:6px 0 12px;color:var(--dg)}
+.contact-v2 p{font-size:16px;line-height:1.7;color:var(--mut);margin:0 0 14px}
+.contact-v2 .ct-hero{background:linear-gradient(90deg,#fff 0,var(--mint) 100%);padding:48px 0 70px}
+.contact-v2 .ct-chip{display:inline-block;background:var(--dg);color:#fff;font-size:13px;font-weight:700;padding:7px 14px;border-radius:99px}
+.contact-v2 .ct-hero p{max-width:62ch;margin:0}
+.contact-v2 .ct-options{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-40px;position:relative;z-index:3}
+.contact-v2 .ct-opt{position:relative;overflow:hidden;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(10,63,53,.08);display:flex;flex-direction:column;gap:6px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.contact-v2 .ct-opt>*{position:relative;z-index:2}
+.contact-v2 .ct-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--mint);color:var(--g)}
+.contact-v2 .ct-opt h2{font-size:19px;margin:8px 0 0}
+.contact-v2 .ct-opt p{font-size:14.5px;margin:0 0 8px;line-height:1.55}
+.contact-v2 .ct-opt .btn{margin-top:auto;align-self:flex-start;max-width:100%}
+.contact-v2 .ct-opt .btn.o{word-break:break-all}
+@media (hover:hover) and (pointer:fine){
+ .contact-v2 .ct-opt::before,.contact-v2 .ct-loc::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .contact-v2 .ct-opt::after{content:"";position:absolute;right:16px;top:14px;width:84px;height:28px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+ .contact-v2 .ct-opt:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,61,46,.09)}
+ .contact-v2 .ct-opt:hover::before,.contact-v2 .ct-loc:hover::before{opacity:1;transform:scale(1)}
+ .contact-v2 .ct-opt:hover::after{opacity:.95}
+}
+.contact-v2 .ct-two{display:grid;grid-template-columns:1.35fr 1fr;gap:24px;margin:44px 0 0;align-items:start}
+.contact-v2 .ct-card{background:#fff;border:1px solid var(--bd);border-radius:20px;padding:28px}
+.contact-v2 .ct-form .ct-note{background:#fff8ea;border:1px solid #f1d9a0;border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.55;color:#5a4a1d;margin:0 0 16px}
+.contact-v2 #wf{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0}
+.contact-v2 #wf label{margin:0;font-size:13.5px;font-weight:700;color:var(--dg);line-height:1.5}
+.contact-v2 #wf input,.contact-v2 #wf select,.contact-v2 #wf textarea{display:block;width:100%;margin-top:6px;border:1px solid #b7cfc0;background:#fbfdfc;border-radius:10px;padding:12px;font:inherit;font-size:15px;color:var(--ink)}
+.contact-v2 #wf input:focus,.contact-v2 #wf select:focus,.contact-v2 #wf textarea:focus{outline:2px solid var(--g);outline-offset:1px;border-color:var(--g)}
+.contact-v2 #wf label:has(textarea){grid-column:1/-1}
+.contact-v2 #wf button{grid-column:1/-1;justify-self:start;cursor:pointer;font-size:15px;padding:13px 22px}
+.contact-v2 .ct-small{font-size:13px!important;margin:14px 0 0!important;color:#52645c!important}
+.contact-v2 .ct-side{display:grid;gap:16px}
+.contact-v2 .ct-side h2{font-size:20px}
+.contact-v2 .ct-list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.contact-v2 .ct-list li{position:relative;padding-left:30px;font-size:15px;line-height:1.55;color:var(--mut)}
+.contact-v2 .ct-list li::before{content:"✓";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--mint);color:var(--g);font-weight:800;font-size:13px;display:grid;place-items:center}
+.contact-v2 .ct-list li.no::before{content:"✕";background:#fdecec;color:#b42318}
+.contact-v2 .ct-verify{background:var(--dg);border-color:var(--dg)}
+.contact-v2 .ct-verify h2,.contact-v2 .ct-verify p{color:#fff}.contact-v2 .ct-verify p{color:#cfe5df;font-size:14.5px}
+.contact-v2 .ct-verify a{color:#fff;text-decoration:underline}
+.contact-v2 .ct-loc-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;margin-top:44px;align-items:stretch}
+.contact-v2 .ct-loc{position:relative;overflow:hidden}
+.contact-v2 .ct-loc>*{position:relative;z-index:2}
+.contact-v2 .ct-loc address{font-style:normal;font-size:16px;line-height:1.65;color:var(--mut);margin:0 0 12px}
+.contact-v2 .ct-loc address b{color:var(--dg)}
+.contact-v2 .ct-tags{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px;padding:0;list-style:none}
+.contact-v2 .ct-tags li{background:var(--mint);color:var(--dg);font-size:13.5px;font-weight:700;padding:6px 12px;border-radius:99px}
+.contact-v2 .ct-loc .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.contact-v2 .contact-map{display:block;width:100%;height:100%;min-height:380px;border:0;border-radius:20px}
+.contact-v2 .ct-online{margin:44px 0 0}
+.contact-v2 .ct-online .soc{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+.contact-v2 .ct-faq{margin:44px 0 10px}
+.contact-v2 .ct-faq details{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px 20px;margin:0 0 10px}
+.contact-v2 .ct-faq summary{cursor:pointer;font-weight:800;color:var(--dg);font-size:16.5px}
+.contact-v2 .ct-faq details p{margin:10px 0 0}
+.contact-v2 .ct-foot{font-size:13px!important;text-align:center;color:#52645c!important;padding:20px 0 36px;margin:0}
+@media(max-width:900px){.contact-v2 .ct-options{grid-template-columns:1fr}.contact-v2 .ct-two,.contact-v2 .ct-loc-grid{grid-template-columns:1fr}.contact-v2 .contact-map{min-height:300px}.contact-v2 #wf{grid-template-columns:1fr}.contact-v2 .ct-card{padding:22px 18px}}
+@media (prefers-reduced-motion:reduce){.contact-v2 .ct-opt,.contact-v2 .ct-opt::before,.contact-v2 .ct-opt::after,.contact-v2 .ct-loc::before{transition:none}}
