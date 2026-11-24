@@ -66,3 +66,8 @@
 .services-v2 .sv-tools-l{flex:0 0 100%;margin:0;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--g)}
 .services-v2 .sv-tools .btn.y{display:inline-flex;align-items:center;gap:8px}
 .services-v2 .sv-tools .sv-ci{flex:0 0 auto}
+
+/* inline styles moved here (site CSP blocks style="") */
+.sv-lead{max-width:62ch}
+.sv-sr{position:absolute;left:-9999px}
+#sv-popular{margin-top:34px}
