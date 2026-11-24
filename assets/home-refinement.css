@@ -190,3 +190,31 @@ body:has(.home) .ft{padding-inline:max(20px,calc((100% - 1280px)/2))}
 .fc-note{text-align:center;font-size:13px;color:var(--mut);margin:14px 0 0}
 @media(max-width:900px){.fc-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.fc-profile,.fc-contact{padding:22px}.fc-head{flex-direction:column;align-items:flex-start}.fc-head h2{font-size:22px}.fc-map iframe{height:220px}}
+
+/* How it works (Nov 2026) */
+.home-steps-sub{text-align:center;margin:8px auto 34px}
+.home-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;position:relative}
+.home-steps::before{content:"";position:absolute;left:16%;right:16%;top:44px;border-top:2px dashed #9ccab5;z-index:0}
+.home-step{position:relative;z-index:1;overflow:hidden;background:#fff;border:1px solid #dae6df;border-radius:18px;padding:84px 24px 24px;box-shadow:0 4px 18px rgba(11,61,46,.05);display:flex;flex-direction:column;gap:10px;transition:border-color .25s ease}
+.home-step-num{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:54px;height:54px;border-radius:50%;background:var(--g);color:#fff;font-weight:800;font-size:22px;display:grid;place-items:center;z-index:2}
+.home-step h3,.home-step p,.home-step-tag{position:relative;z-index:2}
+.home-step h3{margin:0;text-align:center;font-size:19px}
+.home-step p{margin:0;font-size:15px;line-height:1.65}
+.home-step .nw{white-space:nowrap}
+.home-step-tag{margin-top:auto;align-self:center;background:var(--mint);color:var(--g);font-size:12px;font-weight:700;padding:6px 12px;border-radius:99px;text-align:center}
+.home-trust-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:28px 0}
+.home-trust-item{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.7);border:1px solid #dae6df;border-radius:14px;padding:14px 16px}
+.home-trust-item>span{width:40px;height:40px;border-radius:10px;background:var(--mint);color:var(--g);display:grid;place-items:center;flex:none}
+.home-trust-item strong{display:block;font-size:14px;line-height:1.3}
+.home-trust-item small{display:block;color:var(--mut);font-size:12.5px;line-height:1.4}
+@media (hover:hover) and (pointer:fine){
+ .home-step::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .home-step::after{content:"";position:absolute;right:16px;top:20px;width:92px;height:32px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+ .home-step:hover{border-color:var(--g)}
+ .home-step:hover::before{opacity:1;transform:scale(1)}
+ .home-step:hover::after{opacity:.95}
+}
+@media (prefers-reduced-motion:reduce){.home-step,.home-step::before,.home-step::after{transition:none}}
+@media(max-width:900px){.home-steps{grid-template-columns:1fr}.home-steps::before{display:none}.home-trust-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.home-trust-strip{grid-template-columns:1fr}.home-step{padding:80px 20px 20px}}
+.home .process .row{justify-content:center}
