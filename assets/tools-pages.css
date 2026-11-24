@@ -74,7 +74,7 @@
 .downloads-v2 .dl-card .btn.o{background:#fff;border:2px solid var(--g);color:var(--g)}
 .downloads-v2 .dl-card .btn.dl-og{border-color:var(--bd);color:var(--mut)}
 @media (hover:hover) and (pointer:fine){
- .tools-v2 .tp-card::before,.tools-v2 .tp-portal::before,.downloads-v2 .dl-card::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .tools-v2 .tp-card::before,.tools-v2 .tp-portal::before,.downloads-v2 .dl-card::before{content:"";position:absolute;right:-135px;top:-125px;width:340px;height:340px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
  .tools-v2 .tp-card::after,.tools-v2 .tp-portal::after,.downloads-v2 .dl-card::after{content:"";position:absolute;right:16px;bottom:12px;width:70px;height:23px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
  .downloads-v2 .dl-card::after{top:20px;bottom:auto}
  .tools-v2 .tp-card:hover,.tools-v2 .tp-portal:hover,.downloads-v2 .dl-card:hover{border-color:var(--g);transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,61,46,.09)}
@@ -102,7 +102,7 @@
 .calc-hub-v2 .ch-how li{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px;font-size:14px;line-height:1.55;color:var(--mut)}.calc-hub-v2 .ch-how b{display:block;color:var(--dg);margin-bottom:4px}
 .calc-hub-v2 .ch-pdf{background:var(--mint);border:1px solid #c7dfd1;border-radius:14px;padding:16px 20px;font-size:15px;color:var(--ink);margin:0}
 @media (hover:hover) and (pointer:fine){
- .calc-hub-v2 .ch-card::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .calc-hub-v2 .ch-card::before{content:"";position:absolute;right:-135px;top:-125px;width:340px;height:340px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
  .calc-hub-v2 .ch-card::after{content:"";position:absolute;right:18px;top:18px;width:78px;height:26px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
  .calc-hub-v2 .ch-card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,61,46,.09)}
  .calc-hub-v2 .ch-card:hover::before{opacity:1;transform:scale(1)}.calc-hub-v2 .ch-card:hover::after{opacity:.95}

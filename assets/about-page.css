@@ -37,7 +37,7 @@
 .about-v2 .ab-card small{display:block;font-weight:500;font-size:14px;line-height:1.5;color:var(--mut);margin-top:6px}
 .about-v2 .ab-card>*{position:relative;z-index:2}
 @media (hover:hover) and (pointer:fine){
- .about-v2 .ab-card::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .about-v2 .ab-card::before{content:"";position:absolute;right:-135px;top:-125px;width:340px;height:340px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
  .about-v2 .ab-card::after{content:"";position:absolute;right:16px;top:12px;width:84px;height:28px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
  .about-v2 .ab-card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,61,46,.09)}
  .about-v2 .ab-card:hover::before{opacity:1;transform:scale(1)}
