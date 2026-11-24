@@ -63,3 +63,6 @@
 @media(max-width:900px){.services-v2 .sv-grid,.services-v2 .sv-steps{grid-template-columns:1fr}.services-v2 .sv-flow{padding:26px 20px}}
 @media (prefers-reduced-motion:reduce){.services-v2 .sv-card,.services-v2 .sv-card::before,.services-v2 .sv-card::after{transition:none}}
 .services-v2 [hidden]{display:none!important}
+.services-v2 .sv-tools-l{flex:0 0 100%;margin:0;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--g)}
+.services-v2 .sv-tools .btn.y{display:inline-flex;align-items:center;gap:8px}
+.services-v2 .sv-tools .sv-ci{flex:0 0 auto}
