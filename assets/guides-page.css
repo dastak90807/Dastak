@@ -2,8 +2,8 @@
 .guides-v2{background:#f7faf9;padding:0}
 .guides-v2 .gp-wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 .guides-v2 .gp-hero{background:linear-gradient(90deg,#fff 0,var(--mint) 100%);padding:46px 0 30px}
-.guides-v2 .gp-chip{display:inline-block;background:var(--dg);color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:7px 14px;border-radius:99px}
-.guides-v2 h1{font-size:clamp(28px,3.6vw,42px);line-height:1.15;letter-spacing:-.6px;margin:14px 0 12px;color:var(--dg);max-width:20ch}
+.guides-v2 .gp-chip{display:inline-block;background:var(--dg);color:#fff;font-size:13px;font-weight:700;padding:7px 14px;border-radius:99px}
+.guides-v2 h1{font-size:clamp(28px,3.6vw,42px);line-height:1.15;letter-spacing:-.6px;margin:14px 0 12px;color:var(--dg);max-width:34ch}
 .guides-v2 h2{color:var(--dg)}
 .guides-v2 .gp-lead{font-size:17px;line-height:1.65;color:var(--mut);max-width:64ch;margin:0 0 20px}
 .guides-v2 .gp-sr{position:absolute;left:-9999px}
