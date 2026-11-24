@@ -28,10 +28,10 @@
       '<nav id="site-navigation" aria-label="Main navigation">' +
         '<a href="/en/">Home</a>' +
         '<a href="/en/services/">Services</a>' +
+        '<a class="nav-calc" href="/en/calculators/">Fee Calculator</a>' +
         '<div class="nav-tools">' +
           '<button class="nav-tools-toggle" type="button" aria-expanded="false" aria-controls="citizen-tools-menu">Citizen Tools</button>' +
           '<div class="nav-tools-menu" id="citizen-tools-menu">' +
-            '<a href="/en/calculators/">Fee Calculator</a>' +
             '<a href="/en/document-checklist/">Document Checklist</a>' +
             '<a href="/en/citizen-tools/">Official Portals</a>' +
             '<a href="/en/downloads/">Downloads &amp; Forms</a>' +

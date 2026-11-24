@@ -45,3 +45,8 @@
   .hd nav { margin-left: auto; }
   .hd .site-search.hd-search { margin-left: 28px; margin-right: auto; }
 }
+
+/* Highlighted Fee Calculator link (Nov 2026) */
+.hd nav a.nav-calc{background:#fdecc0;color:var(--ink);border-radius:99px;padding:6px 14px;font-weight:700}
+.hd nav a.nav-calc:hover{background:var(--y);color:var(--ink)}
+@media(max-width:980px){.hd nav a.nav-calc{display:inline-block;align-self:flex-start;margin:8px 0;padding:8px 16px}.hd nav a.nav-calc+a,.hd nav a+a.nav-calc{border-top:0}}
