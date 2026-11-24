@@ -47,3 +47,9 @@ main .card h2,main .card h3{line-height:1.4}
 .guide-illustration svg{color:inherit}
 @media(prefers-reduced-motion:no-preference){.guide-illustration svg{transition:transform .2s ease}.guide-card:hover .guide-illustration svg{transform:scale(1.04)}}
 @media(max-width:700px){.ft.clean-footer{padding-bottom:150px}}
+
+/* Button system on service pages (Nov 2026): green = WhatsApp, outline = Call; yellow stays for "go to" buttons */
+.service-detail .book .row a.btn[href^="https://wa.me/"]{background:var(--g);color:#fff;border-color:transparent}
+.service-detail .book .row a.btn[href^="https://wa.me/"]:hover{background:#0b6a57}
+.service-detail .book .row a.btn[href^="tel:"]{background:#fff;color:var(--g);border-color:var(--g)}
+.service-detail .book .row a.btn[href^="tel:"]:hover{background:var(--mint)}
