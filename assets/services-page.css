@@ -1,0 +1,62 @@
+/* Services directory v2 (Nov 2026) */
+.services-v2{background:#f7faf9;padding:0}
+.services-v2 .sv-wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.services-v2 .sv-eb{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--g);text-transform:uppercase;margin:0}
+.services-v2 h1{font-size:clamp(28px,3.6vw,42px);line-height:1.15;letter-spacing:-.6px;margin:10px 0 14px;color:var(--dg);max-width:22ch}
+.services-v2 h2{font-size:clamp(23px,2.5vw,29px);line-height:1.2;margin:6px 0 12px;color:var(--dg)}
+.services-v2 p{font-size:16px;line-height:1.7;color:var(--mut);margin:0 0 14px}
+.services-v2 .sv-hero{background:linear-gradient(90deg,#fff 0,var(--mint) 100%);padding:46px 0 34px}
+.services-v2 .sv-chip{display:inline-block;background:var(--dg);color:#fff;font-size:13px;font-weight:700;padding:7px 14px;border-radius:99px}
+.services-v2 .sv-hero .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.services-v2 .sv-search{display:block;width:100%;max-width:640px;margin:22px 0 14px;border:1px solid #b7cfc0;background:#fff;border-radius:14px;padding:14px 18px;font:inherit;font-size:16px;color:var(--ink)}
+.services-v2 .sv-search:focus{outline:2px solid var(--g);outline-offset:1px}
+.services-v2 .sv-chips{display:flex;flex-wrap:wrap;gap:8px}
+.services-v2 .sv-chips button{border:1px solid var(--bd);background:#fff;color:var(--dg);font:inherit;font-weight:700;font-size:14px;border-radius:99px;padding:8px 14px;cursor:pointer}
+.services-v2 .sv-chips button[aria-pressed=true]{background:var(--dg);color:#fff;border-color:var(--dg)}
+.services-v2 .sv-empty{display:none;background:#fff8ea;border:1px solid #f1d9a0;border-radius:14px;padding:16px 18px;margin:20px 0;color:#5a4a1d}
+.services-v2 .sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:14px 0}
+.services-v2 .sv-card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--bd);border-radius:16px;padding:20px;text-decoration:none;color:var(--dg);box-shadow:0 4px 18px rgba(11,61,46,.05);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.services-v2 .sv-card>*{position:relative;z-index:2}
+.services-v2 .sv-card b{font-size:17px;line-height:1.35}
+.services-v2 .sv-card small{display:block;font-size:14px;line-height:1.5;color:var(--mut);font-weight:500}
+.services-v2 .sv-card .go{margin-top:auto;padding-top:6px;font-weight:800;font-size:14px;color:var(--g)}
+.services-v2 .sv-card .sv-tag{position:absolute;top:16px;right:16px;z-index:3;background:var(--g);color:#fff;font-size:11px;font-weight:700;padding:5px 10px;border-radius:99px}
+.services-v2 .sv-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--mint);color:var(--g);flex:none}
+.services-v2 .sv-pop .sv-card{padding:22px}
+.services-v2 .sv-list .sv-card{flex-direction:row;align-items:center;justify-content:space-between;padding:15px 18px;gap:12px}
+.services-v2 .sv-list .sv-card b{font-size:16px}
+.services-v2 .sv-list .sv-card .go{margin:0;padding:0;font-size:18px}
+.services-v2 .sv-list .sv-card small{display:none}
+@media (hover:hover) and (pointer:fine){
+ .services-v2 .sv-card::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .services-v2 .sv-pop .sv-card::after{content:"";position:absolute;right:16px;top:52px;width:84px;height:28px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+ .services-v2 .sv-card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,61,46,.09)}
+ .services-v2 .sv-card:hover::before{opacity:1;transform:scale(1)}
+ .services-v2 .sv-pop .sv-card:hover::after{opacity:.95}
+}
+.services-v2 .sv-flow{background:var(--dg);color:#fff;border-radius:24px;padding:38px;margin:34px 0}
+.services-v2 .sv-flow h2{color:#fff}.services-v2 .sv-flow p{color:#cfe5df}.services-v2 .sv-flow .sv-eb{color:#7fe0c6}
+.services-v2 .sv-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0;list-style:none;padding:0}
+.services-v2 .sv-steps li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:20px;color:#cfe5df;font-size:14.5px;line-height:1.55}
+.services-v2 .sv-steps b{color:#fff}
+.services-v2 .sv-steps .n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--y);color:#222;font-weight:800;margin-bottom:10px}
+.services-v2 .sv-steps strong{display:block;color:#fff;font-size:16px;margin-bottom:6px}
+.services-v2 .sv-opts{display:grid;gap:8px;margin-top:10px}
+.services-v2 .sv-opts span{display:block;border-radius:10px;padding:9px 11px;font-size:13.5px;line-height:1.45}
+.services-v2 .sv-o1{background:#0a7a3c;color:#fff}.services-v2 .sv-o2{border:1.5px solid #f0a83a;color:#f7c26b}
+.services-v2 .sv-flow .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.services-v2 .sv-flow .btn.o{background:transparent;border-color:#fff;color:#fff}.services-v2 .sv-flow .btn.o:hover{background:rgba(255,255,255,.12)}
+.services-v2 .sv-group{margin:34px 0}
+.services-v2 .sv-group h2{display:flex;align-items:center;gap:12px;font-size:24px;margin:0 0 4px}
+.services-v2 .sv-group .s{margin:0 0 14px;font-size:15px}
+.services-v2 .sv-tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.services-v2 .sv-faq{margin:40px 0 10px}
+.services-v2 .sv-faq details{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px 20px;margin:0 0 10px}
+.services-v2 .sv-faq summary{cursor:pointer;font-weight:800;color:var(--dg);font-size:16.5px}
+.services-v2 .sv-faq details p{margin:10px 0 0}
+.services-v2 .sv-cta{background:var(--mint);border:1px solid var(--bd);border-radius:22px;padding:36px 24px;text-align:center;margin:30px 0 16px}
+.services-v2 .sv-cta .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.services-v2 .sv-note{font-size:13px!important;text-align:center;color:#52645c!important;padding:0 0 36px;margin:0}
+@media(max-width:900px){.services-v2 .sv-grid,.services-v2 .sv-steps{grid-template-columns:1fr}.services-v2 .sv-flow{padding:26px 20px}}
+@media (prefers-reduced-motion:reduce){.services-v2 .sv-card,.services-v2 .sv-card::before,.services-v2 .sv-card::after{transition:none}}
+.services-v2 [hidden]{display:none!important}
