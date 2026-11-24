@@ -50,8 +50,19 @@
 .services-v2 .sv-flow .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
 .services-v2 .sv-flow .btn.o{background:transparent;border-color:#fff;color:#fff}.services-v2 .sv-flow .btn.o:hover{background:rgba(255,255,255,.12)}
 .services-v2 .sv-group{margin:34px 0}
-.services-v2 .sv-group h2{display:flex;align-items:center;gap:12px;font-size:24px;margin:0 0 4px}
-.services-v2 .sv-group .s{margin:0 0 14px;font-size:15px}
+.services-v2 .sv-group{margin:38px 0}
+.services-v2 .sv-hd{display:flex;flex-wrap:wrap;align-items:center;gap:16px;background:linear-gradient(90deg,#EAF5F1 0,#fff 100%);border:1px solid #cfe5db;border-radius:18px;padding:16px 20px;margin-bottom:16px}
+.services-v2 .sv-hd .sv-ic{width:54px;height:54px;border-radius:16px;background:#fff;border:1px solid #cfe5db;box-shadow:0 2px 8px rgba(10,63,53,.06)}
+.services-v2 .sv-hd .sv-ic svg{width:28px;height:28px}
+.services-v2 .sv-hdt{flex:1 1 360px;min-width:0}
+.services-v2 .sv-cnt{margin:0 0 2px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--g)}
+.services-v2 .sv-group h2{display:block;margin:0;font-size:clamp(23px,2.6vw,29px);line-height:1.15;color:var(--dg)}
+.services-v2 .sv-group .s{margin:4px 0 0;font-size:15px;color:var(--mut)}
+.services-v2 .sv-act{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.services-v2 .sv-act .btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;padding:10px 14px}
+.services-v2 .sv-act-many{flex:1 1 100%;justify-content:flex-start;padding-left:70px}
+.services-v2 .sv-list .sv-card .sv-pp{margin-left:auto;background:#FFF3D6;color:#7a5200;border:1px solid #f0d58a;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:99px;line-height:1.3;white-space:nowrap}
+@media(max-width:760px){.services-v2 .sv-hd{padding:14px;gap:12px}.services-v2 .sv-hd .sv-ic{width:46px;height:46px;border-radius:14px}.services-v2 .sv-hdt{flex:1 1 calc(100% - 70px)}.services-v2 .sv-act,.services-v2 .sv-act-many{flex:0 0 100%;padding-left:0}.services-v2 .sv-act .btn{flex:1 1 100%;justify-content:center}}
 .services-v2 .sv-tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
 .services-v2 .sv-faq{margin:40px 0 10px}
 .services-v2 .sv-faq details{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px 20px;margin:0 0 10px}
