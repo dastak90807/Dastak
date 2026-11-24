@@ -35,11 +35,11 @@ def card2(g, feat=False):
     txt = 'data-gp-cat="%s" data-gp-text="%s"' % (g['category'], e((g['title'] + ' ' + g['summary'] + ' ' + CAT[g['category']]).lower()))
     if feat:
         return ('<article class="gp-feat" %s><a class="gp-feat-img" href="%s" tabindex="-1" aria-hidden="true">%s</a><div class="gp-feat-b"><span class="gp-tag">Featured &middot; Published %s</span>'
-                '<h2><a data-ga-event="guide_read" href="%s">%s</a></h2><p>%s</p><div class="row"><a data-ga-event="guide_read" class="btn y" href="%s">Read guide <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>%s</div></div></article>'
+                '<h2><a data-ga-event="guide_read" href="%s">%s</a></h2><p>%s</p><div class="row"><a data-ga-event="guide_read" class="btn y" href="%s">Read Guide <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>%s</div></div></article>'
                 % (txt, href, img, fdate(g['date']), href, e(g['title']), e(g['summary']), href,
-                   ''.join('<a class="btn o" href="%s">%s</a>' % (h, e(t)) for t, h in REL.get(g['category'], []) if 'calculator' in h)))
+                   ''.join('<a class="btn o" href="%s">Calculate Fees</a>' % h for t, h in REL.get(g['category'], []) if 'calculator' in h)))
     return ('<article class="gp-card" %s><a class="gp-img" href="%s" tabindex="-1" aria-hidden="true">%s</a><div class="gp-b"><span class="gp-t">%s</span>'
-            '<h3><a data-ga-event="guide_read" href="%s">%s</a></h3><p>%s</p><div class="gp-meta"><span>Published %s</span><a data-ga-event="guide_read" class="gp-read" href="%s">Read guide <span aria-hidden="true">&#8599;</span></a></div>'
+            '<h3><a data-ga-event="guide_read" href="%s">%s</a></h3><p>%s</p><div class="gp-meta"><span>Published %s</span><a data-ga-event="guide_read" class="gp-read" href="%s">Read Guide <span aria-hidden="true">&#8599;</span></a></div>'
             '<div class="gp-rel">%s</div></div></article>' % (txt, href, img, CAT[g['category']].upper(), href, e(g['title']), e(g['summary']), fdate(g['date']), href, rel))
 def listing_html(gs):
     more = ('<article class="gp-card gp-more" data-gp-cat="more" data-gp-text="more guides coming learner license duplicate license tenant registration"><div class="gp-more-in"><b>More guides coming</b><p>Learner license, duplicate license, tenant registration. Tell me which guide you need.</p>'
