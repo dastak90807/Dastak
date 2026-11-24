@@ -1,0 +1,32 @@
+/* Ask Dastak 90807 chat panel v2 (Nov 2026). Loaded by assets/chatbot.js. Overrides the older .cb-* rules in style.css */
+.cb-p.cb2{width:min(380px,calc(100vw - 24px));border-radius:18px;border:1px solid var(--bd);box-shadow:0 14px 44px rgba(10,63,53,.28);background:#fff}
+.cb2 .cb-h{display:flex;align-items:center;gap:10px;background:var(--dg);color:#fff;padding:11px 12px 11px 14px}
+.cb2 .cb-av{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:var(--y);color:var(--dg);display:grid;place-items:center}
+.cb2 .cb-t{flex:1;min-width:0}.cb2 .cb-t b{display:block;font-size:15.5px;line-height:1.25;white-space:nowrap}
+.cb2 .cb-t small{display:flex;align-items:center;font-size:12px;color:#cfe5df;white-space:nowrap}.cb2 .cb-t small .cb-dot{flex:0 0 7px;width:7px;height:7px;border-radius:50%;background:#5BD39A;margin-right:6px}
+.cb2 .cb-wa{background:#1FA855;color:#fff;border-radius:9px;padding:8px 10px;font-weight:700;font-size:12.5px;text-decoration:none;line-height:1;white-space:nowrap}.cb2 .cb-wa:hover{background:#178a45}
+.cb2 .cb-x{width:34px;height:34px;padding:0;display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:#fff;font-size:15px;cursor:pointer}
+.cb2 .cb-n{font-size:12px;line-height:1.45;color:#6b4e12;background:#fff7e0;margin:0;padding:7px 14px;border-bottom:1px solid #f0e2b8}.cb2 .cb-n b{color:#5a3f08}
+.cb2 .cb-l{background:#fbfdfc;padding:12px 14px;gap:9px;min-height:90px}
+.cb2 .cb-m{max-width:90%;padding:10px 12px;border-radius:14px;font-size:14px;line-height:1.5}
+.cb2 .cb-m.b{background:var(--mint);border-top-left-radius:4px;align-self:flex-start}.cb2 .cb-m.u{background:var(--y);color:var(--dg);font-weight:600;border-top-right-radius:4px;align-self:flex-end}
+.cb2 .cb-tx{white-space:pre-line}
+.cb2 .cb-ur{display:block;margin-top:3px;font-size:13px;color:var(--mut);text-align:right}
+.cb2 .cb-lk{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.cb2 .cb-a{display:inline-block;margin:0;background:#fff;border:1px solid var(--g);color:var(--g);border-radius:20px;padding:6px 11px;font-size:12.5px;font-weight:700;text-decoration:none;line-height:1.3}
+.cb2 .cb-a.y{background:var(--y);border-color:var(--y);color:var(--dg)}.cb2 .cb-a.w{background:#1FA855;border-color:#1FA855;color:#fff}
+.cb2 .cb-a:hover{filter:brightness(.95)}
+.cb2 .cb-c{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:4px 14px 12px;background:#fbfdfc}.cb2 .cb-c[hidden]{display:none}
+.cb2 .cb-chip{display:flex;align-items:center;gap:8px;text-align:left;border:1px solid var(--bd);background:#fff;border-radius:12px;padding:8px 10px;min-height:48px;cursor:pointer;font:inherit;color:var(--dg);text-decoration:none}
+.cb2 .cb-chip:hover{border-color:var(--g);background:#f3faf7}.cb2 .cb-chip:focus-visible,.cb2 .cb-a:focus-visible,.cb2 .cb-wa:focus-visible,.cb2 .cb-x:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+.cb2 .cb-chip-w{background:#E8FAF0;border-color:#9fe0bd}
+.cb2 .cb-ic{font-size:16px;line-height:1}.cb2 .cb-ct b{display:block;font-size:13px;line-height:1.2}.cb2 .cb-ct small{display:block;font-size:11.5px;color:var(--mut);margin-top:2px;text-align:left}
+.cb2 .cb-f{display:flex;gap:8px;align-items:center;padding:10px 12px;border-top:1px solid var(--bd)}
+.cb2 .cb-sr{position:absolute;left:-9999px}
+.cb2 .cb-f input{flex:1;min-width:0;margin:0;border:1.5px solid #b7cfc0;border-radius:12px;padding:11px 12px;font:inherit;font-size:16px}.cb2 .cb-f input:focus{outline:2px solid var(--g);outline-offset:1px}
+.cb2 .cb-go{flex:0 0 46px;width:46px;height:46px;min-height:46px;padding:0;display:grid;place-items:center;border:0;border-radius:12px;background:var(--g);color:#fff;cursor:pointer}
+.cb2 .cb-ft{margin:0;padding:0 12px 9px;font-size:11px;color:var(--mut);text-align:center}
+body.cb-open a.back-to-top{opacity:0!important;visibility:hidden!important;pointer-events:none}
+@media(max-width:800px){.cb-p.cb2{max-height:calc(100vh - 150px)}.cb2 .cb-l{min-height:70px}}
+@media(max-width:440px){.cb2 .cb-av{display:none}.cb2 .cb-h{gap:8px}}
+@media(max-width:340px){.cb2 .cb-wa{display:none}}
