@@ -116,7 +116,6 @@ body:has(.home) .ft{padding-inline:max(20px,calc((100% - 1280px)/2))}
 
 /* Services cards hover v2: light curve + logo + arrow (desktop hover only, Nov 2026) */
 .home .home-category .category-icon,.home .home-category h3,.home .home-category p,.home .home-category ul,.home .home-category .home-category-wa{position:relative;z-index:2}
-.home .home-category .home-category-foot .home-category-more::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
 @media (hover:hover) and (pointer:fine){
  .home .home-category{overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
  .home .home-category::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
@@ -154,3 +153,10 @@ body:has(.home) .ft{padding-inline:max(20px,calc((100% - 1280px)/2))}
  .home-calc-grid .home-tool:hover>a.btn::before{opacity:1;transform:none}
 }
 @media (prefers-reduced-motion:reduce){.home-calc-grid .home-tool,.home-calc-grid .home-tool::before,.home-calc-grid .home-tool::after,.home-calc-grid .home-tool>a.btn::before{transition:none}}
+
+/* Button system (Nov 2026): yellow = go to a page/tool, with diagonal arrow */
+.home .btn-arrow{flex:none;transition:transform .2s ease}
+.home .btn.y:hover .btn-arrow,.home .btn.y:focus-visible .btn-arrow{transform:translate(2px,-2px)}
+.home .home-category .home-category-foot .home-category-more.btn{min-height:44px;padding:10px 16px;border:2px solid transparent;font-size:13px;text-decoration:none;font-weight:700}
+.home .home-category .home-category-foot .home-category-more.btn:hover{text-decoration:none}
+@media (prefers-reduced-motion:reduce){.home .btn-arrow{transition:none}.home .btn.y:hover .btn-arrow{transform:none}}
