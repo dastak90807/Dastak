@@ -128,3 +128,29 @@ body:has(.home) .ft{padding-inline:max(20px,calc((100% - 1280px)/2))}
  .home .home-category:hover .home-category-foot::before{opacity:1;transform:none}
 }
 @media (prefers-reduced-motion:reduce){.home .home-category,.home .home-category::before,.home .home-category::after,.home .home-category .home-category-foot::before{transition:none}}
+
+/* Calculator section (Nov 2026) */
+.home>section.home-tools{background:#e9f5ee}
+.home-calc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:24px 0 18px}
+.home-calc-grid .home-tool>a.btn{margin-top:auto;align-self:flex-start;min-height:44px;padding:10px 16px;font-size:14px;text-decoration:none}
+.home-calc-grid .home-tool p{margin:8px 0 16px}
+.home .home-tools-more{margin:0 0 8px;font-size:14px;font-weight:600;color:var(--mut)}
+.home .home-tools-more a{text-decoration:none}
+.home .home-tools-note{margin:0;font-size:13px;color:var(--mut)}
+#fee-calculators{scroll-margin-top:120px}
+@media(max-width:980px){.home-calc-grid{grid-template-columns:1fr}}
+
+/* Calculator cards: same hover as service cards (desktop hover only) */
+.home-calc-grid .home-tool{position:relative;overflow:hidden}
+.home-calc-grid .home-tool .category-icon,.home-calc-grid .home-tool h3,.home-calc-grid .home-tool p{position:relative;z-index:2}
+@media (hover:hover) and (pointer:fine){
+ .home-calc-grid .home-tool{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+ .home-calc-grid .home-tool::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .home-calc-grid .home-tool::after{content:"";position:absolute;right:20px;top:24px;width:92px;height:32px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+ .home-calc-grid .home-tool>a.btn::before{content:"\2192";position:absolute;right:22px;bottom:22px;width:38px;height:38px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-size:18px;font-weight:700;opacity:0;transform:translateX(-10px);transition:opacity .25s ease,transform .25s ease;pointer-events:none;z-index:2}
+ .home-calc-grid .home-tool:hover{border-color:var(--g)}
+ .home-calc-grid .home-tool:hover::before{opacity:1;transform:scale(1)}
+ .home-calc-grid .home-tool:hover::after{opacity:.95}
+ .home-calc-grid .home-tool:hover>a.btn::before{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){.home-calc-grid .home-tool,.home-calc-grid .home-tool::before,.home-calc-grid .home-tool::after,.home-calc-grid .home-tool>a.btn::before{transition:none}}
