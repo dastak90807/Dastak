@@ -144,3 +144,20 @@ body:has(.home) .ft{padding-inline:max(20px,calc((100% - 1280px)/2))}
 .home .home-category .home-category-foot .home-category-more.btn{min-height:44px;padding:10px 16px;border:2px solid transparent;font-size:13px;text-decoration:none;font-weight:700}
 .home .home-category .home-category-foot .home-category-more.btn:hover{text-decoration:none}
 @media (prefers-reduced-motion:reduce){.home .btn-arrow{transition:none}.home .btn.y:hover .btn-arrow{transform:none}}
+
+/* Reviews: Google rating badge + cleaner cards (Nov 2026) */
+.home-review-heading{flex-wrap:wrap;align-items:flex-end}
+.home-review-heading .sub{margin:8px 0 0;max-width:520px}
+.review-badge{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #dae6df;border-radius:16px;padding:12px 18px;text-decoration:none;color:var(--ink);box-shadow:0 4px 18px rgba(11,61,46,.06);transition:border-color .2s ease,box-shadow .2s ease}
+.review-badge:hover{border-color:var(--g);box-shadow:0 6px 22px rgba(11,61,46,.1)}
+.review-badge>svg{width:30px;height:30px;flex:none}
+.review-score{display:flex;flex-direction:column;line-height:1}
+.review-score b{font-size:32px;font-weight:800}
+.review-stars{margin-top:4px;font-size:15px;letter-spacing:1px;background:linear-gradient(90deg,#f4b63f 98%,#d9d9d9 98%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.review-meta{display:flex;flex-direction:column;gap:3px}
+.review-meta small{color:var(--mut);font-size:13px}
+.review-controls-row{display:flex;justify-content:flex-end;width:100%;margin:6px 0 14px}
+.review-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.review-g{display:inline-flex}
+.review-chip{background:var(--mint);color:var(--g);font-size:12px;font-weight:700;padding:5px 11px;border-radius:99px;line-height:1.2}
+@media(max-width:700px){.review-badge{width:100%;box-sizing:border-box}.review-controls-row{justify-content:center}}
