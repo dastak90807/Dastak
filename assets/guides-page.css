@@ -51,7 +51,7 @@
 .guides-v2 .gp-faq summary{font-weight:700;color:var(--dg);cursor:pointer}.guides-v2 .gp-faq p{margin:10px 0 0;color:var(--mut);line-height:1.65}
 .guides-v2 .gp-disc{font-size:13px;color:var(--mut);margin:0 0 40px}
 @media (hover:hover) and (pointer:fine){
- .guides-v2 .gp-card::before,.guides-v2 .gp-feat::before{content:"";position:absolute;right:-190px;top:-170px;width:480px;height:480px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+ .guides-v2 .gp-card::before,.guides-v2 .gp-feat::before{content:"";position:absolute;right:-135px;top:-125px;width:340px;height:340px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
  .guides-v2 .gp-card:not(.gp-more)::after{content:"";position:absolute;right:16px;bottom:58px;width:72px;height:24px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:2}
  .guides-v2 .gp-card:hover{border-color:var(--g);transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,61,46,.09)}
  .guides-v2 .gp-card:hover::before,.guides-v2 .gp-feat:hover::before{opacity:1;transform:scale(1)}
