@@ -64,3 +64,6 @@
 /* inline styles moved here (site CSP blocks style="") */
 .ct-lbl{margin-bottom:6px}
 .ct-note{font-size:14.5px}
+/* Hover logo on the office card, same as the contact option cards (Nov 2026) */
+.contact-v2 .ct-loc::after{content:"";position:absolute;right:18px;top:16px;width:84px;height:28px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+@media (hover:hover){.contact-v2 .ct-loc:hover::after{opacity:.95}}

@@ -62,3 +62,6 @@
 @media (prefers-reduced-motion:reduce){.guides-v2 .gp-card,.guides-v2 .gp-card::before,.guides-v2 .gp-card::after{transition:none}.guides-v2 .gp-card:hover{transform:none}}
 @media (max-width:900px){.guides-v2 .gp-grid{grid-template-columns:repeat(2,1fr)}.guides-v2 .gp-feat{grid-template-columns:1fr}.guides-v2 .gp-feat-b{padding:24px}}
 @media (max-width:600px){.guides-v2 .gp-grid{grid-template-columns:1fr}.guides-v2 .gp-steps{grid-template-columns:1fr}.guides-v2 .gp-help{padding:26px 20px}.guides-v2 .gp-hero{padding:32px 0 22px}.guides-v2 .gp-news{padding:18px}}
+/* Hover logo on the featured guide card, same as the guide cards (Nov 2026) */
+.guides-v2 .gp-feat::after{content:"";position:absolute;right:24px;top:18px;width:72px;height:24px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+@media (hover:hover){.guides-v2 .gp-feat:hover::after{opacity:.95}}
