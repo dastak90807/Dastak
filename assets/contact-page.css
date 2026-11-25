@@ -32,7 +32,7 @@
 .contact-v2 #wf input:focus,.contact-v2 #wf select:focus,.contact-v2 #wf textarea:focus{outline:2px solid var(--g);outline-offset:1px;border-color:var(--g)}
 .contact-v2 #wf label:has(textarea){grid-column:1/-1}
 .contact-v2 #wf button{grid-column:1/-1;justify-self:start;cursor:pointer;font-size:15px;padding:13px 22px}
-.contact-v2 .ct-small{font-size:13px!important;margin:14px 0 0!important;color:#52645c!important}
+.contact-v2 .ct-small{font-size:14px!important;margin:14px 0 0!important;color:#52645c!important}
 .contact-v2 .ct-side{display:grid;gap:16px}
 .contact-v2 .ct-side h2{font-size:20px}
 .contact-v2 .ct-list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
@@ -57,7 +57,7 @@
 .contact-v2 .ct-faq details{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px 20px;margin:0 0 10px}
 .contact-v2 .ct-faq summary{cursor:pointer;font-weight:800;color:var(--dg);font-size:16.5px}
 .contact-v2 .ct-faq details p{margin:10px 0 0}
-.contact-v2 .ct-foot{font-size:13px!important;text-align:center;color:#52645c!important;padding:20px 0 36px;margin:0}
+.contact-v2 .ct-foot{font-size:14px!important;text-align:center;color:#52645c!important;padding:20px 0 36px;margin:0}
 @media(max-width:900px){.contact-v2 .ct-options{grid-template-columns:1fr}.contact-v2 .ct-two,.contact-v2 .ct-loc-grid{grid-template-columns:1fr}.contact-v2 .contact-map{min-height:300px}.contact-v2 #wf{grid-template-columns:1fr}.contact-v2 .ct-card{padding:22px 18px}}
 @media (prefers-reduced-motion:reduce){.contact-v2 .ct-opt,.contact-v2 .ct-opt::before,.contact-v2 .ct-opt::after,.contact-v2 .ct-loc::before{transition:none}}
 

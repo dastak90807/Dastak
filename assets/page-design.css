@@ -24,7 +24,7 @@
 .page-shell .book{border-top:3px solid var(--y);background:#fffdf7}
 .page-shell .book .row{gap:12px}
 .page-shell .book .btn{font-size:14px}
-.page-shell .note,.page-shell .card .note{font-size:12px;line-height:1.8;color:#56685e}
+.page-shell .note,.page-shell .card .note{font-size:14px;line-height:1.8;color:#56685e}
 .page-shell .faq-list details{border:0;border-bottom:1px solid #e3ebe6;border-radius:0;margin:0;padding:15px 0;background:transparent}
 .page-shell .faq-list details:last-child{border-bottom:0}
 .page-shell .faq-list summary{font-size:15px;line-height:1.6;font-weight:600;color:var(--dg)}
@@ -38,7 +38,7 @@
 .page-contact .contact-options{background:#eaf4ef;border-color:#c7dfd1;padding:20px 24px}
 .page-contact .contact-options .row{margin:0 0 12px}
 .page-contact .contact-options .btn{font-size:14px;padding:11px 18px}
-.page-contact .contact-options p{font-size:13px;margin:0}
+.page-contact .contact-options p{font-size:14px;margin:0}
 .page-contact #wf{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;margin-top:22px}
 .page-contact #wf label{margin:0;font-size:13px;font-weight:600;line-height:1.6;color:var(--dg)}
 .page-contact #wf input,.page-contact #wf select,.page-contact #wf textarea{margin-top:7px;border:1px solid #b7cfc0;background:#fbfdfc;border-radius:8px;padding:11px 12px;font-size:15px;line-height:1.6;min-width:0}
