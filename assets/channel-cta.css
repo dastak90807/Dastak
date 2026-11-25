@@ -1,11 +1,5 @@
-/* Dastak 90807 WhatsApp Channel button, banner and QR card.
+/* Dastak 90807 WhatsApp Channel banner and QR card. The footer icon uses the existing .social-icon style.
    Loaded on every page by /assets/shared-header.js. Styles only: no inline styles are used. */
-.ft .footer-social .channel-follow{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;color:#fff;font-size:13px;font-weight:700;line-height:1.2;text-decoration:none;margin:0}
-.ft .footer-social .channel-follow:hover{background:rgba(255,255,255,.12)}
-.ft .footer-social .channel-follow:focus-visible{outline:2px solid var(--y,#F4B63D);outline-offset:2px}
-.channel-follow svg{width:18px;height:18px;flex:none}
-.channel-follow .ur{font-weight:600;opacity:.9}
-
 .channel-strip{max-width:1100px;margin:8px auto 32px;padding:0 20px}
 .channel-strip-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--mint,#EAF5F1);border:1px solid var(--bd,#D9E2E1);border-radius:16px;padding:20px 24px}
 .channel-strip-text{flex:1 1 280px;min-width:0}
