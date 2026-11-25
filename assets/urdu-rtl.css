@@ -57,3 +57,13 @@ html[dir="rtl"] .skip:focus{right:8px}
 .ur-fee-grid td{text-align:center;white-space:nowrap}
 /* Desktop: keep the longer Urdu menu names on one row */
 @media(min-width:981px){html[lang="ur"] .hd nav{gap:2px}html[lang="ur"] .hd nav>a,html[lang="ur"] .hd .nav-tools-toggle{font-size:15px;padding-inline:7px;white-space:nowrap}html[lang="ur"] .hd .btn{white-space:nowrap}html[lang="ur"] .hd .site-search{max-width:190px}}
+/* Urdu cards: same hover as the English cards (lift, shadow, green border), whole card clickable */
+.ur-cards li{position:relative;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
+.ur-cards li a::after{content:"";position:absolute;inset:0;border-radius:14px}
+.ur-cards li a::before{content:"←";float:left;margin-right:8px;color:var(--g,#0A3F35);opacity:.45;transition:transform .2s ease,opacity .2s ease}
+.ur-cards li:hover,.ur-cards li:focus-within{transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,61,46,.09);border-color:var(--g,#0A3F35);background:#f4faf7}
+.ur-cards li:hover a::before,.ur-cards li:focus-within a::before{opacity:1;transform:translateX(-4px)}
+.ur-cards li:active{transform:translateY(-1px)}
+.ur-cards li a:focus-visible{outline:none}
+.ur-cards li:focus-within{outline:2px solid var(--g,#0A3F35);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.ur-cards li,.ur-cards li a::before{transition:none}.ur-cards li:hover,.ur-cards li:focus-within{transform:none}}
