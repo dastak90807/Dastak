@@ -1,0 +1,31 @@
+/* Dastak 90807 WhatsApp Channel button, banner and QR card.
+   Loaded on every page by /assets/shared-header.js. Styles only: no inline styles are used. */
+.ft .footer-social .channel-follow{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;color:#fff;font-size:13px;font-weight:700;line-height:1.2;text-decoration:none;margin:0}
+.ft .footer-social .channel-follow:hover{background:rgba(255,255,255,.12)}
+.ft .footer-social .channel-follow:focus-visible{outline:2px solid var(--y,#F4B63D);outline-offset:2px}
+.channel-follow svg{width:18px;height:18px;flex:none}
+.channel-follow .ur{font-weight:600;opacity:.9}
+
+.channel-strip{max-width:1100px;margin:8px auto 32px;padding:0 20px}
+.channel-strip-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--mint,#EAF5F1);border:1px solid var(--bd,#D9E2E1);border-radius:16px;padding:20px 24px}
+.channel-strip-text{flex:1 1 280px;min-width:0}
+.channel-strip h2{margin:0 0 4px;font-size:19px;line-height:1.3;color:var(--dg,#0A3F35)}
+.channel-strip p{margin:0;font-size:14px;line-height:1.5;color:var(--mut,#3C5256)}
+.channel-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:12px 20px;border-radius:12px;background:var(--g,#0E7C66);color:#fff;font-weight:700;font-size:16px;text-decoration:none}
+.channel-btn:hover{background:var(--dg,#0A3F35)}
+.channel-btn:focus-visible{outline:3px solid var(--y,#F4B63D);outline-offset:2px}
+.channel-btn svg{width:20px;height:20px;flex:none}
+
+.channel-card{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin:44px 0 0}
+.channel-card img{width:180px;height:180px;flex:none;border:1px solid var(--bd,#D9E2E1);border-radius:12px;background:#fff}
+.channel-card-text{flex:1 1 260px;min-width:0}
+.channel-card h2{margin:0 0 8px}
+.channel-card p{margin:0 0 12px;line-height:1.55}
+.channel-card .channel-note{font-size:14px;color:var(--mut,#3C5256)}
+
+@media (max-width:560px){
+  .channel-strip-in{padding:18px}
+  .channel-strip .channel-btn{width:100%}
+  .channel-card{padding:20px}
+  .channel-card img{width:150px;height:150px}
+}
