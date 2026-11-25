@@ -26,8 +26,8 @@
   .hd .hd-search .site-search-results { left: auto; width: min(380px, 92vw); }
 }
 
-/* Narrow desktop (981-1199px): menu needs the room, so search is an icon that opens on click */
-@media (min-width: 981px) and (max-width: 1199px) {
+/* Narrow desktop (981-1499px): menu needs the room, so search is an icon that opens on click */
+@media (min-width: 981px) and (max-width: 1499px) {
   .hd .site-search.hd-search { flex: 0 0 44px; min-width: 44px; height: 44px; }
   .hd .hd-search .site-search-field {
     position: absolute; top: 0; right: 0; z-index: 61; width: 44px; height: 44px;
@@ -40,8 +40,8 @@
   .hd .hd-search:focus-within .site-search-field input { width: 100%; opacity: 1; }
 }
 
-/* Wide desktop (1200px+): menu and search sit together in the center, between logo and WhatsApp */
-@media (min-width: 1200px) {
+/* Wide desktop (1500px+): menu and search sit together in the center, between logo and WhatsApp */
+@media (min-width: 1500px) {
   .hd nav { margin-left: auto; }
   .hd .site-search.hd-search { margin-left: 28px; margin-right: auto; }
 }
@@ -50,3 +50,41 @@
 .hd nav a.nav-calc{background:#fdecc0;color:var(--ink);border-radius:99px;padding:6px 14px;font-weight:700}
 .hd nav a.nav-calc:hover{background:var(--y);color:var(--ink)}
 @media(max-width:980px){.hd nav a.nav-calc{display:inline-block;align-self:flex-start;margin:8px 0;padding:8px 16px}.hd nav a.nav-calc+a,.hd nav a+a.nav-calc{border-top:0}}
+
+/* One-row menu on desktop (Nov 2026): menu never wraps; WhatsApp button stays on one line */
+@media (min-width: 981px) {
+  .hd nav { flex-wrap: nowrap; justify-content: center; gap: clamp(8px, 1.05vw, 18px); }
+  .hd nav > a, .hd .nav-tools-toggle { white-space: nowrap; }
+  .hd > .btn { display: inline-flex; flex-direction: row; align-items: center; gap: 6px; white-space: nowrap; min-height: 44px; padding: 10px 16px; }
+  .hd > .btn svg, .hd > .btn::before { margin: 0; }
+}
+@media (min-width: 981px) and (max-width: 1279px) {
+  .hd .brand-logo { width: 150px; }
+  .hd nav > a, .hd .nav-tools-toggle { font-size: 14px; }
+  .hd nav a.nav-calc { padding: 5px 10px; }
+  .hd .lang-switch { padding: 4px 4px; gap: 6px; }
+}
+@media (min-width: 981px) and (max-width: 1179px) {
+  /* Small laptops: the floating WhatsApp button (bottom corner) stays, so the header copy steps aside for the menu */
+  .hd > .btn { display: none; }
+  .hd .brand-logo { width: 140px; }
+  .hd nav { gap: 8px; }
+  .hd nav > a, .hd .nav-tools-toggle { font-size: 13.5px; }
+}
+/* Urdu menu words are longer: tighter spacing so it still fits on one row */
+@media (min-width: 981px) and (max-width: 1399px) {
+  html[lang="ur"] .hd { column-gap: 8px; }
+  html[lang="ur"] .hd .brand-logo { width: 150px; }
+  html[lang="ur"] .hd nav { gap: 10px; }
+  html[lang="ur"] .hd nav > a, html[lang="ur"] .hd .nav-tools-toggle { font-size: 14px; }
+  html[lang="ur"] .hd nav a.nav-calc { padding: 5px 10px; }
+  html[lang="ur"] .hd .lang-switch { padding: 4px 2px; gap: 5px; }
+}
+@media (min-width: 981px) and (max-width: 1179px) {
+  html[lang="ur"] .hd .brand-logo { width: 130px; }
+  html[lang="ur"] .hd nav { gap: 7px; }
+  html[lang="ur"] .hd nav > a, html[lang="ur"] .hd .nav-tools-toggle { font-size: 13px; }
+  html[lang="ur"] .hd nav a.nav-calc { padding: 4px 8px; }
+  html[lang="ur"] .hd { padding-inline: 10px; column-gap: 6px; }
+  html[lang="ur"] .hd .lang-switch .ls-en, html[lang="ur"] .hd .lang-switch .ls-ur { font-size: 12.5px; }
+}
