@@ -691,7 +691,7 @@ FACILITATOR = (
     'میں پنجاب کے شہریوں کی سرکاری دستاویزات، ای لائسنس اور ای بز سے متعلق درخواستوں میں مدد کرتا ہوں۔</p>'
     '<p class="fc-label">آپ کے علاقے میں گھر پر وزٹ</p><ul class="area-tags">' + "".join(f"<li>{a}</li>" for a in AREAS) + '</ul>'
     f'<div class="ur-verify-box" id="verify"><h3>فیسیلیٹیٹر کی تصدیق کیسے کریں؟</h3><p>{VERIFY}</p></div>'
-    '<a class="fc-more" href="/ur/about/">محمد عثمان کا تعارف اور رجسٹریشن کی تصدیق ←</a></article>'
+    '<a class="fc-more" href="/en/about/">محمد عثمان کا تعارف اور رجسٹریشن کی تصدیق (English) ←</a></article>'
     '<aside class="fc-contact"><p class="fc-eyebrow">آئیں آپ کے کاغذات مکمل کریں</p><h2>اپنے دستک فیسیلیٹیٹر سے رابطہ کریں</h2>'
     '<p>اپنی سروس اور شہر کا نام بھیجیں۔ میں آپ کو ضروری دستاویزات اور اگلے قدم بتا دوں گا۔</p>'
     f'<a class="btn fc-wa" href="{wa_link("دستک سروس میں رہنمائی")}">واٹس ایپ <span class="ltr">{PHONE}</span></a>'
