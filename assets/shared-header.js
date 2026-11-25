@@ -21,6 +21,20 @@
     document.head.appendChild(analytics);
   }
 
+  if (!document.querySelector('script[data-channel-cta]')) {
+    const channelCss = document.createElement('link');
+    channelCss.rel = 'stylesheet';
+    channelCss.href = '/assets/channel-cta.css?v=1';
+    channelCss.setAttribute('blocking', 'render');
+    document.head.appendChild(channelCss);
+
+    const channelJs = document.createElement('script');
+    channelJs.defer = true;
+    channelJs.dataset.channelCta = '1';
+    channelJs.src = '/assets/channel-cta.js?v=1';
+    document.head.appendChild(channelJs);
+  }
+
   script.insertAdjacentHTML('beforebegin',
     '<header class="hd">' +
       '<a class="brand" href="/en/"><img class="brand-logo" src="/assets/dastak-90807-transparent.png" alt="Dastak 90807 — Doorstep Delivery of Services" width="2121" height="741"></a>' +
