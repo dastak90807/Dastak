@@ -67,3 +67,21 @@ html[dir="rtl"] .skip:focus{right:8px}
 .ur-cards li a:focus-visible{outline:none}
 .ur-cards li:focus-within{outline:2px solid var(--g,#0A3F35);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){.ur-cards li,.ur-cards li a::before{transition:none}.ur-cards li:hover,.ur-cards li:focus-within{transform:none}}
+/* Same hover as the English cards: light green circle grows from the corner and the Dastak 90807 logo appears.
+   Mirrored for right-to-left: circle and logo on the left side. Replaces the small arrow. */
+.ur-cards li{overflow:hidden}
+.ur-cards li>*{position:relative;z-index:2}
+.ur-cards li a::before{content:none}
+.ur-cards li::before{content:"";position:absolute;left:-135px;top:-125px;width:340px;height:340px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top left;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
+.ur-cards li::after{content:"";position:absolute;left:18px;bottom:14px;width:92px;height:32px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:1}
+.ur-cards li:hover::before,.ur-cards li:focus-within::before{opacity:1;transform:scale(1)}
+.ur-cards li:hover::after,.ur-cards li:focus-within::after{opacity:.95}
+.ur-cards li:hover,.ur-cards li:focus-within{background:#fff}
+.ur-cards li p{padding-bottom:30px}
+@media(prefers-reduced-motion:reduce){.ur-cards li::before,.ur-cards li::after{transition:none}}
+.ur-cards li>a{position:static}
+.ur-cards li a::after{z-index:3}
+/* Keep the circle and logo behind the card text */
+.ur-cards li{isolation:isolate}
+.ur-cards li>*{position:static;z-index:auto}
+.ur-cards li::before,.ur-cards li::after{z-index:-1}
