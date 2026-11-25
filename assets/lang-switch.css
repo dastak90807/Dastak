@@ -1,0 +1,8 @@
+/* EN / اردو language switch button in the shared header (assets/shared-header.js). */
+.hd .lang-switch{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:4px 14px;border:1.5px solid var(--g,#0A3F35);border-radius:99px;color:var(--g,#0A3F35);background:#fff;font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap}
+.hd .lang-switch:hover,.hd .lang-switch:focus-visible{background:var(--g,#0A3F35);color:#fff}
+.hd .lang-switch[lang="ur"]{font-family:'Noto Nastaliq Urdu',"Noto Naskh Arabic",Tahoma,sans-serif;font-size:16px;line-height:1.6}
+.hd .lang-switch[lang="en"]{font-family:Inter,system-ui,sans-serif}
+@media(max-width:980px){.hd .lang-switch{min-height:36px;padding:2px 12px;font-size:14px}}
+/* Phones and tablets: keep the switch on the first header row, beside the Menu button, so the header does not grow */
+@media(max-width:980px){.hd .lang-switch{order:1;margin-inline-start:auto}.hd .menu-toggle,.hd>.btn{order:2}.hd .site-search.hd-search{order:3}}
