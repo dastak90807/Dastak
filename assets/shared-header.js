@@ -26,6 +26,20 @@
     document.head.appendChild(analytics);
   }
 
+  if (!document.querySelector('script[data-channel-cta]')) {
+    const channelCss = document.createElement('link');
+    channelCss.rel = 'stylesheet';
+    channelCss.href = '/assets/channel-cta.css?v=4';
+    channelCss.setAttribute('blocking', 'render');
+    document.head.appendChild(channelCss);
+
+    const channelJs = document.createElement('script');
+    channelJs.defer = true;
+    channelJs.dataset.channelCta = '1';
+    channelJs.src = '/assets/channel-cta.js?v=4';
+    document.head.appendChild(channelJs);
+  }
+
   // Pages that have an Urdu version. Add a path here when a new /ur/ page is published.
   const urduPages = [
     '/', '/services/', '/guides/', '/calculators/', '/contact/', '/gujar-khan/',

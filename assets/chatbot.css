@@ -30,3 +30,12 @@ body.cb-open a.back-to-top{opacity:0!important;visibility:hidden!important;point
 @media(max-width:800px){.cb-p.cb2{max-height:calc(100vh - 150px)}.cb2 .cb-l{min-height:70px}}
 @media(max-width:440px){.cb2 .cb-av{display:none}.cb2 .cb-h{gap:8px}}
 @media(max-width:340px){.cb2 .cb-wa{display:none}}
+/* Urdu (RTL) pages: chat button bottom-left (WhatsApp button moves to the right), panel mirrored */
+html[dir="rtl"] .cb-btn{right:auto;left:16px;font-family:"Noto Sans Arabic",Inter,system-ui,sans-serif}
+html[dir="rtl"] .cb-p{right:auto;left:16px}
+html[dir="rtl"] .cb2 .cb-m.b{border-top-left-radius:14px;border-top-right-radius:4px}
+html[dir="rtl"] .cb2 .cb-m.u{border-top-right-radius:14px;border-top-left-radius:4px}
+html[dir="rtl"] .cb2 .cb-t small .cb-dot{margin-right:0;margin-left:6px}
+html[dir="rtl"] .cb2 .cb-ur{text-align:left}
+html[dir="rtl"] .cb2 .cb-go svg{transform:scaleX(-1)}
+html[dir="rtl"] .cb2 .cb-t{overflow:hidden}html[dir="rtl"] .cb2 .cb-t b{white-space:normal;font-size:14.5px}

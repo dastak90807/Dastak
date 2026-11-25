@@ -172,3 +172,16 @@ html[dir="rtl"] .home .home-step{text-align:right}
 html[dir="rtl"] .home .home-step h3,html[dir="rtl"] .home .home-step p{text-align:right}
 html[dir="rtl"] .home .home-step .home-step-tag{align-self:flex-start}
 html[dir="rtl"] .home .home-steps-sub{text-align:center}
+/* Top bar text centred */
+html[lang="ur"] .top:has(.ur-top){justify-content:center}
+html[lang="ur"] .ur-top{flex:1 1 auto;text-align:center}
+/* Moving strip under the hero: scroll in the RTL direction */
+@keyframes announcement-scroll-rtl{to{transform:translateX(25%)}}
+@media (prefers-reduced-motion:no-preference){
+ html[dir="rtl"] .top:where(:has(.announcement-toggle:not([hidden]))) .announcement-track{animation-name:announcement-scroll-rtl}
+}
+html[dir="rtl"] .announcement-toggle{border-left:0;border-right:1px solid #ffffff33}
+html[dir="rtl"] .trust-strip .announcement-message{padding:10px 0 10px 32px}
+/* Back-to-top mirrors the chat button (left side on Urdu pages) */
+html[dir="rtl"] .back-to-top{right:auto;left:20px}
+@media(max-width:800px){html[dir="rtl"] .back-to-top{left:16px}}

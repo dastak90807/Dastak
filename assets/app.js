@@ -25,7 +25,7 @@
 document.querySelectorAll('.announcement-toggle').forEach((toggle) => {
   const announcement = toggle.closest('.top');
   const pauseLabel = toggle.getAttribute('aria-label');
-  const resumeLabel = pauseLabel.replace('Pause ', 'Resume ');
+  const resumeLabel = toggle.dataset.resumeLabel || pauseLabel.replace('Pause ', 'Resume ');
   toggle.hidden = false;
   toggle.addEventListener('click', () => {
     const paused = announcement.toggleAttribute('data-paused');
