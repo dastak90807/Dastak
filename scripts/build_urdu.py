@@ -136,7 +136,7 @@ def page(p):
     main_class = p.get("main_class", "service-detail")
     en_note = f'<p class="ur-en-link" lang="en" dir="ltr">Read in English: <a href="/en{path}" hreflang="en">{esc(p.get("en_title", "English version"))}</a></p>'
 
-    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=11"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
+    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=12"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
 <script src="/assets/shared-header.js?v=7"></script><noscript><nav aria-label="مرکزی مینو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
 {(f'<main id="main" class="{main_class}">{p["body"]}<section class="wrap home-faqs">{faq_block}{en_note}<p class="disc">{DISCLAIMER}</p></section></main>') if p.get("raw") else f'''<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپ ڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
@@ -146,7 +146,7 @@ def page(p):
 <p class="disc">{DISCLAIMER}</p></section></main>'''}
 {FOOTER}
 <aside aria-label="فوری رابطہ"><a class="wafloat btn g" href="{WA}">واٹس ایپ</a><div class="bar"><a class="btn g" href="{WA}">واٹس ایپ</a><a class="btn y" href="tel:+923455583530">کال کریں</a></div></aside>
-<script src="/assets/app.js" defer></script><a class="back-to-top" href="#top" aria-label="اوپر جائیں" title="اوپر جائیں">↑</a><script src="/assets/site-update.js?v=20261122-ui" defer></script><script src="/assets/site-polish.js?v=4" defer></script></body></html>
+<script src="/assets/app.js" defer></script><a class="back-to-top" href="#top" aria-label="اوپر جائیں" title="اوپر جائیں">↑</a><script src="/assets/site-update.js?v=20261122-ui" defer></script><script src="/assets/site-polish.js?v=4" defer></script>{"".join(f'<script src="{j}" defer></script>' for j in p.get("js", []))}</body></html>
 '''
 
 
@@ -656,6 +656,53 @@ STEPS = (
     '<span class="home-step-tag">ٹریکنگ آئی ڈی · اسٹیٹس اپ ڈیٹس</span></li>'
 )
 
+MONTHS_UR = {"January":"جنوری","February":"فروری","March":"مارچ","April":"اپریل","May":"مئی","June":"جون","July":"جولائی",
+             "August":"اگست","September":"ستمبر","October":"اکتوبر","November":"نومبر","December":"دسمبر"}
+_track = HP["review_track"]
+for _en, _ur in MONTHS_UR.items():
+    _track = re.sub(r'(<time datetime="[^"]+">)(\d+) ' + _en + r' (\d{4})</time>', lambda m, u=_ur: f'{m.group(1)}{m.group(2)} {u} {m.group(3)}</time>', _track)
+
+REVIEWS = (
+    '<section class="band rev" id="reviews"><div class="wrap"><div class="home-review-heading"><div>'
+    '<p class="eyebrow">ہمارے صارفین کی زبانی</p><h2>شہری کیا کہتے ہیں</h2>'
+    '<p class="sub">گوجرخان، راولپنڈی اور پورے پنجاب میں جن شہریوں کی ہم نے مدد کی، ان کے منتخب تبصرے۔</p></div>'
+    '<a class="review-badge" href="https://share.google/nmpsQYND7NTAnZzqI" target="_blank" rel="noopener" data-ga-event="home_review_cta_click" '
+    'aria-label="78 گوگل ریویوز میں 5 میں سے 4.9 ریٹنگ۔ ہمارا گوگل بزنس پروفائل کھولیں">'
+    + HP["review_g"] +
+    '<span class="review-score"><b class="ltr">4.9</b><span class="review-stars" aria-hidden="true">★★★★★</span></span>'
+    '<span class="review-meta"><b>گوگل ریٹنگ</b><small><span class="ltr">78</span> ریویوز · سب دیکھیں ←</small></span></a></div>'
+    '<div class="review-controls-row"><div class="review-controls">'
+    '<button type="button" data-review-direction="1" aria-label="پچھلے تبصرے" aria-controls="home-review-track">→</button>'
+    '<button type="button" data-review-direction="-1" aria-label="اگلے تبصرے" aria-controls="home-review-track">←</button></div></div>'
+    '<div class="home-review-track" id="home-review-track" tabindex="0" role="region" aria-label="صارفین کے تبصرے">' + _track + '</div>'
+    '<p class="sub">یہ تبصرے زیادہ تر ہمارے گوگل بزنس پروفائل اور چند فیس بک سفارشات سے لیے گئے ہیں اور صارفین کے اپنے الفاظ میں ہیں، اس لیے ان کا ترجمہ نہیں کیا گیا۔ '
+    'کچھ تبصرے اقتباس ہیں۔ 24 نومبر 2026 تک <span class="ltr">78</span> ریویوز سے گوگل ریٹنگ <span class="ltr">4.9</span>۔ ہر شخص کا تجربہ اور کام کا وقت مختلف ہو سکتا ہے۔</p>'
+    '<div class="row"><a data-ga-event="home_review_cta_click" class="btn y" href="https://g.page/r/CcbPfWByTNL1ECE/review" target="_blank" rel="noopener">گوگل پر ریویو دیں</a>'
+    '<a data-ga-event="home_review_cta_click" class="btn o" href="https://www.facebook.com/Dastak90807/reviews" target="_blank" rel="noopener">فیس بک پر ریویو دیں</a></div></div></section>'
+)
+
+AREAS = ["گوجرخان", "کلر سیداں", "کہوٹہ", "راولپنڈی", "مندرہ", "بیول", "دولتالہ", "سکھو", "جاتلی", "قاضیاں", "پورے پنجاب میں آن لائن"]
+FACILITATOR = (
+    '<section class="band home-fc" id="contact"><div class="wrap"><div class="fc-grid">'
+    '<article class="fc-profile" id="facilitator"><div class="fc-head">'
+    '<img src="/assets/usman.webp" alt="محمد عثمان، مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807، گوجرخان راولپنڈی" width="112" height="112" loading="lazy">'
+    f'<div><span class="chip">فیسیلیٹیٹر کوڈ <span class="ltr">{CODE}</span></span><h2>اپنے رجسٹرڈ مریم کی دستک فیسیلیٹیٹر سے ملیں</h2><p class="fc-name">محمد عثمان</p></div></div>'
+    f'<p>میں محمد عثمان ہوں، حکومتِ پنجاب کے مریم کی دستک پروگرام کے تحت رجسٹرڈ فیسیلیٹیٹر (کوڈ <span class="ltr">{CODE}</span>)۔ '
+    'میں پنجاب کے شہریوں کی سرکاری دستاویزات، ای لائسنس اور ای بز سے متعلق درخواستوں میں مدد کرتا ہوں۔</p>'
+    '<p class="fc-label">آپ کے علاقے میں گھر پر وزٹ</p><ul class="area-tags">' + "".join(f"<li>{a}</li>" for a in AREAS) + '</ul>'
+    f'<div class="ur-verify-box" id="verify"><h3>فیسیلیٹیٹر کی تصدیق کیسے کریں؟</h3><p>{VERIFY}</p></div>'
+    '<a class="fc-more" href="/ur/about/">محمد عثمان کا تعارف اور رجسٹریشن کی تصدیق ←</a></article>'
+    '<aside class="fc-contact"><p class="fc-eyebrow">آئیں آپ کے کاغذات مکمل کریں</p><h2>اپنے دستک فیسیلیٹیٹر سے رابطہ کریں</h2>'
+    '<p>اپنی سروس اور شہر کا نام بھیجیں۔ میں آپ کو ضروری دستاویزات اور اگلے قدم بتا دوں گا۔</p>'
+    f'<a class="btn fc-wa" href="{wa_link("دستک سروس میں رہنمائی")}">واٹس ایپ <span class="ltr">{PHONE}</span></a>'
+    '<a class="btn fc-call" href="tel:+923455583530">محمد عثمان کو کال کریں</a>'
+    '<p class="fc-line"><strong>ای میل:</strong> <a class="ltr" href="mailto:support@dastak90807.com">support@dastak90807.com</a></p>'
+    '<p class="fc-line"><strong>دفتر:</strong> صندل روڈ، وارڈ نمبر <span class="ltr">14</span>، گوجرخان، راولپنڈی، پنجاب</p>'
+    '<a class="fc-maplink" href="https://www.google.com/maps/place/Dastak+Online+Document+Facilitation/@33.2547796,73.2958553,17z/data=!4m5!3m4!1s0x392005c98ae34345:0xf5d24c72607dcfc6!8m2!3d33.2547796!4d73.2958553" target="_blank" rel="noopener">گوگل بزنس پروفائل پر ہماری لوکیشن کھولیں ↗</a></aside></div>'
+    '<div class="fc-map"><iframe class="contact-map" title="گوجرخان میں دستک آن لائن ڈاکومنٹ فیسیلیٹیشن کی لوکیشن" src="https://www.google.com/maps?q=33.2547796,73.2958553&amp;z=17&amp;output=embed" width="800" height="320" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>'
+    '<p class="fc-note">یہ ایک آزاد فیسیلیٹیشن سروس ہے، سرکاری دفتر نہیں۔ بکنگ سے پہلے شرائط اور دستیابی کی تصدیق کر لیں۔</p></div></section>'
+)
+
 HOME_BODY = (
     '<section class="hero"><div class="wrap two"><div>'
     f'<span class="chip">رجسٹرڈ فیسیلیٹیٹر · مریم کی دستک · کوڈ {CODE}</span>'
@@ -666,7 +713,7 @@ HOME_BODY = (
     f'<div class="row"><a class="btn g" data-ga-event="hero_whatsapp_click" href="{wa_link("دستک سروس میں رہنمائی")}">واٹس ایپ: {PHONE}</a>'
     f'<a class="btn y hero-calc" data-ga-event="hero_calculator_click" href="#fee-calculators">فیس معلوم کریں {ARROW}</a>'
     f'<a class="btn o hero-call" data-ga-event="hero_call_click" href="tel:+923455583530">{HP["call"]}کال کریں {PHONE}</a></div></div>'
-    f'<div class="art"><img src="/assets/muhammad-usman-dastak-90807-doorstep-document-facilitation-punjab.webp" width="2400" height="1340" alt="{HERO_ALT}" fetchpriority="high"></div></div></section>'
+    f'<div class="art"><img src="/assets/muhammad-usman-dastak-90807-doorstep-facilitation-gujar-khan-urdu-rtl.webp" width="2400" height="1340" alt="{HERO_ALT}" fetchpriority="high"></div></div></section>'
     + STRIP +
     '<section class="wrap home-services" id="services" aria-labelledby="home-services-title"><p class="eyebrow">پورے پنجاب میں آن لائن · گوجرخان میں گھر کی دہلیز پر</p>'
     '<h2 id="home-services-title">پنجاب میں کہیں سے بھی آن لائن اپلائی کریں</h2><p class="sub">اپنی خدمت منتخب کریں اور دستاویزات اور اگلے قدم دیکھیں۔</p>'
@@ -678,13 +725,13 @@ HOME_BODY = (
     f'<p class="sub home-steps-sub">پورے پنجاب سے آن لائن۔ گوجرخان میں گھر کی دہلیز پر۔</p><ol class="home-steps">{STEPS}</ol>'
     f'<div class="home-trust-strip">{trust_html}</div>'
     f'<div class="row"><a class="btn g" href="{wa_link("سروس کی بکنگ")}">واٹس ایپ {PHONE}</a><a class="btn y" href="#fee-calculators">فیس معلوم کریں {ARROW}</a></div></div></section>'
-    f'<section class="wrap"><div class="card ur-verify-box" id="verify"><h2>فیسیلیٹیٹر کی تصدیق کیسے کریں؟</h2><p>{VERIFY}</p></div></section>'
+    + REVIEWS + FACILITATOR +
     '<section class="wrap ur-home-guides"><h2>مفید اردو گائیڈز</h2>' + cards((R["renew_guide"], R["track"], R["character_guide"], R["vehicle_guide"])) + '</section>'
 )
 
 PAGES.append(dict(
     path="/", kind="hub", raw=True, main_class="home home-ur", en_title="Home",
-    css=["/assets/home-wide.css", "/assets/home-refinement.css?v=20261125a", "/assets/guide-cards.css?v=1"],
+    css=["/assets/home-wide.css", "/assets/home-refinement.css?v=20261125a", "/assets/guide-cards.css?v=1"], js=["/assets/home-refinement.js?v=third1"],
     title="دستک 90807 | گھر بیٹھے سرکاری دستاویزات، گوجرخان اور پنجاب",
     desc="ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل میں گھر بیٹھے مدد۔ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807۔ واٹس ایپ 0345-5583530۔",
     h1="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن", og="/assets/dastak-online-document-facilitation-punjab-og.jpg",

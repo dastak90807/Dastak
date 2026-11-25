@@ -132,3 +132,34 @@ html[dir="rtl"] .ur-fee td{text-align:right}
 html[dir="rtl"] details summary{padding-inline:0}
 html[lang="ur"] .service-detail .related-module .ur-cards li a::after{content:"";position:absolute;inset:0;z-index:3;color:transparent}
 html[lang="ur"] .service-detail .related-module .ur-cards li a{display:inline;padding:0;border:0;background:none;box-shadow:none;transform:none;font-weight:700}
+/* ---- Urdu home v2: hero text right / photo left, RTL cards, reviews, facilitator ---- */
+/* Hero: Urdu text on the right, photo (RTL-composed copy, people on the left) on the left */
+@media(min-width:981px){
+ html[dir="rtl"] .home .hero .art{left:0;right:auto}
+ html[dir="rtl"] .home .hero .art img{object-position:left center;-webkit-mask-image:none;mask-image:none}
+ html[dir="rtl"] .home .hero .wrap.two{justify-content:flex-start}
+}
+@media(max-width:980px){
+ html[dir="rtl"] .home .hero .art img{object-position:left center}
+}
+html[dir="rtl"] .home .hero h1,html[dir="rtl"] .home .hero h1 span,html[dir="rtl"] .home .hero .lead,html[dir="rtl"] .home .hero .chip,html[dir="rtl"] .home .hero p{text-align:right}
+html[dir="rtl"] .home .hero .row{justify-content:flex-start}
+/* Cards: icon top-right, badge top-left, everything else right-aligned */
+html[dir="rtl"] .home .home-category{text-align:right}
+html[dir="rtl"] .home .home-category .category-icon{margin-left:auto;margin-right:0}
+html[dir="rtl"] .home .home-category .home-popular{right:auto;left:16px}
+html[dir="rtl"] .home .home-category ul{padding:0;margin-inline:0;text-align:right}
+html[dir="rtl"] .home .home-category ul li a{justify-content:flex-start;text-align:right}
+html[dir="rtl"] .home .home-category-foot{justify-content:flex-start}
+/* Reviews: RTL heading and track; customer words stay in their own language (LTR) */
+html[dir="rtl"] .home .rev .home-review-heading{text-align:right}
+html[dir="rtl"] .home .rev .review-controls-row{justify-content:flex-start}
+html[dir="rtl"] .home .review-card blockquote[dir="ltr"]{text-align:left;font-family:inherit}
+html[dir="rtl"] .home .review-card figcaption{text-align:right}
+html[dir="rtl"] .home .review-card figcaption .review-avatar{margin-left:10px;margin-right:0}
+/* Facilitator section */
+html[dir="rtl"] .home .home-fc{text-align:right}
+html[dir="rtl"] .home .home-fc .area-tags{padding:0}
+html[dir="rtl"] .home .home-fc .ur-verify-box{margin:16px 0;padding:14px 16px;border-radius:12px;background:#f4faf7;border:1px solid var(--bd,#dbe7e0)}
+html[dir="rtl"] .home .home-fc .ur-verify-box h3{margin:0 0 6px;font-size:17px}
+html[dir="rtl"] .home .home-fc .ur-verify-box p{margin:0;font-size:14px;line-height:1.9}
