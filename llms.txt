@@ -30,7 +30,7 @@ Doorstep facilitation in Gujar Khan, Rawalpindi, Kallar Syedan, Kahuta, Mandra, 
 
 ## Urdu version (اردو)
 Urdu pages mirror the English URLs under /ur/ (same slugs). Fees on Urdu pages follow the official Dastak training manual (V-5, 26 June 2025) and the official Dastak portal; the PSID shows the final amount. Facilitator charge: Rs 950 per service. Domicile via Dastak: Rs 1,200 total by PSID (Rs 300 e-stamp affidavit separate).
-- [اردو ہوم پیج](https://www.dastak90807.com/ur/): گھر بیٹھے سرکاری دستاویزات، گوجر خان اور پنجاب
+- [اردو ہوم پیج](https://www.dastak90807.com/ur/): گھر بیٹھے سرکاری دستاویزات، گوجرخان اور پنجاب
 - [سروسز](https://www.dastak90807.com/ur/services/)
 - [ڈرائیونگ لائسنس رینیول](https://www.dastak90807.com/ur/services/renewal-of-regular-license/)
 - [لرنر ڈرائیونگ لائسنس](https://www.dastak90807.com/ur/services/learner-driving-license/)
@@ -40,7 +40,7 @@ Urdu pages mirror the English URLs under /ur/ (same slugs). Fees on Urdu pages f
 - [ڈومیسائل سرٹیفکیٹ](https://www.dastak90807.com/ur/services/domicile-certificate/)
 - [اردو گائیڈز](https://www.dastak90807.com/ur/guides/): لائسنس رینیول، لائسنس ٹریکنگ، کریکٹر سرٹیفکیٹ، ٹرانسفر اور ٹوکن ٹیکس
 - [فیس کیلکولیٹر](https://www.dastak90807.com/ur/calculators/)
-- [گوجر خان](https://www.dastak90807.com/ur/gujar-khan/)
+- [گوجرخان](https://www.dastak90807.com/ur/gujar-khan/)
 - [رابطہ](https://www.dastak90807.com/ur/contact/)
 
 ## Contact & official profiles
