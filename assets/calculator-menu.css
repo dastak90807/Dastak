@@ -1,0 +1,22 @@
+/* Top menu bar for the 3 standalone fee calculator pages (assets/calculator-menu.js). */
+.dm{background:#fff;border:1px solid #D9E2E1;border-radius:18px;box-shadow:0 10px 25px -8px rgba(14,75,40,.12);margin-bottom:14px;padding:10px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.dm .dm-lg img{height:46px;width:auto;display:block}
+.dm nav{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;flex-wrap:wrap}
+.dm nav a{color:#0A3F35;text-decoration:none;font-weight:700;font-size:15px;padding:9px 12px;border-radius:99px}
+.dm nav a:hover{background:#EAF5F1}
+.dm nav a.on{background:#FFF3D6}
+.dm nav a:focus-visible,.dm .dm-wa:focus-visible,.dm .dm-tg:focus-visible{outline:2px solid #0E7C66;outline-offset:2px}
+.dm .dm-wa{background:#0E7C66;color:#fff;text-decoration:none;font-weight:800;font-size:14.5px;padding:10px 16px;border-radius:99px}
+.dm .dm-tg{display:none;margin-left:auto;background:#EAF5F1;color:#0A3F35;border:1px solid #cfe5db;border-radius:99px;font:800 14.5px 'Plus Jakarta Sans',system-ui,sans-serif;padding:10px 16px;cursor:pointer}
+.dm nav a.dm-wa2{display:none}
+@media(max-width:860px){
+.dm{padding:10px 14px;gap:10px}
+.dm .dm-tg{display:inline-flex;align-items:center;gap:8px}
+.dm>.dm-wa{display:none}
+.dm nav{flex:0 0 100%;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #D9E2E1;margin-top:4px;display:none}
+.dm.open nav{display:flex}
+.dm nav a{border-radius:0;padding:13px 6px;border-bottom:1px solid #eef3f1}
+.dm nav a.on{background:#FFF3D6;border-radius:10px}
+.dm nav a.dm-wa2{display:block;background:#0E7C66;color:#fff;text-align:center;border-radius:99px;margin-top:10px;border:0}
+}
+@media print{.dm{display:none}}
