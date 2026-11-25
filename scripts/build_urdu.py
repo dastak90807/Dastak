@@ -136,14 +136,14 @@ def page(p):
     main_class = p.get("main_class", "service-detail")
     en_note = f'<p class="ur-en-link" lang="en" dir="ltr">Read in English: <a href="/en{path}" hreflang="en">{esc(p.get("en_title", "English version"))}</a></p>'
 
-    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a"><link rel="stylesheet" href="/assets/urdu-rtl.css?v=6"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
+    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=8"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
 <script src="/assets/shared-header.js?v=7"></script><noscript><nav aria-label="مرکزی مینیو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
-<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
+{(f'<main id="main" class="{main_class}">{p["body"]}<section class="wrap home-faqs">{faq_block}{en_note}<p class="disc">{DISCLAIMER}</p></section></main>') if p.get("raw") else f'''<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
 {p["body"]}
 {faq_block}
 {en_note}
-<p class="disc">{DISCLAIMER}</p></section></main>
+<p class="disc">{DISCLAIMER}</p></section></main>'''}
 {FOOTER}
 <aside aria-label="فوری رابطہ"><a class="wafloat btn g" href="{WA}">واٹس ایپ</a><div class="bar"><a class="btn g" href="{WA}">واٹس ایپ</a><a class="btn y" href="tel:+923455583530">کال کریں</a></div></aside>
 <script src="/assets/app.js" defer></script><a class="back-to-top" href="#top" aria-label="اوپر جائیں" title="اوپر جائیں">↑</a><script src="/assets/site-update.js?v=20261122-ui" defer></script><script src="/assets/site-polish.js?v=4" defer></script></body></html>
@@ -586,28 +586,117 @@ PAGES.append(dict(
         ("کیا آپ کا دفتر ہے؟", "پتہ سینڈل روڈ، وارڈ نمبر 14، گوجرخان ہے۔ آنے سے پہلے واٹس ایپ پر وقت طے کر لیں۔"),
     ]))
 
+HP = json.load(open(os.path.join(ROOT, "scripts", "home_parts.json"), encoding="utf-8"))
+ARROW = HP["arrow"]
+
+
+def home_card(icon, tag, title, links, more_href, more_text, wa_topic):
+    lis = "".join(f'<li><a href="{h}">{t} ←</a></li>' for h, t in links)
+    return (f'<article class="card home-category"><span class="home-popular">{tag}</span><span class="category-icon">{icon}</span>'
+            f'<h3>{title}</h3><ul>{lis}</ul><div class="home-category-foot"><a class="btn y home-category-more" href="{more_href}">{more_text} {ARROW}</a>'
+            f'<a class="btn g home-category-wa" href="{wa_link(wa_topic)}">واٹس ایپ پر پوچھیں</a></div></article>')
+
+
+SV, TL = HP["svc"], HP["tools"]
+STRIP_TEXT = ["گھر کی دہلیز پر کاغذات کی وصولی اور ڈیلیوری", f"کوڈ {CODE} کی تصدیق سرکاری پورٹل پر کریں", "آزاد فیسیلیٹیشن سروس، سرکاری دفتر نہیں"]
+strip_items = "".join(f"<li>{ic}<span>{t}</span></li>" for ic, t in zip(HP["strip"], STRIP_TEXT))
+STRIP = ('<aside class="top trust-strip" aria-label="سروس کی خصوصیات"><div class="announcement-window"><div class="announcement-track">'
+         f'<ul class="announcement-message">{strip_items}</ul><ul class="announcement-message announcement-copy" aria-hidden="true">{strip_items}</ul>'
+         f'<ul class="announcement-message announcement-copy" aria-hidden="true">{strip_items}</ul></div></div></aside>')
+TRUST = [("رجسٹرڈ فیسیلیٹیٹر", f"کوڈ {CODE}"), ("سرکاری پورٹلز", "پنجاب کے سرکاری سسٹم سے کارروائی"),
+         ("اسٹیٹس اپڈیٹس", "ٹریکنگ آئی ڈی آپ کو دی جاتی ہے"), ("آزاد سروس", "سرکاری دفتر نہیں")]
+trust_html = "".join(f'<div class="home-trust-item"><span>{ic}</span><div><strong>{a}</strong><small>{b}</small></div></div>'
+                     for ic, (a, b) in zip(HP["trust"], TRUST))
+
+HERO_ALT = ("گوجرخان، راولپنڈی اور پنجاب میں دستک فیسیلیٹیٹر گھر کی دہلیز پر شہری کو دستاویزات دیتے ہوئے، "
+            "دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)")
+
+CARDS_SVC = "".join([
+    home_card(SV[0]["icon"], "مقبول", "ڈرائیونگ لائسنس",
+              [("/ur/services/learner-driving-license/", "لرنر ڈرائیونگ لائسنس"), ("/ur/services/renewal-of-regular-license/", "لائسنس رینیول"),
+               ("/ur/guides/how-to-track-driving-license-in-punjab/", "لائسنس ٹریک کریں")], "/ur/services/", "تمام خدمات", "ڈرائیونگ لائسنس"),
+    home_card(SV[1]["icon"], "مقبول", "گاڑی اور ایکسائز",
+              [("/ur/services/transfer-of-motor-vehicle/", "گاڑی اور موٹر سائیکل ٹرانسفر"), ("/ur/services/token-tax/", "ٹوکن ٹیکس"),
+               ("/ur/guides/vehicle-transfer-token-tax-punjab/", "ٹرانسفر اور ٹوکن ٹیکس گائیڈ")], "/ur/services/", "تمام خدمات", "گاڑی اور ایکسائز"),
+    home_card(SV[2]["icon"], "مقبول", "پولیس خدمات",
+              [("/ur/services/character-certificate/", "پولیس کریکٹر سرٹیفکیٹ"), ("/ur/guides/punjab-police-character-certificate-online/", "کریکٹر سرٹیفکیٹ گائیڈ"),
+               ("/en/services/tenant-registration/", "کرایہ دار رجسٹریشن (English)")], "/ur/services/", "تمام خدمات", "پولیس خدمات"),
+    home_card(SV[3]["icon"], "گوجرخان", "سول دستاویزات",
+              [("/ur/services/domicile-certificate/", "ڈومیسائل سرٹیفکیٹ"), ("/en/services/e-stamping/", "ای اسٹامپ (English)"),
+               ("/en/services/birth-certificate/", "پیدائش سرٹیفکیٹ (English)")], "/ur/gujar-khan/", "گوجرخان خدمات", "سول دستاویزات"),
+    home_card(SV[4]["icon"], "رہنمائی", "جنگلات، وائلڈ لائف اور فشریز",
+              [("/en/services/other-punjab-dastak-services/", "فشریز ای لائسنس رہنمائی (English)"),
+               ("/en/services/other-punjab-dastak-services/", "وائلڈ لائف پرمٹ رہنمائی (English)")], "/ur/services/", "تمام خدمات", "جنگلات، وائلڈ لائف اور فشریز"),
+    home_card(SV[5]["icon"], "رہنمائی", "ای بز کاروباری خدمات",
+              [("/en/services/other-punjab-dastak-services/", "فوڈ اتھارٹی لائسنس رہنمائی (English)"),
+               ("/en/services/other-punjab-dastak-services/", "کاروبار کی رجسٹریشن رہنمائی (English)"),
+               ("/en/services/general-inquiry-and-guide/", "گھر پر کاروباری سہولت (English)")], "/ur/services/", "تمام خدمات", "ای بز کاروباری خدمات"),
+])
+CARDS_TOOLS = "".join([
+    home_card(TL[0]["icon"], "مفت", "ڈرائیونگ لائسنس فیس کیلکولیٹر",
+              [(TL[0]["more"], "رینیول فیس (1 سے 5 سال)"), (TL[0]["more"], "نیا اور ڈپلیکیٹ لائسنس"), (TL[0]["more"], "انٹرنیشنل ڈرائیونگ پرمٹ")],
+              TL[0]["more"], "ابھی حساب کریں", "ڈرائیونگ لائسنس فیس"),
+    home_card(TL[1]["icon"], "مفت", "کار ٹوکن ٹیکس اور ٹرانسفر کیلکولیٹر",
+              [(TL[1]["more"], "کار اور جیپ کا ٹوکن ٹیکس"), (TL[1]["more"], "کار ٹرانسفر فیس"), (TL[1]["more"], "فائلر اور نان فائلر ریٹس")],
+              TL[1]["more"], "ابھی حساب کریں", "کار فیس"),
+    home_card(TL[2]["icon"], "مفت", "موٹر سائیکل رجسٹریشن اور ٹرانسفر کیلکولیٹر",
+              [(TL[2]["more"], "نئی بائیک رجسٹریشن فیس"), (TL[2]["more"], "موٹر سائیکل ٹرانسفر فیس"), (TL[2]["more"], "لائف ٹائم ٹوکن ٹیکس")],
+              TL[2]["more"], "ابھی حساب کریں", "موٹر سائیکل فیس"),
+])
+
+STEPS = (
+    '<li class="home-step"><span class="home-step-num">1</span><h3>شروع کرنے کا طریقہ منتخب کریں</h3>'
+    f'<p>دستک ایپ میں <strong>Doorstep Delivery</strong> منتخب کریں، پھر <strong>Self</strong> یا <strong>On Behalf</strong> چنیں اور Facilitator Code کے خانے میں <strong>{CODE}</strong> لکھیں۔ '
+    f'یا واٹس ایپ یا کال کریں: {PHONE}۔ میں آپ کو دستاویزات اور فیس کی تفصیل بتاتا ہوں۔</p><span class="home-step-tag">دستک ایپ · واٹس ایپ · فون</span></li>'
+    '<li class="home-step"><span class="home-step-num">2</span><h3>درخواست مکمل کریں</h3>'
+    '<p>میں دستاویزات کی تیاری میں رہنمائی کرتا ہوں اور آپ کے ساتھ درخواست مکمل کرتا ہوں۔ آپ SMS یا ایپ میں آنے والے کوڈ (OTP) سے تصدیق کرتے ہیں۔ گوجرخان میں یہ کام آپ کے گھر پر ہو سکتا ہے۔</p>'
+    '<span class="home-step-tag">آن لائن · گوجرخان میں گھر پر</span></li>'
+    '<li class="home-step"><span class="home-step-num">3</span><h3>جمع کروائیں اور ٹریک کریں</h3>'
+    '<p>درخواست سرکاری دستک سسٹم کے ذریعے جمع ہوتی ہے اور فیس سرکاری PSID سے ادا ہوتی ہے۔ آپ کو ٹریکنگ آئی ڈی ملتی ہے اور محکمے کے کام مکمل کرنے تک میں آپ کو اپڈیٹ دیتا رہتا ہوں۔</p>'
+    '<span class="home-step-tag">ٹریکنگ آئی ڈی · اسٹیٹس اپڈیٹس</span></li>'
+)
+
+HOME_BODY = (
+    '<section class="hero"><div class="wrap two"><div>'
+    f'<span class="chip">رجسٹرڈ فیسیلیٹیٹر · مریم کی دستک · کوڈ {CODE}</span>'
+    '<h1>دستک آن لائن ڈاکومنٹ فیسیلیٹیشن <span>پورے پنجاب میں آن لائن · گوجرخان اور راولپنڈی میں گھر کی دہلیز پر</span></h1>'
+    '<p class="hero-tagline">گھر بیٹھے اپلائی کریں، دفتر جانے کی ضرورت نہیں۔</p>'
+    f'<p class="lead">پولیس، ڈرائیونگ لائسنس، گاڑی اور ڈومیسائل جیسی سرکاری خدمات کے لیے پنجاب میں کہیں سے بھی گھر بیٹھے اپلائی کریں، رجسٹرڈ فیسیلیٹیٹر محمد عثمان (کوڈ {CODE}) کے ساتھ۔ '
+    'گوجرخان اور راولپنڈی میں گھر پر وزٹ۔ <a href="#verify">تصدیق کیسے کریں؟</a></p>'
+    f'<div class="row"><a class="btn g" data-ga-event="hero_whatsapp_click" href="{wa_link("دستک سروس میں رہنمائی")}">واٹس ایپ: {PHONE}</a>'
+    f'<a class="btn y hero-calc" data-ga-event="hero_calculator_click" href="#fee-calculators">فیس معلوم کریں {ARROW}</a>'
+    f'<a class="btn o hero-call" data-ga-event="hero_call_click" href="tel:+923455583530">{HP["call"]}کال کریں {PHONE}</a></div></div>'
+    f'<div class="art"><img src="/assets/muhammad-usman-dastak-90807-doorstep-document-facilitation-punjab.webp" width="2400" height="1340" alt="{HERO_ALT}" fetchpriority="high"></div></div></section>'
+    + STRIP +
+    '<section class="wrap home-services" id="services" aria-labelledby="home-services-title"><p class="eyebrow">پورے پنجاب میں آن لائن · گوجرخان میں گھر کی دہلیز پر</p>'
+    '<h2 id="home-services-title">پنجاب میں کہیں سے بھی آن لائن اپلائی کریں</h2><p class="sub">اپنی خدمت منتخب کریں اور دستاویزات اور اگلے قدم دیکھیں۔</p>'
+    f'<div class="home-category-grid">{CARDS_SVC}</div></section>'
+    '<section class="wrap home-tools" id="citizen-tools"><p class="eyebrow">مفت فیس کیلکولیٹر</p><h2 id="fee-calculators">اپنی فیس کا اندازہ لگائیں</h2>'
+    '<p class="sub">ڈرائیونگ لائسنس، کار اور موٹر سائیکل کے مفت فیس کیلکولیٹر، اردو اور انگریزی دونوں میں۔ اندازہ PDF میں ڈاؤن لوڈ کریں۔ حتمی رقم ہمیشہ PSID پر ہوتی ہے۔</p>'
+    f'<div class="home-category-grid">{CARDS_TOOLS}</div></section>'
+    '<section class="band process" id="how-it-works"><div class="wrap"><p class="eyebrow">طریقہ کار</p><h2>3 آسان قدموں میں اپلائی کریں</h2>'
+    f'<p class="sub home-steps-sub">پورے پنجاب سے آن لائن۔ گوجرخان میں گھر کی دہلیز پر۔</p><ol class="home-steps">{STEPS}</ol>'
+    f'<div class="home-trust-strip">{trust_html}</div>'
+    f'<div class="row"><a class="btn g" href="{wa_link("سروس کی بکنگ")}">واٹس ایپ {PHONE}</a><a class="btn y" href="#fee-calculators">فیس معلوم کریں {ARROW}</a></div></div></section>'
+    f'<section class="wrap"><div class="card ur-verify-box" id="verify"><h2>فیسیلیٹیٹر کی تصدیق کیسے کریں؟</h2><p>{VERIFY}</p></div></section>'
+    '<section class="wrap ur-home-guides"><h2>مفید اردو گائیڈز</h2>' + cards((R["renew_guide"], R["track"], R["character_guide"], R["vehicle_guide"])) + '</section>'
+)
+
 PAGES.append(dict(
-    path="/", kind="hub", main_class="service-detail home-ur", en_title="Home",
+    path="/", kind="hub", raw=True, main_class="home home-ur", en_title="Home",
+    css=["/assets/home-wide.css", "/assets/home-refinement.css?v=20261125a", "/assets/guide-cards.css?v=1"],
     title="دستک 90807 | گھر بیٹھے سرکاری دستاویزات، گوجرخان اور پنجاب",
     desc="ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل میں گھر بیٹھے مدد۔ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807۔ واٹس ایپ 0345-5583530۔",
-    h1="گھر بیٹھے سرکاری دستاویزات: پنجاب کے لیے دستک سروس", og="/assets/dastak-online-document-facilitation-punjab-og.jpg",
+    h1="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن", og="/assets/dastak-online-document-facilitation-punjab-og.jpg",
     og_alt="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی اور پنجاب میں گھر بیٹھے سرکاری دستاویزات",
-    crumbs=[], meta=f'<span class="ur-pill">رجسٹرڈ فیسیلیٹیٹر · کوڈ {CODE}</span> · مریم کی دستک (حکومتِ پنجاب کا اقدام)',
-    body=f'''<p class="lead">میں محمد عثمان ہوں۔ ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل جیسی سرکاری خدمات آپ کے گھر کی دہلیز پر فراہم کرتا ہوں۔ پورے پنجاب کے لیے واٹس ایپ پر رہنمائی، اور {AREAS} میں گھر پر وزٹ۔</p>
-<div class="sd-actions"><a class="btn g" data-ga-event="home_whatsapp_click" href="{WA}">واٹس ایپ {PHONE}</a><a class="btn y" href="/ur/services/">تمام خدمات دیکھیں</a><a class="btn o" href="/ur/calculators/">فیس کیلکولیٹر</a></div>
-<p class="sd-trust">آزاد فیسیلیٹیشن سروس، سرکاری دفتر نہیں</p><p class="ur-note" id="verify"><b>تصدیق:</b> {VERIFY}</p>
-<section class="service-module"><h2>آپ کو کس کام میں مدد چاہیے؟</h2>{cards((R["renew"], R["learner"], R["character"], R["transfer"], R["token"], R["domicile"]))}<p><a href="/ur/services/">تمام خدمات ←</a></p></section>
-<section class="service-module steps-module"><h2>دستک سروس کیسے کام کرتی ہے؟</h2><ol><li>واٹس ایپ پر اپنی سروس بتائیں یا دستک ایپ میں Doorstep Delivery کے ساتھ کوڈ {CODE} لکھیں۔</li><li>ہم آپ کی دستاویزات پہلے سے چیک کرتے ہیں تاکہ درخواست مسترد نہ ہو۔</li><li>فیسیلیٹیٹر گھر آ کر درخواست جمع کرواتا ہے۔ آپ PSID کی فیس موبائل سے ادا کرتے ہیں۔</li><li>تیار دستاویز کورئیر یا فیسیلیٹیٹر کے ذریعے آپ تک پہنچتی ہے۔</li></ol></section>
-<section class="service-module"><h2>دستک 90807 کیوں؟</h2><ul><li><b>رجسٹرڈ فیسیلیٹیٹر:</b> مریم کی دستک پروگرام کا کوڈ {CODE}، جس کی تصدیق سرکاری پورٹل، ایپ یا سرکاری ہیلپ لائن 1202 سے ہو سکتی ہے۔</li><li><b>واضح چارجز:</b> ہر سروس پر فیسیلیٹیٹر چارجز 950 روپے۔ سرکاری فیس PSID پر، کوئی چھپی ہوئی رقم نہیں۔</li><li><b>آپ کی پرائیویسی:</b> کام مکمل ہونے کے بعد دستاویزات ڈیلیٹ۔ کبھی پاس ورڈ یا OTP نہیں مانگا جاتا۔</li><li><b>اپنی زبان میں:</b> اردو، پنجابی اور انگریزی میں بات کریں۔</li></ul></section>
-<section class="service-module"><h2>مفید اردو گائیڈز</h2>{cards((R["renew_guide"], R["track"], R["character_guide"], R["vehicle_guide"]))}</section>
-<section class="service-module"><h2>گوجرخان اور راولپنڈی</h2><p>گوجرخان اور راولپنڈی میں ڈومیسائل، لائسنس اور پولیس سرٹیفکیٹ کے لیے گھر پر سہولت۔ <a href="/ur/gujar-khan/">گوجرخان سروس کی تفصیل</a> · <a href="/ur/contact/">رابطہ اور لوکیشن</a></p></section>''',
+    crumbs=[],
+    body=HOME_BODY,
     faqs=[
         ("کیا یہ سرکاری ویب سائٹ ہے؟", "نہیں۔ یہ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر (کوڈ 90807) کی آزاد سروس ہے، کوئی سرکاری ویب سائٹ یا محکمہ نہیں۔ سرکاری پورٹل dastak.punjab.gov.pk ہے۔"),
         ("گھر بیٹھے سرکاری کاغذات کیسے بنوائیں؟ (Ghar baithe documents kaise banwayen)", "واٹس ایپ 0345-5583530 پر رابطہ کریں یا دستک ایپ میں Doorstep Delivery منتخب کر کے کوڈ 90807 لکھیں۔"),
         ("فیس کتنی ہے؟", "سرکاری فیس ہر سروس کی الگ ہے اور PSID پر لکھی ہوتی ہے۔ دستک تربیتی مینول کے مطابق فیسیلیٹیٹر چارجز 950 روپے ہیں۔"),
         ("کیا آپ پورے پنجاب میں کام کرتے ہیں؟", "جی ہاں، پورے پنجاب کے لیے واٹس ایپ پر رہنمائی اور دستاویزات کی جانچ۔ گھر پر وزٹ گوجرخان، راولپنڈی اور قریبی علاقوں میں۔"),
     ]))
-
 
 def main():
     for p in PAGES:
