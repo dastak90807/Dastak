@@ -254,9 +254,9 @@ PAGES.append(dict(
 
 PAGES.append(dict(
     path="/services/learner-driving-license/", kind="service", en_title="Learner Driving License",
-    title="لرنر پرمٹ (لرنر پرمٹ) کیسے بنوائیں؟ فیس اور دستاویزات | دستک 90807",
-    desc="پنجاب میں لرنر پرمٹ (لرنر پرمٹ) بنوانے کا طریقہ: صرف شناختی کارڈ اور تصویر، سرکاری فیس 500 روپے فی کیٹیگری، 180 دن کارآمد۔ دستک کوڈ 90807۔",
-    h1="لرنر پرمٹ (لرنر پرمٹ)", og="/assets/og/driving-license.jpg",
+    title="لرنر پرمٹ (لرنر لائسنس) کیسے بنوائیں؟ فیس اور دستاویزات | دستک 90807",
+    desc="پنجاب میں لرنر پرمٹ (لرنر ڈرائیونگ لائسنس) بنوانے کا طریقہ: صرف شناختی کارڈ اور تصویر، سرکاری فیس 500 روپے فی کیٹیگری، 180 دن کارآمد۔ دستک کوڈ 90807۔",
+    h1="لرنر پرمٹ (لرنر ڈرائیونگ لائسنس)", og="/assets/og/driving-license.jpg",
     crumbs=[("خدمات", "/ur/services/"), ("لرنر پرمٹ", "/ur/services/learner-driving-license/")],
     body=service_body(
         "لرنر پرمٹ",
