@@ -1,7 +1,7 @@
 /* Info-style service pages: Other Punjab Dastak Services, General Inquiry and Guide (Nov 2026). Builds on tools-pages.css */
 .sd-info .crumb{margin:0 0 12px;font-size:14px;color:var(--mut)}
 .sd-info .sp-hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px}
-.sd-info .sp-trust{font-size:13.5px;color:#425e50;margin:0}.sd-info .sp-trust a{font-weight:700}
+.sd-info .sp-trust{font-size:14px;color:#425e50;margin:0}.sd-info .sp-trust a{font-weight:700}
 .sd-info .sp-sub{margin:-6px 0 14px;color:var(--mut);line-height:1.6}
 .sd-info .sp-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .sd-info .sp-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -17,6 +17,6 @@
 .sd-info .sp-note{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:16px 20px;margin:18px 0;font-size:14.5px;color:var(--mut);line-height:1.65}
 .sd-info .sp-gap{height:26px}
 .sd-info .sp-book{margin:0 0 26px}
-.sd-info .tp-disc{font-size:13.5px;line-height:1.65;color:#425e50;margin:0 0 30px}
+.sd-info .tp-disc{font-size:14px;line-height:1.65;color:#425e50;margin:0 0 30px}
 @media(max-width:900px){.sd-info .sp-grid4,.sd-info .sp-steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.sd-info .sp-grid3,.sd-info .sp-grid4,.sd-info .sp-steps,.sd-info .sp-ask{grid-template-columns:1fr}}

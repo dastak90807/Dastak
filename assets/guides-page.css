@@ -31,14 +31,14 @@
 .guides-v2 .gp-t{font-size:11px;font-weight:800;letter-spacing:.07em;color:var(--g)}
 .guides-v2 .gp-card h3{font-size:17px;line-height:1.35;margin:8px 0;color:var(--dg)}
 .guides-v2 .gp-card p{font-size:14px;line-height:1.55;color:var(--mut);margin:0 0 12px}
-.guides-v2 .gp-meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mut);margin-top:auto}
+.guides-v2 .gp-meta{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--mut);margin-top:auto}
 .guides-v2 .gp-read{font-weight:700;color:var(--g);text-decoration:none}
-.guides-v2 .gp-rel{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);min-height:34px;font-size:13px}
+.guides-v2 .gp-rel{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;padding-top:10px;border-top:1px solid var(--bd);min-height:34px;font-size:14px}
 .guides-v2 .gp-rel a{color:var(--g);font-weight:600}
 .guides-v2 .gp-more{background:var(--mint);border-style:dashed;justify-content:center;text-align:center}
 .guides-v2 .gp-more-in{padding:24px}.guides-v2 .gp-more-in b{color:var(--dg);font-size:17px}.guides-v2 .gp-more-in p{margin:8px 0 14px}
 .guides-v2 .gp-news{background:#fff;border:1px solid var(--bd);border-radius:16px;padding:22px 26px;margin:36px 0}
-.guides-v2 .gp-news h2{font-size:21px;margin:0 0 4px}.guides-v2 .gp-note{font-size:13px;color:var(--mut);margin:0 0 12px}
+.guides-v2 .gp-news h2{font-size:21px;margin:0 0 4px}.guides-v2 .gp-note{font-size:14px;color:var(--mut);margin:0 0 12px}
 .guides-v2 .gp-news ul{padding:0;margin:0;list-style:none}.guides-v2 .gp-news li{padding:9px 0;border-top:1px solid var(--bd);font-size:15px;line-height:1.5}.guides-v2 .gp-news time{font-weight:700;color:var(--g)}
 .guides-v2 .gp-help{background:var(--dg);color:#fff;border-radius:22px;padding:38px;margin:10px 0 36px}
 .guides-v2 .gp-help h2{color:#fff;margin:0 0 6px;font-size:clamp(22px,2.4vw,28px)}.guides-v2 .gp-help>p{color:#cfe5df;margin:0 0 20px}
@@ -49,7 +49,7 @@
 .guides-v2 .gp-faq{margin-bottom:26px}.guides-v2 .gp-faq h2{font-size:clamp(22px,2.4vw,28px);margin:0 0 14px}
 .guides-v2 .gp-faq details{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:16px 20px;margin-bottom:10px}
 .guides-v2 .gp-faq summary{font-weight:700;color:var(--dg);cursor:pointer}.guides-v2 .gp-faq p{margin:10px 0 0;color:var(--mut);line-height:1.65}
-.guides-v2 .gp-disc{font-size:13px;color:var(--mut);margin:0 0 40px}
+.guides-v2 .gp-disc{font-size:14px;color:var(--mut);margin:0 0 40px}
 @media (hover:hover) and (pointer:fine){
  .guides-v2 .gp-card::before,.guides-v2 .gp-feat::before{content:"";position:absolute;right:-135px;top:-125px;width:340px;height:340px;border-radius:50%;background:#e3f3ea;opacity:0;transform:scale(.7);transform-origin:top right;transition:opacity .25s ease,transform .3s ease;pointer-events:none;z-index:0}
  .guides-v2 .gp-card:not(.gp-more)::after{content:"";position:absolute;right:16px;bottom:58px;width:72px;height:24px;background:url(/assets/dastak-90807-logo-hover.webp) center/contain no-repeat;opacity:0;transition:opacity .25s ease;pointer-events:none;z-index:2}

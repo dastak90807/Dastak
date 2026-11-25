@@ -4,7 +4,7 @@
 .service-detail .sd-glance small{display:block;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--g);margin-bottom:4px}
 .service-detail .sd-glance b{display:block;font-size:15px;line-height:1.4;color:var(--dg)}
 .service-detail .sd-actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}
-.service-detail .sd-trust{font-size:13.5px;color:#425e50;margin:0 0 20px}
+.service-detail .sd-trust{font-size:14px;color:#425e50;margin:0 0 20px}
 .service-detail .sd-trust a{font-weight:700}
 .service-detail .docs{list-style:none;padding:0;margin:0 0 12px;display:grid;gap:8px}
 .service-detail .docs li{position:relative;padding:10px 12px 10px 40px;background:#f4faf7;border:1px solid #d5e7de;border-radius:10px;line-height:1.5}
@@ -20,7 +20,7 @@
 .service-detail .card.book .btn.g{background:#fff;color:var(--dg);border-color:#fff}
 .service-detail .card.book .btn.o{background:transparent;border:2px solid #fff;color:#fff}
 .service-detail .card.book .btn.o:hover{background:rgba(255,255,255,.12)}
-.service-detail .card.book .note{font-size:13px;color:#b9d3cb}
+.service-detail .card.book .note{font-size:14px;color:#b9d3cb}
 .service-detail .card.book .sd-tip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:12px 14px;margin:14px 0 0;font-size:14px;line-height:1.55;color:#fff}
 .service-detail .related-module ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .service-detail .related-module li a{position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:1px solid var(--bd);border-radius:14px;padding:15px 18px;font-weight:800;color:var(--dg);text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}

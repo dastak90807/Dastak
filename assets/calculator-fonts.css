@@ -1,0 +1,13 @@
+/* Fonts and readable text sizes for the 3 fee calculator pages.
+   Inter matches the rest of the site; Urdu text uses Noto Nastaliq Urdu.
+   Both are stored on this site (no Google Fonts). */
+@font-face{font-family:Inter;font-weight:400;font-style:normal;font-display:swap;src:url(/assets/fonts/inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;font-style:normal;font-display:swap;src:url(/assets/fonts/inter-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;font-style:normal;font-display:swap;src:url(/assets/fonts/inter-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:800;font-style:normal;font-display:swap;src:url(/assets/fonts/inter-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Noto Nastaliq Urdu';font-weight:400;font-style:normal;font-display:swap;src:url(/assets/fonts/noto-nastaliq-urdu-arabic-400-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2010-2011,U+25CC}
+@font-face{font-family:'Noto Nastaliq Urdu';font-weight:700;font-style:normal;font-display:swap;src:url(/assets/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2010-2011,U+25CC}
+/* Readable text: sentences and notes at least 14px; buttons and chips at least 13px. Small caps labels stay small. */
+.card-sub,.table-row,.table-row-alt,.multi-year-subhead,.multi-year-values,.summary-list,.disclaimer-box,.header-caption,.footer-links{font-size:14px}
+.trust-strip{font-size:13px}
+.btn-pdf,.btn-copy,.reset-btn,.select-date-chip,.pill-btn-green,.pill-btn-gold,.cal-select,.calendar-day-btn{font-size:13px}
