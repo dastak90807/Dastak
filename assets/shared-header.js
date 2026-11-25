@@ -24,14 +24,14 @@
   if (!document.querySelector('script[data-channel-cta]')) {
     const channelCss = document.createElement('link');
     channelCss.rel = 'stylesheet';
-    channelCss.href = '/assets/channel-cta.css?v=1';
+    channelCss.href = '/assets/channel-cta.css?v=2';
     channelCss.setAttribute('blocking', 'render');
     document.head.appendChild(channelCss);
 
     const channelJs = document.createElement('script');
     channelJs.defer = true;
     channelJs.dataset.channelCta = '1';
-    channelJs.src = '/assets/channel-cta.js?v=1';
+    channelJs.src = '/assets/channel-cta.js?v=2';
     document.head.appendChild(channelJs);
   }
 
