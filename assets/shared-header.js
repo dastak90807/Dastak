@@ -43,7 +43,7 @@
   const switchHref = isUrdu ? '/en' + rest : (urduPages.includes(rest) ? '/ur' + rest : '/ur/');
 
   const t = isUrdu ? {
-    home: '/ur/', brandAlt: 'دستک 90807، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن', menu: 'مینیو', navLabel: 'مرکزی مینیو',
+    home: '/ur/', brandAlt: 'دستک 90807، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن', menu: 'مینو', navLabel: 'مرکزی مینو',
     links: [['/ur/', 'ہوم'], ['/ur/services/', 'خدمات'], ['/ur/calculators/', 'فیس کیلکولیٹر', 'nav-calc']],
     tools: 'شہری سہولیات',
     toolLinks: [['/en/document-checklist/', 'دستاویزات کی چیک لسٹ'], ['/en/citizen-tools/', 'سرکاری پورٹلز'], ['/en/downloads/', 'فارمز اور ڈاؤن لوڈز']],

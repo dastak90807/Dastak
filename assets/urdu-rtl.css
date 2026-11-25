@@ -108,3 +108,27 @@ html[dir="rtl"] .home .home-category:hover .home-category-foot::before{transform
  html[dir="rtl"] .home .hero .art img{object-position:right center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 8%,rgba(0,0,0,.45) 20%,#000 34%);mask-image:linear-gradient(90deg,transparent 0%,transparent 8%,rgba(0,0,0,.45) 20%,#000 34%)}
  html[dir="rtl"] .home .hero .wrap.two{justify-content:flex-end}
 }
+/* Footer (Urdu): numbers stay on the same line as their words (the shared footer style makes every span/link a block) */
+html[lang="ur"] .ft .ltr,html[lang="ur"] .ft strong.ltr{display:inline;margin:0;white-space:nowrap;font-size:inherit;color:inherit}
+html[lang="ur"] .ft a.ltr,html[lang="ur"] .ft .footer-helpline a{display:inline;margin:0;font-weight:700;color:#fff}
+html[lang="ur"] .ft .footer-helpline{white-space:nowrap;margin:8px 0 0}
+html[lang="ur"] .ft .footer-contact a{white-space:nowrap}
+html[lang="ur"] .ft .nw{display:inline;margin:0;white-space:nowrap;font-size:inherit;color:inherit}
+/* ---- RTL alignment pass (Nov 2026) ---- */
+/* Numbers, phone numbers and Rs amounts never split across lines */
+html[lang="ur"] .ltr,html[lang="ur"] bdi{white-space:nowrap}
+html[lang="ur"] .btn .ltr{margin:0 6px}
+/* Booking steps (01, 02, 03): number badge on the right, text aligned to the same right edge */
+html[dir="rtl"] .steps-module li,html[dir="rtl"] .service-detail .book li{padding:8px 44px 12px 0}
+html[dir="rtl"] .steps-module li::before,html[dir="rtl"] .service-detail .book li::before{left:auto;right:0}
+html[dir="rtl"] .service-detail .steps-module ol li{padding:12px 52px 12px 14px}
+/* Related pages: one card per link (the English style boxes the link a second time) */
+html[lang="ur"] .related-module .ur-cards li a{display:inline;height:auto;padding:0;border:0;background:none;border-radius:0;line-height:inherit}
+html[lang="ur"] .related-module .ur-cards li a:hover{background:none}
+/* Same right edge for text, lists and tables */
+html[dir="rtl"] .service-detail .wrap p,html[dir="rtl"] .service-detail .wrap li,html[dir="rtl"] .service-detail .wrap h1,html[dir="rtl"] .service-detail .wrap h2,html[dir="rtl"] .service-detail .wrap h3,html[dir="rtl"] summary{text-align:right}
+html[dir="rtl"] .service-detail .wrap ul:not(.docs):not(.ur-cards){padding:0 20px 0 0;margin-inline:0}
+html[dir="rtl"] .ur-fee td{text-align:right}
+html[dir="rtl"] details summary{padding-inline:0}
+html[lang="ur"] .service-detail .related-module .ur-cards li a::after{content:"";position:absolute;inset:0;z-index:3;color:transparent}
+html[lang="ur"] .service-detail .related-module .ur-cards li a{display:inline;padding:0;border:0;background:none;box-shadow:none;transform:none;font-weight:700}
