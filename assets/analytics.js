@@ -30,7 +30,9 @@
     if (!link) return;
     const href = link.getAttribute('href') || '';
 
-    if (/^https?:\/\/(wa\.me|api\.whatsapp\.com|wa\.link)\//i.test(href)) {
+    if (/^https?:\/\/(www\.)?whatsapp\.com\/channel\//i.test(href)) {
+      send('whatsapp_channel_click', { link_location: where(link) });
+    } else if (/^https?:\/\/(wa\.me|api\.whatsapp\.com|wa\.link)\//i.test(href)) {
       send('whatsapp_click', { link_location: where(link) });
     } else if (/^tel:/i.test(href)) {
       send('call_click', { link_location: where(link) });
