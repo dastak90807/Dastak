@@ -82,7 +82,7 @@
       card.setAttribute('aria-labelledby', 'channel-card-h');
       const img = document.createElement('img');
       img.src = QR_SRC;
-      img.alt = QR_ALT;
+      img.alt = UR ? 'دستک 90807 واٹس ایپ چینل فالو کرنے کا QR کوڈ۔ دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی، پنجاب' : QR_ALT;
       img.width = 180;
       img.height = 180;
       img.loading = 'lazy';
@@ -90,11 +90,17 @@
       const text = document.createElement('div');
       text.className = 'channel-card-text';
       text.innerHTML =
+        (UR ?
+        '<p class="ct-eb">تازہ معلومات</p>' +
+        '<h2 id="channel-card-h">ہمارا واٹس ایپ چینل فالو کریں</h2>' +
+        '<p>فون کے کیمرے سے QR کوڈ اسکین کریں یا بٹن دبائیں۔ پنجاب کی دستاویزات کی فیس میں تبدیلی، نئے قواعد اور مختصر گائیڈز ملیں گی۔</p>' +
+        '<p class="channel-note">چینل صرف تازہ معلومات کے لیے ہے۔ بکنگ یا سوال کے لیے واٹس ایپ <span class="ltr">0345-5583530</span> پر میسج کریں۔</p>'
+      :
         '<p class="ct-eb">Updates</p>' +
         '<h2 id="channel-card-h">Follow our WhatsApp Channel</h2>' +
         '<p>Scan the QR code with your phone camera, or tap the button. You will get fee changes, new rules and short guides for Punjab document services.</p>' +
-        '<p class="channel-note">The channel is for updates only. To book or ask a question, message WhatsApp 0345-5583530.</p>';
-      text.appendChild(link('channel-btn', WA_ICON + '<span>Join the WhatsApp Channel</span>'));
+        '<p class="channel-note">The channel is for updates only. To book or ask a question, message WhatsApp 0345-5583530.</p>');
+      text.appendChild(link('channel-btn', WA_ICON + '<span>' + (UR ? 'واٹس ایپ چینل جوائن کریں' : 'Join the WhatsApp Channel') + '</span>'));
       card.appendChild(img);
       card.appendChild(text);
       online.parentNode.insertBefore(card, online);
