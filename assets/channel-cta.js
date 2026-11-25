@@ -1,8 +1,8 @@
 /* Dastak 90807 WhatsApp Channel button, banner and QR card.
    Loaded on every page by /assets/shared-header.js, so no page needs editing.
-   - Every page: "WhatsApp Channel" button in the footer follow row.
+   - Every page: WhatsApp Channel icon in the footer social row (same style as the other icons).
    - Home page and guide pages: a short banner above the footer.
-   - Contact page: a QR card above "Find me online".
+   - Contact page: a QR card above "Find me online", plus the icon in that row.
    The channel is for updates only. Bookings stay on WhatsApp 0345-5583530. */
 (() => {
   if (window.__dastakChannelCta) return;
@@ -12,6 +12,8 @@
   const QR_SRC = '/assets/qr/dastak-90807-whatsapp-channel-qr-gujar-khan.svg';
   const QR_ALT = 'QR code to follow the Dastak 90807 WhatsApp Channel. Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi, Punjab';
   const ICON = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12 7l-5 1 1-4a8 8 0 1 1 16-4z"/></svg>';
+
+  const WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12 7l-5 1 1-4a8 8 0 1 1 16-4z"/><path d="M9.5 8.8c.3 2.4 2.7 4.8 5.2 5.2l1.1-1.3-1.7-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.7z" fill="currentColor" stroke="none"/></svg>';
 
   const link = (cls, html) => {
     const a = document.createElement('a');
@@ -29,12 +31,13 @@
     const isGuide = path.indexOf('/en/guides/') === 0;
     const footer = document.querySelector('footer.ft');
 
-    // 1) Footer follow row (all pages)
-    document.querySelectorAll('footer .footer-social').forEach(box => {
-      if (box.querySelector('.channel-follow')) return;
-      const a = link('channel-follow', ICON + '<span>WhatsApp Channel</span><span class="ur" lang="ur" dir="rtl">واٹس ایپ چینل</span>');
-      a.setAttribute('aria-label', 'Follow the Dastak 90807 WhatsApp Channel (opens WhatsApp)');
-      box.appendChild(a);
+    // 1) Icon-only button, same style as the other social icons (footer on all pages, "Find me online" on contact)
+    document.querySelectorAll('footer .footer-social .soc, .contact-social').forEach(row => {
+      if (row.querySelector('.channel-follow')) return;
+      const a = link('social-icon channel-follow', WA_ICON);
+      a.setAttribute('aria-label', 'WhatsApp Channel');
+      a.title = 'WhatsApp Channel';
+      row.appendChild(a);
     });
 
     // 2) Banner on the home page and guide pages
