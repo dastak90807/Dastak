@@ -1,0 +1,20 @@
+/* Eng / اردو toggle switch in the shared header (assets/shared-header.js).
+   Same look on English and Urdu pages: "Eng [switch] اردو". The knob sits on the side of the current language.
+   The switch is a link to the same page in the other language, so it works without JavaScript state. */
+.hd .lang-switch{display:inline-flex;align-items:center;gap:8px;direction:ltr;min-height:40px;padding:4px 10px;border-radius:99px;color:var(--ink,#16302b);text-decoration:none;white-space:nowrap;font-size:14px;line-height:1}
+.hd .lang-switch .ls-en{font-family:Inter,system-ui,sans-serif;font-weight:600}
+.hd .lang-switch .ls-ur{font-family:"Noto Sans Arabic",Tahoma,"Segoe UI",sans-serif;font-weight:700;font-size:15px;line-height:1.4}
+.hd .lang-switch .ls-track{position:relative;display:inline-block;width:38px;height:20px;border-radius:99px;background:#c9d6d2;transition:background .2s}
+.hd .lang-switch .ls-knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:left .2s}
+.hd .lang-switch[aria-checked="true"] .ls-track{background:var(--g,#0A3F35)}
+.hd .lang-switch[aria-checked="true"] .ls-knob{left:20px}
+.hd .lang-switch[aria-checked="false"] .ls-en,.hd .lang-switch[aria-checked="true"] .ls-ur{color:var(--g,#0A3F35)}
+.hd .lang-switch[aria-checked="false"] .ls-ur,.hd .lang-switch[aria-checked="true"] .ls-en{opacity:.6}
+.hd .lang-switch:hover .ls-track{background:#9fb5af}
+.hd .lang-switch[aria-checked="true"]:hover .ls-track{background:#0d5446}
+.hd .lang-switch:focus-visible{outline:2px solid var(--g,#0A3F35);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.hd .lang-switch .ls-knob,.hd .lang-switch .ls-track{transition:none}}
+/* Phones and tablets: keep the switch on the first header row, beside the Menu button, so the header does not grow */
+@media(max-width:980px){.hd .lang-switch{order:1;margin-inline-start:auto;padding:4px 6px;gap:6px}.hd .menu-toggle,.hd>.btn{order:2}.hd .site-search.hd-search{order:3}}
+/* Small phones: a slightly smaller switch so logo, switch and Menu fit on one row */
+@media(max-width:480px){.hd .lang-switch{padding:2px 0;gap:4px;font-size:12px}.hd .lang-switch .ls-ur{font-size:13px}.hd .lang-switch .ls-track{width:30px;height:16px}.hd .lang-switch .ls-knob{width:12px;height:12px}.hd .lang-switch[aria-checked="true"] .ls-knob{left:16px}.hd{column-gap:8px}}

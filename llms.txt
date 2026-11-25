@@ -28,9 +28,25 @@ Doorstep facilitation in Gujar Khan, Rawalpindi, Kallar Syedan, Kahuta, Mandra, 
 - [Punjab Vehicle Ownership Transfer Guide](https://www.dastak90807.com/en/guides/vehicle-transfer-token-tax-punjab/)
 - [Fisheries e-license and e-Biz inquiries](https://www.dastak90807.com/en/services/other-punjab-dastak-services/): guidance on Punjab fisheries, food authority licenses, business registrations and departmental NOCs; confirm availability before booking
 
+## Urdu version (اردو)
+Urdu pages mirror the English URLs under /ur/ (same slugs). Fees on Urdu pages follow the official Dastak training manual (V-5, 26 June 2025) and the official Dastak portal; the PSID shows the final amount. Facilitator charge: Rs 950 per service. Domicile via Dastak: Rs 1,200 total by PSID (Rs 300 e-stamp affidavit separate).
+- [اردو ہوم پیج](https://www.dastak90807.com/ur/): گھر بیٹھے سرکاری دستاویزات، گوجرخان اور پنجاب
+- [سروسز](https://www.dastak90807.com/ur/services/)
+- [ڈرائیونگ لائسنس رینیول](https://www.dastak90807.com/ur/services/renewal-of-regular-license/)
+- [لرنر ڈرائیونگ لائسنس](https://www.dastak90807.com/ur/services/learner-driving-license/)
+- [پولیس کریکٹر سرٹیفکیٹ](https://www.dastak90807.com/ur/services/character-certificate/)
+- [گاڑی اور موٹر سائیکل ٹرانسفر](https://www.dastak90807.com/ur/services/transfer-of-motor-vehicle/)
+- [ٹوکن ٹیکس](https://www.dastak90807.com/ur/services/token-tax/)
+- [ڈومیسائل سرٹیفکیٹ](https://www.dastak90807.com/ur/services/domicile-certificate/)
+- [اردو گائیڈز](https://www.dastak90807.com/ur/guides/): لائسنس رینیول، لائسنس ٹریکنگ، کریکٹر سرٹیفکیٹ، ٹرانسفر اور ٹوکن ٹیکس
+- [فیس کیلکولیٹر](https://www.dastak90807.com/ur/calculators/)
+- [گوجرخان](https://www.dastak90807.com/ur/gujar-khan/)
+- [رابطہ](https://www.dastak90807.com/ur/contact/)
+
 ## Contact & official profiles
 - Email: support@dastak90807.com
 - WhatsApp / Phone: +92-345-5583530
+- WhatsApp Channel (updates only, not for bookings): https://whatsapp.com/channel/0029VbEdgGRAu3aLblsW5g0Y
 - Official Punjab portal: https://dastak.punjab.gov.pk (Helpline 1202)
 - Facebook: https://facebook.com/dastak90807
 - Instagram: https://instagram.com/dastak90807

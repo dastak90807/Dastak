@@ -1,4 +1,4 @@
-// Injects the shared footer (assets/footer.html) into every HTML page on the server.
+// Injects the shared footer (assets/footer.html, or assets/footer-ur.html on /ur/ pages) into every HTML page on the server.
 // If anything fails, the page's own footer is served unchanged.
 export async function onRequest(context) {
   const response = await context.next();
@@ -6,7 +6,9 @@ export async function onRequest(context) {
   if (!type.includes("text/html")) return response;
   try {
     const url = new URL(context.request.url);
-    const footerRes = await context.env.ASSETS.fetch(new URL("/assets/footer.html", url.origin));
+    // Urdu pages (/ur/...) get the Urdu footer; every other page gets the English one.
+    const footerPath = url.pathname.startsWith("/ur/") || url.pathname === "/ur" ? "/assets/footer-ur.html" : "/assets/footer.html";
+    const footerRes = await context.env.ASSETS.fetch(new URL(footerPath, url.origin));
     if (!footerRes.ok) return response;
     const footerHtml = await footerRes.text();
     if (!footerHtml.includes("clean-footer")) return response;

@@ -5,7 +5,7 @@ var PH='923455583530',W='https://wa.me/'+PH;
 function wa(msg){return W+'?text='+encodeURIComponent(msg);}
 function handoff(q){return wa('Assalam o Alaikum. I asked on your website: '+String(q||'').slice(0,200));}
 var CALC={dl:'/en/calculators/tools/punjab-driving-license-fee-calculator',car:'/en/calculators/tools/punjab-car-token-tax-transfer-fee-calculator',bike:'/en/calculators/tools/punjab-bike-registration-transfer-fee-calculator',hub:'/en/calculators/'};
-var UR=[['السلام علیکم','assalam'],['اسلام علیکم','assalam'],['سلام','salam'],['ڈرائیونگ','driving'],['لائسنس','license'],['لائیسنس','license'],['فیس','fee'],['ڈومیسائل','domicile'],['کریکٹر','character'],['کردار','character'],['سرٹیفکیٹ','certificate'],['پولیس','police'],['ویریفکیشن','verification'],['ٹوکن','token'],['ٹیکس','tax'],['موٹر سائیکل','motorcycle'],['بائیک','bike'],['گاڑی','car'],['کرایہ دار','tenant'],['پیدائش','birth'],['نکاح','marriage'],['شادی','marriage'],['طلاق','divorce'],['وفات','death'],['بکنگ','booking'],['کاغذات','documents'],['دستاویزات','documents'],['ادائیگی','payment'],['رابطہ','contact'],['واٹس ایپ','whatsapp'],['کتنے دن','how long'],['کتنا وقت','how long'],['گم','lost'],['ای سٹیمپ','estamp'],['اسٹام','stamp'],['ٹرانسفر','transfer'],['رجسٹریشن','registration'],['چالان','challan'],['ایف آئی آر','fir'],['رپورٹ','report'],['فشریز','fisheries'],['ماہی','fisheries'],['فوڈ','food'],['کاروبار','business'],['تصدیق','verify'],['علاقہ','area'],['گوجر خان','gujar khan'],['راولپنڈی','rawalpindi'],['کیلکولیٹر','calculator']];
+var UR=[['السلام علیکم','assalam'],['اسلام علیکم','assalam'],['سلام','salam'],['ڈرائیونگ','driving'],['لائسنس','license'],['لائیسنس','license'],['فیس','fee'],['ڈومیسائل','domicile'],['کریکٹر','character'],['کردار','character'],['سرٹیفکیٹ','certificate'],['پولیس','police'],['ویریفکیشن','verification'],['ٹوکن','token'],['ٹیکس','tax'],['موٹر سائیکل','motorcycle'],['بائیک','bike'],['گاڑی','car'],['کرایہ دار','tenant'],['پیدائش','birth'],['نکاح','marriage'],['شادی','marriage'],['طلاق','divorce'],['وفات','death'],['بکنگ','booking'],['کاغذات','documents'],['دستاویزات','documents'],['ادائیگی','payment'],['رابطہ','contact'],['واٹس ایپ','whatsapp'],['کتنے دن','how long'],['کتنا وقت','how long'],['گم','lost'],['ای سٹیمپ','estamp'],['اسٹام','stamp'],['ٹرانسفر','transfer'],['رجسٹریشن','registration'],['چالان','challan'],['ایف آئی آر','fir'],['رپورٹ','report'],['فشریز','fisheries'],['ماہی','fisheries'],['فوڈ','food'],['کاروبار','business'],['تصدیق','verify'],['علاقہ','area'],['گوجرخان','gujar khan'],['راولپنڈی','rawalpindi'],['کیلکولیٹر','calculator']];
 function urdu(s){s=s||'';for(var i=0;i<UR.length;i++)s=s.split(UR[i][0]).join(' '+UR[i][1]+' ');return s;}
 function norm(s){return urdu(s).toLowerCase().replace(/licence/g,'license').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();}
 var RE_CNIC=/\b\d{5}[- ]?\d{7}[- ]?\d\b|\b\d{13}\b/;
@@ -95,40 +95,43 @@ function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.tex
 var ICON='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>';
 var SEND='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 var CHIPS=[['📄','Documents needed','ضروری کاغذات','Documents needed'],['📱','Book a service','بکنگ کیسے کریں','How do I book?'],['🧮','Fees & calculators','فیس معلوم کریں','fee calculator'],['📍','Doorstep areas','کن علاقوں میں','Which areas do you cover?'],['✅','Verify me','تصدیق کریں','How can I verify you?'],['','WhatsApp me','واٹس ایپ کریں','']];
+var UR=(document.documentElement.lang||'').toLowerCase().indexOf('ur')===0;
+var S=UR?{ask:'سوال پوچھیں',close:'✕ بند کریں',title:'دستک 90807 سے پوچھیں',sub:'خودکار مدد · فوری جواب',wa:'واٹس ایپ',closeA:'چیٹ بند کریں',note:'یہ خودکار مددگار ہے، سرکاری سروس نہیں۔ ',noteB:'اپنا شناختی کارڈ نمبر، پاس ورڈ یا OTP کبھی نہ لکھیں۔',lab:'آپ کا سوال',ph:'اپنا سوال لکھیں…',send:'بھیجیں',ft:'رجسٹرڈ فیسیلیٹیٹر کوڈ 90807 · آزاد سروس',hi:'السلام علیکم! آپ کو کس چیز میں مدد چاہیے؟ نیچے بٹن دبائیں یا اپنا سوال لکھیں۔',hiEn:'Answers are in English for now.',waMsg:'السلام علیکم، میرا ایک سوال ہے۔'}
+ :{ask:'Ask a question',close:'✕ Close chat',title:'Ask Dastak 90807',sub:'Automated help · instant',wa:'WhatsApp',closeA:'Close chat',note:'Automated helper, not a government service. ',noteB:'Never type your CNIC, passwords or OTPs.',lab:'Your question',ph:'Type your question…',send:'Send',ft:'Registered Facilitator Code 90807 · Independent service',hi:'Assalam o Alaikum! What do you need help with? Tap a button or type your question.',hiEn:'',waMsg:'Assalam o Alaikum. I have a question.'};
 function init(){
  if(document.getElementById('cbp'))return;
- var css=document.createElement('link');css.rel='stylesheet';css.href='/assets/chatbot.css?v=1';document.head.appendChild(css);
- var btn=el('button','cb-btn','Ask a question');btn.type='button';btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls','cbp');
- var p=el('div','cb-p cb2');p.id='cbp';p.setAttribute('role','dialog');p.setAttribute('aria-label','Ask Dastak 90807');p.hidden=true;
+ var css=document.createElement('link');css.rel='stylesheet';css.href='/assets/chatbot.css?v=2';document.head.appendChild(css);
+ var btn=el('button','cb-btn',S.ask);btn.type='button';btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls','cbp');
+ var p=el('div','cb-p cb2');p.id='cbp';p.setAttribute('role','dialog');p.setAttribute('aria-label',S.title);p.hidden=true;
  var h=el('div','cb-h');var av=el('span','cb-av');av.innerHTML=ICON;h.appendChild(av);
- var tt=el('div','cb-t');tt.appendChild(el('b','','Ask Dastak 90807'));var sm=el('small');sm.appendChild(el('span','cb-dot'));sm.appendChild(document.createTextNode('Automated help · instant'));tt.appendChild(sm);h.appendChild(tt);
- var hw=el('a','cb-wa','WhatsApp');hw.href=wa('Assalam o Alaikum. I have a question.');hw.rel='noopener';hw.addEventListener('click',function(){ga('chat_whatsapp_handoff',{tool_name:'header'});});h.appendChild(hw);
- var x=el('button','cb-x','✕');x.type='button';x.setAttribute('aria-label','Close chat');h.appendChild(x);p.appendChild(h);
- var n=el('p','cb-n');n.appendChild(document.createTextNode('Automated helper, not a government service. '));n.appendChild(el('b','','Never type your CNIC, passwords or OTPs.'));p.appendChild(n);
+ var tt=el('div','cb-t');tt.appendChild(el('b','',S.title));var sm=el('small');sm.appendChild(el('span','cb-dot'));sm.appendChild(document.createTextNode(S.sub));tt.appendChild(sm);h.appendChild(tt);
+ var hw=el('a','cb-wa',S.wa);hw.href=wa(S.waMsg);hw.rel='noopener';hw.addEventListener('click',function(){ga('chat_whatsapp_handoff',{tool_name:'header'});});h.appendChild(hw);
+ var x=el('button','cb-x','✕');x.type='button';x.setAttribute('aria-label',S.closeA);h.appendChild(x);p.appendChild(h);
+ var n=el('p','cb-n');n.appendChild(document.createTextNode(S.note));n.appendChild(el('b','',S.noteB));p.appendChild(n);
  var log=el('div','cb-l');log.setAttribute('aria-live','polite');p.appendChild(log);
  var chips=el('div','cb-c');
  CHIPS.forEach(function(c){
   var b=c[3]?el('button','cb-chip'):el('a','cb-chip cb-chip-w');
-  if(c[3])b.type='button';else{b.href=wa('Assalam o Alaikum. I have a question.');b.rel='noopener';}
+  if(c[3])b.type='button';else{b.href=wa(S.waMsg);b.rel='noopener';}
   if(c[0]){var ic=el('span','cb-ic',c[0]);ic.setAttribute('aria-hidden','true');b.appendChild(ic);}
-  var tx=el('span','cb-ct');tx.appendChild(el('b','',c[1]));var u=el('small','',c[2]);u.lang='ur';u.dir='rtl';tx.appendChild(u);b.appendChild(tx);
+  var tx=el('span','cb-ct');if(UR){tx.appendChild(el('b','',c[2]));}else{tx.appendChild(el('b','',c[1]));var u=el('small','',c[2]);u.lang='ur';u.dir='rtl';tx.appendChild(u);}b.appendChild(tx);
   b.addEventListener('click',function(){ga(c[3]?'chat_quick_tap':'chat_whatsapp_handoff',{tool_name:c[1]});if(c[3])send(c[3],c[1]);});
   chips.appendChild(b);
  });
  p.appendChild(chips);
- var f=el('form','cb-f');var lab=el('label','cb-sr','Your question');lab.setAttribute('for','cb-in');var i=el('input');i.id='cb-in';i.type='text';i.maxLength=200;i.autocomplete='off';i.placeholder='Type your question…';i.setAttribute('enterkeyhint','send');
- var go=el('button','cb-go');go.type='submit';go.innerHTML=SEND;go.setAttribute('aria-label','Send');
+ var f=el('form','cb-f');var lab=el('label','cb-sr',S.lab);lab.setAttribute('for','cb-in');var i=el('input');i.id='cb-in';i.type='text';i.maxLength=200;i.autocomplete='off';i.placeholder=S.ph;i.setAttribute('enterkeyhint','send');
+ var go=el('button','cb-go');go.type='submit';go.innerHTML=SEND;go.setAttribute('aria-label',S.send);
  f.appendChild(lab);f.appendChild(i);f.appendChild(go);p.appendChild(f);
- p.appendChild(el('p','cb-ft','Registered Facilitator Code 90807 · Independent service'));
+ p.appendChild(el('p','cb-ft',S.ft));
  document.body.appendChild(p);document.body.appendChild(btn);
  function add(cls,t,links){var m=el('div','cb-m '+cls);var tx=el('div','cb-tx',t);m.appendChild(tx);
   if(links&&links.length){var lk=el('div','cb-lk');links.forEach(function(l){var a=el('a','cb-a'+(l.k?' '+l.k:''),l.t);a.href=l.h;if(/^https?:/.test(l.h))a.rel='noopener';
    a.addEventListener('click',function(){ga(/wa\.me/.test(l.h)?'chat_whatsapp_handoff':'chat_link_click',{tool_name:l.t});});lk.appendChild(a);});m.appendChild(lk);}
   log.appendChild(m);m.scrollIntoView({block:'nearest'});log.scrollTop=log.scrollHeight;}
- function send(t,label){add('u',label||t);var r=answer(t);add('b',r.text,r.links);if(!label&&r.ev)ga('chat_question',{tool_name:r.ev});chips.hidden=true;}
+ function send(t,label){add('u',(UR&&label?(CHIPS.filter(function(c){return c[1]===label;})[0]||[])[2]:0)||label||t);var r=answer(t);add('b',r.text,r.links);if(!label&&r.ev)ga('chat_question',{tool_name:r.ev});chips.hidden=true;}
  f.addEventListener('submit',function(e){e.preventDefault();var v=i.value.trim();if(!v)return;i.value='';send(v);});
- function open(o){p.hidden=!o;btn.setAttribute('aria-expanded',String(o));btn.textContent=o?'✕ Close chat':'Ask a question';document.body.classList.toggle('cb-open',o);
-  if(o){ga('chat_open');if(!log.children.length){add('b','Assalam o Alaikum! What do you need help with? Tap a button or type your question.');var ur=el('span','cb-ur','سوال لکھیں یا نیچے بٹن دبائیں');ur.lang='ur';ur.dir='rtl';log.lastChild.appendChild(ur);}if(window.matchMedia&&window.matchMedia('(pointer:fine)').matches)i.focus();}else btn.focus();}
+ function open(o){p.hidden=!o;btn.setAttribute('aria-expanded',String(o));btn.textContent=o?S.close:S.ask;document.body.classList.toggle('cb-open',o);
+  if(o){ga('chat_open');if(!log.children.length){add('b',S.hi);var ur=el('span','cb-ur',UR?S.hiEn:'سوال لکھیں یا نیچے بٹن دبائیں');if(UR){ur.lang='en';ur.dir='ltr';}else{ur.lang='ur';ur.dir='rtl';}log.lastChild.appendChild(ur);}if(window.matchMedia&&window.matchMedia('(pointer:fine)').matches)i.focus();}else btn.focus();}
  btn.addEventListener('click',function(){open(p.hidden);});x.addEventListener('click',function(){open(false);});
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!p.hidden)open(false);});
 }
