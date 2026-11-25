@@ -743,7 +743,7 @@ HOME_BODY = HOME_BODY.replace("سرٹیفیکیٹ", "سرٹیفیکیٹ").replac
 
 PAGES.append(dict(
     path="/", kind="hub", raw=True, main_class="home home-ur", en_title="Home",
-    css=["/assets/home-wide.css", "/assets/home-refinement.css?v=20261125a", "/assets/guide-cards.css?v=1"], js=["/assets/home-refinement.js?v=third1"],
+    css=["/assets/home-wide.css", "/assets/home-refinement.css?v=20261126a", "/assets/guide-cards.css?v=1"], js=["/assets/home-refinement.js?v=third1"],
     title="دستک 90807 | گھر بیٹھے سرکاری دستاویزات، گوجرخان اور پنجاب",
     desc="ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفیکیٹ، گاڑی کی ملکیت کی منتقلی، ٹوکن ٹیکس اور ڈومیسائل میں گھر بیٹھے مدد۔ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807۔ واٹس ایپ 0345-5583530۔",
     h1="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن", og="/assets/dastak-online-document-facilitation-punjab-og.jpg",
