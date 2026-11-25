@@ -17,7 +17,7 @@
     document.head.appendChild(css);
   };
   addCss('/assets/shared-header.css?v=' + version);
-  addCss('/assets/lang-switch.css?v=2');
+  addCss('/assets/lang-switch.css?v=3');
 
   if (!window.__dastakAnalytics) {
     const analytics = document.createElement('script');
