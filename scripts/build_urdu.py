@@ -82,6 +82,12 @@ def faq_html(faqs):
     return "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faqs)
 
 
+def home_faq(faqs):
+    items = "".join(f'<details data-ga-event="home_faq_expand" data-faq-title="{html.escape(q)}"><summary>{q}</summary><p>{a}</p></details>' for q, a in faqs)
+    return ('<section class="wrap home-faqs" id="faqs" aria-labelledby="home-faq-title"><h2 id="home-faq-title">پنجاب کی سرکاری خدمات سے متعلق آپ کے سوالات</h2>'
+            f'<div class="faq-list">{items}</div><p><a class="btn o" href="/en/faqs/">تمام سوالات دیکھیں (انگریزی) ←</a></p></section>')
+
+
 def cards(items):
     return '<ul class="ur-cards">' + "".join(
         f'<li><a href="{href}">{title}</a><p>{desc}</p></li>' for href, title, desc in items) + "</ul>"
@@ -134,12 +140,12 @@ def page(p):
     faq_block = (f'<section class="service-module questions-module"><h2>عام سوالات</h2>{faq_html(p["faqs"])}</section>'
                  if p.get("faqs") else "")
     main_class = p.get("main_class", "service-detail")
-    en_note = f'<p class="ur-en-link" lang="en" dir="ltr">Read in English: <a href="/en{path}" hreflang="en">{esc(p.get("en_title", "English version"))}</a></p>'
+    en_note = f'<p class="ur-en-link">یہ صفحہ انگریزی میں پڑھیں: <a href="/en{path}" hreflang="en">انگریزی ورژن ←</a></p>'
 
-    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=12"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
+    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=15"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
 <script src="/assets/shared-header.js?v=7"></script><noscript><nav aria-label="مرکزی مینو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
-{(f'<main id="main" class="{main_class}">{p["body"]}<section class="wrap home-faqs">{faq_block}{en_note}<p class="disc">{DISCLAIMER}</p></section></main>') if p.get("raw") else f'''<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپ ڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
+{(f'<main id="main" class="{main_class}">{p["body"].replace("<!--FAQ-->", home_faq(p["faqs"]))}<section class="wrap ur-page-end">{en_note}<p class="disc">{DISCLAIMER}</p></section></main>' if "<!--FAQ-->" in p["body"] else f'<main id="main" class="{main_class}">{p["body"]}<section class="wrap home-faqs">{faq_block}{en_note}<p class="disc">{DISCLAIMER}</p></section></main>') if p.get("raw") else f'''<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپ ڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
 {p["body"]}
 {faq_block}
 {en_note}
@@ -613,34 +619,34 @@ HERO_ALT = ("گوجرخان، راولپنڈی اور پنجاب میں دستک
 
 CARDS_SVC = "".join([
     home_card(SV[0]["icon"], "مقبول", "ڈرائیونگ لائسنس",
-              [("/ur/services/learner-driving-license/", "لرنر ڈرائیونگ لائسنس"), ("/ur/services/renewal-of-regular-license/", "لائسنس رینیول"),
+              [("/ur/services/learner-driving-license/", "لرنر پرمٹ"), ("/ur/services/renewal-of-regular-license/", "لائسنس کی تجدید"),
                ("/ur/guides/how-to-track-driving-license-in-punjab/", "لائسنس ٹریک کریں")], "/ur/services/", "تمام خدمات", "ڈرائیونگ لائسنس"),
     home_card(SV[1]["icon"], "مقبول", "گاڑی اور ایکسائز",
-              [("/ur/services/transfer-of-motor-vehicle/", "گاڑی اور موٹر سائیکل ٹرانسفر"), ("/ur/services/token-tax/", "ٹوکن ٹیکس"),
-               ("/ur/guides/vehicle-transfer-token-tax-punjab/", "ٹرانسفر اور ٹوکن ٹیکس گائیڈ")], "/ur/services/", "تمام خدمات", "گاڑی اور ایکسائز"),
+              [("/ur/services/transfer-of-motor-vehicle/", "گاڑی اور موٹر سائیکل کی ملکیت کی منتقلی"), ("/ur/services/token-tax/", "ٹوکن ٹیکس"),
+               ("/ur/guides/vehicle-transfer-token-tax-punjab/", "ملکیت کی منتقلی اور ٹوکن ٹیکس گائیڈ")], "/ur/services/", "تمام خدمات", "گاڑی اور ایکسائز"),
     home_card(SV[2]["icon"], "مقبول", "پولیس خدمات",
-              [("/ur/services/character-certificate/", "پولیس کریکٹر سرٹیفکیٹ"), ("/ur/guides/punjab-police-character-certificate-online/", "کریکٹر سرٹیفکیٹ گائیڈ"),
-               ("/en/services/tenant-registration/", "کرایہ دار رجسٹریشن (English)")], "/ur/services/", "تمام خدمات", "پولیس خدمات"),
+              [("/ur/services/character-certificate/", "پولیس کریکٹر سرٹیفیکیٹ"), ("/ur/guides/punjab-police-character-certificate-online/", "کریکٹر سرٹیفیکیٹ گائیڈ"),
+               ("/en/services/tenant-registration/", "کرایہ دار رجسٹریشن (انگریزی)")], "/ur/services/", "تمام خدمات", "پولیس خدمات"),
     home_card(SV[3]["icon"], "گوجرخان", "سول دستاویزات",
-              [("/ur/services/domicile-certificate/", "ڈومیسائل سرٹیفکیٹ"), ("/en/services/e-stamping/", "ای اسٹامپ (English)"),
-               ("/en/services/birth-certificate/", "پیدائش سرٹیفکیٹ (English)")], "/ur/gujar-khan/", "گوجرخان خدمات", "سول دستاویزات"),
+              [("/ur/services/domicile-certificate/", "ڈومیسائل سرٹیفیکیٹ"), ("/en/services/e-stamping/", "ای اسٹامپ (انگریزی)"),
+               ("/en/services/birth-certificate/", "پیدائش سرٹیفیکیٹ (انگریزی)")], "/ur/gujar-khan/", "گوجرخان خدمات", "سول دستاویزات"),
     home_card(SV[4]["icon"], "رہنمائی", "جنگلات، وائلڈ لائف اور فشریز",
-              [("/en/services/other-punjab-dastak-services/", "فشریز ای لائسنس رہنمائی (English)"),
-               ("/en/services/other-punjab-dastak-services/", "وائلڈ لائف پرمٹ رہنمائی (English)")], "/ur/services/", "تمام خدمات", "جنگلات، وائلڈ لائف اور فشریز"),
+              [("/en/services/other-punjab-dastak-services/", "فشریز ای لائسنس رہنمائی (انگریزی)"),
+               ("/en/services/other-punjab-dastak-services/", "وائلڈ لائف پرمٹ رہنمائی (انگریزی)")], "/ur/services/", "تمام خدمات", "جنگلات، وائلڈ لائف اور فشریز"),
     home_card(SV[5]["icon"], "رہنمائی", "ای بز کاروباری خدمات",
-              [("/en/services/other-punjab-dastak-services/", "فوڈ اتھارٹی لائسنس رہنمائی (English)"),
-               ("/en/services/other-punjab-dastak-services/", "کاروبار کی رجسٹریشن رہنمائی (English)"),
-               ("/en/services/general-inquiry-and-guide/", "گھر پر کاروباری سہولت (English)")], "/ur/services/", "تمام خدمات", "ای بز کاروباری خدمات"),
+              [("/en/services/other-punjab-dastak-services/", "فوڈ اتھارٹی لائسنس رہنمائی (انگریزی)"),
+               ("/en/services/other-punjab-dastak-services/", "کاروبار کی رجسٹریشن رہنمائی (انگریزی)"),
+               ("/en/services/general-inquiry-and-guide/", "گھر پر کاروباری سہولت (انگریزی)")], "/ur/services/", "تمام خدمات", "ای بز کاروباری خدمات"),
 ])
 CARDS_TOOLS = "".join([
     home_card(TL[0]["icon"], "مفت", "ڈرائیونگ لائسنس فیس کیلکولیٹر",
-              [(TL[0]["more"], "رینیول فیس (1 سے 5 سال)"), (TL[0]["more"], "نیا اور ڈپلیکیٹ لائسنس"), (TL[0]["more"], "انٹرنیشنل ڈرائیونگ پرمٹ")],
+              [(TL[0]["more"], "تجدید فیس (1 سے 5 سال)"), (TL[0]["more"], "نیا اور ڈپلیکیٹ لائسنس"), (TL[0]["more"], "انٹرنیشنل ڈرائیونگ پرمٹ")],
               TL[0]["more"], "ابھی حساب کریں", "ڈرائیونگ لائسنس فیس"),
-    home_card(TL[1]["icon"], "مفت", "کار ٹوکن ٹیکس اور ٹرانسفر کیلکولیٹر",
-              [(TL[1]["more"], "کار اور جیپ کا ٹوکن ٹیکس"), (TL[1]["more"], "کار ٹرانسفر فیس"), (TL[1]["more"], "فائلر اور نان فائلر ریٹس")],
+    home_card(TL[1]["icon"], "مفت", "کار ٹوکن ٹیکس اور ملکیت کی منتقلی کیلکولیٹر",
+              [(TL[1]["more"], "کار اور جیپ کا ٹوکن ٹیکس"), (TL[1]["more"], "کار کی ملکیت کی منتقلی فیس"), (TL[1]["more"], "فائلر اور نان فائلر ریٹس")],
               TL[1]["more"], "ابھی حساب کریں", "کار فیس"),
-    home_card(TL[2]["icon"], "مفت", "موٹر سائیکل رجسٹریشن اور ٹرانسفر کیلکولیٹر",
-              [(TL[2]["more"], "نئی بائیک رجسٹریشن فیس"), (TL[2]["more"], "موٹر سائیکل ٹرانسفر فیس"), (TL[2]["more"], "لائف ٹائم ٹوکن ٹیکس")],
+    home_card(TL[2]["icon"], "مفت", "موٹر سائیکل رجسٹریشن اور ملکیت کی منتقلی کیلکولیٹر",
+              [(TL[2]["more"], "نئی بائیک رجسٹریشن فیس"), (TL[2]["more"], "موٹر سائیکل کی ملکیت کی منتقلی فیس"), (TL[2]["more"], "لائف ٹائم ٹوکن ٹیکس")],
               TL[2]["more"], "ابھی حساب کریں", "موٹر سائیکل فیس"),
 ])
 
@@ -686,15 +692,15 @@ FACILITATOR = (
     '<section class="band home-fc" id="contact"><div class="wrap"><div class="fc-grid">'
     '<article class="fc-profile" id="facilitator"><div class="fc-head">'
     '<img src="/assets/usman.webp" alt="محمد عثمان، مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807، گوجرخان راولپنڈی" width="112" height="112" loading="lazy">'
-    f'<div><span class="chip">فیسیلیٹیٹر کوڈ <span class="ltr">{CODE}</span></span><h2>اپنے رجسٹرڈ مریم کی دستک فیسیلیٹیٹر سے ملیں</h2><p class="fc-name">محمد عثمان</p></div></div>'
-    f'<p>میں محمد عثمان ہوں، حکومتِ پنجاب کے مریم کی دستک پروگرام کے تحت رجسٹرڈ فیسیلیٹیٹر (کوڈ <span class="ltr">{CODE}</span>)۔ '
+    f'<div><span class="chip">فیسیلیٹیٹر کوڈ {CODE}</span><h2>اپنے رجسٹرڈ مریم کی دستک فیسیلیٹیٹر سے ملیں</h2><p class="fc-name">محمد عثمان</p></div></div>'
+    f'<p>میں محمد عثمان ہوں، حکومتِ پنجاب کے مریم کی دستک پروگرام کے تحت رجسٹرڈ فیسیلیٹیٹر (کوڈ {CODE})۔ '
     'میں پنجاب کے شہریوں کی سرکاری دستاویزات، ای لائسنس اور ای بز سے متعلق درخواستوں میں مدد کرتا ہوں۔</p>'
     '<p class="fc-label">آپ کے علاقے میں گھر پر وزٹ</p><ul class="area-tags">' + "".join(f"<li>{a}</li>" for a in AREAS) + '</ul>'
     f'<div class="ur-verify-box" id="verify"><h3>فیسیلیٹیٹر کی تصدیق کیسے کریں؟</h3><p>{VERIFY}</p></div>'
-    '<a class="fc-more" href="/en/about/">محمد عثمان کا تعارف اور رجسٹریشن کی تصدیق (English) ←</a></article>'
+    '<a class="fc-more" href="/en/about/">محمد عثمان کا تعارف اور رجسٹریشن کی تصدیق (انگریزی) ←</a></article>'
     '<aside class="fc-contact"><p class="fc-eyebrow">آئیں آپ کے کاغذات مکمل کریں</p><h2>اپنے دستک فیسیلیٹیٹر سے رابطہ کریں</h2>'
     '<p>اپنی سروس اور شہر کا نام بھیجیں۔ میں آپ کو ضروری دستاویزات اور اگلے قدم بتا دوں گا۔</p>'
-    f'<a class="btn fc-wa" href="{wa_link("دستک سروس میں رہنمائی")}">واٹس ایپ <span class="ltr">{PHONE}</span></a>'
+    f'<a class="btn fc-wa" href="{wa_link("دستک سروس میں رہنمائی")}">واٹس ایپ {PHONE}</a>'
     '<a class="btn fc-call" href="tel:+923455583530">محمد عثمان کو کال کریں</a>'
     '<p class="fc-line"><strong>ای میل:</strong> <a class="ltr" href="mailto:support@dastak90807.com">support@dastak90807.com</a></p>'
     '<p class="fc-line"><strong>دفتر:</strong> صندل روڈ، وارڈ نمبر <span class="ltr">14</span>، گوجرخان، راولپنڈی، پنجاب</p>'
@@ -725,38 +731,62 @@ HOME_BODY = (
     f'<p class="sub home-steps-sub">پورے پنجاب سے آن لائن۔ گوجرخان میں گھر کی دہلیز پر۔</p><ol class="home-steps">{STEPS}</ol>'
     f'<div class="home-trust-strip">{trust_html}</div>'
     f'<div class="row"><a class="btn g" href="{wa_link("سروس کی بکنگ")}">واٹس ایپ {PHONE}</a><a class="btn y" href="#fee-calculators">فیس معلوم کریں {ARROW}</a></div></div></section>'
-    + REVIEWS + FACILITATOR +
+    + REVIEWS + '<!--FAQ-->' + FACILITATOR +
     '<section class="wrap ur-home-guides"><h2>مفید اردو گائیڈز</h2>' + cards((R["renew_guide"], R["track"], R["character_guide"], R["vehicle_guide"])) + '</section>'
 )
+
+# Home page terminology (phase 1: home only; roll out to inner pages after approval)
+HOME_BODY = HOME_BODY.replace("سرٹیفکیٹ", "سرٹیفیکیٹ").replace("ٹرانسفر اور ٹوکن ٹیکس گائیڈ", "ملکیت کی منتقلی اور ٹوکن ٹیکس گائیڈ")
 
 PAGES.append(dict(
     path="/", kind="hub", raw=True, main_class="home home-ur", en_title="Home",
     css=["/assets/home-wide.css", "/assets/home-refinement.css?v=20261125a", "/assets/guide-cards.css?v=1"], js=["/assets/home-refinement.js?v=third1"],
     title="دستک 90807 | گھر بیٹھے سرکاری دستاویزات، گوجرخان اور پنجاب",
-    desc="ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل میں گھر بیٹھے مدد۔ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807۔ واٹس ایپ 0345-5583530۔",
+    desc="ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفیکیٹ، گاڑی کی ملکیت کی منتقلی، ٹوکن ٹیکس اور ڈومیسائل میں گھر بیٹھے مدد۔ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807۔ واٹس ایپ 0345-5583530۔",
     h1="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن", og="/assets/dastak-online-document-facilitation-punjab-og.jpg",
     og_alt="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی اور پنجاب میں گھر بیٹھے سرکاری دستاویزات",
     crumbs=[],
     body=HOME_BODY,
     faqs=[
+        ("مریم کی دستک کیسے کام کرتی ہے؟", "مریم کی دستک حکومتِ پنجاب کا اقدام ہے جس کے تحت سرکاری خدمات گھر کی دہلیز پر دی جاتی ہیں۔ دستاویزات اور دستیابی کی تصدیق کے لیے رجسٹرڈ فیسیلیٹیٹر محمد عثمان (کوڈ 90807) سے رابطہ کریں۔ درخواستیں پنجاب کے متعلقہ سرکاری نظام کے ذریعے جمع ہوتی ہیں۔"),
+        ("فیسیلیٹیٹر کوڈ 90807 کی تصدیق کیسے کریں؟", "دستاویزات دینے سے پہلے سرکاری دستک پورٹل یا ایپ پر کوڈ 90807 چیک کریں، یا مریم کی دستک کی سرکاری ہیلپ لائن 1202 پر کال کر کے محمد عثمان اور کوڈ 90807 کی تصدیق کریں۔ 1202 سرکاری ہیلپ لائن ہے، ہمارا نمبر نہیں۔"),
         ("کیا یہ سرکاری ویب سائٹ ہے؟", "نہیں۔ یہ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر (کوڈ 90807) کی آزاد سروس ہے، کوئی سرکاری ویب سائٹ یا محکمہ نہیں۔ سرکاری پورٹل dastak.punjab.gov.pk ہے۔"),
-        ("گھر بیٹھے سرکاری کاغذات کیسے بنوائیں؟ (Ghar baithe documents kaise banwayen)", "واٹس ایپ 0345-5583530 پر رابطہ کریں یا دستک ایپ میں Doorstep Delivery منتخب کر کے کوڈ 90807 لکھیں۔"),
-        ("فیس کتنی ہے؟", "سرکاری فیس ہر سروس کی الگ ہے اور PSID پر لکھی ہوتی ہے۔ دستک تربیتی مینول کے مطابق فیسیلیٹیٹر چارجز 950 روپے ہیں۔"),
-        ("کیا آپ پورے پنجاب میں کام کرتے ہیں؟", "جی ہاں، پورے پنجاب کے لیے واٹس ایپ پر رہنمائی اور دستاویزات کی جانچ۔ گھر پر وزٹ گوجرخان، راولپنڈی اور قریبی علاقوں میں۔"),
+        ("آپ کن علاقوں میں خدمات دیتے ہیں؟", "گوجرخان، راولپنڈی اور قریبی علاقوں میں پہلے سے وقت طے کر کے گھر پر وزٹ کیا جاتا ہے۔ پورے پنجاب کے لیے آن لائن رہنمائی دستیاب ہے۔ اپنی سروس اور علاقے کے لیے دستیابی کی تصدیق کر لیں۔"),
+        ("کیا آپ ڈرائیونگ لائسنس اور گاڑی کی ملکیت کی منتقلی میں مدد کرتے ہیں؟", "جی ہاں۔ ہم ڈرائیونگ لائسنس کی تجدید، ڈپلیکیٹ لائسنس، گاڑی کی رجسٹریشن اور ملکیت کی منتقلی کے لیے دستاویزات کی تیاری اور درخواست میں رہنمائی کرتے ہیں۔ جہاں لازمی ہو وہاں ٹیسٹ، بائیومیٹرک اور محکمے کا وزٹ ضروری رہتا ہے۔"),
+        ("کیا آپ پولیس سرٹیفیکیٹ اور سول دستاویزات میں مدد کرتے ہیں؟", "پولیس کریکٹر سرٹیفیکیٹ، گمشدگی رپورٹ، ڈومیسائل، ای اسٹامپ اور سول رجسٹریشن کے بارے میں پوچھیں۔ شرائط اور کارروائی کا وقت متعلقہ سرکاری محکمے پر منحصر ہے۔"),
+        ("کیا آپ ای بز اور فشریز کی درخواستوں میں مدد کرتے ہیں؟", "پنجاب ای بز کاروباری خدمات اور فشریز ای لائسنس کے بارے میں رہنمائی کے لیے رابطہ کریں۔ بکنگ سے پہلے سروس کی شرائط اور دستیابی کی تصدیق کر لیں۔"),
+        ("اپلائی کرنے سے پہلے فیس کیسے معلوم کریں؟", "ہمارے پنجاب فیس کیلکولیٹر سے اندازہ لگائیں اور آگے بڑھنے سے پہلے سرکاری فیس اور فیسیلیٹیشن چارجز کی تصدیق کر لیں۔ دستک تربیتی مینول کے مطابق فیسیلیٹیٹر چارجز 950 روپے ہیں۔ حتمی فیس اور اہلیت متعلقہ محکمہ طے کرتا ہے۔"),
     ]))
 
 _RS = re.compile(r"Rs\.? ?[\d,]+")
 _ROMAN = re.compile(r"\((?=[A-Za-z])[A-Za-z][A-Za-z ,'\-]*\)")
 
 
+_NUM = re.compile(r"0345-5583530|\+92-345-5583530|(?<![\d,.])(?:90807|47850|1202)(?![\d,])")
+_APP = re.compile(r"Doorstep Delivery|Self Service|On Behalf|Facilitator Code|\bSelf\b")
+
+
 def fix_bidi(doc):
+    """Inside <main>: keep numbers, Rs amounts, app labels and Roman-Urdu brackets left-to-right and unbroken."""
     i, j = doc.find("<main"), doc.find("</main>")
+    body = doc[i:j]
+    skip = []
+    k = body.find('<div class="home-review-track"')
+    if k != -1:
+        skip.append((k, body.find('</div><p class="sub">', k)))
     def text_fix(m):
+        if any(a <= m.start() < b for a, b in skip):
+            return m.group(0)
+        before = body[max(0, m.start() - 40):m.start() + 1]
         t = m.group(0)
+        if before.endswith('class="ltr">') or before.endswith('dir="ltr">') or re.search(r'<(strong|b)[^>]*>$', before) and _NUM.fullmatch(t[1:-1] or "x"):
+            return t
         t = _RS.sub(lambda x: f'<span class="ltr">{x.group(0)}</span>', t)
         t = _ROMAN.sub(lambda x: f'<bdi dir="ltr">{x.group(0)}</bdi>', t)
+        t = _NUM.sub(lambda x: f'<span class="ltr">{x.group(0)}</span>', t)
+        t = _APP.sub(lambda x: f'<bdi dir="ltr">{x.group(0)}</bdi>', t)
         return t
-    body = re.sub(r">[^<>]+<", text_fix, doc[i:j])
+    body = re.sub(r">[^<>]+<", text_fix, body)
     return doc[:i] + body + doc[j:]
 
 

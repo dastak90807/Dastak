@@ -163,3 +163,12 @@ html[dir="rtl"] .home .home-fc .area-tags{padding:0}
 html[dir="rtl"] .home .home-fc .ur-verify-box{margin:16px 0;padding:14px 16px;border-radius:12px;background:#f4faf7;border:1px solid var(--bd,#dbe7e0)}
 html[dir="rtl"] .home .home-fc .ur-verify-box h3{margin:0 0 6px;font-size:17px}
 html[dir="rtl"] .home .home-fc .ur-verify-box p{margin:0;font-size:14px;line-height:1.9}
+/* Urdu home FAQ + page end: same right axis as other sections */
+html[dir="rtl"] .home .home-faqs,html[dir="rtl"] .home .home-faqs summary,html[dir="rtl"] .home .home-faqs p{text-align:right}
+html[dir="rtl"] .home .ur-page-end{padding-block:8px 24px;text-align:right}
+html[lang="ur"] bdi[dir="ltr"]{unicode-bidi:isolate;white-space:nowrap}
+/* Steps: right axis instead of centred text */
+html[dir="rtl"] .home .home-step{text-align:right}
+html[dir="rtl"] .home .home-step h3,html[dir="rtl"] .home .home-step p{text-align:right}
+html[dir="rtl"] .home .home-step .home-step-tag{align-self:flex-start}
+html[dir="rtl"] .home .home-steps-sub{text-align:center}
