@@ -44,6 +44,8 @@
 @media (min-width: 1500px) {
   .hd nav { margin-left: auto; }
   .hd .site-search.hd-search { margin-left: 28px; margin-right: auto; }
+  html[dir="rtl"] .hd nav { margin-left: 0; margin-right: auto; }
+  html[dir="rtl"] .hd .site-search.hd-search { margin-left: auto; margin-right: 28px; }
 }
 
 /* Highlighted Fee Calculator link (Nov 2026) */

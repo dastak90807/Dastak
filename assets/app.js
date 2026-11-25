@@ -1,4 +1,4 @@
-(function(){var f=document.getElementById('wf');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f),t='Assalam o Alaikum. My name is '+(d.get('n')||'')+'.\nService: '+(d.get('s')||'')+'\nArea: '+(d.get('a')||'')+(d.get('p')?'\nPhone: '+d.get('p'):'')+'\nQuestion: '+(d.get('q')||'');window.location.href=f.getAttribute('data-wa')+'?text='+encodeURIComponent(t);});})();
+(function(){var f=document.getElementById('wf');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f),ur=(document.documentElement.lang||'').indexOf('ur')===0,t=ur?('السلام علیکم۔ میرا نام '+(d.get('n')||'')+' ہے۔\nسروس: '+(d.get('s')||'')+'\nعلاقہ: '+(d.get('a')||'')+(d.get('p')?'\nفون: '+d.get('p'):'')+'\nسوال: '+(d.get('q')||'')):('Assalam o Alaikum. My name is '+(d.get('n')||'')+'.\nService: '+(d.get('s')||'')+'\nArea: '+(d.get('a')||'')+(d.get('p')?'\nPhone: '+d.get('p'):'')+'\nQuestion: '+(d.get('q')||''));window.location.href=f.getAttribute('data-wa')+'?text='+encodeURIComponent(t);});})();
 
 (() => {
   const toggle = document.querySelector('.menu-toggle');

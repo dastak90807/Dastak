@@ -94,7 +94,7 @@
 .home .eyebrow{margin-top:0}
 .home .wrap>h2,.home .wrap>div>h2{margin-top:.25em}
 /* Header and footer line up with the same container */
-body:has(.home) .hd{padding-inline:max(var(--sec-x,20px),calc((100% - 1280px)/2))}
+/* Header uses the same full width as every other page (Nov 2026) */
 body:has(.home) .ft{padding-inline:max(20px,calc((100% - 1280px)/2))}
 /* One button system */
 .home section .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:12px;font-size:16px;font-weight:700;line-height:1.2}

@@ -7,7 +7,7 @@
   function apply(){
     var q=(search.value||'').trim().toLowerCase(),shown=0;
     items.forEach(function(el){
-      var c=el.getAttribute('data-gp-cat'),t=el.getAttribute('data-gp-text')||'';
+      var c=el.getAttribute('data-gp-cat'),t=((el.getAttribute('data-gp-text')||'')+' '+el.textContent).toLowerCase();
       var ok=cat==='news'?false:(cat==='all'||c===cat)&&(!q||t.indexOf(q)>-1)&&!(c==='more'&&(cat!=='all'||q&&t.indexOf(q)<0));
       el.hidden=!ok;if(ok&&c!=='more')shown++;
     });

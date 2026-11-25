@@ -185,3 +185,23 @@ html[dir="rtl"] .trust-strip .announcement-message{padding:10px 0 10px 32px}
 /* Back-to-top mirrors the chat button (left side on Urdu pages) */
 html[dir="rtl"] .back-to-top{right:auto;left:20px}
 @media(max-width:800px){html[dir="rtl"] .back-to-top{left:16px}}
+/* Urdu hub pages (layout from English page): visually-hidden labels must not create RTL scroll */
+.ur-hub .sv-sr,.ur-hub .gp-sr{position:absolute!important;left:auto!important;right:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+/* Urdu hubs: mirror direction-specific details of the English hub styles */
+.ur-hub .btn-arrow{transform:scaleX(-1)}
+.ur-hub.services-v2 .sv-card .sv-tag{right:auto;left:16px}
+.ur-hub .sv-card::before,.ur-hub .gp-card::before,.ur-hub .gp-feat::before,.ur-hub .tp-card::before,.ur-hub .tp-portal::before,.ur-hub .ch-card::before,.ur-hub .ct-opt::before,.ur-hub .ct-loc::before{right:auto;left:-135px;transform-origin:top left}
+.ur-hub .sv-pop .sv-card::after,.ur-hub .gp-card:not(.gp-more)::after,.ur-hub .tp-card::after,.ur-hub .tp-portal::after,.ur-hub .ch-card::after,.ur-hub .ct-opt::after{right:auto;left:16px}
+.ur-hub .sv-list .sv-card::after{right:auto;left:12px}
+.ur-hub .sv-act-many{padding-left:0;padding-right:70px}
+.ur-hub .sv-list .sv-card .sv-pp{margin-left:0;margin-right:auto}
+.ur-hub .tp-card i,.ur-hub .tp-portal i{right:auto;left:18px}
+.ur-hub.calc-hub-v2 .ch-card li{padding:7px 24px 7px 0}
+.ur-hub.calc-hub-v2 .ch-card li:before{left:auto;right:2px}
+.ur-hub.contact-v2 .ct-list li{padding-left:0;padding-right:30px}
+.ur-hub.contact-v2 .ct-list li::before{left:auto;right:0}
+.ur-hub h1,.ur-hub h2,.ur-hub h3,.ur-hub p,.ur-hub li,.ur-hub summary{text-align:start}
+.ur-hub .sv-cta p,.ur-hub .sv-cta h2,.ur-hub .sv-note,.ur-hub .ct-foot,.ur-hub .gp-disc,.ur-hub .tp-disc,.ur-hub .ch-go{text-align:center}
+@media(max-width:760px){.ur-hub .sv-act-many{padding-right:0}}
+.ur-hub .sv-opts span span.ltr{display:inline;padding:0;border-radius:0}
+.ur-hub .ur-en-link{margin:8px 0 24px;text-align:start}
