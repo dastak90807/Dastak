@@ -17,7 +17,7 @@
     document.head.appendChild(css);
   };
   addCss('/assets/shared-header.css?v=' + version);
-  addCss('/assets/lang-switch.css?v=1');
+  addCss('/assets/lang-switch.css?v=2');
 
   if (!window.__dastakAnalytics) {
     const analytics = document.createElement('script');
@@ -44,7 +44,7 @@
 
   const t = isUrdu ? {
     home: '/ur/', brandAlt: 'دستک 90807، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن', menu: 'مینیو', navLabel: 'مرکزی مینیو',
-    links: [['/ur/', 'ہوم'], ['/ur/services/', 'سروسز'], ['/ur/calculators/', 'فیس کیلکولیٹر', 'nav-calc']],
+    links: [['/ur/', 'ہوم'], ['/ur/services/', 'خدمات'], ['/ur/calculators/', 'فیس کیلکولیٹر', 'nav-calc']],
     tools: 'شہری ٹولز',
     toolLinks: [['/en/document-checklist/', 'دستاویزات کی چیک لسٹ'], ['/en/citizen-tools/', 'سرکاری پورٹلز'], ['/en/downloads/', 'فارمز اور ڈاؤن لوڈز']],
     after: [['/ur/guides/', 'گائیڈز'], ['/ur/gujar-khan/', 'گوجر خان'], ['/ur/contact/', 'رابطہ']],
@@ -83,7 +83,8 @@
         '</div>' +
         '<div id="site-search-results" class="site-search-results" aria-live="polite" hidden></div>' +
       '</div>' +
-      '<a class="lang-switch" href="' + switchHref + '" hreflang="' + t.switchLang + '" lang="' + t.switchLang + '" aria-label="' + t.switchAria + '">' + t.switchText + '</a>' +
+      '<a class="lang-switch" href="' + switchHref + '" hreflang="' + t.switchLang + '" role="switch" aria-checked="' + (isUrdu ? 'true' : 'false') + '" aria-label="' + t.switchAria + '">' +
+        '<span class="ls-en" lang="en">Eng</span><span class="ls-track" aria-hidden="true"><span class="ls-knob"></span></span><span class="ls-ur" lang="ur">اردو</span></a>' +
       '<a class="btn g sm" href="https://wa.me/923455583530">' + t.wa + '</a>' +
     '</header>');
 })();

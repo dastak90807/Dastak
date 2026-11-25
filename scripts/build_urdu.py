@@ -132,9 +132,9 @@ def page(p):
     main_class = p.get("main_class", "service-detail")
     en_note = f'<p class="ur-en-link" lang="en" dir="ltr">Read in English: <a href="/en{path}" hreflang="en">{esc(p.get("en_title", "English version"))}</a></p>'
 
-    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a"><link rel="stylesheet" href="/assets/urdu-rtl.css?v=1"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
+    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a"><link rel="stylesheet" href="/assets/urdu-rtl.css?v=2"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
-<script src="/assets/shared-header.js?v=4"></script><noscript><nav aria-label="مرکزی مینیو"><a href="/ur/">ہوم</a> <a href="/ur/services/">سروسز</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
+<script src="/assets/shared-header.js?v=5"></script><noscript><nav aria-label="مرکزی مینیو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
 <main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
 {p["body"]}
 {faq_block}
@@ -192,6 +192,22 @@ R = {
     "contact": ("/ur/contact/", "رابطہ", f"واٹس ایپ، کال اور دفتر کا پتہ"),
 }
 
+
+# Official renewal fee table, copied from the official Dastak portal "فیس کی تفصیلات" page
+# (https://dastak.punjab.gov.pk/citizen/fee/stucture), checked 25 Nov 2026. Fee is for 1 year.
+RENEW_ROWS = [("موٹر سائیکل", "450", "225", "450", "1,125", "930"), ("رکشہ", "400", "200", "400", "1,000", "880"),
+              ("کار / جیپ", "1,350", "675", "1,350", "3,375", "1,830"), ("موٹر سائیکل + کار", "1,350", "675", "1,350", "3,375", "1,830"),
+              ("ایل ٹی وی (LTV)", "1,850", "925", "1,850", "4,625", "2,330"), ("ایچ ٹی وی (HTV)", "1,850", "925", "1,850", "4,625", "2,330"),
+              ("ٹریکٹر کمرشل", "1,400", "700", "1,400", "3,500", "1,880")]
+RENEW_FEE_TABLE = ('<div class="ur-table-wrap"><table class="ur-fee ur-fee-grid"><caption>سرکاری رینیول فیس (1 سال)، سرکاری دستک پورٹل کے مطابق</caption>'
+    '<thead><tr><th scope="col">کیٹیگری</th><th scope="col">رینیول فیس</th><th scope="col">جرمانہ 1 سے 3 ماہ</th><th scope="col">جرمانہ 3 ماہ سے 1 سال</th><th scope="col">جرمانہ 1 سال سے زیادہ</th><th scope="col">کل (کورئیر Rs 480 سمیت، جرمانے کے بغیر)</th></tr></thead><tbody>'
+    + "".join(f'<tr><th scope="row">{c}</th>' + "".join(f'<td class="ltr">Rs {v}</td>' for v in vals) + "</tr>" for c, *vals in RENEW_ROWS)
+    + '</tbody></table></div><ul><li>یہ فیس 1 سال کی ہے۔ لائسنس 1 سے 5 سال تک کے لیے بن سکتا ہے، اس لیے سرکاری فیس سالوں کے حساب سے بڑھتی ہے۔</li>'
+    '<li>ایک سے زیادہ کیٹیگری ہوں تو سب سے زیادہ فیس والی کیٹیگری کی فیس لگتی ہے۔</li>'
+    '<li>اصل لائسنس موجود نہ ہو تو ڈپلیکیٹ فیس بھی شامل ہوتی ہے۔</li>'
+    '<li>اس کے علاوہ دستک فیسیلیٹیٹر چارجز Rs 950 اور پلیٹ فارم چارجز Rs 19 ہیں۔ حتمی رقم PSID پر لکھی ہوتی ہے۔</li></ul>'
+    '<p class="ur-note">ذریعہ: سرکاری دستک پورٹل، فیس کی تفصیلات (25 نومبر 2026 کو چیک کیا گیا)۔</p>')
+
 PAGES = []
 
 # ================================================================ SERVICES
@@ -200,7 +216,7 @@ PAGES.append(dict(
     title="ڈرائیونگ لائسنس رینیول پنجاب: دستاویزات اور فیس | دستک 90807",
     desc="پنجاب میں ڈرائیونگ لائسنس رینیول کا طریقہ، دستاویزات، فیس اور وقت۔ 1 سے 5 سال کے لیے تجدید۔ رجسٹرڈ دستک فیسیلیٹیٹر کوڈ 90807، واٹس ایپ 0345-5583530۔",
     h1="ڈرائیونگ لائسنس رینیول (پنجاب)", og="/assets/og/driving-license.jpg",
-    crumbs=[("سروسز", "/ur/services/"), ("ڈرائیونگ لائسنس رینیول", "/ur/services/renewal-of-regular-license/")],
+    crumbs=[("خدمات", "/ur/services/"), ("ڈرائیونگ لائسنس رینیول", "/ur/services/renewal-of-regular-license/")],
     body=service_body(
         "ڈرائیونگ لائسنس رینیول",
         "پنجاب میں ریگولر ڈرائیونگ لائسنس کی تجدید (رینیول) دستک سروس کے ذریعے گھر بیٹھے ہو جاتی ہے۔ آپ کو اصل شناختی کارڈ، پرانا لائسنس اور سفید بیک گراؤنڈ والی تازہ تصویر چاہیے۔ لائسنس 1، 2، 3، 4 یا 5 سال کے لیے بن سکتا ہے اور تقریباً 10 دن میں کورئیر سے گھر پہنچ جاتا ہے۔ سرکاری فیس کیٹیگری اور مدت کے حساب سے بنتی ہے اور PSID پر لکھی ہوتی ہے۔",
@@ -215,6 +231,7 @@ PAGES.append(dict(
          "تقریباً 10 دن میں نیا لائسنس کورئیر سے آپ کے پتے پر آ جاتا ہے۔ اسٹیٹس <a href=\"/ur/guides/how-to-track-driving-license-in-punjab/\">یہاں سے ٹریک کریں</a>۔"],
         [("سرکاری فیس", "لائسنس کی کیٹیگری اور مدت (1 سے 5 سال) کے مطابق مختلف"), ("دستک فیسیلیٹیٹر چارجز", "Rs 950"),
          ("پلیٹ فارم چارجز", "Rs 19 (تربیتی مینول کے مطابق)"), ("ادائیگی", "PSID کے ذریعے"), ("حتمی رقم", "آپ کے PSID پر لکھی ہوتی ہے")],
+        extra='<section class="service-module"><h2>سرکاری رینیول فیس کی تفصیل (پورٹل کے مطابق)</h2>' + RENEW_FEE_TABLE + '</section>',
         related=(R["renew_guide"], R["track"], R["learner"], R["calc"])),
     faqs=[
         ("لائسنس رینیو کیسے کریں؟ (License renew kaise karein)", "دستک ایپ میں Doorstep Delivery منتخب کر کے کوڈ 90807 لکھیں، یا واٹس ایپ 0345-5583530 پر رابطہ کریں۔ فیسیلیٹیٹر گھر آ کر تصویر لیتا ہے، درخواست جمع کرواتا ہے اور لائسنس کورئیر سے آپ کو مل جاتا ہے۔"),
@@ -230,7 +247,7 @@ PAGES.append(dict(
     title="لرنر ڈرائیونگ لائسنس کیسے بنوائیں؟ فیس اور دستاویزات | دستک 90807",
     desc="پنجاب میں لرنر ڈرائیونگ لائسنس (لرنر پرمٹ) بنوانے کا طریقہ: صرف شناختی کارڈ اور تصویر، سرکاری فیس 500 روپے فی کیٹیگری، 180 دن کارآمد۔ دستک کوڈ 90807۔",
     h1="لرنر ڈرائیونگ لائسنس (لرنر پرمٹ)", og="/assets/og/driving-license.jpg",
-    crumbs=[("سروسز", "/ur/services/"), ("لرنر ڈرائیونگ لائسنس", "/ur/services/learner-driving-license/")],
+    crumbs=[("خدمات", "/ur/services/"), ("لرنر ڈرائیونگ لائسنس", "/ur/services/learner-driving-license/")],
     body=service_body(
         "لرنر ڈرائیونگ لائسنس",
         "گاڑی یا موٹر سائیکل چلانا سیکھنے والے ہر شخص کے لیے لرنر پرمٹ ضروری ہے۔ پنجاب میں یہ دستک سروس کے ذریعے گھر بیٹھے بن جاتا ہے: صرف اصل شناختی کارڈ اور سفید بیک گراؤنڈ والی لائیو تصویر چاہیے۔ سرکاری فیس 500 روپے فی کیٹیگری ہے، پرمٹ کی PDF موقع پر مل جاتی ہے اور یہ 180 دن کارآمد رہتا ہے۔",
@@ -258,14 +275,14 @@ PAGES.append(dict(
     title="پولیس کریکٹر سرٹیفکیٹ پنجاب: فیس اور دستاویزات | دستک 90807",
     desc="پنجاب پولیس کریکٹر سرٹیفکیٹ بیرون ملک سفر، نوکری اور امیگریشن کے لیے۔ دستاویزات، سرکاری فیس 1,000 روپے، 3 دن میں کورئیر۔ رجسٹرڈ دستک فیسیلیٹیٹر کوڈ 90807۔",
     h1="پولیس کریکٹر سرٹیفکیٹ (پنجاب پولیس)", og="/assets/og/police.jpg",
-    crumbs=[("سروسز", "/ur/services/"), ("پولیس کریکٹر سرٹیفکیٹ", "/ur/services/character-certificate/")],
+    crumbs=[("خدمات", "/ur/services/"), ("پولیس کریکٹر سرٹیفکیٹ", "/ur/services/character-certificate/")],
     body=service_body(
         "پولیس کریکٹر سرٹیفکیٹ",
         "پولیس کریکٹر سرٹیفکیٹ بیرون ملک سفر، باہر نوکری اور امیگریشن کے لیے ضروری ہوتا ہے۔ دستک سروس کے ذریعے پنجاب پولیس کا کریکٹر سرٹیفکیٹ گھر بیٹھے اپلائی ہو جاتا ہے۔ اصل شناختی کارڈ، پاسپورٹ اور لائیو تصویر چاہیے۔ سرکاری فیس 1,000 روپے ہے اور سرٹیفکیٹ تقریباً 3 دن میں کورئیر سے آتا ہے۔",
         [("محکمہ", "پنجاب پولیس"), ("علاقہ", "پورا پنجاب (گھر پر وزٹ: گوجر خان اور راولپنڈی)"), ("وقت", "تقریباً 3 دن"), ("ڈیلیوری", "کورئیر کے ذریعے")],
         ["اصل شناختی کارڈ (CNIC)", "اصل پاسپورٹ", "سفید بیک گراؤنڈ کے ساتھ لائیو تصویر (کندھوں تک)",
          "اتھارٹی لیٹر، اگر درخواست گزار بیرون ملک ہو۔ اس پر متعلقہ ایمبیسی کی مہر ہو، ورنہ دو معزز افراد کی تصدیق ہو جو درخواست گزار کو جانتے ہوں۔ لیٹر میں بیرون ملک قیام کی مدت بھی لکھی ہو۔"],
-        ["پہلے معلوم کریں کہ آپ کو کریکٹر سرٹیفکیٹ چاہیے یا جنرل پولیس ویری فکیشن۔ دونوں الگ سروسز ہیں۔",
+        ["پہلے معلوم کریں کہ آپ کو کریکٹر سرٹیفکیٹ چاہیے یا جنرل پولیس ویری فکیشن۔ دونوں الگ خدمات ہیں۔",
          "اگر سرٹیفکیٹ کسی دوسرے ملک کے لیے ہے تو پاسپورٹ پر اس ملک کا ویزا لگا ہونا چاہیے، ورنہ درخواست آگے نہیں بڑھتی۔",
          "دستک ایپ میں بکنگ کریں (Doorstep Delivery، کوڈ 90807) یا واٹس ایپ کریں۔",
          "فیسیلیٹیٹر آپ کی دستاویزات چیک کر کے لائیو تصویر لیتا ہے اور درخواست جمع کرواتا ہے۔",
@@ -280,7 +297,7 @@ PAGES.append(dict(
         ("پولیس کریکٹر سرٹیفکیٹ کی فیس کتنی ہے؟", "تربیتی مینول کے مطابق سرکاری فیس 1,000 روپے، دستک فیسیلیٹیٹر چارجز 950 روپے اور پلیٹ فارم چارجز 19 روپے۔ حتمی رقم PSID پر ہوتی ہے۔"),
         ("کریکٹر سرٹیفکیٹ کتنے دن میں ملتا ہے؟", "عام طور پر تقریباً 3 دن، پنجاب پولیس کی منظوری کے بعد کورئیر سے۔"),
         ("کیا ویزا ضروری ہے؟", "اگر سرٹیفکیٹ کسی دوسرے ملک کے لیے چاہیے تو پاسپورٹ پر ویزا لگا ہونا ضروری ہے۔"),
-        ("کریکٹر سرٹیفکیٹ اور جنرل پولیس ویری فکیشن میں کیا فرق ہے؟", "یہ دو الگ سروسز ہیں۔ جس ادارے کو دستاویز چاہیے اس سے پوچھ لیں کہ اسے کون سی سروس چاہیے۔"),
+        ("کریکٹر سرٹیفکیٹ اور جنرل پولیس ویری فکیشن میں کیا فرق ہے؟", "یہ دو الگ خدمات ہیں۔ جس ادارے کو دستاویز چاہیے اس سے پوچھ لیں کہ اسے کون سی سروس چاہیے۔"),
         ("کیا فیسیلیٹیٹر سرٹیفکیٹ منظور کرتا ہے؟", "نہیں۔ فیسیلیٹیٹر صرف درخواست تیار اور جمع کرواتا ہے۔ تصدیق اور منظوری پنجاب پولیس کرتی ہے۔"),
     ]))
 
@@ -289,7 +306,7 @@ PAGES.append(dict(
     title="گاڑی اور موٹر سائیکل ٹرانسفر پنجاب: طریقہ اور فیس | دستک 90807",
     desc="پنجاب میں گاڑی یا موٹر سائیکل اپنے نام ٹرانسفر کروانے کا طریقہ: دستاویزات، خریدار اور بیچنے والے کی بائیومیٹرک، PSID فیس اور 10 دن میں کورئیر۔ دستک کوڈ 90807۔",
     h1="گاڑی اور موٹر سائیکل کی ملکیت ٹرانسفر", og="/assets/og/vehicles.jpg",
-    crumbs=[("سروسز", "/ur/services/"), ("گاڑی ٹرانسفر", "/ur/services/transfer-of-motor-vehicle/")],
+    crumbs=[("خدمات", "/ur/services/"), ("گاڑی ٹرانسفر", "/ur/services/transfer-of-motor-vehicle/")],
     body=service_body(
         "گاڑی ٹرانسفر",
         "پنجاب میں رجسٹرڈ گاڑی یا موٹر سائیکل کی ملکیت نئے مالک کے نام کروانے کے لیے گاڑی کا نمبر، خریدار کا اصل شناختی کارڈ اور گاڑی کی اصل فائل اور بُک یا کارڈ چاہیے۔ خریدار اور بیچنے والے دونوں کی بائیومیٹرک تصدیق لازمی ہے۔ سرکاری فیس گاڑی کی قسم کے مطابق PSID پر بنتی ہے، اور نیا رجسٹریشن کارڈ تقریباً 10 دن میں کورئیر سے آتا ہے۔",
@@ -320,7 +337,7 @@ PAGES.append(dict(
     title="ٹوکن ٹیکس پنجاب: گھر بیٹھے جمع کروائیں | دستک 90807",
     desc="پنجاب میں گاڑی اور موٹر سائیکل کا سالانہ ٹوکن ٹیکس گھر بیٹھے جمع کروائیں۔ صرف گاڑی کا نمبر چاہیے، PSID سے ادائیگی، کام موقع پر مکمل۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
     h1="ٹوکن ٹیکس (گاڑی اور موٹر سائیکل)", og="/assets/og/vehicles.jpg",
-    crumbs=[("سروسز", "/ur/services/"), ("ٹوکن ٹیکس", "/ur/services/token-tax/")],
+    crumbs=[("خدمات", "/ur/services/"), ("ٹوکن ٹیکس", "/ur/services/token-tax/")],
     body=service_body(
         "ٹوکن ٹیکس",
         "ٹوکن ٹیکس گاڑی کا سالانہ سرکاری ٹیکس ہے جو سڑک پر قانونی طور پر گاڑی چلانے کے لیے ضروری ہے۔ دستک سروس سے صرف گاڑی کے نمبر کے ساتھ ٹوکن ٹیکس جمع ہو جاتا ہے۔ رقم گاڑی کے ماڈل، سال اور سرکاری پالیسی کے مطابق PSID پر بنتی ہے، اور کام عام طور پر موقع پر مکمل ہو جاتا ہے۔",
@@ -347,7 +364,7 @@ PAGES.append(dict(
     title="ڈومیسائل کیسے بنوائیں؟ فیس 1,200 روپے، گوجر خان | دستک 90807",
     desc="گوجر خان اور راولپنڈی میں ڈومیسائل سرٹیفکیٹ: دستاویزات کی مکمل فہرست، فیس 1,200 روپے بذریعہ PSID، 300 روپے کا بیان حلفی الگ۔ گھر پر سہولت، دستک کوڈ 90807۔",
     h1="ڈومیسائل سرٹیفکیٹ، گوجر خان اور راولپنڈی", og="/assets/og/civil.jpg",
-    crumbs=[("سروسز", "/ur/services/"), ("ڈومیسائل سرٹیفکیٹ", "/ur/services/domicile-certificate/")],
+    crumbs=[("خدمات", "/ur/services/"), ("ڈومیسائل سرٹیفکیٹ", "/ur/services/domicile-certificate/")],
     body=service_body(
         "ڈومیسائل سرٹیفکیٹ",
         "ڈومیسائل یہ ثابت کرتا ہے کہ آپ کس ضلع کے رہائشی ہیں۔ یہ سرکاری نوکری، تعلیمی کوٹے اور کئی دفتری کاموں میں چاہیے ہوتا ہے۔ دستک کے ذریعے ڈومیسائل کی کل فیس 1,200 روپے ہے جو PSID سے ادا ہوتی ہے۔ 300 روپے کا بیان حلفی (ای اسٹامپ) الگ سے چاہیے۔ دستاویزات تحصیل (اسسٹنٹ کمشنر) دفتر میں جمع ہوتی ہیں اور تیار ڈومیسائل فیسیلیٹیٹر آپ تک پہنچاتا ہے۔",
@@ -363,7 +380,7 @@ PAGES.append(dict(
          "فیسیلیٹیٹر دستاویزات اسسٹنٹ کمشنر (تحصیل) دفتر میں جمع کرواتا ہے اور منظوری کے بعد ڈومیسائل آپ تک پہنچاتا ہے۔"],
         [("ڈومیسائل (دستک سروس)", "<b>کل Rs 1,200</b>، PSID کے ذریعے"), ("بیان حلفی (ای اسٹامپ)", "Rs 300 کا ای اسٹامپ الگ سے درکار ہے"),
          ("ای اسٹامپ دستک کے ذریعے", "کل Rs 1,250 (Rs 300 ای اسٹامپ + Rs 950 فیسیلیٹیٹر چارجز)"), ("وقت", "15 دن تک، محکمے کی منظوری پر منحصر")],
-        extra='<section class="service-module"><h2>ڈومیسائل کی دیگر سروسز</h2><p>ہم ڈومیسائل سے متعلق یہ کام بھی کرواتے ہیں (تفصیل انگریزی صفحات پر):</p><ul><li><a href="/en/services/duplicate-domicile/" lang="en">Duplicate Domicile</a>: ڈومیسائل گم یا خراب ہو جائے تو ڈپلیکیٹ</li><li><a href="/en/services/modification-domicile/" lang="en">Modification of Domicile</a>: ڈومیسائل میں درستگی</li><li><a href="/en/services/noc-for-domicile-transfer/" lang="en">NOC for Domicile Transfer</a>: ڈومیسائل دوسرے ضلع منتقل کرنے کا این او سی</li></ul></section>',
+        extra='<section class="service-module"><h2>ڈومیسائل کی دیگر خدمات</h2><p>ہم ڈومیسائل سے متعلق یہ کام بھی کرواتے ہیں (تفصیل انگریزی صفحات پر):</p><ul><li><a href="/en/services/duplicate-domicile/" lang="en">Duplicate Domicile</a>: ڈومیسائل گم یا خراب ہو جائے تو ڈپلیکیٹ</li><li><a href="/en/services/modification-domicile/" lang="en">Modification of Domicile</a>: ڈومیسائل میں درستگی</li><li><a href="/en/services/noc-for-domicile-transfer/" lang="en">NOC for Domicile Transfer</a>: ڈومیسائل دوسرے ضلع منتقل کرنے کا این او سی</li></ul></section>',
         related=(R["gk"], R["contact"])),
     faqs=[
         ("ڈومیسائل کیسے بنوائیں؟ (Domicile kaise banaye)", "دستک ایپ میں Doorstep Delivery کے ساتھ کوڈ 90807 لکھیں یا واٹس ایپ 0345-5583530 کریں۔ اوپر دی گئی دستاویزات تیار رکھیں۔ فیسیلیٹیٹر انہیں تحصیل دفتر میں جمع کرواتا ہے۔"),
@@ -388,7 +405,7 @@ PAGES.append(dict(
         [
             ("رینیول سے پہلے کیا تیاری کریں؟", "<ul><li>اصل شناختی کارڈ، جس کی مدت ختم نہ ہوئی ہو۔</li><li>پرانا ڈرائیونگ لائسنس، چاہے اس کی مدت ختم ہو چکی ہو۔</li><li>سفید بیک گراؤنڈ والی لائیو تصویر، جو فیسیلیٹیٹر موقع پر لیتا ہے۔</li><li>50 سال سے زیادہ عمر ہو تو میڈیکل سرٹیفکیٹ۔</li><li>لائسنس گم ہو گیا ہو تو ایف آئی آر یا لاسٹ رپورٹ کی کاپی۔</li><li>ایک فعال موبائل نمبر، کیونکہ ڈیلیوری والا رابطہ کر سکتا ہے۔</li></ul>"),
             ("آن لائن رینیول کیسے ہوتا ہے؟", f"<ol><li>دستک ایپ میں Doorstep Delivery منتخب کریں اور کوڈ {CODE} لکھیں، یا واٹس ایپ {PHONE} کریں۔</li><li>فیسیلیٹیٹر آپ کی کیٹیگری اور اہلیت چیک کرتا ہے۔</li><li>آپ لائسنس کی مدت (1 سے 5 سال) منتخب کرتے ہیں۔</li><li>لائیو تصویر اور دستاویزات کے ساتھ درخواست جمع ہوتی ہے اور PSID بنتا ہے۔</li><li>آپ PSID کی ادائیگی موبائل بینکنگ، جاز کیش یا ایزی پیسہ سے کرتے ہیں۔</li><li>تقریباً 10 دن میں لائسنس کورئیر سے آپ کے پتے پر پہنچ جاتا ہے۔</li></ol><p>کچھ کیٹیگریز یا بہت پرانے ختم شدہ لائسنس کے لیے لائسنسنگ سینٹر جانا پڑ سکتا ہے۔ بکنگ سے پہلے واٹس ایپ پر اپنی صورتحال چیک کروا لیں۔</p>"),
-            ("رینیول پر کتنا خرچ آتا ہے؟", '<p>سرکاری فیس لائسنس کی کیٹیگری، مدت اور مدت ختم ہونے کی تاریخ کے حساب سے بنتی ہے، اور حتمی رقم PSID پر لکھی ہوتی ہے۔ دستک تربیتی مینول کے مطابق فیسیلیٹیٹر چارجز 950 روپے اور پلیٹ فارم چارجز 19 روپے ہیں۔ اندازے کے لیے ہمارا <a href="/en/calculators/tools/punjab-driving-license-fee-calculator">ڈرائیونگ لائسنس فیس کیلکولیٹر</a> استعمال کریں۔</p>'),
+            ("رینیول پر کتنا خرچ آتا ہے؟", RENEW_FEE_TABLE + '<p>سرکاری فیس لائسنس کی کیٹیگری، مدت اور مدت ختم ہونے کی تاریخ کے حساب سے بنتی ہے، اور حتمی رقم PSID پر لکھی ہوتی ہے۔ دستک تربیتی مینول کے مطابق فیسیلیٹیٹر چارجز 950 روپے اور پلیٹ فارم چارجز 19 روپے ہیں۔ اندازے کے لیے ہمارا <a href="/en/calculators/tools/punjab-driving-license-fee-calculator">ڈرائیونگ لائسنس فیس کیلکولیٹر</a> استعمال کریں۔</p>'),
             ("لائسنس کا اسٹیٹس کیسے دیکھیں؟", '<p>درخواست کے بعد DLIMS پر شناختی کارڈ نمبر سے پرنٹنگ اور ڈسپیچ کا اسٹیٹس دیکھیں، پھر پاکستان پوسٹ پر ٹریکنگ آئی ڈی سے ڈیلیوری ٹریک کریں۔ مکمل طریقہ: <a href="/ur/guides/how-to-track-driving-license-in-punjab/">ڈرائیونگ لائسنس ٹریک کرنے کا طریقہ</a>۔</p>'),
             ("عام غلطیاں جن سے درخواست رکتی ہے", "<ul><li>شناختی کارڈ کی مدت ختم ہونا۔</li><li>تصویر کا بیک گراؤنڈ سفید نہ ہونا۔</li><li>50 سال سے زیادہ عمر میں میڈیکل سرٹیفکیٹ نہ لگانا۔</li><li>گمشدہ لائسنس کی ایف آئی آر کے بغیر درخواست دینا۔</li><li>غلط یا بند موبائل نمبر دینا۔</li></ul>"),
             ("مدد کہاں سے ملے گی؟", f"<p><b>پورے پنجاب میں:</b> واٹس ایپ {PHONE} پر رہنمائی اور دستاویزات کی جانچ۔</p><p><b>گوجر خان اور راولپنڈی:</b> {AREAS} میں گھر پر وزٹ، پہلے سے وقت طے کر کے۔</p><p>دستک 90807 ایک آزاد رجسٹرڈ فیسیلیٹیٹر ہے، سرکاری دفتر نہیں۔ منظوری اور ڈیلیوری لائسنسنگ اتھارٹی کے اختیار میں ہے۔</p>"),
@@ -439,7 +456,7 @@ PAGES.append(dict(
     body=guide_body(
         "پنجاب پولیس کریکٹر سرٹیفکیٹ کے لیے اصل شناختی کارڈ، پاسپورٹ اور سفید بیک گراؤنڈ والی لائیو تصویر چاہیے۔ اگر سرٹیفکیٹ کسی دوسرے ملک کے لیے ہے تو پاسپورٹ پر ویزا ضروری ہے۔ دستک تربیتی مینول کے مطابق سرکاری فیس 1,000 روپے ہے اور سرٹیفکیٹ تقریباً 3 دن میں کورئیر سے آتا ہے۔ تصدیق اور منظوری پنجاب پولیس کرتی ہے۔",
         [
-            ("کریکٹر سرٹیفکیٹ کب چاہیے ہوتا ہے؟", "<p>بیرون ملک سفر، باہر کی کمپنیوں میں نوکری، امیگریشن اور کئی ویزا درخواستوں کے لیے۔ جس ادارے نے سرٹیفکیٹ مانگا ہے اس سے پوچھ لیں کہ اسے کریکٹر سرٹیفکیٹ چاہیے یا جنرل پولیس ویری فکیشن، کیونکہ یہ دو الگ سروسز ہیں۔</p>"),
+            ("کریکٹر سرٹیفکیٹ کب چاہیے ہوتا ہے؟", "<p>بیرون ملک سفر، باہر کی کمپنیوں میں نوکری، امیگریشن اور کئی ویزا درخواستوں کے لیے۔ جس ادارے نے سرٹیفکیٹ مانگا ہے اس سے پوچھ لیں کہ اسے کریکٹر سرٹیفکیٹ چاہیے یا جنرل پولیس ویری فکیشن، کیونکہ یہ دو الگ خدمات ہیں۔</p>"),
             ("کون سی دستاویزات چاہئیں؟", "<ul><li>اصل شناختی کارڈ (CNIC)</li><li>اصل پاسپورٹ، اور دوسرے ملک کے لیے ہو تو اس پر ویزا</li><li>سفید بیک گراؤنڈ کے ساتھ لائیو تصویر (کندھوں تک)</li><li>بیرون ملک موجود درخواست گزار کے لیے اتھارٹی لیٹر</li></ul>"),
             ("فیس اور وقت", '<table class="ur-fee"><tbody><tr><th scope="row">سرکاری فیس</th><td>Rs 1,000</td></tr><tr><th scope="row">دستک فیسیلیٹیٹر چارجز</th><td>Rs 950</td></tr><tr><th scope="row">پلیٹ فارم چارجز</th><td>Rs 19</td></tr><tr><th scope="row">وقت</th><td>تقریباً 3 دن، کورئیر سے</td></tr></tbody></table><p class="ur-note">' + FEE_SOURCE + '</p>'),
             ("بیرون ملک سے کیسے اپلائی کریں؟", "<p>درخواست گزار بیرون ملک ہو تو اس کا خونی رشتہ دار اتھارٹی لیٹر کے ساتھ درخواست جمع کروا سکتا ہے۔ لیٹر پر متعلقہ ایمبیسی کی مہر ہو، ورنہ دو معزز افراد کی تصدیق ہو جو درخواست گزار کو جانتے ہوں۔ لیٹر میں بیرون ملک قیام کی مدت ضرور لکھیں۔ بھیجنے سے پہلے واٹس ایپ پر چیک کروا لیں۔</p>"),
@@ -449,7 +466,7 @@ PAGES.append(dict(
         hero=("/assets/punjab-police-character-certificate-guide-dastak-90807.webp", "پنجاب پولیس کریکٹر سرٹیفکیٹ گائیڈ، گوجر خان اور راولپنڈی، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)"),
         related=(R["character"], R["gk"], R["contact"])),
     faqs=[
-        ("کیا کریکٹر سرٹیفکیٹ اور جنرل پولیس ویری فکیشن ایک ہی ہیں؟", "نہیں، دونوں الگ سروسز ہیں۔ جس ادارے کو دستاویز چاہیے اس سے پوچھ لیں۔"),
+        ("کیا کریکٹر سرٹیفکیٹ اور جنرل پولیس ویری فکیشن ایک ہی ہیں؟", "نہیں، دونوں الگ خدمات ہیں۔ جس ادارے کو دستاویز چاہیے اس سے پوچھ لیں۔"),
         ("کیا آپ گوجر خان سے باہر بھی مدد کرتے ہیں؟", "جی ہاں۔ پورے پنجاب کے لیے واٹس ایپ پر دستاویزات کی جانچ اور رہنمائی ہوتی ہے۔ گھر پر وزٹ گوجر خان، راولپنڈی اور قریبی علاقوں میں ہوتا ہے۔"),
         ("Bahar se character certificate kaise banwayen?", "خونی رشتہ دار اتھارٹی لیٹر کے ساتھ درخواست جمع کروا سکتا ہے۔ لیٹر پر ایمبیسی کی مہر یا دو معزز افراد کی تصدیق ہو۔"),
         ("کیا فیسیلیٹیٹر سرٹیفکیٹ منظور کرتا ہے؟", "نہیں۔ فیسیلیٹیٹر درخواست تیار اور جمع کرواتا ہے۔ تصدیق اور منظوری پنجاب پولیس کرتی ہے۔"),
@@ -483,16 +500,16 @@ PAGES.append(dict(
 # ================================================================ HUBS AND LOCAL PAGES
 PAGES.append(dict(
     path="/services/", kind="hub", en_title="All services",
-    title="دستک سروسز: لائسنس، پولیس، گاڑی، ڈومیسائل | دستک 90807",
-    desc="پنجاب میں دستک کی گھر بیٹھے سروسز: ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل۔ رجسٹرڈ فیسیلیٹیٹر کوڈ 90807، واٹس ایپ 0345-5583530۔",
-    h1="دستک سروسز: گھر بیٹھے سرکاری دستاویزات", og="/assets/og/general.jpg",
-    crumbs=[("سروسز", "/ur/services/")],
+    title="دستک خدمات (سروسز): لائسنس، پولیس، گاڑی، ڈومیسائل | دستک 90807",
+    desc="پنجاب میں دستک کی گھر بیٹھے خدمات: ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل۔ رجسٹرڈ فیسیلیٹیٹر کوڈ 90807، واٹس ایپ 0345-5583530۔",
+    h1="دستک خدمات: سرکاری خدمات گھر کی دہلیز پر", og="/assets/og/general.jpg",
+    crumbs=[("خدمات", "/ur/services/")],
     body=f'''<div class="card quick"><b>مختصر تعارف</b><p>میں محمد عثمان ہوں، مریم کی دستک پروگرام کا رجسٹرڈ فیسیلیٹیٹر (کوڈ {CODE})۔ پورے پنجاب میں واٹس ایپ پر رہنمائی کرتا ہوں اور {AREAS} میں گھر آ کر سرکاری دستاویزات کا کام کرواتا ہوں۔ ہر سروس پر دستک فیسیلیٹیٹر چارجز 950 روپے ہیں، اور سرکاری فیس PSID پر لکھی ہوتی ہے۔</p></div>
 <section class="service-module"><h2>ڈرائیونگ لائسنس</h2>{cards((R["renew"], R["learner"], R["track"]))}</section>
-<section class="service-module"><h2>پولیس سروسز</h2>{cards((R["character"], ("/en/services/general-police-verification/", "جنرل پولیس ویری فکیشن (English)", "نوکری اور ویزا کے لیے پس منظر کی تصدیق"), ("/en/services/tenant-registration/", "کرایہ دار رجسٹریشن (English)", "مکان کرائے پر دینے والوں کے لیے"), ("/en/services/loss-report/", "گمشدگی رپورٹ (English)", "کاغذات گم ہونے کی رپورٹ")))}</section>
+<section class="service-module"><h2>پولیس خدمات</h2>{cards((R["character"], ("/en/services/general-police-verification/", "جنرل پولیس ویری فکیشن (English)", "نوکری اور ویزا کے لیے پس منظر کی تصدیق"), ("/en/services/tenant-registration/", "کرایہ دار رجسٹریشن (English)", "مکان کرائے پر دینے والوں کے لیے"), ("/en/services/loss-report/", "گمشدگی رپورٹ (English)", "کاغذات گم ہونے کی رپورٹ")))}</section>
 <section class="service-module"><h2>گاڑی اور ایکسائز</h2>{cards((R["transfer"], R["token"], ("/en/services/motor-vehicle-registration/", "نئی گاڑی کی رجسٹریشن (English)", "نئی گاڑی یا بائیک رجسٹر کروائیں")))}</section>
 <section class="service-module"><h2>ڈومیسائل اور سول سرٹیفکیٹس</h2>{cards((R["domicile"], ("/en/services/birth-certificate/", "پیدائش سرٹیفکیٹ (English)", "یونین کونسل سے پیدائش کا اندراج"), ("/en/services/marriage-certificate/", "نکاح نامہ سرٹیفکیٹ (English)", "شادی کا کمپیوٹرائزڈ سرٹیفکیٹ"), ("/en/services/e-stamping/", "ای اسٹامپ پیپر (English)", "بیان حلفی اور دیگر اسٹامپ پیپر")))}</section>
-<p class="ur-note">جن سروسز کے ساتھ (English) لکھا ہے ان کی تفصیل ابھی انگریزی میں ہے۔ اردو صفحات جلد آ رہے ہیں۔ <a href="/en/services/" lang="en">All services in English</a></p>
+<p class="ur-note">جن خدمات کے ساتھ (English) لکھا ہے ان کی تفصیل ابھی انگریزی میں ہے۔ اردو صفحات جلد آ رہے ہیں۔ <a href="/en/services/" lang="en">All services in English</a></p>
 {booking_block("دستک سروس")}''',
     faqs=[
         ("دستک سروس کیا ہے؟", "مریم کی دستک حکومتِ پنجاب کا پروگرام ہے جس میں رجسٹرڈ فیسیلیٹیٹر گھر آ کر سرکاری دستاویزات کا کام کرواتا ہے۔ دستک 90807 ایک آزاد رجسٹرڈ فیسیلیٹیٹر کی سروس ہے۔"),
@@ -519,7 +536,7 @@ PAGES.append(dict(
     crumbs=[("فیس کیلکولیٹر", "/ur/calculators/")],
     body=f'''<div class="card quick"><b>اہم بات</b><p>یہ کیلکولیٹر صرف <b>اندازہ</b> دیتے ہیں۔ سرکاری فیس حکومت کے فیصلوں کے مطابق بدل سکتی ہے، اور حتمی رقم ہمیشہ سرکاری سسٹم کے PSID پر لکھی ہوتی ہے۔ گاڑی اور موٹر سائیکل کیلکولیٹر میں دستک فیسیلیٹیٹر چارجز 950 روپے شامل ہیں۔ کیلکولیٹرز میں اردو اور انگریزی دونوں زبانیں ہیں۔</p></div>
 {cards((("/en/calculators/tools/punjab-driving-license-fee-calculator", "ڈرائیونگ لائسنس فیس کیلکولیٹر", "رینیول کی فیس، 1 سے 5 سال کی مدت کے مطابق"), ("/en/calculators/tools/punjab-car-token-tax-transfer-fee-calculator", "کار ٹرانسفر اور ٹوکن ٹیکس کیلکولیٹر", "کار کی ٹرانسفر فیس اور ٹوکن ٹیکس کا اندازہ"), ("/en/calculators/tools/punjab-bike-registration-transfer-fee-calculator", "موٹر سائیکل رجسٹریشن اور ٹرانسفر کیلکولیٹر", "بائیک اور ای بائیک کی فیس کا اندازہ")))}
-<section class="service-module"><h2>متعلقہ سروسز</h2>{cards((R["renew"], R["transfer"], R["token"]))}</section>''',
+<section class="service-module"><h2>متعلقہ خدمات</h2>{cards((R["renew"], R["transfer"], R["token"]))}</section>''',
     faqs=[
         ("کیا کیلکولیٹر کی فیس حتمی ہے؟", "نہیں۔ کیلکولیٹر صرف اندازہ دیتا ہے۔ حتمی رقم سرکاری PSID پر ہوتی ہے۔"),
         ("کیا فیسیلیٹیٹر چارجز شامل ہیں؟", "گاڑی اور موٹر سائیکل کیلکولیٹر میں دستک فیسیلیٹیٹر چارجز 950 روپے شامل ہیں۔"),
@@ -528,14 +545,14 @@ PAGES.append(dict(
 PAGES.append(dict(
     path="/gujar-khan/", kind="service", en_title="Gujar Khan", areas=("Gujar Khan", "Kallar Syedan", "Kahuta", "Mandra", "Bewal", "Daultala", "Jatli", "Sukho", "Qazian", "Rawalpindi"),
     title="گوجر خان میں دستک سروس: گھر بیٹھے سرکاری دستاویزات | دستک 90807",
-    desc="گوجر خان، کلر سیداں، مندرہ، جاتلی، دولتالہ، بیول اور قریبی علاقوں میں ڈومیسائل، ڈرائیونگ لائسنس، پولیس سرٹیفکیٹ اور گاڑی سروسز گھر پر۔ دستک کوڈ 90807۔",
+    desc="گوجر خان، کلر سیداں، مندرہ، جاتلی، دولتالہ، بیول اور قریبی علاقوں میں ڈومیسائل، ڈرائیونگ لائسنس، پولیس سرٹیفکیٹ اور گاڑی خدمات گھر پر۔ دستک کوڈ 90807۔",
     h1="گوجر خان میں دستک سروس: گھر بیٹھے سرکاری دستاویزات", og="/assets/og/general.jpg",
     og_alt="گوجر خان میں دستک سروس، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، سینڈل روڈ، گوجر خان",
     crumbs=[("گوجر خان", "/ur/gujar-khan/")],
     body=f'''<div class="card quick"><b>مختصر جواب</b><p>گوجر خان اور آس پاس کے علاقوں میں مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر محمد عثمان (کوڈ {CODE}) گھر آ کر سرکاری دستاویزات کا کام کرواتے ہیں۔ گوجر خان اور راولپنڈی میں زیادہ تر کام ڈومیسائل کا ہوتا ہے، ساتھ ڈرائیونگ لائسنس، پولیس، گاڑی اور سول دستاویزات بھی۔ آن لائن رابطہ کسی بھی وقت، گھر پر وزٹ پہلے سے وقت طے کر کے۔</p></div>
 <div class="sd-actions"><a class="btn g" data-ga-event="service_whatsapp_click" href="{wa_link('گوجر خان میں دستک سروس')}">واٹس ایپ: {PHONE}</a><a class="btn o" href="tel:+923455583530">کال کریں</a><a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=Dastak+Online+Document+Facilitation+Sandal+Road+Gujar+Khan" rel="noopener">گوگل میپ پر دیکھیں</a></div>
 <section class="service-module"><h2>کن علاقوں میں گھر پر سروس ملتی ہے؟</h2><p>{AREAS}۔ اپنا علاقہ واٹس ایپ پر بتا کر پہلے تصدیق کر لیں۔</p></section>
-<section class="service-module"><h2>گوجر خان میں سب سے زیادہ مانگی جانے والی سروسز</h2>{cards((R["domicile"], R["renew"], R["character"], R["transfer"], R["token"], R["learner"]))}</section>
+<section class="service-module"><h2>گوجر خان میں سب سے زیادہ مانگی جانے والی خدمات</h2>{cards((R["domicile"], R["renew"], R["character"], R["transfer"], R["token"], R["learner"]))}</section>
 <section class="service-module"><h2>ہمارا پتہ</h2><p>سینڈل روڈ، وارڈ نمبر 14، گوجر خان، پنجاب <span class="ltr">47850</span>۔ شہری اکثر یہاں بھی تشریف لاتے ہیں، مگر آنے سے پہلے واٹس ایپ پر وقت طے کر لیں۔</p></section>
 {booking_block("گوجر خان میں دستک سروس")}''',
     faqs=[
@@ -572,10 +589,10 @@ PAGES.append(dict(
     h1="گھر بیٹھے سرکاری دستاویزات: پنجاب کے لیے دستک سروس", og="/assets/dastak-online-document-facilitation-punjab-og.jpg",
     og_alt="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجر خان، راولپنڈی اور پنجاب میں گھر بیٹھے سرکاری دستاویزات",
     crumbs=[], meta=f'<span class="ur-pill">رجسٹرڈ فیسیلیٹیٹر · کوڈ {CODE}</span> · مریم کی دستک (حکومتِ پنجاب کا اقدام)',
-    body=f'''<p class="lead">میں محمد عثمان ہوں۔ ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل جیسے سرکاری کام گھر بیٹھے کرواتا ہوں۔ پورے پنجاب کے لیے واٹس ایپ پر رہنمائی، اور {AREAS} میں گھر پر وزٹ۔</p>
-<div class="sd-actions"><a class="btn g" data-ga-event="home_whatsapp_click" href="{WA}">واٹس ایپ {PHONE}</a><a class="btn y" href="/ur/services/">تمام سروسز دیکھیں</a><a class="btn o" href="/ur/calculators/">فیس کیلکولیٹر</a></div>
+    body=f'''<p class="lead">میں محمد عثمان ہوں۔ ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل جیسی سرکاری خدمات آپ کے گھر کی دہلیز پر فراہم کرتا ہوں۔ پورے پنجاب کے لیے واٹس ایپ پر رہنمائی، اور {AREAS} میں گھر پر وزٹ۔</p>
+<div class="sd-actions"><a class="btn g" data-ga-event="home_whatsapp_click" href="{WA}">واٹس ایپ {PHONE}</a><a class="btn y" href="/ur/services/">تمام خدمات دیکھیں</a><a class="btn o" href="/ur/calculators/">فیس کیلکولیٹر</a></div>
 <p class="sd-trust">آزاد فیسیلیٹیشن سروس، سرکاری دفتر نہیں · کوڈ {CODE} سرکاری دستک ایپ میں چیک کریں</p>
-<section class="service-module"><h2>آپ کو کس کام میں مدد چاہیے؟</h2>{cards((R["renew"], R["learner"], R["character"], R["transfer"], R["token"], R["domicile"]))}<p><a href="/ur/services/">تمام سروسز ←</a></p></section>
+<section class="service-module"><h2>آپ کو کس کام میں مدد چاہیے؟</h2>{cards((R["renew"], R["learner"], R["character"], R["transfer"], R["token"], R["domicile"]))}<p><a href="/ur/services/">تمام خدمات ←</a></p></section>
 <section class="service-module steps-module"><h2>دستک سروس کیسے کام کرتی ہے؟</h2><ol><li>واٹس ایپ پر اپنی سروس بتائیں یا دستک ایپ میں Doorstep Delivery کے ساتھ کوڈ {CODE} لکھیں۔</li><li>ہم آپ کی دستاویزات پہلے سے چیک کرتے ہیں تاکہ درخواست مسترد نہ ہو۔</li><li>فیسیلیٹیٹر گھر آ کر درخواست جمع کرواتا ہے۔ آپ PSID کی فیس موبائل سے ادا کرتے ہیں۔</li><li>تیار دستاویز کورئیر یا فیسیلیٹیٹر کے ذریعے آپ تک پہنچتی ہے۔</li></ol></section>
 <section class="service-module"><h2>دستک 90807 کیوں؟</h2><ul><li><b>رجسٹرڈ فیسیلیٹیٹر:</b> مریم کی دستک پروگرام کا کوڈ {CODE}، جسے آپ سرکاری ایپ میں چیک کر سکتے ہیں۔</li><li><b>واضح چارجز:</b> ہر سروس پر فیسیلیٹیٹر چارجز 950 روپے۔ سرکاری فیس PSID پر، کوئی چھپی ہوئی رقم نہیں۔</li><li><b>آپ کی پرائیویسی:</b> کام مکمل ہونے کے بعد دستاویزات ڈیلیٹ۔ کبھی پاس ورڈ یا OTP نہیں مانگا جاتا۔</li><li><b>اپنی زبان میں:</b> اردو، پنجابی اور انگریزی میں بات کریں۔</li></ul></section>
 <section class="service-module"><h2>مفید اردو گائیڈز</h2>{cards((R["renew_guide"], R["track"], R["character_guide"], R["vehicle_guide"]))}</section>
