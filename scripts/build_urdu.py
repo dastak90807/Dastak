@@ -42,6 +42,10 @@ FEE_SOURCE = ("فیس کی معلومات کا ذریعہ: سرکاری دستک
 PAYMENT = ("فیس سرکاری سسٹم خود بناتا ہے۔ دستک ایپ میں ادائیگی کے طریقے: PSID (کسی بھی بینکنگ ایپ یا موبائل والٹ سے)، "
            "IBFT، جاز کیش، ایزی پیسہ اور کیش آن ڈیلیوری۔ ہر سروس میں طریقے مختلف ہو سکتے ہیں۔")
 
+VERIFY = (f"میرا فیسیلیٹیٹر کوڈ {CODE} سرکاری <a href=\"https://dastak.punjab.gov.pk\" rel=\"noopener\">دستک پورٹل</a> یا سرکاری دستک ایپ میں چیک کریں، "
+          "یا سرکاری دستک ہیلپ لائن <a href=\"tel:1202\" class=\"ltr\">1202</a> پر کال کر کے تصدیق کریں۔ "
+          "نوٹ: 1202 حکومتِ پنجاب کے دستک پروگرام کی سرکاری ہیلپ لائن ہے، یہ ہمارا نمبر نہیں۔ ہم سے رابطے کے لیے صرف " + PHONE + " استعمال کریں۔")
+
 AREAS = "گوجر خان، راولپنڈی، کلر سیداں، کہوٹہ، مندرہ، بیول، دولتالہ، جاتلی، سکھو اور قاضیاں"
 
 
@@ -66,7 +70,7 @@ def booking_block(service):
 <li>یا براہِ راست واٹس ایپ یا کال کریں: {PHONE}</li></ol>
 <p class="sd-tip"><b>اہم:</b> کوڈ {CODE} کے ساتھ بکنگ کے لیے <b>Doorstep Delivery</b> ہی منتخب کریں۔ Self Service میں فیسیلیٹیٹر کوڈ کا خانہ نہیں ہوتا۔</p>
 <div class="row"><a class="btn y" data-ga-event="service_whatsapp_click" href="{wa_link(service)}">اس سروس کے بارے میں واٹس ایپ کریں</a><a class="btn g" data-ga-event="service_call_click" href="tel:+923455583530">کال کریں {PHONE}</a><a class="btn o" href="{APP_ANDROID}" rel="noopener">دستک ایپ (گوگل پلے)</a><a class="btn o" href="{APP_IOS}" rel="noopener">دستک ایپ (ایپ اسٹور)</a></div>
-<p class="note">{PAYMENT}</p></div>'''
+<p class="note">{PAYMENT}</p><p class="note ur-verify" id="verify"><b>فیسیلیٹیٹر کی تصدیق:</b> {VERIFY}</p></div>'''
 
 
 def fee_table(rows):
@@ -134,7 +138,7 @@ def page(p):
 
     return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a"><link rel="stylesheet" href="/assets/urdu-rtl.css?v=2"><script type="application/ld+json">{ld}</script></head><body id="top"><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
-<script src="/assets/shared-header.js?v=5"></script><noscript><nav aria-label="مرکزی مینیو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
+<script src="/assets/shared-header.js?v=6"></script><noscript><nav aria-label="مرکزی مینیو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
 <main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
 {p["body"]}
 {faq_block}
@@ -153,7 +157,7 @@ def service_body(name, quick, glance, docs, steps, fees, extra="", related=()):
     rel = ("<section class=\"service-module related-module\"><h2>متعلقہ صفحات</h2>" + cards(related) + "</section>") if related else ""
     return f'''<div class="sd-glance" aria-label="سروس ایک نظر میں">{glance_html}</div>
 <div class="sd-actions"><a class="btn g" data-ga-event="service_whatsapp_click" href="{wa_link(name)}">واٹس ایپ: {PHONE}</a><a class="btn y" href="#book">بکنگ کا طریقہ</a><a class="btn o" data-ga-event="service_call_click" href="tel:+923455583530">کال کریں</a></div>
-<p class="sd-trust">رجسٹرڈ فیسیلیٹیٹر کوڈ {CODE} · آزاد سروس، سرکاری دفتر نہیں · <a href="/en/about/#verify">تصدیق کریں</a></p>
+<p class="sd-trust">رجسٹرڈ فیسیلیٹیٹر کوڈ {CODE} · آزاد سروس، سرکاری دفتر نہیں · <a href="#verify">تصدیق کیسے کریں؟</a></p>
 <div class="card quick"><b>مختصر جواب</b><p>{quick}</p></div>
 <section class="service-module documents-module"><h2>{esc(name)} کے لیے کون سی دستاویزات چاہئیں؟</h2><ul class="docs">{docs_html}</ul></section>
 <section class="service-module fee-module"><h2>{esc(name)} کی فیس کتنی ہے؟</h2>{fee_table(fees)}<p class="ur-note">{FEE_SOURCE}</p></section>
@@ -576,7 +580,7 @@ PAGES.append(dict(
 <tr><th scope="row">پتہ</th><td>سینڈل روڈ، وارڈ نمبر 14، گوجر خان، پنجاب <span class="ltr">47850</span></td></tr>
 <tr><th scope="row">اوقات</th><td>آن لائن رابطہ کسی بھی وقت۔ گھر پر وزٹ پہلے سے وقت طے کر کے۔</td></tr>
 </tbody></table><div class="row"><a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=Dastak+Online+Document+Facilitation+Sandal+Road+Gujar+Khan" rel="noopener">گوگل میپ پر لوکیشن</a><a class="btn o" href="https://share.google/nmpsQYND7NTAnZzqI" rel="noopener">گوگل پروفائل اور ریویوز</a></div></section>
-<section class="service-module"><h2>دھوکے سے بچیں</h2><ul><li>میں کبھی آپ سے پاس ورڈ یا OTP نہیں مانگتا۔</li><li>فیس ہمیشہ سرکاری سسٹم کے PSID سے ادا ہوتی ہے۔</li><li>کام مکمل ہونے اور ڈیلیوری کے بعد آپ کی دستاویزات ڈیلیٹ کر دی جاتی ہیں۔</li><li>میرا فیسیلیٹیٹر کوڈ {CODE} سرکاری دستک ایپ میں چیک کریں۔</li></ul></section>''',
+<section class="service-module"><h2>دھوکے سے بچیں</h2><ul><li>میں کبھی آپ سے پاس ورڈ یا OTP نہیں مانگتا۔</li><li>فیس ہمیشہ سرکاری سسٹم کے PSID سے ادا ہوتی ہے۔</li><li>کام مکمل ہونے اور ڈیلیوری کے بعد آپ کی دستاویزات ڈیلیٹ کر دی جاتی ہیں۔</li><li id="verify">{VERIFY}</li></ul></section>''',
     faqs=[
         ("آپ سے رابطہ کیسے کریں؟", "واٹس ایپ یا کال 0345-5583530، یا ای میل support@dastak90807.com۔"),
         ("کیا آپ کا دفتر ہے؟", "پتہ سینڈل روڈ، وارڈ نمبر 14، گوجر خان ہے۔ آنے سے پہلے واٹس ایپ پر وقت طے کر لیں۔"),
@@ -591,10 +595,10 @@ PAGES.append(dict(
     crumbs=[], meta=f'<span class="ur-pill">رجسٹرڈ فیسیلیٹیٹر · کوڈ {CODE}</span> · مریم کی دستک (حکومتِ پنجاب کا اقدام)',
     body=f'''<p class="lead">میں محمد عثمان ہوں۔ ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفکیٹ، گاڑی ٹرانسفر، ٹوکن ٹیکس اور ڈومیسائل جیسی سرکاری خدمات آپ کے گھر کی دہلیز پر فراہم کرتا ہوں۔ پورے پنجاب کے لیے واٹس ایپ پر رہنمائی، اور {AREAS} میں گھر پر وزٹ۔</p>
 <div class="sd-actions"><a class="btn g" data-ga-event="home_whatsapp_click" href="{WA}">واٹس ایپ {PHONE}</a><a class="btn y" href="/ur/services/">تمام خدمات دیکھیں</a><a class="btn o" href="/ur/calculators/">فیس کیلکولیٹر</a></div>
-<p class="sd-trust">آزاد فیسیلیٹیشن سروس، سرکاری دفتر نہیں · کوڈ {CODE} سرکاری دستک ایپ میں چیک کریں</p>
+<p class="sd-trust">آزاد فیسیلیٹیشن سروس، سرکاری دفتر نہیں</p><p class="ur-note" id="verify"><b>تصدیق:</b> {VERIFY}</p>
 <section class="service-module"><h2>آپ کو کس کام میں مدد چاہیے؟</h2>{cards((R["renew"], R["learner"], R["character"], R["transfer"], R["token"], R["domicile"]))}<p><a href="/ur/services/">تمام خدمات ←</a></p></section>
 <section class="service-module steps-module"><h2>دستک سروس کیسے کام کرتی ہے؟</h2><ol><li>واٹس ایپ پر اپنی سروس بتائیں یا دستک ایپ میں Doorstep Delivery کے ساتھ کوڈ {CODE} لکھیں۔</li><li>ہم آپ کی دستاویزات پہلے سے چیک کرتے ہیں تاکہ درخواست مسترد نہ ہو۔</li><li>فیسیلیٹیٹر گھر آ کر درخواست جمع کرواتا ہے۔ آپ PSID کی فیس موبائل سے ادا کرتے ہیں۔</li><li>تیار دستاویز کورئیر یا فیسیلیٹیٹر کے ذریعے آپ تک پہنچتی ہے۔</li></ol></section>
-<section class="service-module"><h2>دستک 90807 کیوں؟</h2><ul><li><b>رجسٹرڈ فیسیلیٹیٹر:</b> مریم کی دستک پروگرام کا کوڈ {CODE}، جسے آپ سرکاری ایپ میں چیک کر سکتے ہیں۔</li><li><b>واضح چارجز:</b> ہر سروس پر فیسیلیٹیٹر چارجز 950 روپے۔ سرکاری فیس PSID پر، کوئی چھپی ہوئی رقم نہیں۔</li><li><b>آپ کی پرائیویسی:</b> کام مکمل ہونے کے بعد دستاویزات ڈیلیٹ۔ کبھی پاس ورڈ یا OTP نہیں مانگا جاتا۔</li><li><b>اپنی زبان میں:</b> اردو، پنجابی اور انگریزی میں بات کریں۔</li></ul></section>
+<section class="service-module"><h2>دستک 90807 کیوں؟</h2><ul><li><b>رجسٹرڈ فیسیلیٹیٹر:</b> مریم کی دستک پروگرام کا کوڈ {CODE}، جس کی تصدیق سرکاری پورٹل، ایپ یا سرکاری ہیلپ لائن 1202 سے ہو سکتی ہے۔</li><li><b>واضح چارجز:</b> ہر سروس پر فیسیلیٹیٹر چارجز 950 روپے۔ سرکاری فیس PSID پر، کوئی چھپی ہوئی رقم نہیں۔</li><li><b>آپ کی پرائیویسی:</b> کام مکمل ہونے کے بعد دستاویزات ڈیلیٹ۔ کبھی پاس ورڈ یا OTP نہیں مانگا جاتا۔</li><li><b>اپنی زبان میں:</b> اردو، پنجابی اور انگریزی میں بات کریں۔</li></ul></section>
 <section class="service-module"><h2>مفید اردو گائیڈز</h2>{cards((R["renew_guide"], R["track"], R["character_guide"], R["vehicle_guide"]))}</section>
 <section class="service-module"><h2>گوجر خان اور راولپنڈی</h2><p>گوجر خان اور راولپنڈی میں ڈومیسائل، لائسنس اور پولیس سرٹیفکیٹ کے لیے گھر پر سہولت۔ <a href="/ur/gujar-khan/">گوجر خان سروس کی تفصیل</a> · <a href="/ur/contact/">رابطہ اور لوکیشن</a></p></section>''',
     faqs=[

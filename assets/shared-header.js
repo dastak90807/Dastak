@@ -45,9 +45,9 @@
   const t = isUrdu ? {
     home: '/ur/', brandAlt: 'دستک 90807، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن', menu: 'مینیو', navLabel: 'مرکزی مینیو',
     links: [['/ur/', 'ہوم'], ['/ur/services/', 'خدمات'], ['/ur/calculators/', 'فیس کیلکولیٹر', 'nav-calc']],
-    tools: 'شہری ٹولز',
+    tools: 'شہری سہولیات',
     toolLinks: [['/en/document-checklist/', 'دستاویزات کی چیک لسٹ'], ['/en/citizen-tools/', 'سرکاری پورٹلز'], ['/en/downloads/', 'فارمز اور ڈاؤن لوڈز']],
-    after: [['/ur/guides/', 'گائیڈز'], ['/ur/gujar-khan/', 'گوجر خان'], ['/ur/contact/', 'رابطہ']],
+    after: [['/ur/guides/', 'رہنمائی اور تازہ ترین معلومات'], ['/en/about/', 'ہمارے بارے میں'], ['/ur/contact/', 'رابطہ کریں']],
     searchLabel: 'سروس، گائیڈ یا فارم تلاش کریں', searchAria: 'دستک میں تلاش', placeholder: 'سروس تلاش کریں…', searchBtn: 'تلاش',
     switchText: 'English', switchLang: 'en', switchAria: 'یہ صفحہ انگریزی میں پڑھیں', wa: 'واٹس ایپ'
   } : {
