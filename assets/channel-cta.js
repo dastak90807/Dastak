@@ -11,7 +11,6 @@
   const CHANNEL_URL = 'https://whatsapp.com/channel/0029VbEdgGRAu3aLblsW5g0Y';
   const QR_SRC = '/assets/qr/dastak-90807-whatsapp-channel-qr-gujar-khan.svg';
   const QR_ALT = 'QR code to follow the Dastak 90807 WhatsApp Channel. Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi, Punjab';
-  const ICON = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12 7l-5 1 1-4a8 8 0 1 1 16-4z"/></svg>';
 
   const WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-12 7l-5 1 1-4a8 8 0 1 1 16-4z"/><path d="M9.5 8.8c.3 2.4 2.7 4.8 5.2 5.2l1.1-1.3-1.7-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.7z" fill="currentColor" stroke="none"/></svg>';
 
@@ -43,17 +42,23 @@
     // 2) Banner on the home page and guide pages
     if ((isHome || isGuide) && footer && !document.querySelector('.channel-strip')) {
       const strip = document.createElement('aside');
-      strip.className = 'channel-strip';
+      strip.className = 'channel-strip' + (isHome ? ' is-home' : (path !== '/en/guides/' ? ' is-article' : ''));
       strip.setAttribute('aria-label', 'WhatsApp Channel');
       strip.innerHTML =
         '<div class="channel-strip-in">' +
-          '<div class="channel-strip-text">' +
-            '<h2>Get Punjab document updates on WhatsApp</h2>' +
-            '<p>Fee changes, new rules and short guides from Dastak 90807. This is an independent facilitator channel (Code 90807), not a government channel. To book, message WhatsApp 0345-5583530.</p>' +
+          '<h2>Join our WhatsApp Channel for Punjab document updates</h2>' +
+          '<p class="channel-strip-sub">Free updates from Dastak 90807 for Gujar Khan, Rawalpindi and all Punjab.</p>' +
+          '<ul class="channel-strip-list">' +
+            '<li>Driving license renewal and tracking updates</li>' +
+            '<li>Token tax deadline and penalty reminders</li>' +
+            '<li>Police character certificate and verification tips</li>' +
+            '<li>Domicile, e-stamp and vehicle transfer guides</li>' +
+          '</ul>' +
+          '<div class="channel-strip-foot">' +
+            '<p class="channel-strip-note">Independent facilitator channel (Code 90807), not a government channel. To book, message WhatsApp 0345-5583530.</p>' +
           '</div>' +
         '</div>';
-      const btn = link('channel-btn', ICON + '<span>Follow the Channel</span>');
-      strip.firstChild.appendChild(btn);
+      strip.querySelector('.channel-strip-foot').appendChild(link('channel-btn', WA_ICON + '<span>Join the WhatsApp Channel</span>'));
       footer.parentNode.insertBefore(strip, footer);
     }
 
@@ -77,7 +82,7 @@
         '<h2 id="channel-card-h">Follow our WhatsApp Channel</h2>' +
         '<p>Scan the QR code with your phone camera, or tap the button. You will get fee changes, new rules and short guides for Punjab document services.</p>' +
         '<p class="channel-note">The channel is for updates only. To book or ask a question, message WhatsApp 0345-5583530.</p>';
-      text.appendChild(link('channel-btn', ICON + '<span>Follow the Channel</span>'));
+      text.appendChild(link('channel-btn', WA_ICON + '<span>Join the WhatsApp Channel</span>'));
       card.appendChild(img);
       card.appendChild(text);
       online.parentNode.insertBefore(card, online);
