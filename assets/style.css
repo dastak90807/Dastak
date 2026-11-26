@@ -1,6 +1,8 @@
 /* Header styles load with this file so the header is drawn correctly from the first paint (no jump).
    Keep these versions equal to the ones shared-header.js adds (its ?v= and lang-switch ?v=). */
 @import url("/assets/shared-header.css?v=9");@import url("/assets/lang-switch.css?v=4");
+/* Logo keeps a fixed shape, so its space is reserved before the image arrives (no jump when it loads). */
+.hd .brand-logo,.dastak-loader-logo{aspect-ratio:2121/741;height:auto}
 @font-face{font-family:Inter;font-weight:400;font-style:normal;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2')}@font-face{font-family:Inter;font-weight:600;font-style:normal;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format('woff2')}@font-face{font-family:Inter;font-weight:800;font-style:normal;font-display:swap;src:url(fonts/inter-latin-800-normal.woff2) format('woff2')}
 :root{--g:#0E7C66;--dg:#0A3F35;--y:#F4B63D;--ink:#12302B;--mint:#EAF5F1;--cream:#FFF8EA;--bd:#D9E2E1;--mut:#3C5256}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
