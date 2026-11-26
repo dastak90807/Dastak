@@ -17,12 +17,12 @@
     document.head.appendChild(css);
   };
   addCss('/assets/shared-header.css?v=' + version);
-  addCss('/assets/lang-switch.css?v=3');
+  addCss('/assets/lang-switch.css?v=4');
 
   if (!window.__dastakAnalytics) {
     const analytics = document.createElement('script');
     analytics.defer = true;
-    analytics.src = '/assets/analytics.js?v=1';
+    analytics.src = '/assets/analytics.js?v=2';
     document.head.appendChild(analytics);
   }
 
@@ -79,7 +79,7 @@
   script.insertAdjacentHTML('beforebegin',
     '<header class="hd">' +
       '<a class="brand" href="' + t.home + '"><img class="brand-logo" src="/assets/dastak-90807-transparent.png" alt="' + t.brandAlt + '" width="2121" height="741"></a>' +
-      '<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>' + t.menu + '</button>' +
+      '<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">' + t.menu + '</button>' +
       '<nav id="site-navigation" aria-label="' + t.navLabel + '">' +
         t.links.map(link).join('') +
         '<div class="nav-tools">' +

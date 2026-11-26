@@ -14,10 +14,17 @@
   window.gtag('js', new Date());
   window.gtag('config', MEASUREMENT_ID);
 
-  const tag = document.createElement('script');
-  tag.async = true;
-  tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID;
-  document.head.appendChild(tag);
+  // Google's script loads after the page itself, so it never slows the first view.
+  // Page views and clicks recorded before then are queued in dataLayer and sent once it loads.
+  const loadTag = () => {
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + MEASUREMENT_ID;
+    document.head.appendChild(tag);
+  };
+  const later = () => ('requestIdleCallback' in window ? requestIdleCallback(loadTag, { timeout: 3000 }) : setTimeout(loadTag, 1500));
+  if (document.readyState === 'complete') later();
+  else window.addEventListener('load', later, { once: true });
 
   const send = (name, params) => {
     window.gtag('event', name, Object.assign({ page_path: location.pathname, transport_type: 'beacon' }, params));

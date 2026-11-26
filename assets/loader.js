@@ -27,7 +27,7 @@
     initial = firstArrival;
     if (firstArrival) activate();
     else showTimer = setTimeout(activate, 150);
-    safetyTimer = setTimeout(hide, 3500);
+    safetyTimer = setTimeout(hide, firstArrival ? 600 : 3500);
   };
   const ready = () => {
     clearTimeout(hideTimer);
@@ -41,7 +41,9 @@
     sessionStorage.setItem('dastak-loader-seen', '1');
   } catch { /* Storage may be unavailable; the timeout still guarantees dismissal. */ }
   if (firstVisit) show(true);
-  if (document.readyState === 'complete') ready();
+  // Hide as soon as the page content is ready; images and analytics keep loading in the background.
+  if (document.readyState !== 'loading') ready();
+  else document.addEventListener('DOMContentLoaded', ready, { once: true });
   window.addEventListener('load', ready, { once: true });
   window.addEventListener('pageshow', event => {
     if (event.persisted) hide();

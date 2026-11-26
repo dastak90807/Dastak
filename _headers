@@ -10,6 +10,26 @@
 /assets/*
   Cache-Control: public, max-age=604800
 
+/assets/fonts/*
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000
+
+/assets/*.webp
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000
+
+/assets/*.png
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000
+
+/assets/*.jpg
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000
+
+/assets/*.svg
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000
+
 # The supplied standalone calculators use inline handlers and Tailwind's CDN.
 # Keep this exception limited to these tools and allow same-origin embedding.
 /en/calculators/tools/*

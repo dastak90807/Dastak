@@ -9,7 +9,7 @@
 .hd .lang-switch[aria-checked="true"] .ls-track{background:var(--g,#0A3F35)}
 .hd .lang-switch[aria-checked="true"] .ls-knob{left:20px}
 .hd .lang-switch[aria-checked="false"] .ls-en,.hd .lang-switch[aria-checked="true"] .ls-ur{color:var(--g,#0A3F35)}
-.hd .lang-switch[aria-checked="false"] .ls-ur,.hd .lang-switch[aria-checked="true"] .ls-en{opacity:.6}
+.hd .lang-switch[aria-checked="false"] .ls-ur,.hd .lang-switch[aria-checked="true"] .ls-en{color:#4a5c57}
 .hd .lang-switch:hover .ls-track{background:#9fb5af}
 .hd .lang-switch[aria-checked="true"]:hover .ls-track{background:#0d5446}
 .hd .lang-switch:focus-visible{outline:2px solid var(--g,#0A3F35);outline-offset:2px}
