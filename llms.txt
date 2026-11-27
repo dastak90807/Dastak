@@ -68,6 +68,11 @@ Urdu pages mirror the English URLs under /ur/ (same slugs). Fees on Urdu pages f
 - [پنجاب کے درخواست فارمز (PDF)](https://www.dastak90807.com/ur/downloads/)
 - [طریقہ کار](https://www.dastak90807.com/ur/how-it-works/)
 - [کسٹمر ریویوز](https://www.dastak90807.com/ur/reviews/)
+- [محمد عثمان، گوجرخان میں آپ کے مریم کی دستک فیسیلیٹیٹر](https://www.dastak90807.com/ur/about/)
+- [عام سوالات](https://www.dastak90807.com/ur/faqs/)
+- [ڈسکلیمر](https://www.dastak90807.com/ur/disclaimer/)
+- [پرائیویسی پالیسی](https://www.dastak90807.com/ur/privacy/)
+- [شرائط](https://www.dastak90807.com/ur/terms/)
 - [اردو گائیڈز](https://www.dastak90807.com/ur/guides/): لائسنس کی تجدید، لائسنس ٹریکنگ، کریکٹر سرٹیفیکیٹ، ملکیت کی منتقلی اور ٹوکن ٹیکس
 - [فیس کیلکولیٹر](https://www.dastak90807.com/ur/calculators/)
 - [گوجرخان](https://www.dastak90807.com/ur/gujar-khan/)

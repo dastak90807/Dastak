@@ -59,7 +59,8 @@
     '/services/death-certificate/', '/services/marriage-certificate/', '/services/divorce-certificate/',
     '/services/general-inquiry-and-guide/', '/services/other-punjab-dastak-services/',
     '/guides/punjab-token-tax-payment-and-penalty/', '/guides/domicile-stamp-paper-gujar-khan-rawalpindi/',
-    '/rawalpindi/', '/citizen-tools/', '/document-checklist/', '/downloads/', '/how-it-works/', '/reviews/'
+    '/rawalpindi/', '/citizen-tools/', '/document-checklist/', '/downloads/', '/how-it-works/', '/reviews/',
+    '/about/', '/faqs/', '/disclaimer/', '/privacy/', '/terms/'
   ];
 
   const isUrdu = (document.documentElement.lang || '').toLowerCase().startsWith('ur');
@@ -73,7 +74,7 @@
     links: [['/ur/', 'ہوم'], ['/ur/services/', 'خدمات'], ['/ur/calculators/', 'فیس کیلکولیٹر', 'nav-calc']],
     tools: 'شہری سہولیات',
     toolLinks: [['/ur/document-checklist/', 'دستاویزات کی چیک لسٹ'], ['/ur/citizen-tools/', 'سرکاری پورٹلز'], ['/ur/downloads/', 'فارمز اور ڈاؤن لوڈز']],
-    after: [['/ur/guides/', 'رہنمائی اور تازہ ترین معلومات'], ['/en/about/', 'ہمارے بارے میں'], ['/ur/contact/', 'رابطہ کریں']],
+    after: [['/ur/guides/', 'رہنمائی اور تازہ ترین معلومات'], ['/ur/about/', 'ہمارے بارے میں'], ['/ur/contact/', 'رابطہ کریں']],
     searchLabel: 'سروس، گائیڈ یا فارم تلاش کریں', searchAria: 'دستک میں تلاش', placeholder: 'سروس تلاش کریں…', searchBtn: 'تلاش',
     switchText: 'English', switchLang: 'en', switchAria: 'یہ صفحہ انگریزی میں پڑھیں', wa: 'واٹس ایپ'
   } : {

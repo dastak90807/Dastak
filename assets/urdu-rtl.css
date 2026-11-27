@@ -213,3 +213,6 @@ html[dir="rtl"] .service-detail .related-module li a::after{content:"\2190"}
 /* Number spans inside card text stay inline (tools-v2 / sd-info cards) */
 html[dir="rtl"] .tools-v2 .tp-card span span,html[dir="rtl"] .tools-v2 .tp-portal span span,html[dir="rtl"] .sd-info .sp-step span span{display:inline}
 .ur-hub .tp-card,.ur-hub .tp-portal{padding:16px 18px 16px 56px}
+
+/* FAQ questions with inline bold/number spans: flow as text, not flex columns */
+.ur-hub .faq-list summary{display:block;padding-top:10px;padding-bottom:10px}

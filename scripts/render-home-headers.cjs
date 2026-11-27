@@ -8,7 +8,7 @@ const source = fs.readFileSync(path.join(root, 'assets/shared-header.js'), 'utf8
 for (const lang of ['en', 'ur']) {
   let header = '';
   const document = {
-    currentScript: {src: 'https://www.dastak90807.com/assets/shared-header.js?v=12', insertAdjacentHTML: (_, html) => { header = html; }},
+    currentScript: {src: 'https://www.dastak90807.com/assets/shared-header.js?v=13', insertAdjacentHTML: (_, html) => { header = html; }},
     documentElement: {lang}, querySelector: () => null, querySelectorAll: () => [],
     createElement: () => ({dataset: {}, setAttribute() {}}), head: {appendChild() {}}
   };
@@ -19,7 +19,7 @@ for (const lang of ['en', 'ur']) {
   const marker = '<!-- Static shared header: regenerate with node scripts/render-home-headers.cjs -->';
   const block = `${marker}\n${header}\n<!-- End static shared header -->\n`;
   html = html.replace(/<!-- Static shared header:[\s\S]*?<!-- End static shared header -->\n?/, '');
-  html = html.replace(/<script src="\/assets\/shared-header.js\?v=[^"]+"><\/script>/, block + '<script src="/assets/shared-header.js?v=12"></script>');
+  html = html.replace(/<script src="\/assets\/shared-header.js\?v=[^"]+"><\/script>/, block + '<script src="/assets/shared-header.js?v=13"></script>');
   // Match the existing stylesheet versions; preserve the final cascade order.
   const styles = '<link rel="stylesheet" href="/assets/shared-header.css?v=10"><link rel="stylesheet" href="/assets/lang-switch.css?v=4">';
   if (!html.includes('/assets/shared-header.css?v=10')) html = html.replace('</head>', styles + '</head>');
