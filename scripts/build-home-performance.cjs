@@ -27,5 +27,7 @@ for (const lang of ['en', 'ur']) {
     attrs = attrs.replace(/\s(?:srcset|sizes)="[^"]*"/g, '');
     return `${div}<img ${attrs} srcset="${variants.join(', ')}" sizes="(max-width: 980px) 134vw, (max-width: 1939px) 66vw, 1280px">`;
   });
+  // Keep Urdu typography unchanged; the font-loading change targets the English audit.
+  if (lang === 'ur') html = html.replace('/assets/home-base-v2.css', '/assets/home-base-v1.css');
   fs.writeFileSync(file, html);
 }
