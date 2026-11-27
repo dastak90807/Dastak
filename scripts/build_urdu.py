@@ -201,7 +201,12 @@ def service_body(name, quick, glance, docs, steps, fees, extra="", related=()):
 {rel}'''
 
 
-def guide_body(quick, sections, hero=None, related=(), sources=()):
+# Parity with English guides: closing "Ask about a doorstep visit" box
+DOORSTEP = ('<aside class="card quick"><h2>گھر پر وزٹ کے بارے میں پوچھیں</h2><p>اپنی سروس اور علاقہ بتائیں تاکہ ہم اگلے مراحل کی تصدیق کر سکیں۔</p>'
+            f'<a class="btn g" data-ga-event="guide_whatsapp_click" href="{WA}">محمد عثمان کو واٹس ایپ کریں</a></aside>')
+
+
+def guide_body(quick, sections, hero=None, related=(), sources=(), doorstep=True):
     toc = "".join(f'<li><a href="#s{i+1}">{h}</a></li>' for i, (h, _) in enumerate(sections))
     secs = "".join(f'<section class="service-module" id="s{i+1}"><h2>{h}</h2>{b}</section>' for i, (h, b) in enumerate(sections))
     hero_html = (f'<figure class="guide-hero"><img src="{hero[0]}" width="1600" height="893" alt="{esc(hero[1])}" fetchpriority="high"></figure>' if hero else "")
@@ -211,7 +216,7 @@ def guide_body(quick, sections, hero=None, related=(), sources=()):
 <nav class="guide-contents card" aria-label="اس صفحے میں"><strong>اس گائیڈ میں</strong><ul>{toc}</ul></nav>
 {secs}
 <div class="card book"><h2>مدد چاہیے؟</h2><p>پورے پنجاب میں واٹس ایپ پر رہنمائی اور دستاویزات کی جانچ۔ {AREAS} میں گھر پر وزٹ پہلے سے وقت طے کر کے۔</p><div class="row"><a class="btn y" data-ga-event="guide_whatsapp_click" href="{WA}">واٹس ایپ {PHONE}</a><a class="btn g" href="tel:+923455583530">کال کریں</a><a class="btn o" href="/ur/calculators/">فیس کیلکولیٹر</a></div></div>
-{rel}'''
+{rel}{DOORSTEP if doorstep else ''}'''
 
 
 # ---------------------------------------------------------------- related link sets
@@ -535,7 +540,7 @@ PAGES.append(dict(
             ("درخواست رکنے کی عام وجوہات", "<ul><li>گاڑی کا نمبر کاغذات سے نہ ملنا۔</li><li>شناختی کارڈ کی مدت ختم ہونا۔</li><li>بیچنے والے کا بائیومیٹرک کے لیے دستیاب نہ ہونا۔</li><li>اصل فائل یا کارڈ کا نہ ہونا۔</li></ul>"),
         ],
         hero=None,
-        related=(R["transfer"], R["token"], R["calc"])),
+        related=(R["transfer"], R["token"], R["calc"]), doorstep=False),
     faqs=[
         ("کیا بیچنے والے کی بائیومیٹرک کے بغیر منتقلی ہو سکتی ہے؟", "نہیں، عام طور پر خریدار اور بیچنے والے دونوں کی لائیو بائیومیٹرک لازمی ہے۔"),
         ("گھر بیٹھے ٹوکن ٹیکس کیسے جمع کروائیں؟", "واٹس ایپ 0345-5583530 پر گاڑی کا نمبر بھیجیں۔ ہم سرکاری PSID بنا دیتے ہیں جسے آپ موبائل بینکنگ سے ادا کر سکتے ہیں۔"),
@@ -598,7 +603,10 @@ PAGES.append(dict(
     body=f'''<div class="card quick"><b>مختصر جواب</b><p>گوجرخان اور آس پاس کے علاقوں میں مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر محمد عثمان (کوڈ {CODE}) گھر آ کر سرکاری دستاویزات کا کام کرواتے ہیں۔ گوجرخان اور راولپنڈی میں زیادہ تر کام ڈومیسائل کا ہوتا ہے، ساتھ ڈرائیونگ لائسنس، پولیس، گاڑی اور سول دستاویزات بھی۔ آن لائن رابطہ کسی بھی وقت، گھر پر وزٹ پہلے سے وقت طے کر کے۔</p></div>
 <div class="sd-actions"><a class="btn g" data-ga-event="service_whatsapp_click" href="{wa_link('گوجرخان میں دستک سروس')}">واٹس ایپ: {PHONE}</a><a class="btn o" href="tel:+923455583530">کال کریں</a><a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=Dastak+Online+Document+Facilitation+Sandal+Road+Gujar+Khan" rel="noopener">گوگل میپ پر دیکھیں</a></div>
 <section class="service-module"><h2>کن علاقوں میں گھر پر سروس ملتی ہے؟</h2><p>{AREAS}۔ اپنا علاقہ واٹس ایپ پر بتا کر پہلے تصدیق کر لیں۔</p></section>
-<section class="service-module"><h2>گوجرخان میں سب سے زیادہ مانگی جانے والی خدمات</h2>{cards((R["domicile"], R["renew"], R["character"], R["transfer"], R["token"], R["learner"]))}</section>
+<section class="service-module"><h2>گوجرخان میں سب سے زیادہ مانگی جانے والی خدمات</h2>{cards((R["domicile"], R["renew"], R["character"], R["transfer"], R["token"], R["learner"],
+    ("/ur/services/duplicate-domicile/", "ڈپلیکیٹ ڈومیسائل", "گم شدہ ڈومیسائل کی دوسری کاپی، گوجرخان اور راولپنڈی"),
+    ("/ur/services/noc-for-domicile-transfer/", "ڈومیسائل منتقلی کا NOC", "دوسرے ضلع میں ڈومیسائل منتقل کرنے کے لیے NOC"),
+    ("/ur/services/birth-certificate/", "پیدائش سرٹیفیکیٹ", "یونین کونسل سے پیدائش سرٹیفیکیٹ میں مدد")))}</section>
 <section class="service-module"><h2>ہمارا پتہ</h2><p>صندل روڈ، وارڈ نمبر 14، گوجرخان، پنجاب <span class="ltr">47850</span>۔ شہری اکثر یہاں بھی تشریف لاتے ہیں، مگر آنے سے پہلے واٹس ایپ پر وقت طے کر لیں۔</p></section>
 {booking_block("گوجرخان میں دستک سروس")}''',
     faqs=[
