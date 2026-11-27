@@ -30,7 +30,8 @@ SAME_AS = ["https://facebook.com/Dastak90807", "https://instagram.com/dastak9080
            "https://www.tiktok.com/@dastak90807", "https://x.com/dastak90807",
            "https://www.linkedin.com/in/dastak90807", "https://www.youtube.com/@Dastak90807",
            "https://www.snapchat.com/add/dastak90807", "https://www.pinterest.com/dastak90807",
-           "https://share.google/nmpsQYND7NTAnZzqI"]
+           "https://share.google/nmpsQYND7NTAnZzqI",
+           "https://whatsapp.com/channel/0029VbEdgGRAu3aLblsW5g0Y"]
 
 DISCLAIMER = ("دستک آن لائن ڈاکومنٹ فیسیلیٹیشن محمد عثمان چلاتے ہیں، جو حکومتِ پنجاب کے مریم کی دستک پروگرام کے تحت "
               f"رجسٹرڈ فیسیلیٹیٹر ہیں (فیسیلیٹیٹر کوڈ {CODE})۔ یہ ویب سائٹ ایک آزاد فیسیلیٹیشن سروس ہے، کوئی سرکاری ویب سائٹ یا محکمہ نہیں۔ "
@@ -745,7 +746,7 @@ PAGES.append(dict(
     path="/", kind="hub", raw=True, main_class="home home-ur", en_title="Home",
     css=["/assets/home-wide.css", "/assets/home-refinement.css?v=20261126a", "/assets/guide-cards.css?v=1"], js=["/assets/home-refinement.js?v=third1"],
     title="دستک 90807 | گھر بیٹھے سرکاری دستاویزات، گوجرخان اور پنجاب",
-    desc="ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفیکیٹ، گاڑی کی ملکیت کی منتقلی، ٹوکن ٹیکس اور ڈومیسائل میں گھر بیٹھے مدد۔ مریم کی دستک کے رجسٹرڈ فیسیلیٹیٹر، کوڈ 90807۔ واٹس ایپ 0345-5583530۔",
+    desc="ڈرائیونگ لائسنس، پولیس کریکٹر سرٹیفیکیٹ، گاڑی کی منتقلی، ٹوکن ٹیکس اور ڈومیسائل میں گھر بیٹھے مدد۔ مریم کی دستک فیسیلیٹیٹر کوڈ 90807۔ واٹس ایپ 0345-5583530۔",
     h1="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن", og="/assets/dastak-online-document-facilitation-punjab-og.jpg",
     og_alt="دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی اور پنجاب میں گھر بیٹھے سرکاری دستاویزات",
     crumbs=[],
