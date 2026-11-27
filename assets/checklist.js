@@ -12,6 +12,22 @@
   const progress = document.querySelector('.checklist-progress');
   const share = document.getElementById('checklist-share');
   let services = [];
+  const ur = (document.documentElement.lang || '').toLowerCase().startsWith('ur');
+  const L = ur ? {
+    ready: (a, b) => b + ' میں سے ' + a + ' ضروری دستاویزات تیار',
+    head: 'پنجاب دستاویزات کی چیک لسٹ\nسروس: ', readyH: '\n\nتیار دستاویزات:\n', missH: '\n\nموجود نہیں / رہنمائی چاہیے:\n',
+    noneReady: 'کوئی تیار نہیں', none: 'کوئی نہیں', pickType: 'درخواست کی قسم منتخب کریں',
+    choose: 'چیک لسٹ دیکھنے کے لیے دستاویز کی قسم منتخب کریں۔', ifApp: ' (اگر لاگو ہو)',
+    data: '/assets/checklist-data-ur.json', down: '<p class="note">چیک لسٹ عارضی طور پر دستیاب نہیں۔</p>',
+    labels: ['لرنر ڈرائیونگ پرمٹ', 'لائسنس کی تجدید / ڈپلیکیٹ', 'انٹرنیشنل ڈرائیونگ پرمٹ', 'گاڑی کی ملکیت کی منتقلی', 'نئی گاڑی کی رجسٹریشن', 'پولیس کریکٹر سرٹیفیکیٹ', 'پولیس گمشدگی رپورٹ', 'کرایہ دار کی رجسٹریشن', 'ڈومیسائل سرٹیفیکیٹ', 'پیدائش، نکاح یا ای اسٹامپ']
+  } : {
+    ready: (a, b) => a + ' of ' + b + ' required documents ready',
+    head: 'Punjab document checklist\nService: ', readyH: '\n\nDocuments ready:\n', missH: '\n\nDocuments missing / need guidance:\n',
+    noneReady: 'None marked ready', none: 'None', pickType: 'Select application type',
+    choose: 'Choose a document type to see its checklist.', ifApp: ' (if applicable)',
+    data: '/assets/checklist-data.json', down: '<p class="note">The checklist is temporarily unavailable.</p>',
+    labels: ['Learner driving permit', 'License renewal / duplicate', 'International driving permit', 'Vehicle ownership transfer', 'New vehicle registration', 'Police character certificate', 'Police loss report', 'Tenant registration', 'Domicile certificate', 'Birth, marriage or e-stamp']
+  };
 
   const update = () => {
     const service = services[Number(selector.value)];
@@ -21,12 +37,12 @@
     const required = [...list.querySelectorAll('input:not([data-optional])')];
     const ready = required.filter(input => input.checked).length;
     const percent = required.length ? Math.round(ready / required.length * 100) : 100;
-    progressText.textContent = ready + ' of ' + required.length + ' required documents ready';
+    progressText.textContent = L.ready(ready, required.length);
     progress.setAttribute('aria-valuenow', String(percent));
     progress.querySelector('span').style.width = percent + '%';
     const readyList = checked.map(input => '✅ ' + input.dataset.label);
     const missingList = [...list.querySelectorAll('input:not(:checked)')].map(input => '❌ ' + input.dataset.label);
-    const message = 'Punjab document checklist\nService: ' + service.name + (variant ? ' — ' + variant.name : '') + '\n\nDocuments ready:\n' + (readyList.join('\n') || 'None marked ready') + '\n\nDocuments missing / need guidance:\n' + (missingList.join('\n') || 'None');
+    const message = L.head + service.name + (variant ? ' — ' + variant.name : '') + L.readyH + (readyList.join('\n') || L.noneReady) + L.missH + (missingList.join('\n') || L.none);
     share.href = 'https://wa.me/923455583530?text=' + encodeURIComponent(message);
   };
 
@@ -37,7 +53,7 @@
     title.textContent = service.name;
     variantField.hidden = !service.variants;
     if (service.variants) {
-      variantSelect.replaceChildren(new Option('Select application type', ''));
+      variantSelect.replaceChildren(new Option(L.pickType, ''));
       service.variants.forEach((variant, index) => variantSelect.add(new Option(variant.name, String(index))));
       variantSelect.value = '';
     }
@@ -50,7 +66,7 @@
     list.replaceChildren();
     notes.replaceChildren();
     if (!items || (service.variants && !variantSelect.value)) {
-      progressText.textContent = 'Choose a document type to see its checklist.';
+      progressText.textContent = L.choose;
       progress.setAttribute('aria-valuenow', '0');
       progress.querySelector('span').style.width = '0%';
       share.hidden = true;
@@ -62,10 +78,10 @@
       label.className = 'checklist-item';
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
-      checkbox.dataset.label = item.text + (item.optional ? ' (if applicable)' : '');
+      checkbox.dataset.label = item.text + (item.optional ? L.ifApp : '');
       if (item.optional) checkbox.dataset.optional = 'true';
       const text = document.createElement('span');
-      text.textContent = item.text + (item.optional ? ' (if applicable)' : '');
+      text.textContent = item.text + (item.optional ? L.ifApp : '');
       label.append(checkbox, text);
       list.append(label);
     });
@@ -83,17 +99,17 @@
     show();
     if (typeof window.gtag === 'function') window.gtag('event', 'checklist_service_select', { service: services[Number(selector.value)]?.name });
   });
-  fetch('/assets/checklist-data.json', { cache: 'no-cache' }).then(response => {
+  fetch(L.data, { cache: 'no-cache' }).then(response => {
     if (!response.ok) throw new Error('Checklist unavailable');
     return response.json();
   }).then(data => {
     services = data;
-    const labels = ['Learner driving permit', 'License renewal / duplicate', 'International driving permit', 'Vehicle ownership transfer', 'New vehicle registration', 'Police character certificate', 'Police loss report', 'Tenant registration', 'Domicile certificate', 'Birth, marriage or e-stamp'];
+    const labels = L.labels;
     [...selector.options].slice(1).forEach((option, index) => { option.textContent = labels[index]; });
     selector.disabled = false;
     show();
   }).catch(() => {
     selector.disabled = true;
-    selector.insertAdjacentHTML('afterend', '<p class="note">The checklist is temporarily unavailable.</p>');
+    selector.insertAdjacentHTML('afterend', L.down);
   });
 })();

@@ -186,7 +186,7 @@ html[dir="rtl"] .trust-strip .announcement-message{padding:10px 0 10px 32px}
 html[dir="rtl"] .back-to-top{right:auto;left:20px}
 @media(max-width:800px){html[dir="rtl"] .back-to-top{left:16px}}
 /* Urdu hub pages (layout from English page): visually-hidden labels must not create RTL scroll */
-.ur-hub .sv-sr,.ur-hub .gp-sr{position:absolute!important;left:auto!important;right:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.ur-hub .sv-sr,.ur-hub .gp-sr,.ur-hub .tp-sr{position:absolute!important;left:auto!important;right:auto!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 /* Urdu hubs: mirror direction-specific details of the English hub styles */
 .ur-hub .btn-arrow{transform:scaleX(-1)}
 .ur-hub.services-v2 .sv-card .sv-tag{right:auto;left:16px}

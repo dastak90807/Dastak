@@ -30,6 +30,9 @@ URDU_PATHS = {
     "/services/noc-for-domicile-transfer/", "/services/e-stamping/", "/services/birth-certificate/",
     "/services/death-certificate/", "/services/marriage-certificate/", "/services/divorce-certificate/",
     "/services/general-inquiry-and-guide/", "/services/other-punjab-dastak-services/",
+    # Phase 4: guides and content pages
+    "/guides/punjab-token-tax-payment-and-penalty/", "/guides/domicile-stamp-paper-gujar-khan-rawalpindi/",
+    "/rawalpindi/", "/citizen-tools/", "/document-checklist/", "/downloads/", "/how-it-works/", "/reviews/",
 }
 
 # Text that is the same in both languages (brands, emails, domains, numbers).
@@ -46,9 +49,15 @@ def convert(slug):
     m = re.search(r'<main id="main" class="([^"]*)">(.*)</main>', src, re.S)
     main_class, body = m.group(1), m.group(2)
     tr_file = os.path.join(ROOT, "scripts", "ur_hubs", slug + ".json")
-    if not os.path.exists(tr_file) and slug.startswith("services/"):
-        tr_file = os.path.join(ROOT, "scripts", "ur_hubs", "service-detail.json")  # shared by service pages
-    tr = json.load(open(tr_file, encoding="utf-8"))
+    if os.path.exists(tr_file):
+        tr = json.load(open(tr_file, encoding="utf-8"))
+    else:
+        # Shared translations: service pages first, then other content pages.
+        tr = {}
+        for name in ("service-detail", "pages"):
+            tr_file = os.path.join(ROOT, "scripts", "ur_hubs", name + ".json")
+            if os.path.exists(tr_file):
+                tr.update(json.load(open(tr_file, encoding="utf-8")))
     missing = []
 
     def look(t):
@@ -122,7 +131,7 @@ def convert(slug):
                          f"{os.path.relpath(tr_file, ROOT)}:\n  " + "\n  ".join(dict.fromkeys(missing)))
 
     faqs = [(re.sub("<[^>]+>", "", q), re.sub("<[^>]+>", "", a))
-            for q, a in re.findall(r"<details><summary>(.*?)</summary><p>(.*?)</p></details>", body, re.S)]
-    css = re.findall(r'<link rel="stylesheet" href="(/assets/(?:guide-cards|guides-page|tools-pages|service-info-pages|contact-page|services-page)[^"]*)"', src)
-    js = re.findall(r'<script src="(/assets/(?:guides-page|services-page)[^"]*)"', src)
+            for q, a in re.findall(r"<details[^>]*>\s*<summary[^>]*>(.*?)</summary>\s*<p>(.*?)</p>\s*</details>", body, re.S)]
+    css = ["/assets/" + x for x in re.findall(r'<link rel="stylesheet" href="(?:\.\./)*/?assets/((?:guide-cards|guide-hero|guides-page|tools-pages|service-info-pages|contact-page|services-page)[^"]*)"', src)]
+    js = ["/assets/" + x for x in re.findall(r'<script src="(?:\.\./)*/?assets/((?:guides-page|services-page|portals-page|checklist|downloads)[^"]*)"', src)]
     return dict(main_class=main_class + " ur-hub", body=body, faqs=faqs, css=css, js=js)

@@ -145,9 +145,9 @@ def page(p):
     main_class = p.get("main_class", "service-detail")
     en_note = f'<p class="ur-en-link">یہ صفحہ انگریزی میں پڑھیں: <a href="/en{path}" hreflang="en">انگریزی ورژن ←</a></p>'
 
-    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/loader.css?v=1"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=23"><script type="application/ld+json">{ld}</script>{CLARITY_SNIPPET}</head><body id="top"><div id="dastak-loader" role="status" aria-live="polite" aria-label="صفحہ لوڈ ہو رہا ہے" aria-hidden="true"><span class="dastak-loader-status">صفحہ لوڈ ہو رہا ہے…</span><div class="dastak-loader-wrap"><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><img src="/assets/dastak-90807-transparent.png" alt="دستک 90807، گھر کی دہلیز پر سرکاری خدمات" class="dastak-loader-logo" width="175" height="61"></div></div><script src="/assets/loader.js?v=1"></script><a class="skip" href="#main">مواد پر جائیں</a>
+    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/loader.css?v=1"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=24"><script type="application/ld+json">{ld}</script>{CLARITY_SNIPPET}</head><body id="top"><div id="dastak-loader" role="status" aria-live="polite" aria-label="صفحہ لوڈ ہو رہا ہے" aria-hidden="true"><span class="dastak-loader-status">صفحہ لوڈ ہو رہا ہے…</span><div class="dastak-loader-wrap"><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><img src="/assets/dastak-90807-transparent.png" alt="دستک 90807، گھر کی دہلیز پر سرکاری خدمات" class="dastak-loader-logo" width="175" height="61"></div></div><script src="/assets/loader.js?v=1"></script><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
-<script src="/assets/shared-header.js?v=11"></script><noscript><nav aria-label="مرکزی مینو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
+<script src="/assets/shared-header.js?v=12"></script><noscript><nav aria-label="مرکزی مینو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
 {(lambda _b, _i: f'<main id="main" class="{main_class}">{_b[:_i]}{en_note}{_b[_i:]}</main>')(p["body"], max(p["body"].rfind("</div>"), p["body"].rfind("</section>"))) if p.get("hub_en") else (f'<main id="main" class="{main_class}">{p["body"].replace("<!--FAQ-->", home_faq(p["faqs"]))}<section class="wrap ur-page-end">{en_note}<p class="disc">{DISCLAIMER}</p></section></main>' if "<!--FAQ-->" in p["body"] else f'<main id="main" class="{main_class}">{p["body"]}<section class="wrap home-faqs">{faq_block}{en_note}<p class="disc">{DISCLAIMER}</p></section></main>') if p.get("raw") else f'''<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپ ڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
 {p["body"]}
 {faq_block}
@@ -955,11 +955,70 @@ PAGES.append(dict(
     crumbs=[("خدمات", "/ur/services/"), ("پنجاب دستک کی دیگر خدمات", "/ur/services/other-punjab-dastak-services/")], faqs=[]))
 PHASE2_SERVICES.append("/services/other-punjab-dastak-services/")
 
+# Phase 4: guides and content pages (body comes from the English page).
+PHASE4_PAGES = []
+PAGES.append(dict(
+    path="/guides/punjab-token-tax-payment-and-penalty/", kind="guide", en_title="Punjab Token Tax 2026",
+    title="پنجاب ٹوکن ٹیکس 2026: آخری تاریخ اور جرمانہ | دستک 90807",
+    desc="خبروں کے مطابق 30 نومبر 2026 آخری تاریخ، 1 دسمبر سے جرمانہ۔ PSID سے ٹوکن ٹیکس کیسے ادا کریں اور سرکاری رقم کہاں چیک کریں۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="پنجاب ٹوکن ٹیکس 2026: آخری تاریخ، جرمانہ اور ادائیگی", og="/assets/punjab-token-tax-guide-dastak-90807-og.jpg?v=1",
+    crumbs=[('رہنمائی', '/ur/guides/'), ('پنجاب ٹوکن ٹیکس 2026: آخری تاریخ، جرمانہ اور ادائیگی', '/ur/guides/punjab-token-tax-payment-and-penalty/')], faqs=[]))
+PHASE4_PAGES.append("/guides/punjab-token-tax-payment-and-penalty/")
+PAGES.append(dict(
+    path="/guides/domicile-stamp-paper-gujar-khan-rawalpindi/", kind="guide", en_title="Domicile & e-Stamp Paper Guide",
+    title="ڈومیسائل اور ای اسٹامپ پیپر: گوجرخان، راولپنڈی گائیڈ | دستک 90807",
+    desc="گوجرخان اور راولپنڈی میں ڈومیسائل کی درخواست اور ای اسٹامپ پیپر کی مکمل گائیڈ: دستاویزات، طریقہ اور تصدیق۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="گوجرخان اور راولپنڈی میں ڈومیسائل اور ای اسٹامپ پیپر", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
+    crumbs=[('رہنمائی', '/ur/guides/'), ('گوجرخان اور راولپنڈی میں ڈومیسائل اور ای اسٹامپ پیپر', '/ur/guides/domicile-stamp-paper-gujar-khan-rawalpindi/')], faqs=[]))
+PHASE4_PAGES.append("/guides/domicile-stamp-paper-gujar-khan-rawalpindi/")
+PAGES.append(dict(
+    path="/rawalpindi/", kind="page", en_title="Rawalpindi",
+    title="راولپنڈی: گھر پر سرکاری دستاویزات کی مدد | دستک 90807",
+    desc="راولپنڈی میں ڈومیسائل، ڈرائیونگ لائسنس، پولیس، گاڑی اور سول دستاویزات میں مدد۔ دستک ایپ میں کوڈ 90807 کے ساتھ بکنگ یا واٹس ایپ 0345-5583530۔",
+    h1="راولپنڈی میں گھر پر دستاویزات کی مدد", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
+    crumbs=[('راولپنڈی میں گھر پر دستاویزات کی مدد', '/ur/rawalpindi/')], faqs=[]))
+PHASE4_PAGES.append("/rawalpindi/")
+PAGES.append(dict(
+    path="/citizen-tools/", kind="page", en_title="Citizen Tools",
+    title="پنجاب سرکاری پورٹلز: لائسنس ٹریکنگ، ای چالان، تصدیق | دستک 90807",
+    desc="ڈرائیونگ لائسنس ٹریک کریں، گاڑی، پولیس، ڈومیسائل اور ای اسٹامپ کی تصدیق کریں۔ پنجاب کے سرکاری پورٹلز کے لنکس ایک جگہ۔ یہ سرکاری ویب سائٹ نہیں۔",
+    h1="پنجاب حکومت کے پورٹلز ایک جگہ", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
+    crumbs=[('پنجاب حکومت کے پورٹلز ایک جگہ', '/ur/citizen-tools/')], faqs=[]))
+PHASE4_PAGES.append("/citizen-tools/")
+PAGES.append(dict(
+    path="/document-checklist/", kind="page", en_title="Document Checklist",
+    title="دستاویزات کی چیک لسٹ: پنجاب خدمات | دستک 90807",
+    desc="سروس چنیں، موجود دستاویزات پر نشان لگائیں اور فہرست واٹس ایپ پر بھیجیں۔ لائسنس، پولیس، گاڑی، ڈومیسائل اور سول دستاویزات۔ کوڈ 90807۔",
+    h1="پنجاب کی خدمات کے لیے دستاویزات کی چیک لسٹ", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
+    crumbs=[('پنجاب کی خدمات کے لیے دستاویزات کی چیک لسٹ', '/ur/document-checklist/')], faqs=[]))
+PHASE4_PAGES.append("/document-checklist/")
+PAGES.append(dict(
+    path="/downloads/", kind="page", en_title="Downloads",
+    title="پنجاب درخواست فارمز PDF ڈاؤن لوڈ | دستک 90807",
+    desc="گاڑی کی رجسٹریشن، ڈرائیونگ لائسنس میڈیکل، ڈومیسائل، پولیس اور یونین کونسل کے فارمز مفت ڈاؤن لوڈ کریں۔ ہر فارم کا ذریعہ درج۔ کوڈ 90807۔",
+    h1="پنجاب کے درخواست فارمز (PDF)", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
+    crumbs=[('پنجاب کے درخواست فارمز (PDF)', '/ur/downloads/')], faqs=[]))
+PHASE4_PAGES.append("/downloads/")
+PAGES.append(dict(
+    path="/how-it-works/", kind="page", en_title="How it works",
+    title="طریقہ کار: دستک سروس کیسے کام کرتی ہے | دستک 90807",
+    desc="بکنگ سے ڈیلیوری تک: دستک ایپ میں کوڈ 90807، ادائیگی PSID سے، اور دستاویزات کی حفاظت۔ گوجرخان، راولپنڈی اور پنجاب۔",
+    h1="طریقہ کار", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
+    crumbs=[('طریقہ کار', '/ur/how-it-works/')], faqs=[]))
+PHASE4_PAGES.append("/how-it-works/")
+PAGES.append(dict(
+    path="/reviews/", kind="page", en_title="Reviews",
+    title="کسٹمر ریویوز: دستک آن لائن ڈاکومنٹ فیسیلیٹیشن | دستک 90807",
+    desc="Google اور Facebook پر دستک 90807 کے اصل کسٹمر ریویوز پڑھیں یا اپنا ریویو دیں۔ Google ریٹنگ 5 میں سے 4.9۔",
+    h1="کسٹمر ریویوز", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
+    crumbs=[('کسٹمر ریویوز', '/ur/reviews/')], faqs=[]))
+PHASE4_PAGES.append("/reviews/")
+
 
 # Hub pages: layout comes from the English page itself (scripts/ur_hub_convert.py).
 from ur_hub_convert import convert as _hub_convert  # noqa: E402
 for _p in PAGES:
-    if _p["path"] in ("/services/", "/guides/", "/calculators/", "/contact/") or _p["path"] in PHASE2_SERVICES:
+    if _p["path"] in ("/services/", "/guides/", "/calculators/", "/contact/") or _p["path"] in PHASE2_SERVICES or _p["path"] in PHASE4_PAGES:
         _h = _hub_convert(_p["path"].strip("/"))
         _p.update(hub_en=True, raw=True, main_class=_h["main_class"], body=_h["body"], faqs=_h["faqs"],
                   css=_h["css"], js=_h["js"], h1=re.sub(r"<[^>]+>", "", re.search(r"<h1[^>]*>(.*?)</h1>", _h["body"], re.S).group(1)))
