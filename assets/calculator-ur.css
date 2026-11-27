@@ -1,0 +1,10 @@
+/* Urdu (RTL) fee calculator pages: /ur/calculators/tools/*
+   Same Urdu font as the rest of the Urdu site. Loaded only by the Urdu calculator pages. */
+@font-face{font-family:'Noto Sans Arabic';font-weight:400;font-style:normal;font-display:swap;src:url(/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:'Noto Sans Arabic';font-weight:700;font-style:normal;font-display:swap;src:url(/assets/fonts/noto-sans-arabic-arabic-700-normal.woff2) format('woff2');unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+html[lang="ur"] body,html[lang="ur"] button,html[lang="ur"] select,html[lang="ur"] input,html[lang="ur"] .urdu-text{font-family:"Noto Sans Arabic",Inter,Tahoma,system-ui,sans-serif}
+html[lang="ur"] body{line-height:1.7}
+/* English paragraphs that already have an Urdu twin on the page */
+.ur-hide{display:none!important}
+/* Phone numbers and amounts are left-to-right inside Urdu text ("0345-5583530", "+ Rs. 950") */
+html[lang="ur"] #dastakOfficialFooter .footer-links a,html[lang="ur"] a[href^="tel:"],html[lang="ur"] [id$="Val"],html[lang="ur"] .summary-item>span:last-child{direction:ltr;unicode-bidi:isolate}

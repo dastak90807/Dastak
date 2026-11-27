@@ -73,6 +73,9 @@ Urdu pages mirror the English URLs under /ur/ (same slugs). Fees on Urdu pages f
 - [ڈسکلیمر](https://www.dastak90807.com/ur/disclaimer/)
 - [پرائیویسی پالیسی](https://www.dastak90807.com/ur/privacy/)
 - [شرائط](https://www.dastak90807.com/ur/terms/)
+- [پنجاب ڈرائیونگ لائسنس فیس کیلکولیٹر](https://www.dastak90807.com/ur/calculators/tools/punjab-driving-license-fee-calculator)
+- [پنجاب کار ٹوکن ٹیکس اور ٹرانسفر فیس کیلکولیٹر](https://www.dastak90807.com/ur/calculators/tools/punjab-car-token-tax-transfer-fee-calculator)
+- [پنجاب موٹر سائیکل رجسٹریشن اور ٹرانسفر فیس کیلکولیٹر](https://www.dastak90807.com/ur/calculators/tools/punjab-bike-registration-transfer-fee-calculator)
 - [اردو گائیڈز](https://www.dastak90807.com/ur/guides/): لائسنس کی تجدید، لائسنس ٹریکنگ، کریکٹر سرٹیفیکیٹ، ملکیت کی منتقلی اور ٹوکن ٹیکس
 - [فیس کیلکولیٹر](https://www.dastak90807.com/ur/calculators/)
 - [گوجرخان](https://www.dastak90807.com/ur/gujar-khan/)
