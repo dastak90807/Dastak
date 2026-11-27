@@ -145,7 +145,7 @@ def page(p):
     main_class = p.get("main_class", "service-detail")
     en_note = f'<p class="ur-en-link">یہ صفحہ انگریزی میں پڑھیں: <a href="/en{path}" hreflang="en">انگریزی ورژن ←</a></p>'
 
-    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/loader.css?v=1"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=25"><script type="application/ld+json">{ld}</script>{CLARITY_SNIPPET}</head><body id="top"><div id="dastak-loader" role="status" aria-live="polite" aria-label="صفحہ لوڈ ہو رہا ہے" aria-hidden="true"><span class="dastak-loader-status">صفحہ لوڈ ہو رہا ہے…</span><div class="dastak-loader-wrap"><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><img src="/assets/dastak-90807-transparent.png" alt="دستک 90807، گھر کی دہلیز پر سرکاری خدمات" class="dastak-loader-logo" width="175" height="61"></div></div><script src="/assets/loader.js?v=1"></script><a class="skip" href="#main">مواد پر جائیں</a>
+    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/loader.css?v=1"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{'<link rel="stylesheet" href="/assets/guide-hero.css?v=1">' if 'class="guide-hero"' in p["body"] else ""}{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=26"><script type="application/ld+json">{ld}</script>{CLARITY_SNIPPET}</head><body id="top"><div id="dastak-loader" role="status" aria-live="polite" aria-label="صفحہ لوڈ ہو رہا ہے" aria-hidden="true"><span class="dastak-loader-status">صفحہ لوڈ ہو رہا ہے…</span><div class="dastak-loader-wrap"><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><img src="/assets/dastak-90807-transparent.png" alt="دستک 90807، گھر کی دہلیز پر سرکاری خدمات" class="dastak-loader-logo" width="175" height="61"></div></div><script src="/assets/loader.js?v=1"></script><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
 <script src="/assets/shared-header.js?v=13"></script><noscript><nav aria-label="مرکزی مینو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
 {(lambda _b, _i: f'<main id="main" class="{main_class}">{_b[:_i]}{en_note}{_b[_i:]}</main>')(p["body"], max(p["body"].rfind("</div>"), p["body"].rfind("</section>"))) if p.get("hub_en") else (f'<main id="main" class="{main_class}">{p["body"].replace("<!--FAQ-->", home_faq(p["faqs"]))}<section class="wrap ur-page-end">{en_note}<p class="disc">{DISCLAIMER}</p></section></main>' if "<!--FAQ-->" in p["body"] else f'<main id="main" class="{main_class}">{p["body"]}<section class="wrap home-faqs">{faq_block}{en_note}<p class="disc">{DISCLAIMER}</p></section></main>') if p.get("raw") else f'''<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپ ڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
@@ -157,6 +157,22 @@ def page(p):
 <aside aria-label="فوری رابطہ"><a class="wafloat btn g" href="{WA}">واٹس ایپ</a><div class="bar"><a class="btn g" href="{WA}">واٹس ایپ</a><a class="btn y" href="tel:+923455583530">کال کریں</a></div></aside>
 <script src="/assets/app.js?v=3" defer></script><a class="back-to-top" href="#top" aria-label="اوپر جائیں" title="اوپر جائیں">↑</a><script src="/assets/site-update.js?v=20261122-ui" defer></script><script src="/assets/site-polish.js?v=4" defer></script><script src="/assets/chatbot.js?v=4" defer></script>{"".join(f'<script src="{j}" defer></script>' for j in p.get("js", []))}</body></html>
 '''
+
+
+# Parity with the English service pages: "Estimate the fee" box (sd-calc) linking to the Urdu calculators
+_CALC = {"dl": ("/ur/calculators/tools/punjab-driving-license-fee-calculator", "Driving License Fee Calculator", "ڈرائیونگ لائسنس فیس کیلکولیٹر"),
+         "car": ("/ur/calculators/tools/punjab-car-token-tax-transfer-fee-calculator", "Car Token Tax &amp; Transfer Fee Calculator", "کار ٹوکن ٹیکس اور ملکیت کی منتقلی کیلکولیٹر"),
+         "bike": ("/ur/calculators/tools/punjab-bike-registration-transfer-fee-calculator", "Motorcycle Registration &amp; Transfer Fee Calculator", "موٹر سائیکل رجسٹریشن اور ملکیت کی منتقلی کیلکولیٹر")}
+CALC_FOR = {"ٹوکن ٹیکس": ("car", "bike"), "گاڑی کی ملکیت کی منتقلی": ("car", "bike"), "ڈرائیونگ لائسنس کی تجدید": ("dl",)}
+_ARR = '<svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>'
+
+
+def calc_box(name):
+    if name not in CALC_FOR:
+        return ""
+    btns = "".join(f'<a class="btn y" href="{_CALC[k][0]}" data-ga-event="service_calculator_click" data-tool-name="{_CALC[k][1]}">{_CALC[k][2]} {_ARR}</a>' for k in CALC_FOR[name])
+    return (f'<div class="card sd-calc"><h2>{esc(name)} کی فیس کا اندازہ لگائیں</h2><p>ہمارے مفت کیلکولیٹر سے فوری اندازہ لگائیں اور PDF میں ڈاؤن لوڈ کریں۔ '
+            f'یہ صرف اندازہ ہے۔ سرکاری فیس پنجاب کا سرکاری سسٹم بناتا ہے۔</p><div class="row">{btns}</div></div>\n')
 
 
 def service_body(name, quick, glance, docs, steps, fees, extra="", related=()):
@@ -171,7 +187,7 @@ def service_body(name, quick, glance, docs, steps, fees, extra="", related=()):
 <section class="service-module documents-module"><h2>{esc(name)} کے لیے کون سی دستاویزات چاہئیں؟</h2><ul class="docs">{docs_html}</ul></section>
 <section class="service-module fee-module"><h2>{esc(name)} کی فیس کتنی ہے؟</h2>{fee_table(fees)}<p class="ur-note">{FEE_SOURCE}</p></section>
 <section class="service-module steps-module"><h2>{esc(name)} کا طریقہ، قدم بہ قدم</h2><ol>{steps_html}</ol></section>
-{extra}
+{calc_box(name)}{extra}
 {booking_block(name)}
 {rel}'''
 
@@ -313,6 +329,10 @@ PAGES.append(dict(
         ("کیا ویزا ضروری ہے؟", "اگر سرٹیفیکیٹ کسی دوسرے ملک کے لیے چاہیے تو پاسپورٹ پر ویزا لگا ہونا ضروری ہے۔"),
         ("کریکٹر سرٹیفیکیٹ اور جنرل پولیس ویریفکیشن میں کیا فرق ہے؟", "یہ دو الگ خدمات ہیں۔ جس ادارے کو دستاویز چاہیے اس سے پوچھ لیں کہ اسے کون سی سروس چاہیے۔"),
         ("کیا فیسیلیٹیٹر سرٹیفیکیٹ منظور کرتا ہے؟", "نہیں۔ فیسیلیٹیٹر صرف درخواست تیار اور جمع کرواتا ہے۔ تصدیق اور منظوری پنجاب پولیس کرتی ہے۔"),
+        ("ادائیگی کیسے کروں؟", "فیس سرکاری سسٹم خود بناتا ہے۔ دستک ایپ میں ادائیگی کے طریقوں میں PSID (کسی بھی بینکنگ ایپ یا موبائل والٹ سے)، IBFT، JazzCash، Easypaisa اور کیش آن ڈیلیوری شامل ہیں۔ دستیاب طریقے سروس کے لحاظ سے مختلف ہو سکتے ہیں۔"),
+        ("کیا بیانِ حلفی ضروری ہے؟", "نہیں، اس وقت بیانِ حلفی ضروری نہیں۔ دستاویزات کی تازہ فہرست ہمیشہ دستک ایپ میں چیک کریں۔"),
+        ("کیا یہ سرکاری ویب سائٹ ہے؟", "نہیں۔ یہ ایک رجسٹرڈ فیسیلیٹیٹر کی آزاد فیسیلیٹیشن سروس ہے۔ آپ ہمارے بارے میں صفحے پر میری تصدیق کر سکتے ہیں۔"),
+        ("میری دستاویزات کا کیا ہوتا ہے؟", "درخواست مکمل اور ڈیلیور ہوتے ہی کسٹمر کی دستاویزات ڈیلیٹ کر دی جاتی ہیں۔ میں کبھی پاس ورڈ یا OTP نہیں مانگتا۔"),
     ]))
 
 PAGES.append(dict(
@@ -446,6 +466,7 @@ PAGES.append(dict(
         [
             ("مرحلہ 1: DLIMS پر پرنٹنگ اور ڈسپیچ کا اسٹیٹس", '<ol><li>سرکاری <a href="https://dlims.punjab.gov.pk/track" rel="noopener">DLIMS ٹریکنگ صفحہ</a> کھولیں۔</li><li>اپنا 13 ہندسوں کا شناختی کارڈ نمبر بغیر ڈیش کے لکھیں، یا جو تفصیل صفحہ مانگے۔</li><li>سیکیورٹی چیک مکمل کر کے سرچ کریں۔</li><li>اسٹیٹس پڑھیں۔ الفاظ بدل سکتے ہیں، مگر عام طور پر یہ مراحل ہوتے ہیں:<ul><li><b>In process / تصدیق جاری:</b> درخواست ابھی چیک ہو رہی ہے۔</li><li><b>Approved / منظور:</b> لائسنس منظور ہو گیا، پرنٹنگ کا انتظار ہے۔</li><li><b>Printed / پرنٹ:</b> کارڈ پرنٹ ہو گیا، ڈسپیچ ہونا باقی ہے۔</li><li><b>Dispatched / روانہ:</b> کارڈ ڈاک کے حوالے ہو گیا۔ ٹریکنگ آئی ڈی نظر آئے تو کاپی کر لیں۔</li></ul></li></ol>'),
             ("مرحلہ 2: پاکستان پوسٹ پر ڈیلیوری ٹریک کریں", '<ol><li>DLIMS سے ملنے والی ٹریکنگ یا کنسائنمنٹ آئی ڈی محفوظ کریں۔</li><li><a href="https://ep.gov.pk/services/ums_intro.asp" rel="noopener">پاکستان پوسٹ UMS پورٹل</a> کھولیں۔</li><li>Track &amp; Trace میں اپنا نمبر لکھیں۔</li><li>نتیجے میں ڈاک کی روانگی اور مقامی ڈاک خانے تک پہنچنے کی معلومات نظر آتی ہیں۔</li></ol><p class="ur-note">اپنا رجسٹرڈ موبائل نمبر فعال رکھیں۔ ڈاکیا ڈیلیوری سے پہلے کال کر سکتا ہے۔</p>'),
+            ("ایک نظر میں: لائسنس ٹریکنگ کے مراحل", '<div class="guide-table-wrap"><table class="guide-table"><thead><tr><th scope="col">ٹریکنگ کا مرحلہ</th><th scope="col">سرکاری پورٹل</th><th scope="col">کیا درکار ہے</th><th scope="col">آپ کیا دیکھ سکتے ہیں</th></tr></thead><tbody><tr><td><strong>1. منظوری اور کارڈ کی پرنٹنگ</strong></td><td><a href="https://dlims.punjab.gov.pk/track" target="_blank" rel="noopener noreferrer">DLIMS پنجاب ٹریکنگ</a></td><td>13 ہندسوں کا شناختی کارڈ نمبر (یا جو تفصیل صفحہ مانگے)</td><td>تصدیق کی صورتحال، پرنٹنگ کا اسٹیٹس اور جہاں دستیاب ہو، ڈاک کی ٹریکنگ آئی ڈی</td></tr><tr><td><strong>2. کارڈ کی گھر پر ڈیلیوری</strong></td><td><a href="https://ep.gov.pk/services/ums_intro.asp" target="_blank" rel="noopener noreferrer">پاکستان پوسٹ EMTTS / UMS</a></td><td>DLIMS سے ملنے والی ٹریکنگ آئی ڈی</td><td>ڈاک کی ترسیل، مقامی ڈاک خانے میں پہنچنے اور ڈیلیوری کا اسٹیٹس</td></tr><tr><td><strong>3. ڈیجیٹل لائسنس</strong></td><td><a href="https://dlims.punjab.gov.pk/elicense" target="_blank" rel="noopener noreferrer">DLIMS ای لائسنس</a></td><td>DLIMS کی مانگی گئی تفصیل</td><td>جہاں دستیاب ہو، اپنے ریکارڈ کے لیے ڈیجیٹل ای لائسنس PDF ڈاؤن لوڈ کریں</td></tr></tbody></table></div>'),
             ("ای لائسنس کیسے ڈاؤن لوڈ کریں؟", '<p>منظوری کے بعد سرکاری <a href="https://dlims.punjab.gov.pk/elicense" rel="noopener">DLIMS ای لائسنس صفحے</a> سے ڈیجیٹل لائسنس دیکھا جا سکتا ہے۔ ڈیجیٹل ریکارڈ اور فزیکل کارڈ کی ڈیلیوری دو الگ مرحلے ہیں۔</p>'),
             ("لائسنس آنے میں دیر کیوں ہوتی ہے؟", "<ul><li>درخواست کی تصدیق ابھی جاری ہو۔</li><li>پرنٹنگ میں رش ہو۔</li><li>پتہ نامکمل یا غلط ہو۔</li><li>موبائل نمبر بند ہونے سے ڈاکیا رابطہ نہ کر سکے۔</li></ul><p>اسٹیٹس کئی دن تک نہ بدلے تو واٹس ایپ پر اپنی درخواست کی تفصیل بھیجیں، ہم رہنمائی کر دیں گے۔</p>"),
             ("تجدید یا نئے لائسنس میں مدد", '<p>اگر ابھی درخواست دینی ہے تو <a href="/ur/services/renewal-of-regular-license/">لائسنس کی تجدید</a> یا <a href="/ur/services/learner-driving-license/">لرنر پرمٹ</a> کا صفحہ دیکھیں۔</p>'),
@@ -456,6 +477,9 @@ PAGES.append(dict(
         ("لائسنس کا اسٹیٹس کیسے چیک کریں؟ (License status check kaise karein)", "سرکاری DLIMS ٹریکنگ صفحے پر اپنا 13 ہندسوں کا شناختی کارڈ نمبر لکھ کر اسٹیٹس دیکھیں۔"),
         ("Dispatched کا کیا مطلب ہے؟", "اس کا مطلب ہے کہ کارڈ ڈاک کے حوالے ہو گیا ہے۔ اب پاکستان پوسٹ پر ٹریکنگ آئی ڈی سے ڈیلیوری دیکھیں۔"),
         ("ٹریکنگ آئی ڈی کہاں ملتی ہے؟", "اسٹیٹس Dispatched ہونے پر DLIMS کے نتیجے میں ٹریکنگ یا کنسائنمنٹ نمبر نظر آتا ہے۔"),
+        ("پنجاب میں ڈرائیونگ لائسنس ملنے میں کتنے دن لگتے ہیں؟", "بہت سے درخواست گزاروں کو بائیومیٹرک تصدیق اور فیس جمع ہونے کے بعد عموماً دو سے چار ہفتوں میں اسمارٹ کارڈ مل جاتا ہے، مگر وقت پرنٹنگ کے کام اور ڈاک کی ترسیل کے حساب سے بدل سکتا ہے۔ پرنٹنگ اور ڈسپیچ لائسنسنگ اتھارٹی کے پاس ہے، اس لیے تازہ اسٹیٹس کے لیے DLIMS ٹریکنگ صفحہ دیکھیں۔"),
+        ("کیا فزیکل کارڈ آنے تک پنجاب ای لائسنس کارآمد ہے؟", "اگر DLIMS آپ کے ریکارڈ کے لیے ای لائسنس دیتا ہے تو آپ اسے PDF میں ڈاؤن لوڈ کر کے فون میں رکھ سکتے ہیں۔ کسی خاص صورتحال میں یہ قبول ہو گا یا نہیں، یہ ٹریفک حکام طے کرتے ہیں، اس لیے اصل شناختی کارڈ ساتھ رکھیں اور شک ہو تو اپنے لائسنسنگ آفس سے تصدیق کر لیں۔"),
+        ("کیا ختم شدہ لائسنس آن لائن یا گھر بیٹھے رینیو ہو سکتا ہے؟", "رجسٹرڈ فیسیلیٹیٹر محمد عثمان (کوڈ 90807) گوجرخان، راولپنڈی اور پورے پنجاب میں لائسنس کی تجدید کے لیے دستاویزات کی جانچ اور درخواست میں مدد کرتے ہیں۔ اپنی کیٹیگری اور اہلیت جاننے کے لیے واٹس ایپ 0345-5583530 پر پیغام بھیجیں۔"),
         ("کیا دستک 90807 سرکاری ٹریکنگ ویب سائٹ ہے؟", "نہیں۔ ہم آزاد فیسیلیٹیٹر ہیں اور صرف رہنمائی کرتے ہیں۔ ٹریکنگ سرکاری DLIMS اور پاکستان پوسٹ کی ویب سائٹس پر ہوتی ہے۔"),
     ]))
 
@@ -717,6 +741,29 @@ FACILITATOR = (
     '<p class="fc-note">یہ ایک آزاد فیسیلیٹیشن سروس ہے، سرکاری دفتر نہیں۔ بکنگ سے پہلے شرائط اور دستیابی کی تصدیق کر لیں۔</p></div></section>'
 )
 
+# Parity with the English home: "More free tools" row and the 3 picture guide cards
+_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{}"/></svg>'
+TOOL_LINKS = ('<div class="home-tool-links"><p class="home-tool-links-label">مزید مفت ٹولز</p><div class="home-tool-links-row">'
+    + "".join(f'<a class="btn o" href="{h}" data-ga-event="home_tool_launcher_click" data-tool-name="{n}">{_SVG.format(d)} {t}</a>' for h, n, d, t in (
+        ("/ur/document-checklist/", "Document Checklist", "M9 11l2 2 4-4M5 4h14v16H5z", "دستاویزات کی چیک لسٹ"),
+        ("/ur/citizen-tools/", "Tracking &amp; Official Portals", "M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18", "سرکاری پورٹلز"),
+        ("/ur/downloads/", "Forms &amp; Downloads", "M12 4v11m0 0l-4-4m4 4l4-4M5 20h14", "فارمز اور ڈاؤن لوڈز")))
+    + '</div></div><p class="home-tools-note">یہ صرف اندازہ ہے۔ سرکاری فیس پنجاب کا سرکاری سسٹم بناتا ہے۔ دستک 90807 ایک آزاد فیسیلیٹیشن سروس ہے۔</p>')
+_G = [
+    ("vehicle", "/assets/punjab-token-tax-guide-dastak-90807-thumb.webp", "پنجاب ٹوکن ٹیکس کی 30 نومبر 2026 کی رپورٹ شدہ آخری تاریخ کا پوسٹر، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی",
+     "نئی · گاڑی اور ٹوکن ٹیکس گائیڈ", "/ur/guides/punjab-token-tax-payment-and-penalty/", "پنجاب ٹوکن ٹیکس 2026: آخری تاریخ، جرمانہ اور ادائیگی کا طریقہ", "30 نومبر 2026 کی رپورٹ شدہ آخری تاریخ، جرمانہ اور سرکاری PSID سے ادائیگی۔"),
+    ("driving", "/assets/track-driving-license-punjab-dastak-90807-thumb.webp", "پنجاب میں DLIMS اور پاکستان پوسٹ سے ڈرائیونگ لائسنس ٹریک کرنے کی گائیڈ، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی",
+     "نئی · ڈرائیونگ لائسنس گائیڈ", "/ur/guides/how-to-track-driving-license-in-punjab/", "پنجاب میں ڈرائیونگ لائسنس ٹریک کرنے کا طریقہ (DLIMS اور پاکستان پوسٹ)", "دو مرحلوں میں ٹریکنگ: شناختی کارڈ سے DLIMS اسٹیٹس، پھر پاکستان پوسٹ سے ڈیلیوری۔"),
+    ("driving", "/assets/punjab-driving-license-renewal-guide-dastak-90807-thumb.webp", "گوجرخان اور راولپنڈی میں پنجاب ڈرائیونگ لائسنس کی تجدید کی گائیڈ، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)",
+     "پنجاب ڈرائیونگ لائسنس گائیڈ", "/ur/guides/punjab-driving-license-renewal-online/", "پنجاب ڈرائیونگ لائسنس کی آن لائن تجدید: دستاویزات، فیس اور طریقہ", "لائسنس کی تجدید: دستاویزات، فیس، ٹریکنگ اور پورے پنجاب میں مدد۔"),
+]
+HOME_GUIDES = ('<section class="wrap guides ur-home-guides" id="guides"><p class="eyebrow">تیاری کیسے کریں</p><h2>مقامی دستاویزات کی گائیڈز</h2>'
+    '<p class="sub">گوجرخان، راولپنڈی اور آس پاس کے علاقوں کے لیے عملی معلومات۔</p><div class="guide-grid">'
+    + "".join(f'<article class="card guide-card local-guide" data-guide-category="{c}"><div class="guide-illustration has-thumb"><img src="{img}" width="640" height="357" loading="lazy" decoding="async" alt="{alt}"></div>'
+              f'<div class="guide-body"><span class="eyebrow">{eb}</span><h3><a data-ga-event="home_guide_click" href="{u}">{t}</a></h3><p>{d}</p>'
+              f'<a data-ga-event="home_guide_click" class="btn y" href="{u}">گائیڈ پڑھیں <span aria-hidden="true">↗</span></a></div></article>' for c, img, alt, eb, u, t, d in _G)
+    + '</div><p><a data-ga-event="home_guide_click" href="/ur/guides/">تمام گائیڈز دیکھیں</a></p></section>')
+
 HOME_BODY = (
     '<section class="hero"><div class="wrap two"><div>'
     f'<span class="chip">رجسٹرڈ فیسیلیٹیٹر · مریم کی دستک · کوڈ {CODE}</span>'
@@ -734,13 +781,13 @@ HOME_BODY = (
     f'<div class="home-category-grid">{CARDS_SVC}</div></section>'
     '<section class="wrap home-tools" id="citizen-tools"><p class="eyebrow">مفت فیس کیلکولیٹر</p><h2 id="fee-calculators">اپنی فیس کا اندازہ لگائیں</h2>'
     '<p class="sub">ڈرائیونگ لائسنس، کار اور موٹر سائیکل کے مفت فیس کیلکولیٹر، اردو اور انگریزی دونوں میں۔ اندازہ PDF میں ڈاؤن لوڈ کریں۔ حتمی رقم ہمیشہ PSID پر ہوتی ہے۔</p>'
-    f'<div class="home-category-grid">{CARDS_TOOLS}</div></section>'
+    f'<div class="home-category-grid">{CARDS_TOOLS}</div>' + TOOL_LINKS + '</section>'
     '<section class="band process" id="how-it-works"><div class="wrap"><p class="eyebrow">طریقہ کار</p><h2>3 آسان قدموں میں اپلائی کریں</h2>'
     f'<p class="sub home-steps-sub">پورے پنجاب سے آن لائن۔ گوجرخان میں گھر کی دہلیز پر۔</p><ol class="home-steps">{STEPS}</ol>'
     f'<div class="home-trust-strip">{trust_html}</div>'
     f'<div class="row"><a class="btn g" href="{wa_link("سروس کی بکنگ")}">واٹس ایپ {PHONE}</a><a class="btn y" href="#fee-calculators">فیس معلوم کریں {ARROW}</a></div></div></section>'
     + REVIEWS + '<!--FAQ-->' + FACILITATOR +
-    '<section class="wrap ur-home-guides"><h2>مفید اردو گائیڈز</h2>' + cards((R["renew_guide"], R["track"], R["character_guide"], R["vehicle_guide"])) + '</section>'
+    HOME_GUIDES
 )
 
 # Home page terminology (phase 1: home only; roll out to inner pages after approval)

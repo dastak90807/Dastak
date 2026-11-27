@@ -216,3 +216,6 @@ html[dir="rtl"] .tools-v2 .tp-card span span,html[dir="rtl"] .tools-v2 .tp-porta
 
 /* FAQ questions with inline bold/number spans: flow as text, not flex columns */
 .ur-hub .faq-list summary{display:block;padding-top:10px;padding-bottom:10px}
+
+/* Guide tables (guide-hero.css is LTR): align cells to the right on Urdu pages */
+[dir=rtl] .guide-table th,[dir=rtl] .guide-table td{text-align:right}
