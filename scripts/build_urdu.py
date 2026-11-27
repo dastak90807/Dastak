@@ -167,9 +167,18 @@ CALC_FOR = {"ٹوکن ٹیکس": ("car", "bike"), "گاڑی کی ملکیت کی
 _ARR = '<svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>'
 
 
-def calc_box(name):
+# Renewal: the calculator replaces the old 1-year category table, so its button sits inside the fee section
+CALC_IN_FEE = {"ڈرائیونگ لائسنس کی تجدید"}
+
+
+def calc_box(name, in_fee=False):
     if name not in CALC_FOR:
         return ""
+    if in_fee:
+        btns = "".join(f'<a class="btn y" href="{_CALC[k][0]}" data-ga-event="service_calculator_click" data-tool-name="{_CALC[k][1]}">{_CALC[k][2]} کھولیں {_ARR}</a>' for k in CALC_FOR[name])
+        return (f'<div class="card sd-calc"><p><strong>اپنی کیٹیگری اور مدت (1 سے 5 سال) کے مطابق درست اندازہ کیلکولیٹر سے لگائیں۔</strong> '
+                f'کیلکولیٹر تجدید فیس، تاخیر کا جرمانہ، کوریئر فیس اور فیسیلیٹیٹر چارجز ایک ساتھ دکھاتا ہے اور آپ اندازہ PDF میں ڈاؤن لوڈ کر سکتے ہیں۔ یہ صرف اندازہ ہے، حتمی رقم PSID پر لکھی ہوتی ہے۔</p>'
+                f'<div class="row">{btns}</div></div>')
     btns = "".join(f'<a class="btn y" href="{_CALC[k][0]}" data-ga-event="service_calculator_click" data-tool-name="{_CALC[k][1]}">{_CALC[k][2]} {_ARR}</a>' for k in CALC_FOR[name])
     return (f'<div class="card sd-calc"><h2>{esc(name)} کی فیس کا اندازہ لگائیں</h2><p>ہمارے مفت کیلکولیٹر سے فوری اندازہ لگائیں اور PDF میں ڈاؤن لوڈ کریں۔ '
             f'یہ صرف اندازہ ہے۔ سرکاری فیس پنجاب کا سرکاری سسٹم بناتا ہے۔</p><div class="row">{btns}</div></div>\n')
@@ -185,9 +194,9 @@ def service_body(name, quick, glance, docs, steps, fees, extra="", related=()):
 <p class="sd-trust">رجسٹرڈ فیسیلیٹیٹر کوڈ {CODE} · آزاد سروس، سرکاری دفتر نہیں · <a href="#verify">تصدیق کیسے کریں؟</a></p>
 <div class="card quick"><b>مختصر جواب</b><p>{quick}</p></div>
 <section class="service-module documents-module"><h2>{esc(name)} کے لیے کون سی دستاویزات چاہئیں؟</h2><ul class="docs">{docs_html}</ul></section>
-<section class="service-module fee-module"><h2>{esc(name)} کی فیس کتنی ہے؟</h2>{fee_table(fees)}<p class="ur-note">{FEE_SOURCE}</p></section>
+<section class="service-module fee-module"><h2>{esc(name)} کی فیس کتنی ہے؟</h2>{fee_table(fees)}{calc_box(name, True) if name in CALC_IN_FEE else ""}<p class="ur-note">{FEE_SOURCE}</p></section>
 <section class="service-module steps-module"><h2>{esc(name)} کا طریقہ، قدم بہ قدم</h2><ol>{steps_html}</ol></section>
-{calc_box(name)}{extra}
+{"" if name in CALC_IN_FEE else calc_box(name)}{extra}
 {booking_block(name)}
 {rel}'''
 
@@ -261,7 +270,6 @@ PAGES.append(dict(
          "تقریباً 10 دن میں نیا لائسنس کوریئر سے آپ کے پتے پر آ جاتا ہے۔ اسٹیٹس <a href=\"/ur/guides/how-to-track-driving-license-in-punjab/\">یہاں سے ٹریک کریں</a>۔"],
         [("سرکاری فیس", "لائسنس کی کیٹیگری اور مدت (1 سے 5 سال) کے مطابق مختلف"), ("دستک فیسیلیٹیٹر چارجز", "Rs 950"),
          ("پلیٹ فارم چارجز", "Rs 19 (تربیتی مینول کے مطابق)"), ("ادائیگی", "PSID کے ذریعے"), ("حتمی رقم", "آپ کے PSID پر لکھی ہوتی ہے")],
-        extra='<section class="service-module"><h2>سرکاری تجدید فیس کی تفصیل (پورٹل کے مطابق)</h2>' + RENEW_FEE_TABLE + '</section>',
         related=(R["renew_guide"], R["track"], R["learner"], R["calc"])),
     faqs=[
         ("لائسنس رینیو کیسے کریں؟ (License renew kaise karein)", "دستک ایپ میں Doorstep Delivery منتخب کر کے کوڈ 90807 لکھیں، یا واٹس ایپ 0345-5583530 پر رابطہ کریں۔ فیسیلیٹیٹر گھر آ کر تصویر لیتا ہے، درخواست جمع کرواتا ہے اور لائسنس کوریئر سے آپ کو مل جاتا ہے۔"),
