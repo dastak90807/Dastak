@@ -6,10 +6,12 @@
    Urdu pages (<html lang="ur">) get the Urdu menu automatically. */
 (() => {
   const script = document.currentScript;
-  if (!script || document.querySelector('header.hd')) return;
+  if (!script) return;
+  const hasStaticHeader = Boolean(document.querySelector('header.hd'));
 
   const version = new URL(script.src, location.href).searchParams.get('v') || '1';
   const addCss = (href) => {
+    if (Array.from(document.querySelectorAll('link[rel="stylesheet"]')).some(link => new URL(link.href, location.href).href === new URL(href, location.href).href)) return;
     const css = document.createElement('link');
     css.rel = 'stylesheet';
     css.href = href;
@@ -76,7 +78,8 @@
 
   const link = ([href, text, cls]) => '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + href + '">' + text + '</a>';
 
-  script.insertAdjacentHTML('beforebegin',
+  // Homepages include this same markup at build time to avoid a late header insertion.
+  if (!hasStaticHeader) script.insertAdjacentHTML('beforebegin',
     '<header class="hd">' +
       '<a class="brand" href="' + t.home + '"><img class="brand-logo" src="/assets/dastak-90807-transparent.png" alt="' + t.brandAlt + '" width="2121" height="741"></a>' +
       '<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">' + t.menu + '</button>' +
