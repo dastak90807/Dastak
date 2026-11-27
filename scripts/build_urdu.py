@@ -100,6 +100,22 @@ def cards(items):
 FOOTER = open(os.path.join(ROOT, "assets", "footer-ur.html"), encoding="utf-8").read().strip()
 
 
+def local_business(org):
+    """Full LocalBusiness node for the Urdu home and contact pages.
+    Single source: the #org node in en/index.html (address, geo, hours, map),
+    with the Urdu description, names and contact point kept."""
+    import re as _re
+    html = open(os.path.join(ROOT, "en", "index.html"), encoding="utf-8").read()
+    raw = _re.search(r'<script type="application/ld\+json">(.*?)</script>', html, _re.S).group(1)
+    base = next(n for n in json.loads(raw)["@graph"] if str(n.get("@id", "")).endswith("/#org"))
+    node = json.loads(json.dumps(base))
+    for k in ("description", "alternateName", "url", "contactPoint"):
+        node[k] = org[k]
+    node.pop("hasOfferCatalog", None)
+    node["founder"] = {"@id": SITE + "/#person"}
+    return node
+
+
 def page(p):
     path = p["path"]                       # e.g. /services/token-tax/
     ur_url = SITE + "/ur" + path
@@ -122,6 +138,8 @@ def page(p):
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + u} for i, (n, u) in enumerate(crumbs)]},
     ]
+    if path in ("/", "/contact/"):
+        graph[0] = local_business(graph[0])
     if p.get("kind") == "service":
         graph.append({"@type": "Service", "@id": ur_url + "#service", "name": strip_tags(p["h1"]),
                       "serviceType": "Document facilitation", "description": desc, "inLanguage": "ur",
