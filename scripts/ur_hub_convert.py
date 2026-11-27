@@ -33,6 +33,8 @@ URDU_PATHS = {
     # Phase 4: guides and content pages
     "/guides/punjab-token-tax-payment-and-penalty/", "/guides/domicile-stamp-paper-gujar-khan-rawalpindi/",
     "/rawalpindi/", "/citizen-tools/", "/document-checklist/", "/downloads/", "/how-it-works/", "/reviews/",
+    # Phase 5: about, FAQs and legal pages
+    "/about/", "/faqs/", "/disclaimer/", "/privacy/", "/terms/",
 }
 
 # Text that is the same in both languages (brands, emails, domains, numbers).
@@ -86,6 +88,9 @@ def convert(slug):
         if u is None:
             return t
         lead = " " if t[:1].isspace() else ""
+        # English piece began with punctuation (". During"), Urdu begins with a word: keep a space.
+        if not lead and t[:1] in ".,;:)" and u[:1].isalpha():
+            lead = " "
         trail = " " if t[-1:].isspace() else ""
         return f"{lead}{u}{trail}"
 
@@ -132,6 +137,6 @@ def convert(slug):
 
     faqs = [(re.sub("<[^>]+>", "", q), re.sub("<[^>]+>", "", a))
             for q, a in re.findall(r"<details[^>]*>\s*<summary[^>]*>(.*?)</summary>\s*<p>(.*?)</p>\s*</details>", body, re.S)]
-    css = ["/assets/" + x for x in re.findall(r'<link rel="stylesheet" href="(?:\.\./)*/?assets/((?:guide-cards|guide-hero|guides-page|tools-pages|service-info-pages|contact-page|services-page)[^"]*)"', src)]
+    css = ["/assets/" + x for x in re.findall(r'<link rel="stylesheet" href="(?:\.\./)*/?assets/((?:about-page|guide-cards|guide-hero|guides-page|tools-pages|service-info-pages|contact-page|services-page)[^"]*)"', src)]
     js = ["/assets/" + x for x in re.findall(r'<script src="(?:\.\./)*/?assets/((?:guides-page|services-page|portals-page|checklist|downloads)[^"]*)"', src)]
     return dict(main_class=main_class + " ur-hub", body=body, faqs=faqs, css=css, js=js)
