@@ -35,7 +35,10 @@ jobs:
           from html.parser import HTMLParser
           from pathlib import Path
           from urllib.parse import quote, urlsplit
+          from urllib.error import HTTPError
           from urllib.request import Request, urlopen
+
+          UA = {"User-Agent": "Dastak90807-IndexNow/1.0 (+https://www.dastak90807.com/)"}
 
           HOST = "www.dastak90807.com"
           ORIGIN = "https://" + HOST
@@ -129,12 +132,22 @@ jobs:
               raise SystemExit(0)
           if len(urls) > 10000:
               raise SystemExit("More than 10,000 URLs: exceeds the single-request IndexNow limit.")
-          with urlopen(KEY_LOCATION, timeout=30) as response:
-              if response.read(1024).decode("utf-8") != KEY:
-                  raise SystemExit("The live IndexNow verification file does not match the configured key.")
+          # The key file is deployed from this same commit; check it here first.
+          if Path(f"{KEY}.txt").read_text().strip() != KEY:
+              raise SystemExit("The repository IndexNow key file does not match the configured key.")
+          # Cloudflare bot protection may block GitHub runners (HTTP 403). IndexNow reads the
+          # key with its own verified crawler, so a blocked check here is only a warning.
+          try:
+              with urlopen(Request(KEY_LOCATION, headers=UA), timeout=30) as response:
+                  if response.read(1024).decode("utf-8").strip() != KEY:
+                      raise SystemExit("The live IndexNow verification file does not match the configured key.")
+          except HTTPError as error:
+              if error.code != 403:
+                  raise
+              print("::warning::Live key check blocked by the site firewall (HTTP 403); submitting anyway.")
           payload = {"host": HOST, "key": KEY, "keyLocation": KEY_LOCATION, "urlList": sorted(urls)}
           request = Request("https://api.indexnow.org/indexnow", data=json.dumps(payload).encode("utf-8"),
-                            headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
+                            headers={"Content-Type": "application/json; charset=utf-8", **UA}, method="POST")
           with urlopen(request, timeout=60) as response:
               if response.status not in (200, 202):
                   raise SystemExit(f"Unexpected IndexNow response: HTTP {response.status}")
