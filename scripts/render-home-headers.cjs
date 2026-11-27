@@ -8,7 +8,7 @@ const source = fs.readFileSync(path.join(root, 'assets/shared-header.js'), 'utf8
 for (const lang of ['en', 'ur']) {
   let header = '';
   const document = {
-    currentScript: {src: 'https://www.dastak90807.com/assets/shared-header.js?v=9', insertAdjacentHTML: (_, html) => { header = html; }},
+    currentScript: {src: 'https://www.dastak90807.com/assets/shared-header.js?v=10', insertAdjacentHTML: (_, html) => { header = html; }},
     documentElement: {lang}, querySelector: () => null, querySelectorAll: () => [],
     createElement: () => ({dataset: {}, setAttribute() {}}), head: {appendChild() {}}
   };

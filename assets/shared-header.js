@@ -49,7 +49,11 @@
     '/services/character-certificate/', '/services/transfer-of-motor-vehicle/',
     '/services/token-tax/', '/services/domicile-certificate/',
     '/guides/punjab-driving-license-renewal-online/', '/guides/how-to-track-driving-license-in-punjab/',
-    '/guides/punjab-police-character-certificate-online/', '/guides/vehicle-transfer-token-tax-punjab/'
+    '/guides/punjab-police-character-certificate-online/', '/guides/vehicle-transfer-token-tax-punjab/',
+    '/services/renewal-of-learners-driving-license/', '/services/duplicate-driving-license/',
+    '/services/renewal-international-driving-license/', '/services/duplicate-international-driving-license/',
+    '/services/general-police-verification/', '/services/tenant-registration/', '/services/loss-report/',
+    '/services/crime-report/', '/services/copy-of-fir/', '/services/traffic-challan/', '/services/safe-city-challan/'
   ];
 
   const isUrdu = (document.documentElement.lang || '').toLowerCase().startsWith('ur');
