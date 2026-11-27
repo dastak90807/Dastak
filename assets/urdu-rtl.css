@@ -207,3 +207,6 @@ html[dir="rtl"] .back-to-top{right:auto;left:20px}
 .ur-hub .ur-en-link{margin:8px 0 24px;text-align:start}
 .ur-hub .ct-loc::after{right:auto;left:18px}
 .ur-hub .gp-feat::after{left:24px;right:auto}
+
+/* Phase 2 service pages: arrows point left in RTL */
+html[dir="rtl"] .service-detail .related-module li a::after{content:"\2190"}

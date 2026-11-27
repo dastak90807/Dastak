@@ -8,6 +8,7 @@ the build, so a new English section can never leak onto the Urdu page.
 import html
 import json
 import os
+import posixpath
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,6 +20,11 @@ URDU_PATHS = {
     "/services/token-tax/", "/services/domicile-certificate/",
     "/guides/punjab-driving-license-renewal-online/", "/guides/how-to-track-driving-license-in-punjab/",
     "/guides/punjab-police-character-certificate-online/", "/guides/vehicle-transfer-token-tax-punjab/",
+    # Phase 2: driving license and police service pages
+    "/services/renewal-of-learners-driving-license/", "/services/duplicate-driving-license/",
+    "/services/renewal-international-driving-license/", "/services/duplicate-international-driving-license/",
+    "/services/general-police-verification/", "/services/tenant-registration/", "/services/loss-report/",
+    "/services/crime-report/", "/services/copy-of-fir/", "/services/traffic-challan/", "/services/safe-city-challan/",
 }
 
 # Text that is the same in both languages (brands, emails, domains, numbers).
@@ -34,7 +40,10 @@ def convert(slug):
     src = open(os.path.join(ROOT, "en", slug, "index.html"), encoding="utf-8").read()
     m = re.search(r'<main id="main" class="([^"]*)">(.*)</main>', src, re.S)
     main_class, body = m.group(1), m.group(2)
-    tr = json.load(open(os.path.join(ROOT, "scripts", "ur_hubs", slug + ".json"), encoding="utf-8"))
+    tr_file = os.path.join(ROOT, "scripts", "ur_hubs", slug + ".json")
+    if not os.path.exists(tr_file) and slug.startswith("services/"):
+        tr_file = os.path.join(ROOT, "scripts", "ur_hubs", "service-detail.json")  # shared by service pages
+    tr = json.load(open(tr_file, encoding="utf-8"))
     missing = []
 
     def look(t):
@@ -87,13 +96,25 @@ def convert(slug):
             return f'href="/ur{path}"{rest}'
         return f'href="/en{path}" hreflang="en"{rest}'
 
+    # Relative links (../x/index.html) are resolved against the English page first.
+    def rel(x):
+        href = x.group(1)
+        if re.match(r"(?:[a-z]+:|/|#)", href):
+            return x.group(0)
+        frag = re.search(r"[#?].*$", href)
+        frag = frag.group(0) if frag else ""
+        full = posixpath.normpath(posixpath.join("/en/" + slug + "/", href[:len(href) - len(frag)]))
+        full = re.sub(r"/index\.html$", "", full).rstrip("/") + "/"
+        return f'href="{full}{frag}"'
+
+    body = re.sub(r'href="([^"]*)"', rel, body)
     body = re.sub(r'href="/en(/[^"]*)"([^>]*)', link, body)
-    body = body.replace('href="../../', 'href="/').replace('src="../../', 'src="/')
+    body = body.replace('src="../../', 'src="/')
     body = re.sub(r"\x00(\d+)\x00", lambda x: keep[int(x.group(1))], body)
 
     if missing:
         raise SystemExit(f"[ur_hub_convert] {slug}: {len(missing)} English strings need Urdu in "
-                         f"scripts/ur_hubs/{slug}.json:\n  " + "\n  ".join(dict.fromkeys(missing)))
+                         f"{os.path.relpath(tr_file, ROOT)}:\n  " + "\n  ".join(dict.fromkeys(missing)))
 
     faqs = [(re.sub("<[^>]+>", "", q), re.sub("<[^>]+>", "", a))
             for q, a in re.findall(r"<details><summary>(.*?)</summary><p>(.*?)</p></details>", body, re.S)]
