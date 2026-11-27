@@ -1,0 +1,4 @@
+/* Keep the hero's visual crop without creating a nested scroll container. */
+@supports (overflow: clip) {
+  .home .hero { overflow: clip; }
+}
