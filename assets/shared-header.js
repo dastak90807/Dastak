@@ -57,7 +57,9 @@
     '/services/motor-vehicle-registration/', '/services/duplicate-domicile/', '/services/modification-domicile/',
     '/services/noc-for-domicile-transfer/', '/services/e-stamping/', '/services/birth-certificate/',
     '/services/death-certificate/', '/services/marriage-certificate/', '/services/divorce-certificate/',
-    '/services/general-inquiry-and-guide/', '/services/other-punjab-dastak-services/'
+    '/services/general-inquiry-and-guide/', '/services/other-punjab-dastak-services/',
+    '/guides/punjab-token-tax-payment-and-penalty/', '/guides/domicile-stamp-paper-gujar-khan-rawalpindi/',
+    '/rawalpindi/', '/citizen-tools/', '/document-checklist/', '/downloads/', '/how-it-works/', '/reviews/'
   ];
 
   const isUrdu = (document.documentElement.lang || '').toLowerCase().startsWith('ur');
@@ -70,7 +72,7 @@
     home: '/ur/', brandAlt: 'دستک 90807، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن', menu: 'مینو', navLabel: 'مرکزی مینو',
     links: [['/ur/', 'ہوم'], ['/ur/services/', 'خدمات'], ['/ur/calculators/', 'فیس کیلکولیٹر', 'nav-calc']],
     tools: 'شہری سہولیات',
-    toolLinks: [['/en/document-checklist/', 'دستاویزات کی چیک لسٹ'], ['/en/citizen-tools/', 'سرکاری پورٹلز'], ['/en/downloads/', 'فارمز اور ڈاؤن لوڈز']],
+    toolLinks: [['/ur/document-checklist/', 'دستاویزات کی چیک لسٹ'], ['/ur/citizen-tools/', 'سرکاری پورٹلز'], ['/ur/downloads/', 'فارمز اور ڈاؤن لوڈز']],
     after: [['/ur/guides/', 'رہنمائی اور تازہ ترین معلومات'], ['/en/about/', 'ہمارے بارے میں'], ['/ur/contact/', 'رابطہ کریں']],
     searchLabel: 'سروس، گائیڈ یا فارم تلاش کریں', searchAria: 'دستک میں تلاش', placeholder: 'سروس تلاش کریں…', searchBtn: 'تلاش',
     switchText: 'English', switchLang: 'en', switchAria: 'یہ صفحہ انگریزی میں پڑھیں', wa: 'واٹس ایپ'

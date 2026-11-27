@@ -7,7 +7,7 @@
     groups.forEach(function(g){
       var gc=g.getAttribute('data-pt-cat'),any=false;
       [].forEach.call(g.querySelectorAll('.tp-portal'),function(c){
-        var ok=(cat==='all'||gc===cat)&&(!q||(c.getAttribute('data-pt-text')||'').indexOf(q)>-1);
+        var ok=(cat==='all'||gc===cat)&&(!q||((c.getAttribute('data-pt-text')||'')+' '+c.textContent.toLowerCase()).indexOf(q)>-1);
         c.hidden=!ok;if(ok){any=true;shown++}
       });
       g.hidden=!any;
