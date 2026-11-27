@@ -25,6 +25,11 @@ URDU_PATHS = {
     "/services/renewal-international-driving-license/", "/services/duplicate-international-driving-license/",
     "/services/general-police-verification/", "/services/tenant-registration/", "/services/loss-report/",
     "/services/crime-report/", "/services/copy-of-fir/", "/services/traffic-challan/", "/services/safe-city-challan/",
+    # Phase 3: vehicle, domicile, e-stamp and civil service pages
+    "/services/motor-vehicle-registration/", "/services/duplicate-domicile/", "/services/modification-domicile/",
+    "/services/noc-for-domicile-transfer/", "/services/e-stamping/", "/services/birth-certificate/",
+    "/services/death-certificate/", "/services/marriage-certificate/", "/services/divorce-certificate/",
+    "/services/general-inquiry-and-guide/", "/services/other-punjab-dastak-services/",
 }
 
 # Text that is the same in both languages (brands, emails, domains, numbers).
@@ -118,6 +123,6 @@ def convert(slug):
 
     faqs = [(re.sub("<[^>]+>", "", q), re.sub("<[^>]+>", "", a))
             for q, a in re.findall(r"<details><summary>(.*?)</summary><p>(.*?)</p></details>", body, re.S)]
-    css = re.findall(r'<link rel="stylesheet" href="(/assets/(?:guide-cards|guides-page|tools-pages|contact-page|services-page)[^"]*)"', src)
+    css = re.findall(r'<link rel="stylesheet" href="(/assets/(?:guide-cards|guides-page|tools-pages|service-info-pages|contact-page|services-page)[^"]*)"', src)
     js = re.findall(r'<script src="(/assets/(?:guides-page|services-page)[^"]*)"', src)
     return dict(main_class=main_class + " ur-hub", body=body, faqs=faqs, css=css, js=js)

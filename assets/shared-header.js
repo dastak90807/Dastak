@@ -53,7 +53,11 @@
     '/services/renewal-of-learners-driving-license/', '/services/duplicate-driving-license/',
     '/services/renewal-international-driving-license/', '/services/duplicate-international-driving-license/',
     '/services/general-police-verification/', '/services/tenant-registration/', '/services/loss-report/',
-    '/services/crime-report/', '/services/copy-of-fir/', '/services/traffic-challan/', '/services/safe-city-challan/'
+    '/services/crime-report/', '/services/copy-of-fir/', '/services/traffic-challan/', '/services/safe-city-challan/',
+    '/services/motor-vehicle-registration/', '/services/duplicate-domicile/', '/services/modification-domicile/',
+    '/services/noc-for-domicile-transfer/', '/services/e-stamping/', '/services/birth-certificate/',
+    '/services/death-certificate/', '/services/marriage-certificate/', '/services/divorce-certificate/',
+    '/services/general-inquiry-and-guide/', '/services/other-punjab-dastak-services/'
   ];
 
   const isUrdu = (document.documentElement.lang || '').toLowerCase().startsWith('ur');

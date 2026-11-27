@@ -145,9 +145,9 @@ def page(p):
     main_class = p.get("main_class", "service-detail")
     en_note = f'<p class="ur-en-link">یہ صفحہ انگریزی میں پڑھیں: <a href="/en{path}" hreflang="en">انگریزی ورژن ←</a></p>'
 
-    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/loader.css?v=1"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=21"><script type="application/ld+json">{ld}</script>{CLARITY_SNIPPET}</head><body id="top"><div id="dastak-loader" role="status" aria-live="polite" aria-label="صفحہ لوڈ ہو رہا ہے" aria-hidden="true"><span class="dastak-loader-status">صفحہ لوڈ ہو رہا ہے…</span><div class="dastak-loader-wrap"><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><img src="/assets/dastak-90807-transparent.png" alt="دستک 90807، گھر کی دہلیز پر سرکاری خدمات" class="dastak-loader-logo" width="175" height="61"></div></div><script src="/assets/loader.js?v=1"></script><a class="skip" href="#main">مواد پر جائیں</a>
+    return f'''<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{ur_url}"><link rel="alternate" hreflang="ur" href="{ur_url}"><link rel="alternate" hreflang="en" href="{en_url}"><link rel="alternate" hreflang="x-default" href="{en_url}"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="{"article" if p.get("kind") == "guide" else "website"}"><meta property="og:site_name" content="Dastak 90807"><meta property="og:locale" content="ur_PK"><meta property="og:locale:alternate" content="en_PK"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{ur_url}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_img}"><meta name="twitter:image:alt" content="{esc(og_alt)}"><meta name="theme-color" content="#0A3F35"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{SITE}/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="preload" href="/assets/fonts/noto-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/loader.css?v=1"><link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/site-update.css?v=20261122-ui"><link rel="stylesheet" href="/assets/site-polish.css?v=6"><link rel="stylesheet" href="/assets/services-design.css?v=1"><link rel="stylesheet" href="/assets/page-design.css?v=20261125a"><link rel="stylesheet" href="/assets/service-detail-v2.css?v=20261125a">{"".join(f'<link rel="stylesheet" href="{c}">' for c in p.get("css", []))}<link rel="stylesheet" href="/assets/urdu-rtl.css?v=23"><script type="application/ld+json">{ld}</script>{CLARITY_SNIPPET}</head><body id="top"><div id="dastak-loader" role="status" aria-live="polite" aria-label="صفحہ لوڈ ہو رہا ہے" aria-hidden="true"><span class="dastak-loader-status">صفحہ لوڈ ہو رہا ہے…</span><div class="dastak-loader-wrap"><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><span class="dastak-pulse-ring" aria-hidden="true"></span><img src="/assets/dastak-90807-transparent.png" alt="دستک 90807، گھر کی دہلیز پر سرکاری خدمات" class="dastak-loader-logo" width="175" height="61"></div></div><script src="/assets/loader.js?v=1"></script><a class="skip" href="#main">مواد پر جائیں</a>
 <aside class="top" aria-label="سرکاری پورٹل اور رجسٹریشن"><p class="ur-top">مریم کی دستک (حکومتِ پنجاب کا اقدام) کے <b>رجسٹرڈ فیسیلیٹیٹر</b> · <b class="gold">کوڈ {CODE}</b> · سرکاری پورٹل: <a href="https://dastak.punjab.gov.pk" rel="noopener" class="ltr">dastak.punjab.gov.pk</a></p></aside>
-<script src="/assets/shared-header.js?v=10"></script><noscript><nav aria-label="مرکزی مینو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
+<script src="/assets/shared-header.js?v=11"></script><noscript><nav aria-label="مرکزی مینو"><a href="/ur/">ہوم</a> <a href="/ur/services/">خدمات</a> <a href="/ur/calculators/">فیس کیلکولیٹر</a> <a href="/ur/guides/">گائیڈز</a> <a href="/ur/contact/">رابطہ</a> <a href="/en{path}" lang="en">English</a></nav></noscript>
 {(lambda _b, _i: f'<main id="main" class="{main_class}">{_b[:_i]}{en_note}{_b[_i:]}</main>')(p["body"], max(p["body"].rfind("</div>"), p["body"].rfind("</section>"))) if p.get("hub_en") else (f'<main id="main" class="{main_class}">{p["body"].replace("<!--FAQ-->", home_faq(p["faqs"]))}<section class="wrap ur-page-end">{en_note}<p class="disc">{DISCLAIMER}</p></section></main>' if "<!--FAQ-->" in p["body"] else f'<main id="main" class="{main_class}">{p["body"]}<section class="wrap home-faqs">{faq_block}{en_note}<p class="disc">{DISCLAIMER}</p></section></main>') if p.get("raw") else f'''<main id="main" class="{main_class}"><section class="wrap"><header class="service-intro"><p class="crumb">{crumb_html}</p>{p.get("eyebrow", "")}<h1>{p["h1"]}</h1><p class="meta">{p.get("meta", f"آخری اپ ڈیٹ: {UPDATED_UR} · تحریر: محمد عثمان، فیسیلیٹیٹر کوڈ {CODE}")}</p></header>
 {p["body"]}
 {faq_block}
@@ -394,7 +394,7 @@ PAGES.append(dict(
          "فیسیلیٹیٹر دستاویزات اسسٹنٹ کمشنر (تحصیل) دفتر میں جمع کرواتا ہے اور منظوری کے بعد ڈومیسائل آپ تک پہنچاتا ہے۔"],
         [("ڈومیسائل (دستک سروس)", "<b>کل Rs 1,200</b>، PSID کے ذریعے"), ("بیان حلفی (ای اسٹامپ)", "Rs 300 کا ای اسٹامپ الگ سے درکار ہے"),
          ("ای اسٹامپ دستک کے ذریعے", "کل Rs 1,250 (Rs 300 ای اسٹامپ + Rs 950 فیسیلیٹیٹر چارجز)"), ("وقت", "15 دن تک، محکمے کی منظوری پر منحصر")],
-        extra='<section class="service-module"><h2>ڈومیسائل کی دیگر خدمات</h2><p>ہم ڈومیسائل سے متعلق یہ کام بھی کرواتے ہیں (تفصیل انگریزی صفحات پر):</p><ul><li><a href="/en/services/duplicate-domicile/">ڈپلیکیٹ ڈومیسائل</a>: ڈومیسائل گم یا خراب ہو جائے تو نیا ڈپلیکیٹ (انگریزی صفحہ)</li><li><a href="/en/services/modification-domicile/">ڈومیسائل میں ترمیم</a>: ڈومیسائل میں غلطی کی درستی (انگریزی صفحہ)</li><li><a href="/en/services/noc-for-domicile-transfer/">ڈومیسائل منتقلی کا این او سی</a>: ڈومیسائل دوسرے ضلع منتقل کرنے کے لیے (انگریزی صفحہ)</li></ul></section>',
+        extra='<section class="service-module"><h2>ڈومیسائل کی دیگر خدمات</h2><p>ہم ڈومیسائل سے متعلق یہ کام بھی کرواتے ہیں:</p><ul><li><a href="/ur/services/duplicate-domicile/">ڈپلیکیٹ ڈومیسائل</a>: ڈومیسائل گم یا خراب ہو جائے تو نیا ڈپلیکیٹ</li><li><a href="/ur/services/modification-domicile/">ڈومیسائل میں ترمیم</a>: ڈومیسائل میں غلطی کی درستی</li><li><a href="/ur/services/noc-for-domicile-transfer/">ڈومیسائل منتقلی کا این او سی</a>: ڈومیسائل دوسرے ضلع منتقل کرنے کے لیے</li></ul></section>',
         related=(R["gk"], R["contact"])),
     faqs=[
         ("ڈومیسائل کیسے بنوائیں؟ (Domicile kaise banaye)", "دستک ایپ میں Doorstep Delivery کے ساتھ کوڈ 90807 لکھیں یا واٹس ایپ 0345-5583530 کریں۔ اوپر دی گئی دستاویزات تیار رکھیں۔ فیسیلیٹیٹر انہیں تحصیل دفتر میں جمع کرواتا ہے۔"),
@@ -521,8 +521,8 @@ PAGES.append(dict(
     body=f'''<div class="card quick"><b>مختصر تعارف</b><p>میں محمد عثمان ہوں، مریم کی دستک پروگرام کا رجسٹرڈ فیسیلیٹیٹر (کوڈ {CODE})۔ پورے پنجاب میں واٹس ایپ پر رہنمائی کرتا ہوں اور {AREAS} میں گھر آ کر سرکاری دستاویزات کا کام کرواتا ہوں۔ ہر سروس پر دستک فیسیلیٹیٹر چارجز 950 روپے ہیں، اور سرکاری فیس PSID پر لکھی ہوتی ہے۔</p></div>
 <section class="service-module"><h2>ڈرائیونگ لائسنس</h2>{cards((R["renew"], R["learner"], R["track"]))}</section>
 <section class="service-module"><h2>پولیس خدمات</h2>{cards((R["character"], ("/ur/services/general-police-verification/", "جنرل پولیس ویریفکیشن", "نوکری اور ویزا کے لیے پس منظر کی تصدیق"), ("/ur/services/tenant-registration/", "کرایہ دار کی رجسٹریشن", "مکان کرائے پر دینے والوں کے لیے"), ("/ur/services/loss-report/", "گمشدگی کی رپورٹ", "کاغذات گم ہونے کی رپورٹ")))}</section>
-<section class="service-module"><h2>گاڑی اور ایکسائز</h2>{cards((R["transfer"], R["token"], ("/en/services/motor-vehicle-registration/", "نئی گاڑی کی رجسٹریشن (English)", "نئی گاڑی یا بائیک رجسٹر کروائیں")))}</section>
-<section class="service-module"><h2>ڈومیسائل اور سول سرٹیفیکیٹس</h2>{cards((R["domicile"], ("/en/services/birth-certificate/", "پیدائش سرٹیفیکیٹ (English)", "یونین کونسل سے پیدائش کا اندراج"), ("/en/services/marriage-certificate/", "نکاح نامہ سرٹیفیکیٹ (English)", "شادی کا کمپیوٹرائزڈ سرٹیفیکیٹ"), ("/en/services/e-stamping/", "ای اسٹامپ پیپر (English)", "بیان حلفی اور دیگر اسٹامپ پیپر")))}</section>
+<section class="service-module"><h2>گاڑی اور ایکسائز</h2>{cards((R["transfer"], R["token"], ("/ur/services/motor-vehicle-registration/", "نئی گاڑی کی رجسٹریشن", "نئی گاڑی یا بائیک رجسٹر کروائیں")))}</section>
+<section class="service-module"><h2>ڈومیسائل اور سول سرٹیفیکیٹس</h2>{cards((R["domicile"], ("/ur/services/birth-certificate/", "پیدائش سرٹیفیکیٹ", "یونین کونسل سے پیدائش کا اندراج"), ("/ur/services/marriage-certificate/", "نکاح نامہ سرٹیفیکیٹ", "شادی کا کمپیوٹرائزڈ سرٹیفیکیٹ"), ("/ur/services/e-stamping/", "ای اسٹامپ پیپر", "بیان حلفی اور دیگر اسٹامپ پیپر")))}</section>
 <p class="ur-note">جن خدمات کے ساتھ (English) لکھا ہے ان کی تفصیل ابھی انگریزی میں ہے۔ اردو صفحات جلد آ رہے ہیں۔ <a href="/en/services/" lang="en">All services in English</a></p>
 {booking_block("دستک سروس")}''',
     faqs=[
@@ -634,15 +634,15 @@ CARDS_SVC = "".join([
               [("/ur/services/character-certificate/", "پولیس کریکٹر سرٹیفیکیٹ"), ("/ur/guides/punjab-police-character-certificate-online/", "کریکٹر سرٹیفیکیٹ گائیڈ"),
                ("/ur/services/tenant-registration/", "کرایہ دار کی رجسٹریشن")], "/ur/services/", "تمام خدمات", "پولیس خدمات"),
     home_card(SV[3]["icon"], "گوجرخان", "سول دستاویزات",
-              [("/ur/services/domicile-certificate/", "ڈومیسائل سرٹیفیکیٹ"), ("/en/services/e-stamping/", "ای اسٹامپ (انگریزی)"),
-               ("/en/services/birth-certificate/", "پیدائش سرٹیفیکیٹ (انگریزی)")], "/ur/gujar-khan/", "گوجرخان خدمات", "سول دستاویزات"),
+              [("/ur/services/domicile-certificate/", "ڈومیسائل سرٹیفیکیٹ"), ("/ur/services/e-stamping/", "ای اسٹامپ"),
+               ("/ur/services/birth-certificate/", "پیدائش سرٹیفیکیٹ")], "/ur/gujar-khan/", "گوجرخان خدمات", "سول دستاویزات"),
     home_card(SV[4]["icon"], "رہنمائی", "جنگلات، وائلڈ لائف اور فشریز",
-              [("/en/services/other-punjab-dastak-services/", "فشریز ای لائسنس رہنمائی (انگریزی)"),
-               ("/en/services/other-punjab-dastak-services/", "وائلڈ لائف پرمٹ رہنمائی (انگریزی)")], "/ur/services/", "تمام خدمات", "جنگلات، وائلڈ لائف اور فشریز"),
+              [("/ur/services/other-punjab-dastak-services/", "فشریز ای لائسنس رہنمائی"),
+               ("/ur/services/other-punjab-dastak-services/", "وائلڈ لائف پرمٹ رہنمائی")], "/ur/services/", "تمام خدمات", "جنگلات، وائلڈ لائف اور فشریز"),
     home_card(SV[5]["icon"], "رہنمائی", "ای بز کاروباری خدمات",
-              [("/en/services/other-punjab-dastak-services/", "فوڈ اتھارٹی لائسنس رہنمائی (انگریزی)"),
-               ("/en/services/other-punjab-dastak-services/", "کاروبار کی رجسٹریشن رہنمائی (انگریزی)"),
-               ("/en/services/general-inquiry-and-guide/", "گھر پر کاروباری سہولت (انگریزی)")], "/ur/services/", "تمام خدمات", "ای بز کاروباری خدمات"),
+              [("/ur/services/other-punjab-dastak-services/", "فوڈ اتھارٹی لائسنس رہنمائی"),
+               ("/ur/services/other-punjab-dastak-services/", "کاروبار کی رجسٹریشن رہنمائی"),
+               ("/ur/services/general-inquiry-and-guide/", "گھر پر کاروباری سہولت")], "/ur/services/", "تمام خدمات", "ای بز کاروباری خدمات"),
 ])
 CARDS_TOOLS = "".join([
     home_card(TL[0]["icon"], "مفت", "ڈرائیونگ لائسنس فیس کیلکولیٹر",
@@ -875,6 +875,85 @@ PAGES.append(dict(
     h1="سیف سٹی چالان", og="/assets/og/police.jpg",
     crumbs=[("خدمات", "/ur/services/"), ("سیف سٹی چالان", "/ur/services/safe-city-challan/")], faqs=[]))
 PHASE2_SERVICES.append("/services/safe-city-challan/")
+
+# Phase 3: vehicle, domicile, e-stamp and civil service pages.
+PAGES.append(dict(
+    path="/services/motor-vehicle-registration/", kind="service", en_title="Motor Vehicle Registration",
+    title="نئی گاڑی کی رجسٹریشن گوجرخان، راولپنڈی | دستک 90807",
+    desc="گوجرخان اور راولپنڈی میں نئی گاڑی یا موٹر سائیکل کی رجسٹریشن گھر بیٹھے کروائیں۔ دستاویزات، طریقہ اور فیس کا اندازہ۔ رجسٹریشن کارڈ کورئیر سے۔ دستک کوڈ 90807۔",
+    h1="نئی گاڑی کی رجسٹریشن", og="/assets/og/vehicles.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("نئی گاڑی کی رجسٹریشن", "/ur/services/motor-vehicle-registration/")], faqs=[]))
+PHASE2_SERVICES.append("/services/motor-vehicle-registration/")
+PAGES.append(dict(
+    path="/services/duplicate-domicile/", kind="service", en_title="Duplicate Domicile",
+    title="ڈپلیکیٹ ڈومیسائل گوجرخان: گھر بیٹھے | دستک 90807",
+    desc="گم شدہ ڈومیسائل کا ڈپلیکیٹ گوجرخان میں گھر بیٹھے بنوائیں۔ مکمل دستاویزات کی فہرست، طریقہ اور بکنگ۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="ڈپلیکیٹ ڈومیسائل", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("ڈپلیکیٹ ڈومیسائل", "/ur/services/duplicate-domicile/")], faqs=[]))
+PHASE2_SERVICES.append("/services/duplicate-domicile/")
+PAGES.append(dict(
+    path="/services/modification-domicile/", kind="service", en_title="Modification Domicile",
+    title="ڈومیسائل میں ترمیم گوجرخان | دستک 90807",
+    desc="گوجرخان میں ڈومیسائل سرٹیفیکیٹ میں درستگی یا ترمیم گھر بیٹھے کروائیں۔ درخواست اور موجودہ ڈومیسائل کافی۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="ڈومیسائل میں ترمیم", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("ڈومیسائل میں ترمیم", "/ur/services/modification-domicile/")], faqs=[]))
+PHASE2_SERVICES.append("/services/modification-domicile/")
+PAGES.append(dict(
+    path="/services/noc-for-domicile-transfer/", kind="service", en_title="NOC for Domicile Transfer",
+    title="ڈومیسائل منتقلی کا NOC گوجرخان | دستک 90807",
+    desc="گوجرخان میں ڈومیسائل کی دوسرے ضلع منتقلی کا NOC گھر بیٹھے حاصل کریں۔ دستاویزات، طریقہ اور بکنگ۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="ڈومیسائل کی منتقلی کا NOC", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("ڈومیسائل کی منتقلی کا NOC", "/ur/services/noc-for-domicile-transfer/")], faqs=[]))
+PHASE2_SERVICES.append("/services/noc-for-domicile-transfer/")
+PAGES.append(dict(
+    path="/services/e-stamping/", kind="service", en_title="E-Stamping",
+    title="ای اسٹامپ پیپر پنجاب: آن لائن | دستک 90807",
+    desc="پنجاب میں ای اسٹامپ پیپر گھر بیٹھے حاصل کریں، بینک آف پنجاب سے لے کر آپ تک۔ صرف شناختی کارڈ کافی۔ دستک فیسیلیٹیٹر کوڈ 90807، گوجرخان۔",
+    h1="ای اسٹامپ پیپر", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("ای اسٹامپ پیپر", "/ur/services/e-stamping/")], faqs=[]))
+PHASE2_SERVICES.append("/services/e-stamping/")
+PAGES.append(dict(
+    path="/services/birth-certificate/", kind="service", en_title="Birth Certificate",
+    title="پیدائش سرٹیفیکیٹ گوجرخان: گھر بیٹھے | دستک 90807",
+    desc="گوجرخان میں بچے کا پیدائش سرٹیفیکیٹ گھر بیٹھے بنوائیں۔ فارم A سمیت تمام دستاویزات کی فہرست اور طریقہ۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="پیدائش سرٹیفیکیٹ", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("پیدائش سرٹیفیکیٹ", "/ur/services/birth-certificate/")], faqs=[]))
+PHASE2_SERVICES.append("/services/birth-certificate/")
+PAGES.append(dict(
+    path="/services/death-certificate/", kind="service", en_title="Death Certificate",
+    title="وفات سرٹیفیکیٹ گوجرخان: گھر بیٹھے | دستک 90807",
+    desc="گوجرخان میں وفات سرٹیفیکیٹ گھر بیٹھے بنوائیں۔ فارم B، گواہ اور تدفین کی پرچی سمیت دستاویزات کی فہرست۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="وفات سرٹیفیکیٹ", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("وفات سرٹیفیکیٹ", "/ur/services/death-certificate/")], faqs=[]))
+PHASE2_SERVICES.append("/services/death-certificate/")
+PAGES.append(dict(
+    path="/services/marriage-certificate/", kind="service", en_title="Marriage Certificate",
+    title="میرج سرٹیفیکیٹ گوجرخان: گھر بیٹھے | دستک 90807",
+    desc="گوجرخان میں نکاح نامے سے میرج سرٹیفیکیٹ گھر بیٹھے بنوائیں۔ دلہا، دلہن اور والدین کے شناختی کارڈ۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="نکاح (میرج) سرٹیفیکیٹ", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("نکاح (میرج) سرٹیفیکیٹ", "/ur/services/marriage-certificate/")], faqs=[]))
+PHASE2_SERVICES.append("/services/marriage-certificate/")
+PAGES.append(dict(
+    path="/services/divorce-certificate/", kind="service", en_title="Divorce Certificate",
+    title="طلاق سرٹیفیکیٹ گوجرخان | دستک 90807",
+    desc="گوجرخان میں طلاق سرٹیفیکیٹ کے لیے درکار دستاویزات، طریقہ اور بکنگ۔ یونین کونسل نوٹس اور ثالثی کونسل ریکارڈ۔ دستک فیسیلیٹیٹر کوڈ 90807۔",
+    h1="طلاق سرٹیفیکیٹ", og="/assets/og/civil.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("طلاق سرٹیفیکیٹ", "/ur/services/divorce-certificate/")], faqs=[]))
+PHASE2_SERVICES.append("/services/divorce-certificate/")
+PAGES.append(dict(
+    path="/services/general-inquiry-and-guide/", kind="service", en_title="General Inquiry and Guide",
+    title="مریم کی دستک: رہنمائی اور عام معلومات | دستک 90807",
+    desc="مریم کی دستک کیسے کام کرتی ہے، دستک ایپ کیسے استعمال کریں، اور سرکاری دستاویزات گھر بیٹھے کیسے حاصل کریں۔ واٹس ایپ پر سوال پوچھیں۔ کوڈ 90807۔",
+    h1="مریم کی دستک: رہنمائی اور عام معلومات", og="/assets/og/general.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("مریم کی دستک: رہنمائی اور عام معلومات", "/ur/services/general-inquiry-and-guide/")], faqs=[]))
+PHASE2_SERVICES.append("/services/general-inquiry-and-guide/")
+PAGES.append(dict(
+    path="/services/other-punjab-dastak-services/", kind="service", en_title="Other Punjab Dastak Services",
+    title="پنجاب دستک کی دیگر خدمات | دستک 90807",
+    desc="پنجاب کے دیگر محکموں کی دستک خدمات: فشریز، فوڈ اتھارٹی، e-Biz اور مزید۔ سروس کا نام بھیجیں، میں بتاؤں گا کہ مدد ہو سکتی ہے۔ کوڈ 90807۔",
+    h1="پنجاب دستک کی دیگر خدمات", og="/assets/og/general.jpg",
+    crumbs=[("خدمات", "/ur/services/"), ("پنجاب دستک کی دیگر خدمات", "/ur/services/other-punjab-dastak-services/")], faqs=[]))
+PHASE2_SERVICES.append("/services/other-punjab-dastak-services/")
 
 
 # Hub pages: layout comes from the English page itself (scripts/ur_hub_convert.py).
