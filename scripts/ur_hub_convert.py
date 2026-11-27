@@ -35,6 +35,10 @@ URDU_PATHS = {
     "/rawalpindi/", "/citizen-tools/", "/document-checklist/", "/downloads/", "/how-it-works/", "/reviews/",
     # Phase 5: about, FAQs and legal pages
     "/about/", "/faqs/", "/disclaimer/", "/privacy/", "/terms/",
+    # Phase 6: fee calculators (built by scripts/build_urdu_calcs.py)
+    "/calculators/tools/punjab-driving-license-fee-calculator",
+    "/calculators/tools/punjab-car-token-tax-transfer-fee-calculator",
+    "/calculators/tools/punjab-bike-registration-transfer-fee-calculator",
 }
 
 # Text that is the same in both languages (brands, emails, domains, numbers).
