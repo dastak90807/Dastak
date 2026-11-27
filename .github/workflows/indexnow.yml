@@ -1,0 +1,142 @@
+name: Submit changed pages to IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the pushed commit and history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Allow Cloudflare Pages to deploy
+        run: sleep 90
+
+      - name: Submit changed public URLs
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import subprocess
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import quote, urlsplit
+          from urllib.request import Request, urlopen
+
+          HOST = "www.dastak90807.com"
+          ORIGIN = "https://" + HOST
+          KEY = "7312e74bc29b4df2b686709c2c2ee0e6"
+          KEY_LOCATION = f"{ORIGIN}/{KEY}.txt"
+
+          def git(*args):
+              return subprocess.check_output(["git", *args], text=True)
+
+          def valid_url(url):
+              parts = urlsplit(url)
+              return parts.scheme == "https" and parts.netloc == HOST and not parts.fragment
+
+          def sitemap_entries(xml):
+              entries = {}
+              for node in ET.fromstring(xml).findall("{*}url"):
+                  url = (node.findtext("{*}loc") or "").strip()
+                  if valid_url(url):
+                      entries[url] = ET.tostring(node, encoding="unicode")
+              return entries
+
+          class PageHead(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.canonical = None
+                  self.noindex = False
+                  self.has_head = False
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag == "head":
+                      self.has_head = True
+                  if tag == "link" and "canonical" in attrs.get("rel", "").lower().split():
+                      self.canonical = attrs.get("href")
+                  if tag == "meta" and attrs.get("name", "").lower() in ("robots", "bingbot"):
+                      self.noindex |= "noindex" in attrs.get("content", "").lower()
+
+          # Exact local redirects include the root and legacy calculator routes.
+          redirects = {}
+          for line in Path("_redirects").read_text().splitlines():
+              fields = line.split()
+              if len(fields) >= 3 and fields[0].startswith("/") and "*" not in fields[0]:
+                  if fields[2] in ("301", "302", "307", "308"):
+                      redirects[fields[0]] = fields[1]
+
+          def resolve_route(path):
+              seen = set()
+              while path in redirects and path not in seen:
+                  seen.add(path)
+                  path = redirects[path]
+              return path if path.startswith("https://") else ORIGIN + path
+
+          def page_url(filename):
+              page = PageHead()
+              page.feed(Path(filename).read_text(encoding="utf-8"))
+              if not page.has_head or page.noindex:
+                  return None
+              raw_path = "/" + quote(filename, safe="/")
+              if raw_path in redirects:
+                  return resolve_route(raw_path)
+              if page.canonical:
+                  return resolve_route("/") if page.canonical == ORIGIN + "/" else page.canonical
+              if raw_path.endswith("/index.html"):
+                  raw_path = raw_path[:-10]
+              else:
+                  raw_path = raw_path[:-5]
+              return resolve_route(raw_path)
+
+          if os.environ["EVENT_NAME"] == "workflow_dispatch":
+              # Manual runs submit the current sitemap, useful for initial setup.
+              urls = set(sitemap_entries(Path("sitemap.xml").read_text()))
+          else:
+              base = os.environ.get("BEFORE_SHA", "")
+              if not base or set(base) == {"0"}:
+                  base = git("rev-parse", "HEAD~1").strip()
+              changed = git("diff", "--name-only", "--no-renames", "--diff-filter=AM", "-z", base, "HEAD").split("\0")
+              urls = set()
+              for filename in filter(None, changed):
+                  if filename.endswith(".html") and Path(filename).is_file():
+                      url = page_url(filename)
+                      if url and valid_url(url):
+                          urls.add(url)
+              if "sitemap.xml" in changed:
+                  current = sitemap_entries(Path("sitemap.xml").read_text())
+                  exists = subprocess.run(["git", "cat-file", "-e", f"{base}:sitemap.xml"], capture_output=True).returncode == 0
+                  previous = sitemap_entries(git("show", f"{base}:sitemap.xml")) if exists else {}
+                  urls.update(url for url, entry in current.items() if previous.get(url) != entry)
+
+          if not urls:
+              print("No added or updated public page URLs; nothing to submit.")
+              raise SystemExit(0)
+          if len(urls) > 10000:
+              raise SystemExit("More than 10,000 URLs: exceeds the single-request IndexNow limit.")
+          with urlopen(KEY_LOCATION, timeout=30) as response:
+              if response.read(1024).decode("utf-8") != KEY:
+                  raise SystemExit("The live IndexNow verification file does not match the configured key.")
+          payload = {"host": HOST, "key": KEY, "keyLocation": KEY_LOCATION, "urlList": sorted(urls)}
+          request = Request("https://api.indexnow.org/indexnow", data=json.dumps(payload).encode("utf-8"),
+                            headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
+          with urlopen(request, timeout=60) as response:
+              if response.status not in (200, 202):
+                  raise SystemExit(f"Unexpected IndexNow response: HTTP {response.status}")
+              print(f"Submitted {len(urls)} URLs: IndexNow HTTP {response.status} (not a guarantee of indexing).")
+          PY
