@@ -644,7 +644,7 @@ PAGES.append(dict(
 <section class="service-module"><h2>رابطے کی تفصیل</h2><table class="ur-fee"><tbody>
 <tr><th scope="row">نام</th><td>محمد عثمان، رجسٹرڈ دستک فیسیلیٹیٹر (کوڈ {CODE})</td></tr>
 <tr><th scope="row">واٹس ایپ اور کال</th><td><a href="{WA}">{PHONE}</a></td></tr>
-<tr><th scope="row">ای میل</th><td><a href="mailto:support@dastak90807.com"><span class="ltr">support@dastak90807.com</span></a><br><a href="mailto:dastak90807@zohamail.com"><span class="ltr">dastak90807@zohamail.com</span></a></td></tr>
+<tr><th scope="row">ای میل</th><td><a href="mailto:support@dastak90807.com"><span class="ltr">support@dastak90807.com</span></a><br><a href="mailto:dastak90807@zohomail.com"><span class="ltr">dastak90807@zohomail.com</span></a></td></tr>
 <tr><th scope="row">پتہ</th><td>صندل روڈ، وارڈ نمبر 14، گوجرخان، پنجاب <span class="ltr">47850</span></td></tr>
 <tr><th scope="row">اوقات</th><td>آن لائن رابطہ کسی بھی وقت۔ گھر پر وزٹ پہلے سے وقت طے کر کے۔</td></tr>
 </tbody></table><div class="row"><a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=Dastak+Online+Document+Facilitation+Sandal+Road+Gujar+Khan" rel="noopener">گوگل میپ پر لوکیشن</a><a class="btn o" href="https://share.google/nmpsQYND7NTAnZzqI" rel="noopener">گوگل پروفائل اور ریویوز</a></div></section>
@@ -739,16 +739,16 @@ REVIEWS = (
     '<p class="eyebrow">ہمارے صارفین کی زبانی</p><h2>شہری کیا کہتے ہیں</h2>'
     '<p class="sub">گوجرخان، راولپنڈی اور پورے پنجاب میں جن شہریوں کی ہم نے مدد کی، ان کے منتخب تبصرے۔</p></div>'
     '<a class="review-badge" href="https://share.google/nmpsQYND7NTAnZzqI" target="_blank" rel="noopener" data-ga-event="home_review_cta_click" '
-    'aria-label="78 گوگل ریویوز میں 5 میں سے 4.9 ریٹنگ۔ ہمارا گوگل بزنس پروفائل کھولیں">'
+    'aria-label="81 گوگل ریویوز میں 5 میں سے 5.0 ریٹنگ۔ ہمارا گوگل بزنس پروفائل کھولیں">'
     + HP["review_g"] +
-    '<span class="review-score"><b class="ltr">4.9</b><span class="review-stars" aria-hidden="true">★★★★★</span></span>'
-    '<span class="review-meta"><b>گوگل ریٹنگ</b><small><span class="ltr">78</span> ریویوز · سب دیکھیں ←</small></span></a></div>'
+    '<span class="review-score"><b class="ltr">5.0</b><span class="review-stars" aria-hidden="true">★★★★★</span></span>'
+    '<span class="review-meta"><b>گوگل ریٹنگ</b><small><span class="ltr">81</span> ریویوز · سب دیکھیں ←</small></span></a></div>'
     '<div class="review-controls-row"><div class="review-controls">'
     '<button type="button" data-review-direction="1" aria-label="پچھلے تبصرے" aria-controls="home-review-track">→</button>'
     '<button type="button" data-review-direction="-1" aria-label="اگلے تبصرے" aria-controls="home-review-track">←</button></div></div>'
     '<div class="home-review-track" id="home-review-track" tabindex="0" role="region" aria-label="صارفین کے تبصرے">' + _track + '</div>'
     '<p class="sub">یہ تبصرے زیادہ تر ہمارے گوگل بزنس پروفائل اور چند فیس بک سفارشات سے لیے گئے ہیں اور صارفین کے اپنے الفاظ میں ہیں، اس لیے ان کا ترجمہ نہیں کیا گیا۔ '
-    'کچھ تبصرے اقتباس ہیں۔ 24 نومبر 2026 تک <span class="ltr">78</span> ریویوز سے گوگل ریٹنگ <span class="ltr">4.9</span>۔ ہر شخص کا تجربہ اور کام کا وقت مختلف ہو سکتا ہے۔</p>'
+    'کچھ تبصرے اقتباس ہیں۔ 28 نومبر 2026 تک <span class="ltr">81</span> ریویوز سے گوگل ریٹنگ <span class="ltr">5.0</span>۔ ہر شخص کا تجربہ اور کام کا وقت مختلف ہو سکتا ہے۔</p>'
     '<div class="row"><a data-ga-event="home_review_cta_click" class="btn y" href="https://g.page/r/CcbPfWByTNL1ECE/review" target="_blank" rel="noopener">گوگل پر ریویو دیں</a>'
     '<a data-ga-event="home_review_cta_click" class="btn o" href="https://www.facebook.com/Dastak90807/reviews" target="_blank" rel="noopener">فیس بک پر ریویو دیں</a></div></div></section>'
 )
@@ -1092,7 +1092,7 @@ PHASE4_PAGES.append("/how-it-works/")
 PAGES.append(dict(
     path="/reviews/", kind="page", en_title="Reviews",
     title="کسٹمر ریویوز: دستک آن لائن ڈاکومنٹ فیسیلیٹیشن | دستک 90807",
-    desc="Google اور Facebook پر دستک 90807 کے اصل کسٹمر ریویوز پڑھیں یا اپنا ریویو دیں۔ Google ریٹنگ 5 میں سے 4.9۔",
+    desc="Google اور Facebook پر دستک 90807 کے اصل کسٹمر ریویوز پڑھیں یا اپنا ریویو دیں۔ Google ریٹنگ 5 میں سے 5.0۔",
     h1="کسٹمر ریویوز", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
     crumbs=[('کسٹمر ریویوز', '/ur/reviews/')], faqs=[]))
 PHASE4_PAGES.append("/reviews/")
@@ -1102,7 +1102,7 @@ PHASE5_PAGES = []
 PAGES.append(dict(
     path="/about/", kind="page", en_title="About",
     title="ہمارے بارے میں: محمد عثمان، فیسیلیٹیٹر کوڈ 90807 | دستک 90807",
-    desc="محمد عثمان، حکومتِ پنجاب کے مریم کی دستک پروگرام کے رجسٹرڈ فیسیلیٹیٹر (کوڈ 90807)، گوجرخان۔ 700 سے زیادہ خدمات مکمل، Google ریٹنگ 4.9۔ اپنی تصدیق خود کریں۔",
+    desc="محمد عثمان، حکومتِ پنجاب کے مریم کی دستک پروگرام کے رجسٹرڈ فیسیلیٹیٹر (کوڈ 90807)، گوجرخان۔ 700 سے زیادہ خدمات مکمل، Google ریٹنگ 5.0۔ اپنی تصدیق خود کریں۔",
     h1="محمد عثمان، گوجرخان میں آپ کے مریم کی دستک فیسیلیٹیٹر", og="/assets/dastak-online-document-facilitation-punjab-og.jpg?v=1",
     crumbs=[("محمد عثمان، گوجرخان میں آپ کے مریم کی دستک فیسیلیٹیٹر", "/ur/about/")], faqs=[]))
 PHASE5_PAGES.append("/about/")
