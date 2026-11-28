@@ -3,7 +3,7 @@
    - Every page: WhatsApp Channel icon in the footer social row (same style as the other icons).
    - Home page and guide pages: a short banner above the footer.
    - Contact page: a QR card above "Find me online", plus the icon in that row.
-   The channel is for updates only. Bookings stay on WhatsApp 0345-5583530. */
+   The channel is for updates only. Bookings stay on WhatsApp +92-345-5583530. */
 (() => {
   if (window.__dastakChannelCta) return;
   window.__dastakChannelCta = true;
@@ -20,14 +20,14 @@
     h2: 'پنجاب کی دستاویزات کی تازہ معلومات کے لیے ہمارا واٹس ایپ چینل جوائن کریں',
     sub: 'دستک 90807 کی طرف سے گوجرخان، راولپنڈی اور پورے پنجاب کے لیے مفت اپ ڈیٹس۔',
     items: ['ڈرائیونگ لائسنس کی تجدید اور ٹریکنگ کی معلومات', 'ٹوکن ٹیکس کی آخری تاریخ اور جرمانے کی یاد دہانی', 'پولیس کریکٹر سرٹیفیکیٹ اور تصدیق سے متعلق مشورے', 'ڈومیسائل، ای اسٹامپ اور گاڑی کی ملکیت کی منتقلی کی گائیڈز'],
-    note: 'یہ ایک آزاد فیسیلیٹیٹر چینل ہے (کوڈ <span class="ltr">90807</span>)، سرکاری چینل نہیں۔ بکنگ کے لیے واٹس ایپ <span class="ltr">0345-5583530</span> پر میسج کریں۔',
+    note: 'یہ ایک آزاد فیسیلیٹیٹر چینل ہے (کوڈ <span class="ltr">90807</span>)، سرکاری چینل نہیں۔ بکنگ کے لیے واٹس ایپ <span class="ltr">+92-345-5583530</span> پر میسج کریں۔',
     btn: 'واٹس ایپ چینل جوائن کریں'
   } : {
     label: 'WhatsApp Channel',
     h2: 'Join our WhatsApp Channel for Punjab document updates',
     sub: 'Free updates from Dastak 90807 for Gujar Khan, Rawalpindi and all Punjab.',
     items: ['Driving license renewal and tracking updates', 'Token tax deadline and penalty reminders', 'Police character certificate and verification tips', 'Domicile, e-stamp and vehicle transfer guides'],
-    note: 'Independent facilitator channel (Code 90807), not a government channel. To book, message WhatsApp 0345-5583530.',
+    note: 'Independent facilitator channel (Code 90807), not a government channel. To book, message WhatsApp +92-345-5583530.',
     btn: 'Join the WhatsApp Channel'
   };
 
@@ -94,12 +94,12 @@
         '<p class="ct-eb">تازہ معلومات</p>' +
         '<h2 id="channel-card-h">ہمارا واٹس ایپ چینل فالو کریں</h2>' +
         '<p>فون کے کیمرے سے QR کوڈ اسکین کریں یا بٹن دبائیں۔ پنجاب کی دستاویزات کی فیس میں تبدیلی، نئے قواعد اور مختصر گائیڈز ملیں گی۔</p>' +
-        '<p class="channel-note">چینل صرف تازہ معلومات کے لیے ہے۔ بکنگ یا سوال کے لیے واٹس ایپ <span class="ltr">0345-5583530</span> پر میسج کریں۔</p>'
+        '<p class="channel-note">چینل صرف تازہ معلومات کے لیے ہے۔ بکنگ یا سوال کے لیے واٹس ایپ <span class="ltr">+92-345-5583530</span> پر میسج کریں۔</p>'
       :
         '<p class="ct-eb">Updates</p>' +
         '<h2 id="channel-card-h">Follow our WhatsApp Channel</h2>' +
         '<p>Scan the QR code with your phone camera, or tap the button. You will get fee changes, new rules and short guides for Punjab document services.</p>' +
-        '<p class="channel-note">The channel is for updates only. To book or ask a question, message WhatsApp 0345-5583530.</p>');
+        '<p class="channel-note">The channel is for updates only. To book or ask a question, message WhatsApp +92-345-5583530.</p>');
       text.appendChild(link('channel-btn', WA_ICON + '<span>' + (UR ? 'واٹس ایپ چینل جوائن کریں' : 'Join the WhatsApp Channel') + '</span>'));
       card.appendChild(img);
       card.appendChild(text);
