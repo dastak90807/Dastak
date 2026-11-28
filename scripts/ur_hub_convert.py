@@ -103,6 +103,8 @@ def convert(slug):
         return ">" + "".join(piece(t) for t in re.split(r"(\x00\d+\x00)", x.group(1))) + "<"
 
     body = re.sub(r">([^<>]+)<", text, body)
+    # A sentence that ends right after a link keeps the English "." text node: use the Urdu full stop.
+    body = re.sub(r"</a>\.(?=\s|<|$)", "</a>۔", body)
     body = body.replace("→", "←").replace("↗", "↖").replace("&#8599;", "&#8598;").replace("&#8594;", "&#8592;").replace("&rarr;", "&larr;")  # arrows point left in RTL
 
     def attr(x):

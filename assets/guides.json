@@ -1,5 +1,5 @@
 {
- "_note": "Add one entry per guide (newest date first wins; ties keep list order). Then run: python3 scripts/build_guides.py  (and --check).",
+ "_note": "Add one entry per guide (newest date first wins; ties keep list order). Then run: python3 scripts/build_guides.py  (and --check). Add a \"ur\" block (eyebrow, title, summary, thumb_alt) too, so the Urdu home page shows the guide; scripts/build_urdu.py then puts the newest 3 on /ur/ automatically.",
  "icons": {
   "driving": "<svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><circle cx=\"8\" cy=\"11\" r=\"2\"/><path d=\"M5 16c0-3 6-3 6 0m3-6h4m-4 4h4\"/></svg>",
   "police": "<svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6\"/></svg>",
@@ -17,7 +17,13 @@
    "thumb": "punjab-driving-license-renewal-from-abroad-overseas-pakistanis-dastak-90807-thumb.webp",
    "thumb_w": 640,
    "thumb_h": 357,
-   "thumb_alt": "Overseas Pakistani renewing a Punjab driving license from abroad online, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi"
+   "thumb_alt": "Overseas Pakistani renewing a Punjab driving license from abroad online, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi",
+   "ur": {
+    "eyebrow": "نئی · اوورسیز پاکستانیوں کے لیے گائیڈ",
+    "title": "بیرون ملک سے پنجاب ڈرائیونگ لائسنس کی تجدید: مکمل رہنمائی",
+    "summary": "یو اے ای، سعودی عرب، برطانیہ، یورپ، امریکہ یا کینیڈا سے پاکستان آئے بغیر لائسنس کی تجدید۔",
+    "thumb_alt": "بیرون ملک مقیم پاکستانی آن لائن پنجاب ڈرائیونگ لائسنس کی تجدید کر رہا ہے، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی"
+   }
   },
   {
    "slug": "punjab-token-tax-payment-and-penalty",
@@ -29,7 +35,13 @@
    "thumb": "punjab-token-tax-guide-dastak-90807-thumb.webp",
    "thumb_w": 640,
    "thumb_h": 357,
-   "thumb_alt": "Poster showing the reported 30 November 2026 Punjab token tax deadline, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi"
+   "thumb_alt": "Poster showing the reported 30 November 2026 Punjab token tax deadline, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi",
+   "ur": {
+    "eyebrow": "نئی · گاڑی اور ٹوکن ٹیکس گائیڈ",
+    "title": "پنجاب ٹوکن ٹیکس 2026: آخری تاریخ، جرمانہ اور ادائیگی کا طریقہ",
+    "summary": "30 نومبر 2026 کی رپورٹ شدہ آخری تاریخ، جرمانہ اور سرکاری PSID سے ادائیگی۔",
+    "thumb_alt": "پنجاب ٹوکن ٹیکس کی 30 نومبر 2026 کی رپورٹ شدہ آخری تاریخ کا پوسٹر، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی"
+   }
   },
   {
    "slug": "how-to-track-driving-license-in-punjab",
@@ -41,7 +53,13 @@
    "thumb": "track-driving-license-punjab-dastak-90807-thumb.webp",
    "thumb_w": 640,
    "thumb_h": 357,
-   "thumb_alt": "Guide banner on how to track a driving license in Punjab by DLIMS and Pakistan Post, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi"
+   "thumb_alt": "Guide banner on how to track a driving license in Punjab by DLIMS and Pakistan Post, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi",
+   "ur": {
+    "eyebrow": "نئی · ڈرائیونگ لائسنس گائیڈ",
+    "title": "پنجاب میں ڈرائیونگ لائسنس ٹریک کرنے کا طریقہ (DLIMS اور پاکستان پوسٹ)",
+    "summary": "دو مرحلوں میں ٹریکنگ: شناختی کارڈ سے DLIMS اسٹیٹس، پھر پاکستان پوسٹ سے ڈیلیوری۔",
+    "thumb_alt": "پنجاب میں DLIMS اور پاکستان پوسٹ سے ڈرائیونگ لائسنس ٹریک کرنے کی گائیڈ، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی"
+   }
   },
   {
    "slug": "punjab-driving-license-renewal-online",
@@ -53,7 +71,13 @@
    "thumb": "punjab-driving-license-renewal-guide-dastak-90807-thumb.webp",
    "thumb_w": 640,
    "thumb_h": 357,
-   "thumb_alt": "Guide banner for Punjab driving license renewal in Gujar Khan and Rawalpindi, from Dastak Online Document Facilitation (Registered Facilitator Code 90807)"
+   "thumb_alt": "Guide banner for Punjab driving license renewal in Gujar Khan and Rawalpindi, from Dastak Online Document Facilitation (Registered Facilitator Code 90807)",
+   "ur": {
+    "eyebrow": "پنجاب ڈرائیونگ لائسنس گائیڈ",
+    "title": "پنجاب ڈرائیونگ لائسنس کی آن لائن تجدید: دستاویزات، فیس اور طریقہ",
+    "summary": "لائسنس کی تجدید: دستاویزات، فیس، ٹریکنگ اور پورے پنجاب میں مدد۔",
+    "thumb_alt": "گوجرخان اور راولپنڈی میں پنجاب ڈرائیونگ لائسنس کی تجدید کی گائیڈ، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)"
+   }
   },
   {
    "slug": "punjab-police-character-certificate-online",
@@ -65,7 +89,13 @@
    "thumb": "punjab-police-character-certificate-guide-dastak-90807-thumb.webp",
    "thumb_w": 640,
    "thumb_h": 357,
-   "thumb_alt": "Poster for the Punjab Police character certificate guide showing online help across Punjab, Pakistan, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi"
+   "thumb_alt": "Poster for the Punjab Police character certificate guide showing online help across Punjab, Pakistan, from Dastak Online Document Facilitation (Registered Facilitator Code 90807), Gujar Khan, Rawalpindi",
+   "ur": {
+    "eyebrow": "پنجاب پولیس گائیڈ",
+    "title": "پنجاب پولیس کریکٹر سرٹیفیکیٹ: مکمل گائیڈ",
+    "summary": "دستاویزات، سرکاری تصدیق اور پورے پنجاب میں دستک 90807 کی مدد۔",
+    "thumb_alt": "پنجاب پولیس کریکٹر سرٹیفیکیٹ کی گائیڈ کا پوسٹر، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی، پنجاب"
+   }
   },
   {
    "slug": "domicile-stamp-paper-gujar-khan-rawalpindi",
@@ -77,7 +107,13 @@
    "thumb": "domicile-e-stamp-paper-gujar-khan-rawalpindi-dastak-90807-thumb.webp",
    "thumb_w": 546,
    "thumb_h": 305,
-   "thumb_alt": "Dastak facilitator reviewing domicile and e-stamp paper documents with a family at home, Gujar Khan, Rawalpindi, Dastak Online Document Facilitation (Code 90807)"
+   "thumb_alt": "Dastak facilitator reviewing domicile and e-stamp paper documents with a family at home, Gujar Khan, Rawalpindi, Dastak Online Document Facilitation (Code 90807)",
+   "ur": {
+    "eyebrow": "مقامی دستاویزات کی گائیڈ",
+    "title": "گوجرخان اور راولپنڈی میں ڈومیسائل اور ای اسٹامپ پیپر",
+    "summary": "ڈومیسائل کے کاغذات، ای اسٹامپ کی تیاری اور سرکاری تصدیق۔",
+    "thumb_alt": "گوجرخان میں گھر پر ایک خاندان کے ساتھ ڈومیسائل اور ای اسٹامپ پیپر کے کاغذات چیک کرتا دستک فیسیلیٹیٹر، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، راولپنڈی"
+   }
   },
   {
    "slug": "vehicle-transfer-token-tax-punjab",
@@ -89,7 +125,13 @@
    "thumb": "vehicle-transfer-token-tax-punjab-dastak-90807-thumb.webp",
    "thumb_w": 546,
    "thumb_h": 305,
-   "thumb_alt": "Dastak facilitator checking vehicle ownership transfer and token tax documents for a motorbike owner in Punjab, Dastak Online Document Facilitation (Code 90807)"
+   "thumb_alt": "Dastak facilitator checking vehicle ownership transfer and token tax documents for a motorbike owner in Punjab, Dastak Online Document Facilitation (Code 90807)",
+   "ur": {
+    "eyebrow": "مقامی دستاویزات کی گائیڈ",
+    "title": "گاڑی اور موٹر سائیکل کی ملکیت کی منتقلی اور ٹوکن ٹیکس: مکمل گائیڈ",
+    "summary": "ضروری دستاویزات، خریدار اور فروخت کنندہ کی شرائط، PSID چالان اور فیس کی تفصیل۔",
+    "thumb_alt": "پنجاب میں موٹر سائیکل کے مالک کے لیے گاڑی کی ملکیت کی منتقلی اور ٹوکن ٹیکس کے کاغذات چیک کرتا دستک فیسیلیٹیٹر، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)"
+   }
   }
  ]
 }

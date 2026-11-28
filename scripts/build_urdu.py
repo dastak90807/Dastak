@@ -884,14 +884,14 @@ TOOL_LINKS = ('<div class="home-tool-links"><p class="home-tool-links-label">م�
         ("/ur/citizen-tools/", "Tracking &amp; Official Portals", "M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18", "سرکاری پورٹلز"),
         ("/ur/downloads/", "Forms &amp; Downloads", "M12 4v11m0 0l-4-4m4 4l4-4M5 20h14", "فارمز اور ڈاؤن لوڈز")))
     + '</div></div><p class="home-tools-note">یہ صرف اندازہ ہے۔ سرکاری فیس پنجاب کا سرکاری سسٹم بناتا ہے۔ دستک 90807 ایک آزاد فیسیلیٹیشن سروس ہے۔</p>')
-_G = [
-    ("vehicle", "/assets/punjab-token-tax-guide-dastak-90807-thumb.webp", "پنجاب ٹوکن ٹیکس کی 30 نومبر 2026 کی رپورٹ شدہ آخری تاریخ کا پوسٹر، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی",
-     "نئی · گاڑی اور ٹوکن ٹیکس گائیڈ", "/ur/guides/punjab-token-tax-payment-and-penalty/", "پنجاب ٹوکن ٹیکس 2026: آخری تاریخ، جرمانہ اور ادائیگی کا طریقہ", "30 نومبر 2026 کی رپورٹ شدہ آخری تاریخ، جرمانہ اور سرکاری PSID سے ادائیگی۔"),
-    ("driving", "/assets/track-driving-license-punjab-dastak-90807-thumb.webp", "پنجاب میں DLIMS اور پاکستان پوسٹ سے ڈرائیونگ لائسنس ٹریک کرنے کی گائیڈ، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)، گوجرخان، راولپنڈی",
-     "نئی · ڈرائیونگ لائسنس گائیڈ", "/ur/guides/how-to-track-driving-license-in-punjab/", "پنجاب میں ڈرائیونگ لائسنس ٹریک کرنے کا طریقہ (DLIMS اور پاکستان پوسٹ)", "دو مرحلوں میں ٹریکنگ: شناختی کارڈ سے DLIMS اسٹیٹس، پھر پاکستان پوسٹ سے ڈیلیوری۔"),
-    ("driving", "/assets/punjab-driving-license-renewal-guide-dastak-90807-thumb.webp", "گوجرخان اور راولپنڈی میں پنجاب ڈرائیونگ لائسنس کی تجدید کی گائیڈ، دستک آن لائن ڈاکومنٹ فیسیلیٹیشن (رجسٹرڈ فیسیلیٹیٹر کوڈ 90807)",
-     "پنجاب ڈرائیونگ لائسنس گائیڈ", "/ur/guides/punjab-driving-license-renewal-online/", "پنجاب ڈرائیونگ لائسنس کی آن لائن تجدید: دستاویزات، فیس اور طریقہ", "لائسنس کی تجدید: دستاویزات، فیس، ٹریکنگ اور پورے پنجاب میں مدد۔"),
-]
+# Newest 3 guides from assets/guides.json (same list as the English home), Urdu text from each guide's "ur" block.
+_GJ = json.load(open(os.path.join(ROOT, "assets", "guides.json"), encoding="utf-8"))["guides"]
+_GJ = sorted(_GJ, key=lambda g: g["date"], reverse=True)  # stable: ties keep list order, like build_guides.py
+_missing_ur = [g["slug"] for g in _GJ[:3] if "ur" not in g]
+if _missing_ur:
+    raise SystemExit("[build_urdu] assets/guides.json: add a \"ur\" block (eyebrow, title, summary, thumb_alt) for: " + ", ".join(_missing_ur))
+_G = [(g["category"], "/assets/" + g["thumb"], html.escape(g["ur"]["thumb_alt"], quote=True), html.escape(g["ur"]["eyebrow"]),
+       "/ur/guides/%s/" % g["slug"], html.escape(g["ur"]["title"]), html.escape(g["ur"]["summary"])) for g in _GJ[:3]]
 HOME_GUIDES = ('<section class="wrap guides ur-home-guides" id="guides"><p class="eyebrow">تیاری کیسے کریں</p><h2>مقامی دستاویزات کی گائیڈز</h2>'
     '<p class="sub">گوجرخان، راولپنڈی اور آس پاس کے علاقوں کے لیے عملی معلومات۔</p><div class="guide-grid">'
     + "".join(f'<article class="card guide-card local-guide" data-guide-category="{c}"><div class="guide-illustration has-thumb"><img src="{img}" width="640" height="357" loading="lazy" decoding="async" alt="{alt}"></div>'
