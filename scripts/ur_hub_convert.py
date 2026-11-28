@@ -32,6 +32,7 @@ URDU_PATHS = {
     "/services/general-inquiry-and-guide/", "/services/other-punjab-dastak-services/",
     # Phase 4: guides and content pages
     "/guides/punjab-token-tax-payment-and-penalty/", "/guides/domicile-stamp-paper-gujar-khan-rawalpindi/",
+    "/guides/punjab-driving-license-renewal-from-abroad/",
     "/rawalpindi/", "/citizen-tools/", "/document-checklist/", "/downloads/", "/how-it-works/", "/reviews/",
     # Phase 5: about, FAQs and legal pages
     "/about/", "/faqs/", "/disclaimer/", "/privacy/", "/terms/",

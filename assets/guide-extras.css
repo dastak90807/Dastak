@@ -1,0 +1,12 @@
+/* Shared extras for long-form guides (EN + UR). Kept in a file because the CSP blocks inline styles. */
+.guide-article .answer-block{font-size:1.05em}
+.nw{white-space:nowrap}
+.guide-figure{margin:1rem 0}
+.guide-figure img{display:block;width:100%;height:auto;border-radius:12px}
+.guide-cta .row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.6rem}
+.guide-cta .cta-title{margin:0 0 .3rem;font-size:1.1em}
+.guide-article .table-wrap{overflow-x:auto}
+.guide-article table{width:100%;border-collapse:collapse}
+.guide-article th,.guide-article td{border:1px solid rgba(0,0,0,.12);padding:.55rem .7rem;text-align:start;vertical-align:top}
+.guide-article caption{text-align:start;font-weight:700;padding:.4rem 0}
+.ur-link{margin-top:1.5rem}

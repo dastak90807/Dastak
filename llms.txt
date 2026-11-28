@@ -19,6 +19,7 @@ Doorstep facilitation in Gujar Khan, Rawalpindi, Kallar Syedan, Kahuta, Mandra, 
 - [Downloads](https://www.dastak90807.com/en/downloads/): official form resources
 - [Local document guides](https://www.dastak90807.com/en/guides/): practical, sourced application guides
 - [How to Track Your Driving License in Punjab (DLIMS & Pakistan Post)](https://www.dastak90807.com/en/guides/how-to-track-driving-license-in-punjab/)
+- [Punjab Driving License Renewal from Abroad: Overseas Guide](https://www.dastak90807.com/en/guides/punjab-driving-license-renewal-from-abroad/): for overseas Pakistanis in the GCC, UK, Europe, North America and elsewhere; documents, Dastak app steps, PSID, e-license, card delivery to family in Punjab (licences expired over 5 years need an in-person centre visit)
 - [Punjab Driving License Renewal Online (Documents, Fees & Steps)](https://www.dastak90807.com/en/guides/punjab-driving-license-renewal-online/)
 - [Punjab Token Tax 2026: Deadline, Penalty & How to Pay (Pakistan)](https://www.dastak90807.com/en/guides/punjab-token-tax-payment-and-penalty/)
 - [Punjab Police Character Certificate: Documents & Steps (Pakistan)](https://www.dastak90807.com/en/guides/punjab-police-character-certificate-online/)
@@ -60,6 +61,7 @@ Urdu pages mirror the English URLs under /ur/ (same slugs). Fees on Urdu pages f
 - [طلاق سرٹیفیکیٹ](https://www.dastak90807.com/ur/services/divorce-certificate/)
 - [مریم کی دستک: رہنمائی اور عام معلومات](https://www.dastak90807.com/ur/services/general-inquiry-and-guide/)
 - [پنجاب دستک کی دیگر خدمات](https://www.dastak90807.com/ur/services/other-punjab-dastak-services/)
+- [بیرون ملک سے پنجاب ڈرائیونگ لائسنس کی تجدید](https://www.dastak90807.com/ur/guides/punjab-driving-license-renewal-from-abroad/): اوورسیز پاکستانیوں کے لیے مکمل طریقہ
 - [پنجاب ٹوکن ٹیکس 2026: آخری تاریخ، جرمانہ اور ادائیگی](https://www.dastak90807.com/ur/guides/punjab-token-tax-payment-and-penalty/)
 - [گوجرخان اور راولپنڈی میں ڈومیسائل اور ای اسٹامپ پیپر](https://www.dastak90807.com/ur/guides/domicile-stamp-paper-gujar-khan-rawalpindi/)
 - [راولپنڈی میں گھر پر دستاویزات کی مدد](https://www.dastak90807.com/ur/rawalpindi/)

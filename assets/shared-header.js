@@ -59,6 +59,7 @@
     '/services/death-certificate/', '/services/marriage-certificate/', '/services/divorce-certificate/',
     '/services/general-inquiry-and-guide/', '/services/other-punjab-dastak-services/',
     '/guides/punjab-token-tax-payment-and-penalty/', '/guides/domicile-stamp-paper-gujar-khan-rawalpindi/',
+    '/guides/punjab-driving-license-renewal-from-abroad/',
     '/rawalpindi/', '/citizen-tools/', '/document-checklist/', '/downloads/', '/how-it-works/', '/reviews/',
     '/about/', '/faqs/', '/disclaimer/', '/privacy/', '/terms/'
   ];
