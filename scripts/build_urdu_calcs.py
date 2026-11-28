@@ -88,6 +88,9 @@ MONTHS = dict(January="جنوری", February="فروری", March="مارچ", Apr
 DATE_WORD = re.compile(r"\b(" + "|".join(sorted(MONTHS, key=len, reverse=True)) + r")\b")
 
 
+CONTACT_NUM = re.compile(r"\u200e?\+92-345-5583530|(?<![\d,.A-Za-z@])(?:90807|40805|1202)(?![\d,A-Za-z.]\w)")
+
+
 def translate(text, d):
     """Translate one text value. Returns None when nothing should change."""
     core = re.sub(r"\s+", " ", text).strip()
@@ -226,6 +229,15 @@ def build(slug, p, d):
     body = re.sub(r'(\s(?:aria-label|placeholder|title|alt)=)(["\'])(.*?)\2', attr, body)
     body = re.sub(r'href="/en/(about|calculators|contact|guides|services)?/?"',
                   lambda m: f'href="/ur/{m.group(1) + "/" if m.group(1) else ""}"', body)
+    # Keep contact numbers and codes unbroken in RTL text (same rule as build_urdu.fix_bidi).
+    def nowrap(m):
+        t = m.group(0)
+        before = body_ref[0][max(0, m.start() - 40):m.start() + 1]
+        if before.endswith('class="ltr">') or before.endswith('dir="ltr">') or "\x00" in t:
+            return t
+        return CONTACT_NUM.sub(lambda x: f'<span class="ltr">{x.group(0).lstrip(chr(0x200e))}</span>', t)
+    body_ref = [body]
+    body = re.sub(r">[^<>]+<", nowrap, body)
     body = re.sub(r"\x00(\d+)\x00", lambda m: keep[int(m.group(1))], body)
 
     out_dir = os.path.join(ROOT, "ur", "calculators", "tools")
