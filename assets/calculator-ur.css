@@ -6,5 +6,5 @@ html[lang="ur"] body,html[lang="ur"] button,html[lang="ur"] select,html[lang="ur
 html[lang="ur"] body{line-height:1.7}
 /* English paragraphs that already have an Urdu twin on the page */
 .ur-hide{display:none!important}
-/* Phone numbers and amounts are left-to-right inside Urdu text ("0345-5583530", "+ Rs. 950") */
+/* Phone numbers and amounts are left-to-right inside Urdu text ("+92-345-5583530", "+ Rs. 950") */
 html[lang="ur"] #dastakOfficialFooter .footer-links a,html[lang="ur"] a[href^="tel:"],html[lang="ur"] [id$="Val"],html[lang="ur"] .summary-item>span:last-child{direction:ltr;unicode-bidi:isolate}
